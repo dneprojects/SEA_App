@@ -1,10 +1,15 @@
 # Changelog
 
-## 0.2.0
+## 0.2.1
 
-- Strategy device rows: the stop condition is now a small 🛑 button on the device
-  row; once set it appears on an indented second line (checkbox bullet aligned
-  under the device name). Tooltips added across the pages (incl. "W/Einheit").
+- **Persistent settings**: config + history now default to `/addon_config`
+  instead of the add-on's private `/data` volume, so settings survive an
+  uninstall/reinstall (HA wipes `/data` on uninstall). On update, existing
+  `/data` files are copied over once (non-destructive).
+- Strategy device rows: the stop condition is now a small black ■ button on the
+  device row; once set it appears on an indented second line. The line no longer
+  has a checkbox — to remove it, click "ändern" and pick "— nicht zugeordnet —".
+  Tooltips added across the pages (incl. "W/Einheit").
 - Savings: the explanation text now adapts to the selected baseline.
 - Dashboard: the power-flow frame height fits the diagram and grows for expanded
   sub-power circles (no more cut-off when expanding consumers).
