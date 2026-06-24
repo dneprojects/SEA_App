@@ -2,6 +2,24 @@
 
 ## 0.2.1
 
+- **Schaltlasten: „unterbrechbar"** – neue Checkbox je geschalteter Entität (in
+  der Geräte-Steuerung). An (Default): eine laufende Last darf bei Wegfall von
+  Überschuss bzw. günstigem Tarif wieder abgeschaltet werden (z. B. Heizstab).
+  Aus: die Last läuft nach dem Start bis zum Ziel durch und wird nur abgeschaltet,
+  wenn das Ziel erreicht ist (z. B. Waschmaschine) – gilt für PV-Überschuss- und
+  Tarif-Steuerung. Die Strategie-Beschreibungen erwähnen den Status im Beispiel.
+
+- **Strategie-Beschreibungen**: jede Strategie hat jetzt einen **ⓘ-Info-Button**
+  (nur Icon) neben ihrem Titel im Strategien-Bereich. Er öffnet eine kompakte
+  Beschreibung (Funktionsweise · Voraussetzungen · Beispiel) in einem Overlay
+  **innerhalb des SEA-Frames** (kein neues Fenster). Die **Voraussetzungen
+  spiegeln die aktuelle Konfiguration** (✓/✗/⚠: PV+Netz, aktivierte Geräte mit
+  Priorität, Master-Schalter, Vorrang/Mindest-SoC, Preisquelle + Schwellen,
+  Thermostat-Gruppen), und das **Beispiel wird aus den real konfigurierten
+  Geräten** und ihren Einstellungen gebaut (Name, Prio, max. Leistung, Stopp-
+  Grenze, Deadline „spätester Start“, Lade-/Entlade-Schwellen, Absenk-Delta &
+  Vorheiz-Vorlauf). Für PV-Überschuss, dynamischen Tarif und Temperaturabsenkung.
+
 - **Bugfix – PV-surplus no longer runs loads from the battery**: the surplus
   controller regulated the grid to zero (`−grid_w`). With a battery present a
   *discharging* battery holds the grid at ~0 by itself, so a controllable load
