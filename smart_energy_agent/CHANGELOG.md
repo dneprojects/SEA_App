@@ -2,6 +2,29 @@
 
 ## 0.8.1
 
+- **Oberfläche: nur noch der Inhalt scrollt.** Kopfzeile (mit Menü-Symbol) und Menü bleiben jetzt
+  fest stehen; nur der innere Bereich scrollt. Ist das Menü im Browser länger als das Fenster,
+  scrollt es für sich.
+
+- **Verschobene Einstellungen erscheinen nicht mehr doppelt unter „Grundeinstellungen".** Die in die
+  Strategiekarten verschobenen Werte (Netzbezug-/Einspeise-Limit, Notstrom-Reserve, Batteriepflege,
+  PV-Abregel-Entität) stehen nur noch dort; unter „Grundeinstellungen" bleiben lediglich die
+  Peak-Zeitfenster und die Regler-Anteile.
+
+- **Fahrzeug-SoC nicht mehr an der Wallbox.** Das Ladeziel wird ausschließlich je Fahrzeug
+  (SoC-Entität + Ziel-SoC) unter „Fahrzeuge" eingestellt; die Wallbox-Karte führt keinen eigenen
+  Fahrzeug-SoC mehr.
+
+- **Regler-Einstellungen umbenannt.** „Modulation P-/I-Anteil" heißt jetzt schlicht
+  **„Regler P-Anteil" / „Regler I-Anteil"** (ohne Zusatztexte).
+
+- **Verlauf: „Tag bis jetzt" als Start; Anzeige bleibt erhalten.** Der Verlauf öffnet auf dem
+  aktuellen Tag; die gewählte Serien-Sichtbarkeit (Kurven an/aus) bleibt beim Neuaufruf von SEA
+  erhalten.
+
+- **Fix: Einsparungs-Zahlen sind wieder stimmig.** Baseline − Aktuell = Einsparung geht jetzt genau
+  auf (vorher konnten die angezeigten Werte um einen Cent auseinanderlaufen).
+
 - **Fix: „hängende" Bilanz/Überschuss abends behoben.** Das Zeit-Angleichungs-Fenster war nicht
   begrenzt — ein fast statischer Bilanzsensor (PV ~0 W oder ruhende Batterie am Abend) blähte es auf
   Minuten auf, sodass das Netzsignal über Minuten gemittelt wurde und **veraltete Tag-Werte
