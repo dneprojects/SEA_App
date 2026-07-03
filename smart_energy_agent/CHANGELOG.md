@@ -4,9 +4,10 @@
 
 - **Verlauf: Zeitstreifen „Operative Strategien".** Unter dem Leistungs-Diagramm zeigt jetzt je
   Strategie ein farbiger Zeitstreifen (wie in HA), wann sie im gewählten Zeitraum tatsächlich Einfluss
-  genommen hat – auf **derselben Zeitachse** wie das Diagramm. Der Recorder schreibt den operativen
-  Zustand ab dieser Version alle 30 s mit; für zurückliegende Zeiträume liegen daher noch keine Daten
-  vor.
+  genommen hat – auf **derselben Zeitachse** wie das Diagramm. Der Zustand wird **synchron zum
+  Regeltakt** (bei jeder Wertänderung, nicht mehr alle 30 s) aufgezeichnet, sodass die Grenzen exakt
+  auf den gestellten Werten liegen. Für zurückliegende Zeiträume vor dieser Version liegen noch keine
+  Daten vor.
 
 - **Oberfläche: nur noch der Inhalt scrollt.** Kopfzeile (mit Menü-Symbol) und Menü bleiben jetzt
   fest stehen; nur der innere Bereich scrollt. Ist das Menü im Browser länger als das Fenster,
