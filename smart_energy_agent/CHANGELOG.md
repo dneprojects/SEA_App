@@ -2,6 +2,11 @@
 
 ## 0.8.1
 
+- **Diagnose: „TEST: Heizstab fest (W)".** Neues Feld in den Grundeinstellungen: fordert die
+  regelbaren Lasten dauerhaft mit einem festen Wert an (alle 10 s, mit ±1-W-Variation), **ohne** den
+  PV-Überschuss zu berücksichtigen — um einen geräteseitigen Abschalt-Impuls von SEAs Regelung zu
+  trennen. `0` = aus (Normalbetrieb). Achtung: zieht bei fehlender Sonne aus dem Netz.
+
 - **Scrollen wieder wie früher (Umbau zurückgenommen).** Der Versuch, nur den inneren Bereich
   scrollen zu lassen (App-Shell), funktionierte geräteübergreifend nicht (Gesten blätterten um statt
   zu scrollen). Zurück auf das bewährte Verhalten: die **Seite** scrollt normal, Kopfzeile und Menü
