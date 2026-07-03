@@ -2,6 +2,12 @@
 
 ## 0.8.1
 
+- **Batterie-Entladung wird jetzt fortlaufend durchgesetzt.** Manche Batterie-Wechselrichter (sonnen)
+  fallen mit dem Entladen nach kurzer Zeit wieder auf 0 zurück, wenn kein frischer Sollwert
+  nachkommt — ein einmalig gesetzter Wert „verpufft". Peak-Shaving und Ladeunterstützung schreiben
+  den Entlade-/Ladesollwert jetzt in **jedem Regeltakt (10 s) neu**, mit einer ±1-W-Variation, damit
+  das Gerät die Entladung hält.
+
 - **Batterie-Unterstützung: Laden beim Entladen stoppen.** Wenn die Ladeunterstützung die Batterie
   entlädt, setzt SEA jetzt zusätzlich den **Ladesollwert auf 0** (wie beim Peak-Shaving). Manche
   Wechselrichter ignorieren den Entlade-Sollwert, solange noch ein Ladesollwert ansteht — dann floss
