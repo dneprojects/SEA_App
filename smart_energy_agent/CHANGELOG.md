@@ -18,9 +18,11 @@
 - **Regler-Einstellungen umbenannt.** „Modulation P-/I-Anteil" heißt jetzt schlicht
   **„Regler P-Anteil" / „Regler I-Anteil"** (ohne Zusatztexte).
 
-- **Verlauf: „Tag bis jetzt" als Start; Anzeige bleibt erhalten.** Der Verlauf öffnet auf dem
-  aktuellen Tag; die gewählte Serien-Sichtbarkeit (Kurven an/aus) bleibt beim Neuaufruf von SEA
-  erhalten.
+- **Verlauf: Zeitbereich und Anzeige bleiben erhalten.** Der gewählte Zeitbereich (auch ein selbst
+  eingegebener) **und** die Serien-Sichtbarkeit (Kurven an/aus) überleben jetzt den Neuaufruf von SEA
+  — praktisch, wenn die HA-App nach dem Bildschirmschoner neu startet. Ohne gespeicherten Bereich
+  öffnet der Verlauf auf „Tag bis jetzt"; die Live-Ansicht „Heute" wird beim Öffnen auf den aktuellen
+  Tag nachgeführt.
 
 - **Fix: Einsparungs-Zahlen sind wieder stimmig.** Baseline − Aktuell = Einsparung geht jetzt genau
   auf (vorher konnten die angezeigten Werte um einen Cent auseinanderlaufen).
