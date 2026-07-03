@@ -2,6 +2,11 @@
 
 ## 0.8.1
 
+- **Batterie-Unterstützung: Laden beim Entladen stoppen.** Wenn die Ladeunterstützung die Batterie
+  entlädt, setzt SEA jetzt zusätzlich den **Ladesollwert auf 0** (wie beim Peak-Shaving). Manche
+  Wechselrichter ignorieren den Entlade-Sollwert, solange noch ein Ladesollwert ansteht — dann floss
+  trotz kommandierter Entladung nichts.
+
 - **Verlauf: Leistungs-Diagramm mit 1-kW-Raster.** Zusätzlich zu den beschrifteten Marken gibt es
   jetzt bei **jedem 1 kW** eine leichte Hilfslinie zum besseren Ablesen.
 - **Fahrzeug ist eine eigene Komponente in den Plots.** Das Auto erscheint im Verlauf mit **SoC** und
