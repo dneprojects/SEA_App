@@ -2,6 +2,12 @@
 
 ## 0.8.1
 
+- **Verlauf: bessere Zeitachse.** Die X-Achse nutzt jetzt **runde Zeitschritte** (z. B. glatte
+  2-Minuten-/Stunden-Marken) statt gleichmäßig geteilter, krummer Werte – dadurch keine
+  ungleichmäßigen 2-/3-Minuten-Sprünge mehr. Beschriftung nur noch mit **Uhrzeit**; das **Datum**
+  erscheint nur ganz links und bei Tageswechsel (Mitternacht). Die **Hilfslinien sind dunkler**
+  (besser sichtbar), und beim Hineinzoomen kommen **feine Zwischenlinien** dazu.
+
 - **Fix: periodisches Ausschalten des Heizstabs (Grenzzyklus) behoben.** Modulierende Lasten
   (Heizstab/ELWA etc.) bekommen ihren Sollwert jetzt in **jedem Regeltakt (10 s)** neu geschrieben,
   statt einen unveränderten Wert bis zu 55 s zu unterdrücken. Damit wird der **geräteeigene
