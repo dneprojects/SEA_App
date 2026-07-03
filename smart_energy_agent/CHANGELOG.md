@@ -2,11 +2,11 @@
 
 ## 0.8.1
 
-- **Fix: Scrollen auf dem Touchgerät wieder normal.** Nach dem App-Shell-Umbau blätterte jede
-  Wisch-/Scrollgeste sofort zur nächsten Seite, statt den Inhalt zu scrollen. Jetzt hat das Scrollen
-  des Inhalts Vorrang: erst **am tatsächlichen oberen/unteren Rand** und mit deutlichem Weiterziehen
-  wird umgeblättert. Zusätzlich scrollt der Inhaltsbereich zuverlässiger (feste Höhe via `dvh`,
-  iOS-Smoothing).
+- **Scrollen wieder wie früher (Umbau zurückgenommen).** Der Versuch, nur den inneren Bereich
+  scrollen zu lassen (App-Shell), funktionierte geräteübergreifend nicht (Gesten blätterten um statt
+  zu scrollen). Zurück auf das bewährte Verhalten: die **Seite** scrollt normal, Kopfzeile und Menü
+  bleiben per `sticky` oben/seitlich stehen, und am Seitenende blättert Weiterscrollen zur nächsten
+  Seite.
 
 - **Regelbare Lasten: Sollwert bekommt einen ±1-W-Takt-Impuls.** Manche Geräte (z. B. der my-PV
   ELWA) setzen ihren eigenen Ansteuerungs-Timeout nur bei einem *geänderten* Sollwert zurück. Damit
@@ -38,9 +38,6 @@
   auf den gestellten Werten liegen. Für zurückliegende Zeiträume vor dieser Version liegen noch keine
   Daten vor.
 
-- **Oberfläche: nur noch der Inhalt scrollt.** Kopfzeile (mit Menü-Symbol) und Menü bleiben jetzt
-  fest stehen; nur der innere Bereich scrollt. Ist das Menü im Browser länger als das Fenster,
-  scrollt es für sich.
 
 - **Verschobene Einstellungen erscheinen nicht mehr doppelt unter „Grundeinstellungen".** Die in die
   Strategiekarten verschobenen Werte (Netzbezug-/Einspeise-Limit, Notstrom-Reserve, Batteriepflege,
