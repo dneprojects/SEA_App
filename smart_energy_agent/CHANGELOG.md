@@ -2,6 +2,14 @@
 
 ## 0.8.1
 
+- **Fix: periodisches Ausschalten des Heizstabs (Grenzzyklus) behoben.** Modulierende Lasten
+  (Heizstab/ELWA etc.) bekommen ihren Sollwert jetzt in **jedem Regeltakt (10 s)** neu geschrieben,
+  statt einen unveränderten Wert bis zu 55 s zu unterdrücken. Damit wird der **geräteeigene
+  Sollwert-Watchdog** (z. B. der my-PV-ELWA, der ohne frischen Sollwert auf 0 zurückfällt) laufend
+  gefüttert, und ein geräteseitiger Abschalt-Impuls wird **binnen 10 s** wieder überstimmt, statt bis
+  zum nächsten Keepalive (~55 s) offen zu bleiben. Das beseitigt das beobachtete Rampe-hoch →
+  Absturz → ~60 s-bei-0 → wieder-hoch-Muster trotz vorhandenem PV-Überschuss.
+
 - **Verlauf: Zeitstreifen „Operative Strategien".** Unter dem Leistungs-Diagramm zeigt jetzt je
   Strategie ein farbiger Zeitstreifen (wie in HA), wann sie im gewählten Zeitraum tatsächlich Einfluss
   genommen hat – auf **derselben Zeitachse** wie das Diagramm. Der Zustand wird **synchron zum
