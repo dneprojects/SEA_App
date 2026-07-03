@@ -2,6 +2,12 @@
 
 ## 0.8.1
 
+- **Fix: Scrollen auf dem Touchgerät wieder normal.** Nach dem App-Shell-Umbau blätterte jede
+  Wisch-/Scrollgeste sofort zur nächsten Seite, statt den Inhalt zu scrollen. Jetzt hat das Scrollen
+  des Inhalts Vorrang: erst **am tatsächlichen oberen/unteren Rand** und mit deutlichem Weiterziehen
+  wird umgeblättert. Zusätzlich scrollt der Inhaltsbereich zuverlässiger (feste Höhe via `dvh`,
+  iOS-Smoothing).
+
 - **Regelbare Lasten: Sollwert bekommt einen ±1-W-Takt-Impuls.** Manche Geräte (z. B. der my-PV
   ELWA) setzen ihren eigenen Ansteuerungs-Timeout nur bei einem *geänderten* Sollwert zurück. Damit
   ein am Maximum gesättigter (sonst konstanter) Sollwert nicht als „unverändert" gilt und das Gerät
