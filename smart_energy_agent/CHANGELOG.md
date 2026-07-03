@@ -2,6 +2,15 @@
 
 ## 0.8.1
 
+- **Regelbare Lasten: Sollwert bekommt einen ±1-W-Takt-Impuls.** Manche Geräte (z. B. der my-PV
+  ELWA) setzen ihren eigenen Ansteuerungs-Timeout nur bei einem *geänderten* Sollwert zurück. Damit
+  ein am Maximum gesättigter (sonst konstanter) Sollwert nicht als „unverändert" gilt und das Gerät
+  in seinen Timeout-Cut läuft, variiert SEA den Modulations-Sollwert jetzt pro Takt minimal um 1 W
+  (für die Last irrelevant; bei grob aufgelösten Stellgrößen wie A-Vorgaben ohne Wirkung).
+- **Staleness-Schwelle auf 300 s angehoben.** Ein gültiger, aber ruhender Bilanzsensor (z. B. eine
+  Batterie bei hohem SoC, die keine Leistungsänderungen mehr meldet) friert die regelbaren Lasten
+  erst nach 300 s statt 180 s ein — mehr Reserve gegen versehentliches Einfrieren.
+
 - **Verlauf: bessere Zeitachse.** Die X-Achse nutzt jetzt **runde Zeitschritte** (z. B. glatte
   2-Minuten-/Stunden-Marken) statt gleichmäßig geteilter, krummer Werte – dadurch keine
   ungleichmäßigen 2-/3-Minuten-Sprünge mehr. Beschriftung nur noch mit **Uhrzeit**; das **Datum**
