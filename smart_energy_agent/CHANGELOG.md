@@ -2,6 +2,10 @@
 
 ## 0.8.1
 
+- **Grundeinstellungen speichern automatisch.** Der „Speichern"-Knopf entfällt — Änderungen werden
+  wie überall sofort übernommen. Ein dezenter **„gespeichert"-Hinweis unten** bestätigt es (dasselbe
+  Muster jetzt konsistent auf allen Seiten).
+
 - **Batterie-Entladung wird jetzt fortlaufend durchgesetzt.** Manche Batterie-Wechselrichter (sonnen)
   fallen mit dem Entladen nach kurzer Zeit wieder auf 0 zurück, wenn kein frischer Sollwert
   nachkommt — ein einmalig gesetzter Wert „verpufft". Peak-Shaving und Ladeunterstützung schreiben
