@@ -2,6 +2,16 @@
 
 ## 0.8.1
 
+- **Verlauf: Leistungs-Diagramm mit 1-kW-Raster.** Zusätzlich zu den beschrifteten Marken gibt es
+  jetzt bei **jedem 1 kW** eine leichte Hilfslinie zum besseren Ablesen.
+- **Fahrzeug ist eine eigene Komponente in den Plots.** Das Auto erscheint im Verlauf mit **SoC** und
+  Lade-/Entlade-Sollwert als eigene Komponente (bisher nur in der Geräteansicht).
+- **Wallbox führt keinen SoC mehr.** Der Ladezustand gehört zum Fahrzeug — die Wallbox zeigt in Plots
+  und Geräteansicht keinen (Rest-)SoC mehr an.
+- **Header und Menü bleiben beim Scrollen stehen.** Der horizontale Scroll liegt jetzt auf `<html>`
+  statt `<body>`, damit `position:sticky` wieder greift: Kopfzeile oben und Menü seitlich bleiben
+  fest, nur der Inhalt scrollt; ein zu langes Menü scrollt für sich.
+
 - **Scrollen wieder wie früher (Umbau zurückgenommen).** Der Versuch, nur den inneren Bereich
   scrollen zu lassen (App-Shell), funktionierte geräteübergreifend nicht (Gesten blätterten um statt
   zu scrollen). Zurück auf das bewährte Verhalten: die **Seite** scrollt normal, Kopfzeile und Menü
