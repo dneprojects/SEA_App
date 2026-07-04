@@ -6,9 +6,11 @@
   (z. B. der sonnen-Timeout), merkte sich bisher nicht den Zeitpunkt — dadurch versuchte SEA es
   trotzdem jeden Takt (10 s). Jetzt wird der **Versuch** gemerkt, sodass das eingestellte
   Batterie-Schreibintervall auch bei Timeouts eingehalten wird (weniger Last aufs Gerät).
-- **Robusterer Heartbeat.** Ein einzelner verpasster Ping (etwa während HA an einem langsamen
-  Geräte-Write hängt) löst nicht mehr sofort einen Reconnect samt Discovery aus — erst **zwei**
-  aufeinanderfolgende Fehlversuche.
+- **Robusterer Heartbeat (aktivitätsbasiert).** Die Verbindung gilt jetzt als lebendig, solange
+  **irgendeine** Nachricht von HA ankommt (SEA abonniert Zustandsänderungen — eine gesunde Verbindung
+  ist nie still). Der Ping ist nur noch ein Fallback für eine **wirklich stille** Verbindung. Damit
+  löst ein einzelner, durch einen langsamen Geräte-Write blockierter Ping **keinen** Reconnect samt
+  Discovery mehr aus, während Events weiterlaufen.
 
 - **Batterie-Schreibintervall einstellbar.** Neu in den Grundeinstellungen: **„Batterie-Schreibintervall
   (s)"**. Manche Wechselrichter (sonnen) setzen die Entladung zurück, wenn kein frischer Sollwert kommt
