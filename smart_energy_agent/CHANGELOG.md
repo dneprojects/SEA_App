@@ -2,6 +2,14 @@
 
 ## 0.8.2
 
+- **Fix: Schreib-Intervall greift auch bei fehlschlagenden Writes.** Ein Schreibvorgang, der scheitert
+  (z. B. der sonnen-Timeout), merkte sich bisher nicht den Zeitpunkt — dadurch versuchte SEA es
+  trotzdem jeden Takt (10 s). Jetzt wird der **Versuch** gemerkt, sodass das eingestellte
+  Batterie-Schreibintervall auch bei Timeouts eingehalten wird (weniger Last aufs Gerät).
+- **Robusterer Heartbeat.** Ein einzelner verpasster Ping (etwa während HA an einem langsamen
+  Geräte-Write hängt) löst nicht mehr sofort einen Reconnect samt Discovery aus — erst **zwei**
+  aufeinanderfolgende Fehlversuche.
+
 - **Batterie-Schreibintervall einstellbar.** Neu in den Grundeinstellungen: **„Batterie-Schreibintervall
   (s)"**. Manche Wechselrichter (sonnen) setzen die Entladung zurück, wenn kein frischer Sollwert kommt
   — aber jeder 10-s-Takt überlastet sie (der Schreibvorgang läuft in einen **Timeout** und stört sogar
