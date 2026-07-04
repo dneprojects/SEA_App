@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.8.2
+
+- **Entscheidungs-Log (neuer Log-Level „decision").** SEA protokolliert jetzt auf einem eigenen
+  Level **zwischen INFO und WARNING**, **warum** eine Last zu einem Zeitpunkt **gestartet oder
+  gestoppt** wurde (mit Sollwert und Begründung). Im Add-on unter *Konfiguration → log_level* auf
+  **`decision`** stellen, dann zeigt das Protokoll nur noch diese Entscheidungen (plus Warnungen/
+  Fehler) — ideal, um das Regelverhalten nachzuvollziehen. Bei `info` erscheinen sie zusätzlich; das
+  laufende Nachregeln, der ±1-W-Impuls und Keepalive-Wiederholungen bleiben auf Debug.
+
 ## 0.8.1
 
 - **Grundeinstellungen speichern automatisch.** Der „Speichern"-Knopf entfällt — Änderungen werden

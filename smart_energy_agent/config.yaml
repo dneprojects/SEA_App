@@ -1,7 +1,7 @@
 # Home Assistant App (formerly add-on) configuration for Smart Energy Agent.
 # Phase 1: entity discovery, curation and monitoring
 name: Smart Energy Agent (Beta)
-version: "0.8.1-beta.51"
+version: "0.8.2-beta.1"
 slug: smart_energy_agent_beta
 description: >-
   Detects energy-related HA entities (power, energy, PV, grid, battery,
@@ -36,6 +36,6 @@ options:
   # Hard cap for raw history retention (days) to protect SD-card lifetime.
   history_retention_days: 90
 schema:
-  log_level: list(debug|info|warning|error)?
+  log_level: list(debug|info|decision|warning|error)?
   history_db_path: str?
   history_retention_days: int(1,3650)?
