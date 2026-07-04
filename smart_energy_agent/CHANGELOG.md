@@ -2,6 +2,13 @@
 
 ## 0.8.2
 
+- **Weniger Einstellungen sichtbar — „Betriebsart" + „Erweitert".** In den Geräte-Einstellungen
+  (Komponenten) sind die selten geänderten Details jetzt unter **„Erweitert"** eingeklappt (PV-Schwelle,
+  min. Laufzeit/Auszeit, Starts/Tag, spätester Start, Stufen, SG-Ready …). Für die **Wallbox** gibt es
+  oben eine **Betriebsart**-Auswahl — *„Nur PV-Überschuss (+ Batterie)"* oder *„Immer laden — PV/
+  Batterie zuerst, Rest Netz"* —, die die passende Einstellung automatisch setzt (statt der einzelnen
+  „Laden aus Netz"-Option). Erster Schritt Richtung „sag *was*, nicht *wie*".
+
 - **Entscheidungs-Log (neuer Log-Level „decision").** SEA protokolliert jetzt auf einem eigenen
   Level **zwischen INFO und WARNING**, **warum** eine Last zu einem Zeitpunkt **gestartet oder
   gestoppt** wurde (mit Sollwert und Begründung). Im Add-on unter *Konfiguration → log_level* auf
