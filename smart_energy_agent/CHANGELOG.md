@@ -2,6 +2,11 @@
 
 ## 0.8.2
 
+- **Fix: Leerlauf-Batterie schreibt keine sinnlosen 0-Sollwerte mehr.** Ein ratenbegrenzter
+  (Schreibintervall-)Sollwert bei ≈0 wird jetzt **einmal** geschrieben (der Übergang) und danach
+  nicht mehr periodisch wiederholt — der Batterie immer wieder „lade/entlade 0" zu sagen, erzeugte nur
+  Timeouts/401 im Log. Ein Halte-Wert ≠0 wird weiterhin jedes Intervall aufgefrischt (die sonnen lässt
+  eine nicht aufgefrischte Entladung sonst fallen).
 - **Fix: sonnen-Batterie wird nicht mehr als Überschuss-Last „dauergeschrieben".** Die Modulation
   behandelte den Batterie-Ladesollwert wie den ELWA-Heizstab und schrieb ihn mit `force` **jeden
   Zyklus** (auch `0 W`, endlos) → dauernde `number_charge`-Timeouts im Log. Batterien werden jetzt
