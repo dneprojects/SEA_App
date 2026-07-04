@@ -2,6 +2,11 @@
 
 ## 0.8.2
 
+- **Fix: Batterie-Entladung (sonnen) — kein „Laden = 0" mehr mitsenden.** Beim Entladen für
+  Peak-Shaving/Ladeunterstützung schrieb SEA zusätzlich den Ladesollwert auf 0. Auf der sonnen setzt
+  dieser gepaarte Schreibvorgang die Entladung wieder zurück (ein manueller, reiner Entlade-Sollwert
+  hält dagegen). SEA schreibt jetzt **nur noch den Entladesollwert** (weiterhin alle 10 s neu).
+
 - **Weniger Einstellungen sichtbar — „Betriebsart" + „Erweitert".** In den Geräte-Einstellungen
   (Komponenten) sind die selten geänderten Details jetzt unter **„Erweitert"** eingeklappt (PV-Schwelle,
   min. Laufzeit/Auszeit, Starts/Tag, spätester Start, Stufen, SG-Ready …). Für die **Wallbox** gibt es
