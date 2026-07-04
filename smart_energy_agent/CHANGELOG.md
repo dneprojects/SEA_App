@@ -2,6 +2,12 @@
 
 ## 0.8.2
 
+- **Fix: Schreib-Intervall greift jetzt auch bei sich änderndem Sollwert.** Der Batterie-Entladewert
+  folgt dem Live-Netzwert (Peak-Shaving `Netz − Limit`, Ladeunterstützung `min(Budget, Netz)`) und
+  ändert sich dadurch fast jeden Takt. Bisher drosselte das Intervall nur bei **unverändertem** Wert,
+  weshalb der Write (und der sonnen-Timeout) trotz „20 s" weiter alle 10 s kam. Jetzt ist das
+  Batterie-Schreibintervall ein echter **Ratenbegrenzer**: innerhalb des Intervalls wird auch ein
+  geänderter Sollwert zurückgehalten und am Intervallende der frischeste Wert geschrieben.
 - **Fix: Schreib-Intervall greift auch bei fehlschlagenden Writes.** Ein Schreibvorgang, der scheitert
   (z. B. der sonnen-Timeout), merkte sich bisher nicht den Zeitpunkt — dadurch versuchte SEA es
   trotzdem jeden Takt (10 s). Jetzt wird der **Versuch** gemerkt, sodass das eingestellte
