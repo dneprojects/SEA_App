@@ -2,11 +2,13 @@
 
 ## 0.8.2
 
-- **Fix: Leerlauf-Batterie schreibt keine sinnlosen 0-Sollwerte mehr.** Ein ratenbegrenzter
-  (Schreibintervall-)Sollwert bei ≈0 wird jetzt **einmal** geschrieben (der Übergang) und danach
-  nicht mehr periodisch wiederholt — der Batterie immer wieder „lade/entlade 0" zu sagen, erzeugte nur
-  Timeouts/401 im Log. Ein Halte-Wert ≠0 wird weiterhin jedes Intervall aufgefrischt (die sonnen lässt
-  eine nicht aufgefrischte Entladung sonst fallen).
+- **Sicherheits-Fix: 0-Sollwert wird wieder aktiv gehalten (Batterie kann nicht ins Netz „durchlaufen").**
+  Die Batterie hält ihren letzten erzwungenen Sollwert. Ein zuvor eingeführtes „Leerlauf-0 geht still"
+  hatte SEA die 0 nur **einmal** schreiben lassen — griff dieser eine Write nicht, entlud die Batterie
+  endlos ins Netz, ohne dass SEA je nachfasste. SEA behauptet den kommandierten Wert (auch **0**) jetzt
+  wieder in **jedem Schreibintervall**, behält so die Kontrolle über den Aktor und fährt die Batterie
+  zuverlässig auf 0 zurück. (Für saubere Logs den Sollwert über einen zuverlässigen lokalen Helfer/
+  Template statt der direkten, timeout-anfälligen sonnen-`number`-Entität führen.)
 - **Fix: sonnen-Batterie wird nicht mehr als Überschuss-Last „dauergeschrieben".** Die Modulation
   behandelte den Batterie-Ladesollwert wie den ELWA-Heizstab und schrieb ihn mit `force` **jeden
   Zyklus** (auch `0 W`, endlos) → dauernde `number_charge`-Timeouts im Log. Batterien werden jetzt
