@@ -2,6 +2,15 @@
 
 ## 0.8.2
 
+- **Fix: sonnen-Batterie wird nicht mehr als Überschuss-Last „dauergeschrieben".** Die Modulation
+  behandelte den Batterie-Ladesollwert wie den ELWA-Heizstab und schrieb ihn mit `force` **jeden
+  Zyklus** (auch `0 W`, endlos) → dauernde `number_charge`-Timeouts im Log. Batterien werden jetzt
+  aufs Schreibintervall gedrosselt und nicht mehr force-refresht; ein Leerlauf-Wert (0) wird nicht
+  mehr wiederholt gesendet.
+- **Fix: Batterie wird nicht geladen, während sie entladen soll.** Lädt ein höher priorisierter Regler
+  (Peak-Shaving / Ladeunterstützung) die Batterie-Entladung, unterlässt die Überschuss-Modulation jetzt
+  den Lade-Sollwert derselben Batterie — vorher hob der Lade-Write bei der sonnen die Entladung wieder
+  auf, sodass die Entlade-Unterstützung nie stehen blieb.
 - **Fix: Schreib-Intervall greift jetzt auch bei sich änderndem Sollwert.** Der Batterie-Entladewert
   folgt dem Live-Netzwert (Peak-Shaving `Netz − Limit`, Ladeunterstützung `min(Budget, Netz)`) und
   ändert sich dadurch fast jeden Takt. Bisher drosselte das Intervall nur bei **unverändertem** Wert,
