@@ -2,6 +2,10 @@
 
 ## 0.8.2
 
+- **Entitäts-Auswahl liest frisch ein.** Beim Öffnen des Entitäts-Pickers (Stift-Button) zieht SEA
+  jetzt die HA-Entitätsliste live neu — ein frisch angelegter Helfer (z. B. `input_number` /
+  Template-Number) ist damit **sofort auswählbar**, ohne SEA erst neu verbinden/neustarten zu müssen.
+
 - **Sicherheits-Fix: 0-Sollwert wird wieder aktiv gehalten (Batterie kann nicht ins Netz „durchlaufen").**
   Die Batterie hält ihren letzten erzwungenen Sollwert. Ein zuvor eingeführtes „Leerlauf-0 geht still"
   hatte SEA die 0 nur **einmal** schreiben lassen — griff dieser eine Write nicht, entlud die Batterie
