@@ -2,6 +2,15 @@
 
 ## 0.8.2
 
+- **Batterie-Schreibintervall einstellbar.** Neu in den Grundeinstellungen: **„Batterie-Schreibintervall
+  (s)"**. Manche Wechselrichter (sonnen) setzen die Entladung zurück, wenn kein frischer Sollwert kommt
+  — aber jeder 10-s-Takt überlastet sie (der Schreibvorgang läuft in einen **Timeout** und stört sogar
+  die HA-Verbindung). Damit lässt sich die stabile Kadenz ausprobieren (Standard 10 s). Der Entlade-
+  Sollwert wird jetzt in diesem Intervall neu geschrieben statt zwangsweise jeden Takt.
+- **Log entschlackt.** Kürzeres Format (nur Uhrzeit, kurzer Modulname ohne „smart_energy_agent."), und
+  die HTTP-Zugriffszeilen (`GET /api/…`) laufen nur noch im Debug-Log — Info und „decision" bleiben
+  knapp und lesbar.
+
 - **Fix: Batterie-Entladung (sonnen) — kein „Laden = 0" mehr mitsenden.** Beim Entladen für
   Peak-Shaving/Ladeunterstützung schrieb SEA zusätzlich den Ladesollwert auf 0. Auf der sonnen setzt
   dieser gepaarte Schreibvorgang die Entladung wieder zurück (ein manueller, reiner Entlade-Sollwert
