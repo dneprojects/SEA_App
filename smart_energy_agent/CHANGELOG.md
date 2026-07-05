@@ -2,6 +2,12 @@
 
 ## 0.8.2
 
+- **Experten-Modus.** Neue Checkbox in den Grundeinstellungen (Allgemein): Erst wenn aktiv, erscheinen
+  die erweiterten Einstellungen (Regler-Parameter, Schreibintervall, Sensor-Angleichung), die
+  „Erweitert"-Bereiche der Geräte (inkl. **Batterie-Zyklenkosten**, dorthin verschoben) und die
+  eigenen Regeln. Für alle anderen bleibt die Oberfläche schlank.
+- **Spar-Analyse umgezogen auf die Einsparung-Seite** (statt Strategien) und die Varianten verwenden
+  jetzt den **konfigurierten Batterie-Namen** (z. B. „Sonnen-Batterie vor ELWA 2").
 - **Advisor Stufe 3: Spar-Analyse auf der Strategien-Seite.** Neues Panel „Spar-Analyse": spielt die
   letzten 1/3/7 Tage aus der eigenen Aufzeichnung mit alternativen Einstellungen durch (beide
   Prio-Reihenfolgen Batterie/Last × Lade-Vorrang 0/30 %) und zeigt die Kosten je Variante in € mit
