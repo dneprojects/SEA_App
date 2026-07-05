@@ -2,6 +2,10 @@
 
 ## 0.8.2
 
+- **Verlaufsplots zeigen echte Stufen statt falscher Rampen.** HA zeichnet nur Wert-Änderungen auf —
+  startete z. B. der Heizstab nach einer langen 0-Phase, malte der Plot eine stundenlange „Rampe" von 0
+  zum neuen Wert. Jetzt wird der gehaltene Wert unmittelbar vor jeder Änderung eingefügt (bei Lücken
+  > 60 s), sodass der Verlauf die tatsächliche Sprungform zeigt.
 - **Fix: Batterie-Laden konvergiert wieder (kein Rest-Export, kein Kampf mit dem Heizstab).** Die
   Prioritäts-Umverteilung aus beta.13 hatte der Batterie den Regel-Integrator genommen: sie bekam pro
   Takt nur den PI-Bruchteil des Überschusses, ihr Ladewert summierte sich nie auf — Rest-Export ging
