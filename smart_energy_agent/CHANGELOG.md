@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.8.3
+
+- **Sankey-Ansicht auf dem Dashboard.** Umschalter oben rechts im Energiefluss: „Fluss" (Netz-Ansicht)
+  oder „Sankey" — ein Fluss-Diagramm im Stil der HA-Energieansicht, aber mit den **aktuellen
+  Leistungen** (Quellen → Haus → Verbraucher/Batterie/Einspeisung, Bandbreite ∝ Watt). Auf dem
+  Handy gedreht (von oben nach unten) mit Legende.
+- **Energiefluss aufgehübscht.** Kugeln mit radialem Farbverlauf, ohne Umrandung, leicht schwebend
+  mit Schatten; größere Schrift und mehr Abstand (keine Überlappungen mehr). Beim Ausklappen wächst
+  die Box jetzt nach unten — das Diagramm bleibt auf dem Handy lesbar statt zu schrumpfen.
+- **Pinch-Zoom im Verlauf.** Auf dem Handy zoomt eine Zwei-Finger-Geste die Zeitachse aller
+  Verlaufs-Diagramme (horizontal aufziehen = hineinzoomen), mit Live-Vorschau während der Geste.
+
 ## 0.8.2
 
 - **Habitron-Bindung.** Der Smart Energy Agent ist Teil des Habitron-Systems: Ohne erkannte
