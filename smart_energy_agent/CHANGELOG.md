@@ -2,6 +2,15 @@
 
 ## 0.8.2
 
+- **Fix: Volle Batterie gibt den Überschuss frei.** Stand die (volle) Batterie oben in der Priorität,
+  bekam sie weiter Überschuss zugeteilt, den sie nicht aufnehmen kann — niedriger priorisierte
+  Verbraucher (Heizstab) gingen leer aus und die Energie ging als Export verloren. Eine Batterie am
+  SoC-Limit gilt jetzt als gesättigt; der Überschuss fließt an die nächste Last. (Gefunden durch die
+  24-h-Vorschau des Advisors, abgesichert als Simulations-Szenario.)
+- **Spar-Analyse erklärt sich.** Über der Tabelle stehen jetzt die Eckdaten des Zeitraums (PV,
+  Grundlast, Überschuss in kWh, Start-SoC) — und wenn alle Varianten praktisch gleich abschneiden,
+  sagt ein Fazit **warum** (z. B. „Batterie zu Beginn schon voll — es gibt nichts zu verteilen"),
+  statt sechs identische Zahlen unkommentiert zu zeigen.
 - **Advisor Stufe 4: 24-h-Vorschau (Prognose-Modus).** Die Spar-Analyse kann jetzt neben dem Rückblick
   auch die **nächsten 24 Stunden** durchspielen: PV-Ertragsprognose (Forecast.Solar oder konfigurierte
   Entität) + **gelerntes Lastprofil** aus der eigenen Aufzeichnung (recency-gewichtetes
