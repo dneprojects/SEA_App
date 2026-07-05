@@ -2,6 +2,16 @@
 
 ## 0.8.2
 
+- **Fix: Batterie-Laden konvergiert wieder (kein Rest-Export, kein Kampf mit dem Heizstab).** Die
+  Prioritäts-Umverteilung aus beta.13 hatte der Batterie den Regel-Integrator genommen: sie bekam pro
+  Takt nur den PI-Bruchteil des Überschusses, ihr Ladewert summierte sich nie auf — Rest-Export ging
+  dauerhaft ins Netz (beobachtet: ~600 W Export bei 13 % SoC), und Batterie und Heizstab „kämpften" in
+  Schüben. Jetzt: Basis der Zuteilung ist wieder die **gemessene** Ladeleistung (Integrator), und der
+  Vorrang eines höher priorisierten Verbrauchers wirkt als **ratenbegrenzter Transfer** (Ki-Anteil pro
+  Takt) — die Leistung wandert sanft vom Speicher zum Verbraucher, ohne Netzbezug; ein gesättigter
+  Verbraucher lässt den Rest der Batterie. Zudem regelt die Batterie jetzt auf ihre gemessene Leistung
+  statt auf den (ggf. „unknown"-) Sollwert-Zustand — kein Aufziehen der Regelung, wenn ein Schreibbefehl
+  verloren geht.
 - **Einstellung „PV-Überschuss-Vorrang" entfällt — die Prioritäten-Liste entscheidet.** Steht die
   (regelbare) Batterie oben, lädt sie zuerst; Verbraucher mit höherer Priorität bekommen den Überschuss
   vor ihr und können ihr bereits laufende Ladeleistung innerhalb eines Takts wieder abnehmen (das ging
