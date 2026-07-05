@@ -2,6 +2,16 @@
 
 ## 0.8.2
 
+- **Advisor Stufe 2: Sofort-Hinweise auf dem Dashboard.** SEA prüft die Konfiguration laufend auf
+  bekannte Stolperfallen und zeigt sie als Hinweis-Karte: Sollwert-Entität liefert „unknown"
+  (Template-Rücklesung defekt), „regelbar bis" über dem Geräte-Maximum (Phantom-Spielraum),
+  fehlender Entladesollwert bei aktiven Entlade-Strategien, wiederholt fehlschlagende Schreibbefehle
+  (Timeout/401). Keine Hinweise = keine Karte.
+- **Kostenmodell nutzt die eigenen Einstellungen.** Bezugspreis aus dem konfigurierten Tarif
+  (statisch/HT-NT/dynamisch), Einspeisevergütung aus den Tarif-Einstellungen. Neu in den
+  Grundeinstellungen: **Batterie-Zyklenkosten (ct/kWh)** — der Planer zyklisiert nie für
+  Cent-Bruchteile. Der **COP/JAZ ist je Wärmepumpe** einstellbar (Geräte-Strategien) und bewertet,
+  ob Überschuss besser in Heizstab-Wärme oder Batterie/WP fließt — im Winter entscheidend.
 - **Advisor-Grundlage (Stufe 1): Kostenfunktion + Einstellungs-Vergleich auf echten Tagen.** Neues
   Modul bewertet Simulationsläufe in **Euro** (Import/Einspeisung, **Zyklenkosten** der Batterie
   gegen unnötiges Zyklisieren, Restwert gespeicherter Energie, Wärme-Gutschrift für den Heizstab,
