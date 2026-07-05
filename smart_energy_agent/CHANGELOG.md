@@ -2,6 +2,15 @@
 
 ## 0.8.2
 
+- **Advisor Stufe 3: Spar-Analyse auf der Strategien-Seite.** Neues Panel „Spar-Analyse": spielt die
+  letzten 1/3/7 Tage aus der eigenen Aufzeichnung mit alternativen Einstellungen durch (beide
+  Prio-Reihenfolgen Batterie/Last × Lade-Vorrang 0/30 %) und zeigt die Kosten je Variante in € mit
+  Differenz zur aktuellen Einstellung — gerechnet mit den eigenen Tarifen, den Batterie-Zyklenkosten
+  und dem Wärmepumpen-COP. Die Analyse läuft im Hintergrund (1–2 min); die tatsächlich gezogene
+  Leistung der regelbaren Last wird aus der HA-History herausgerechnet, damit die Simulation sie neu
+  planen kann.
+- **Zyklenkosten jetzt je Batterie** (Geräte-Strategien, neben Kapazität) statt in den
+  Grundeinstellungen — wie der COP eine Geräteeigenschaft.
 - **Advisor Stufe 2: Sofort-Hinweise auf dem Dashboard.** SEA prüft die Konfiguration laufend auf
   bekannte Stolperfallen und zeigt sie als Hinweis-Karte: Sollwert-Entität liefert „unknown"
   (Template-Rücklesung defekt), „regelbar bis" über dem Geräte-Maximum (Phantom-Spielraum),
