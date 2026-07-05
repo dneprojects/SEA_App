@@ -2,6 +2,11 @@
 
 ## 0.8.2
 
+- **Advisor Stufe 4: 24-h-Vorschau (Prognose-Modus).** Die Spar-Analyse kann jetzt neben dem Rückblick
+  auch die **nächsten 24 Stunden** durchspielen: PV-Ertragsprognose (Forecast.Solar oder konfigurierte
+  Entität) + **gelerntes Lastprofil** aus der eigenen Aufzeichnung (recency-gewichtetes
+  Stunden-Profil, die regelbare Last herausgerechnet), Start beim aktuellen Batterie-SoC. Gleiche
+  Varianten, gleiche €-Bewertung — ohne PV-Prognose verweigert die Vorschau, statt zu raten.
 - **Experten-Modus.** Neue Checkbox in den Grundeinstellungen (Allgemein): Erst wenn aktiv, erscheinen
   die erweiterten Einstellungen (Regler-Parameter, Schreibintervall, Sensor-Angleichung), die
   „Erweitert"-Bereiche der Geräte (inkl. **Batterie-Zyklenkosten**, dorthin verschoben) und die
