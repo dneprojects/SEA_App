@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **Feinschliff nach Feedback:** kräftigere Kugel-Farben im Flussdiagramm; das Sankey zeigt die
+  Einzelverbraucher ausklappbarer Gruppen in derselben Farbe wie die Fluss-Ansicht; Diagramm nach
+  links gerückt und rechte Beschriftungen nicht mehr abgeschnitten.
 - **Sankey-Ansicht auf dem Dashboard.** Umschalter oben rechts im Energiefluss: „Fluss" (Netz-Ansicht)
   oder „Sankey" — ein Fluss-Diagramm im Stil der HA-Energieansicht, aber mit den **aktuellen
   Leistungen** (Quellen → Haus → Verbraucher/Batterie/Einspeisung, Bandbreite ∝ Watt). Auf dem
