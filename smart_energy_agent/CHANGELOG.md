@@ -2,6 +2,12 @@
 
 ## 0.8.2
 
+- **Einstellung „PV-Überschuss-Vorrang" entfällt — die Prioritäten-Liste entscheidet.** Steht die
+  (regelbare) Batterie oben, lädt sie zuerst; Verbraucher mit höherer Priorität bekommen den Überschuss
+  vor ihr und können ihr bereits laufende Ladeleistung innerhalb eines Takts wieder abnehmen (das ging
+  vorher gar nicht). „Lade-Vorrang bis SoC" bleibt: darunter lädt die Batterie immer zuerst, unabhängig
+  von der Liste. Eine Batterie **ohne** Ladesollwert wird konservativ behandelt (Batterie zuerst — ihre
+  eigene Regelung verwaltet sie; Verbraucher bekommen nur echten Export-Überschuss).
 - **Fix: Batterie lädt wieder aus PV-Überschuss (auch bei laufender Wallbox-Session).** Die
   Ladeunterstützung hält die Batterie während einer EV-Session mit einem Entladebefehl von **0 W** in
   Ruhe — dieser 0-Befehl schloss die Batterie fälschlich komplett aus der Überschuss-Verteilung aus,
