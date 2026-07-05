@@ -2,6 +2,13 @@
 
 ## 0.8.2
 
+- **Qualitätssicherung: Closed-Loop-Simulations-Harness.** Der komplette Regelkreis (echte Engine gegen
+  ein Anlagenmodell mit den realen sonnen-Eigenheiten: hält Sollwerte, Lade-Write löscht Entladung,
+  ignoriert Mini-Sollwerte, Write-Timeouts) läuft jetzt in 9 Szenario-Tests über hunderte Zyklen und
+  prüft Invarianten (kein anhaltender Netzbezug, Rest-Export konvergiert, Prio-Reihenfolge im
+  Dauerzustand, festgeklemmte Entladung wird geheilt — auch nachts). Verifiziert: die zwei teuersten
+  Fehler der letzten Tage (leergesaugte Batterie, nicht-konvergierendes Laden) wären damit vor dem
+  Release aufgefallen; künftige Regler-Änderungen müssen diese Szenarien bestehen.
 - **Fix: Prioritäts-Umverteilung wirkt jetzt in beide Richtungen (Batterie bekommt gehaltene
   Verbraucher-Leistung zurück).** Hatte sich ein niedriger priorisierter Verbraucher (ELWA) in einer
   Export-Spitze Leistung gegriffen, behielt er sie dauerhaft — ein positives Überschuss-Signal wirft
