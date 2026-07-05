@@ -2,6 +2,19 @@
 
 ## 0.8.2
 
+- **Fix: Batterie lädt wieder aus PV-Überschuss (auch bei laufender Wallbox-Session).** Die
+  Ladeunterstützung hält die Batterie während einer EV-Session mit einem Entladebefehl von **0 W** in
+  Ruhe — dieser 0-Befehl schloss die Batterie fälschlich komplett aus der Überschuss-Verteilung aus,
+  sodass sie **nie** einen Ladebefehl bekam, solange „Wallbox laden" aktiv war. Jetzt blockiert nur
+  noch eine **aktive** Entladung (> 0 W) das Überschuss-Laden.
+- **Batterie-Ansteuerung grundüberholt: eine Richtung pro Zyklus.** Neue zentrale Regel: Lade- und
+  Entladesollwert einer Batterie schließen sich aus. Ist eine Seite aktiv (> 0), wird die Gegenseite in
+  diesem Zyklus **gar nicht** geschrieben (auch keine 0) — auf der sonnen hebt jeder Schreibzugriff auf
+  den Gegen-Sollwert das aktive Kommando auf. Sind beide Seiten 0, bleiben beide 0-Halte-Writes aktiv
+  (Batterie wird bewusst in Ruhe gehalten).
+- **Schreibintervall jetzt auf ALLEN Batterie-Befehlen.** Einspeiselimit, Notstromreserve,
+  Batteriepflege und Optimierer schrieben bisher am Batterie-Schreibintervall vorbei (bei sich
+  änderndem Wert jeden Takt). Alle Batterie-Sollwerte respektieren jetzt einheitlich das Intervall.
 - **Entitäts-Auswahl liest frisch ein.** Beim Öffnen des Entitäts-Pickers (Stift-Button) zieht SEA
   jetzt die HA-Entitätsliste live neu — ein frisch angelegter Helfer (z. B. `input_number` /
   Template-Number) ist damit **sofort auswählbar**, ohne SEA erst neu verbinden/neustarten zu müssen.
