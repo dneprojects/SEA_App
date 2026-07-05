@@ -2,6 +2,14 @@
 
 ## 0.8.2
 
+- **Fix: Prioritäts-Umverteilung wirkt jetzt in beide Richtungen (Batterie bekommt gehaltene
+  Verbraucher-Leistung zurück).** Hatte sich ein niedriger priorisierter Verbraucher (ELWA) in einer
+  Export-Spitze Leistung gegriffen, behielt er sie dauerhaft — ein positives Überschuss-Signal wirft
+  nie ab, und der Rück-Transfer zur höher priorisierten Batterie fehlte (die bekam nur den kleinen
+  Rest-Export; beobachtet: ELWA hält 1–3 kW, Batterie bei 46 % SoC leer aus). Jetzt stellt jeder
+  Teilnehmer, über dem jemand in der Prio-Liste steht, pro Takt den Ki-Anteil seiner Leistung zur
+  Umverteilung: Höher priorisierte nehmen ihn (sanfte Wanderung ohne Netzbezug), sonst behält er ihn
+  unverändert.
 - **Verlaufsplots zeigen echte Stufen statt falscher Rampen.** HA zeichnet nur Wert-Änderungen auf —
   startete z. B. der Heizstab nach einer langen 0-Phase, malte der Plot eine stundenlange „Rampe" von 0
   zum neuen Wert. Jetzt wird der gehaltene Wert unmittelbar vor jeder Änderung eingefügt (bei Lücken
