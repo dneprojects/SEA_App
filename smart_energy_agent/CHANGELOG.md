@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **Feinschliff II:** Beim Ausklappen auf dem Handy wird nur noch der tatsächlich benötigte Platz
+  eingefügt (vorher großer Leerraum unter jeder ausgeklappten Gruppe); Kugel-Farbverlauf jetzt mit
+  hellerer Mitte und deutlich satterem Rand.
 - **Feinschliff nach Feedback:** kräftigere Kugel-Farben im Flussdiagramm; das Sankey zeigt die
   Einzelverbraucher ausklappbarer Gruppen in derselben Farbe wie die Fluss-Ansicht; Diagramm nach
   links gerückt und rechte Beschriftungen nicht mehr abgeschnitten.
