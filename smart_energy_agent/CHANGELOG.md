@@ -2,6 +2,15 @@
 
 ## 0.8.2
 
+- **Geräte-Einstellungen neu sortiert: „Zeiten & Grenzen" vs. „Experten-Einstellungen".** Startzeiten,
+  Laufzeiten, Auszeiten, spätester Start, Unterbrechbarkeit, Mindestleistung und Mindestmenge/Tag sind
+  KEINE Experten-Einstellungen mehr — sie stehen im für alle sichtbaren Panel „Zeiten & Grenzen".
+  Experten-Einstellungen (nur im Experten-Modus) sind jetzt ausschließlich Dinge, die ein
+  Normalverbraucher nicht verstellen sollte: W/Einheit, Stufen-Verdrahtung, SG-Ready-Relais,
+  Batterie-Zyklenkosten — plus Regler-Parameter, Schreibintervall, Sensor-Angleichung und Regeln.
+- **Experten-Modus admin-verriegelt.** Die Experten-Checkbox erscheint nur noch, wenn die neue
+  App-Option „expert" gesetzt ist — App-Optionen kann in Home Assistant nur ein Administrator ändern.
+  Ohne Freischaltung wird der Modus auch serverseitig abgewiesen.
 - **Fix: Volle Batterie gibt den Überschuss frei.** Stand die (volle) Batterie oben in der Priorität,
   bekam sie weiter Überschuss zugeteilt, den sie nicht aufnehmen kann — niedriger priorisierte
   Verbraucher (Heizstab) gingen leer aus und die Energie ging als Export verloren. Eine Batterie am

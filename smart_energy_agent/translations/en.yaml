@@ -8,3 +8,6 @@ configuration:
   history_retention_days:
     name: History retention (days)
     description: How long raw history is kept before being purged.
+  expert:
+    name: Expert mode available
+    description: Allows enabling the in-app expert settings (controller gains, write interval, device wiring, custom rules). Admin-only, since add-on options require an HA admin.
