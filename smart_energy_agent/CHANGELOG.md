@@ -2,6 +2,10 @@
 
 ## 0.8.2
 
+- **Habitron-Bindung.** Der Smart Energy Agent ist Teil des Habitron-Systems: Ohne erkannte
+  Habitron-Integration in Home Assistant zeigt die App eine Sperrseite und die Steuerung bleibt
+  deaktiviert (harte Verriegelung; in der Entwicklungsumgebung und während des Starts offen).
+  Proprietäre LICENSE-Datei ergänzt (alle Rechte vorbehalten, Nutzung nur für Habitron-Kunden).
 - **Geräte-Einstellungen neu sortiert: „Zeiten & Grenzen" vs. „Experten-Einstellungen".** Startzeiten,
   Laufzeiten, Auszeiten, spätester Start, Unterbrechbarkeit, Mindestleistung und Mindestmenge/Tag sind
   KEINE Experten-Einstellungen mehr — sie stehen im für alle sichtbaren Panel „Zeiten & Grenzen".
