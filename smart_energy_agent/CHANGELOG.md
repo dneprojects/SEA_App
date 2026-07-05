@@ -2,6 +2,12 @@
 
 ## 0.8.2
 
+- **Advisor-Grundlage (Stufe 1): Kostenfunktion + Einstellungs-Vergleich auf echten Tagen.** Neues
+  Modul bewertet Simulationsläufe in **Euro** (Import/Einspeisung, **Zyklenkosten** der Batterie
+  gegen unnötiges Zyklisieren, Restwert gespeicherter Energie, Wärme-Gutschrift für den Heizstab,
+  dynamische Preise) und vergleicht Einstellungs-Varianten (Prioritäten, Lade-Vorrang, …) per Replay
+  aufgezeichneter Tage — inkl. Batterien-Wirkungsgrad (88 % Round-Trip) im Anlagenmodell. Noch ohne
+  UI; Basis für das kommende Empfehlungs-Panel und den späteren opt-in Auto-Modus.
 - **Qualitätssicherung: Closed-Loop-Simulations-Harness.** Der komplette Regelkreis (echte Engine gegen
   ein Anlagenmodell mit den realen sonnen-Eigenheiten: hält Sollwerte, Lade-Write löscht Entladung,
   ignoriert Mini-Sollwerte, Write-Timeouts) läuft jetzt in 9 Szenario-Tests über hunderte Zyklen und
