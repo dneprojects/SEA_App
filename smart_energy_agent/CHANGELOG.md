@@ -2,6 +2,15 @@
 
 ## 0.8.3
 
+- **Strategien orthogonal aufgeräumt.** Neue Ziel-Strategie „Batterie deckt Netzbezug": SEA
+  entlädt die Batterie zur Deckung des Hausverbrauchs — nötig für Wechselrichter im manuellen
+  Modus (z. B. sonnen unter SEA-Steuerung), je Batterie zuschaltbar. Peak-Shaving und
+  Einspeise-Limit sind zu EINER Karte „Netzanschluss-Grenzen (Pflichten)" zusammengefasst;
+  Notstrom-Reserve und Pflege-Vollladung wohnen jetzt als Parameter an der Batterie-Karte.
+- **Ein gemeinsames Entlade-Budget.** Die Batterie-Unterstützung je Verbraucher ist nur noch ein
+  Häkchen (statt lokaler Watt-Werte): das Budget wird zentral in der Reihenfolge der
+  Prioritätenliste verteilt — eine höher priorisierte Wallbox darf das volle Budget beanspruchen,
+  um zu starten; doppelt gezählt wird nie. Haus-Grundlast wird physisch immer zuerst gedeckt.
 - **Zahnrad-Buttons springen zum aufgeklappten Gerät.** Alle ⚙-Buttons öffnen jetzt auf der
   Komponenten-Seite auch die Kategorie-Karte, klappen das Gerät auf und scrollen dorthin.
 - **Anhebungs-Häkchen synchron.** Das Enable der Anhebungs-Strategie und das Häkchen der
