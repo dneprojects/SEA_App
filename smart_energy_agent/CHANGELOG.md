@@ -2,6 +2,12 @@
 
 ## 0.8.3
 
+- **Fix: Batterie fährt jetzt auch bei kleinem Überschuss an (Anfahr-Sprung).** Wechselrichter wie die
+  sonnen ignorieren Ladesollwerte unter ihrer Mindestleistung (~650 W). Der gedämpfte Regler-Schritt
+  (20 % des Überschusses) blieb darunter — die Batterie kam nie ins Laden, der Heizstab bekam alles.
+  Ist an der Batterie die **min. Leistung** gesetzt und der echte Rest-Überschuss deckt sie, startet
+  SEA jetzt direkt mit der Mindestleistung (ohne Netzbezug) und regelt dann normal weiter. Neuer
+  Dashboard-Hinweis, wenn eine regelbare Batterie ohne Mindestleistung konfiguriert ist.
 - **Strategie-Einstellungen bei den Strategien.** „Lade-Vorrang bis SoC" steht jetzt in der
   PV-Überschuss-Karte, die Peak-Shaving-**Zeitfenster** direkt in der Peak-Shaving-Karte (Strategien-
   Seite) — die Grundeinstellungen enthalten keine Strategie-Parameter mehr. Die frühere Karte
