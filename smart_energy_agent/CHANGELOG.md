@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **Börsen-Vergleichstarif: Aufschlag jetzt NETTO.** Klarere Standard-Darstellung:
+  Effektivpreis = (Börsenpreis + **Aufschlag netto**) × (1 + MwSt) — die MwSt wird auf die Summe
+  gerechnet, wie bei realen dynamischen Tarifen (Default: 14,5 ct netto, 19 %).
 - **Börsen-Vergleichstarif.** Die Spar-Analyse kann jetzt mit einem realistischen dynamischen Tarif
   rechnen, auch ohne eigenen dynamischen Vertrag: **EPEX-Börsenpreis** (öffentliche
   aWATTar-Marktdaten, auch historisch) **× MwSt + Aufschlag** (Netzentgelte/Abgaben/Anbieter —
