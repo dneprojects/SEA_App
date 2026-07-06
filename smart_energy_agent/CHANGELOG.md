@@ -2,11 +2,6 @@
 
 ## 0.8.3
 
-- **Überschuss-Senke: Bewertung folgt dem Senkentyp.** Die Baseline bewertet aufgenommene Energie
-  jetzt konsistent mit dem Kostenmodell der Spar-Analyse: Auto = ersetzt Netzbezug 1:1
-  (Bezugspreis − Einspeisung), Heizstab = ersetzt Wärmepumpen-Wärme (Bezugspreis ÷ COP −
-  Einspeisung, kann negativ sein). Der Senkentyp-Schalter setzt Leistung und Bewertung; die
-  Info-Tabelle zeigt die angewandte Bewertung.
 - **Einsparung: Baseline „Dynamischer Tarif" rechnet mit echten Börsenpreisen.** Statt des
   synthetischen Drei-Block-Tarifs verwendet die Baseline jetzt die echten EPEX-Stundenpreise des
   Zeitraums (effektiv, wie im Börsen-Vergleichstarif konfiguriert); „günstig" fürs Netzladen ist das
