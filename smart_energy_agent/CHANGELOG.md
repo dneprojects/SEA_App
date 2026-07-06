@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Wärmepumpen-Karte entrümpelt.** Die Steuerung-Radios (schalten/Sollwert) erscheinen nur noch
+  im Expertenmodus, solange keine Steuerung konfiguriert ist — für Anhebung und SG-Ready sind sie
+  nicht nötig. Das Anhebungs-Feld gibt es nur bei Heizkreisen mit Sollwert-Entität (leer/0 = aus,
+  das Feld ist der Enable); die Anhebungs-Parameter der Wärmepumpe erscheinen erst, wenn
+  mindestens ein Heizkreis eine Sollwert-Entität hat.
 - **Solltemperatur-Anhebung bei PV-Überschuss (Wärmepumpe).** Das Software-Gegenstück zu SG-Ready,
   für jede Wärmepumpe mit stellbaren Heizkreis-Zieltemperaturen (climate/water_heater/number):
   je Heizkreis eine Anhebung in K (Warmwasser z. B. +10 K, Heizkreis +2 K), je Wärmepumpe
