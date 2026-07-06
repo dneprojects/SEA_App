@@ -2,6 +2,8 @@
 
 ## 0.8.3
 
+- **Zahnrad-Buttons springen zum aufgeklappten Gerät.** Alle ⚙-Buttons öffnen jetzt auf der
+  Komponenten-Seite auch die Kategorie-Karte, klappen das Gerät auf und scrollen dorthin.
 - **Anhebungs-Häkchen synchron.** Das Enable der Anhebungs-Strategie und das Häkchen der
   Wärmepumpe in der Prioritätenliste spiegeln sich jetzt gegenseitig — zwei Häkchen, eine
   Bedeutung, kein Widerspruchszustand mehr.
