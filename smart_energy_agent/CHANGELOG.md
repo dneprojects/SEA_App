@@ -2,6 +2,13 @@
 
 ## 0.8.3
 
+- **Wärmepumpen-Anhebung jetzt mit echter Priorität.** Die WP steht in der Prioritätenliste
+  (auch ohne Steuer-Entität): Für den Start zählt der verfügbare Überschuss = Rest-Export plus
+  die Leistung tiefer priorisierter Verbraucher (z. B. Heizstab) — die weichen automatisch,
+  sobald der Verdichter anläuft. Teilnehmer oberhalb (z. B. Batterie) behalten ihre Leistung.
+- **Strategien-Seite aufgeräumt.** Karten auf max. 2 Zeilen gekürzt (Details im ⓘ), WP-Strategie
+  direkt nach dem Eigenverbrauch einsortiert, Zähler kompakt, Zahnrad-Button auch bei der
+  Absenkung; Baselines kurz benannt (u. a. „PV-Volleinspeisung") für schmale Displays.
 - **Anhebungs-Strategie: Anzeige & Bedienung.** Die Karte zeigt „operativ", solange eine
   Anhebung/Absenkung tatsächlich aktiv ist (nicht nur im Schreibmoment), listet die Wärmepumpen
   mit dem üblichen ⚙-Button zu den Geräte-Einstellungen (statt Text-Button) und erklärt die
