@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **Heizkreis-Sollwert akzeptiert water_heater-Entitäten.** Home Assistant bildet
+  Warmwasserkreise (z. B. Vaillant) als eigene Domain `water_heater` ab — die Sollwert-Auswahl der
+  Heizkreise bot bisher nur `climate`/`number` an.
 - **COP-Eingabe an der Wärmepumpen-Komponente.** Das Feld „COP / JAZ (Warmwasser)" steht jetzt auf
   der Komponenten-Karte der Wärmepumpe (Einrichtung) — damit funktioniert es auch für eine rein
   gemessene, nicht steuerbare Wärmepumpe, die in der Strategien-Geräteliste gar nicht auftaucht.
