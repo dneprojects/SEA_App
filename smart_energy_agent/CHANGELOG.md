@@ -2,6 +2,15 @@
 
 ## 0.8.3
 
+- **Börsen-Vergleichstarif.** Die Spar-Analyse kann jetzt mit einem realistischen dynamischen Tarif
+  rechnen, auch ohne eigenen dynamischen Vertrag: **EPEX-Börsenpreis** (öffentliche
+  aWATTar-Marktdaten, auch historisch) **× MwSt + Aufschlag** (Netzentgelte/Abgaben/Anbieter —
+  konfigurierbar unter Tarife im Experten-Modus, Default 19 % / 17 ct). Preisbasis-Auswahl im
+  Analyse-Panel („Meine Tarife" / „Börsenpreis + Aufschlag"); Wärme- und Restwert folgen dem
+  Börsen-Mittel des Zeitraums. Ohne erreichbare Börsendaten verweigert die Rechnung, statt zu raten.
+- **Preis-Chart im Verlauf.** Neues Diagramm „Strompreis (ct/kWh)" unter den Strategien: der eigene
+  (aufgezeichnete) Tarifpreis und der Börsen-Vergleichstarif im selben Zeitfenster — inklusive der
+  bereits veröffentlichten Day-Ahead-Stunden von morgen. Zoombar wie die anderen Charts.
 - **Fix II: Anfahr-Sprung holt auch belegte Leistung zurück.** Hielt ein niedriger priorisierter
   Verbraucher (Heizstab) den Überschuss bereits, blieb der freie Export unter der
   Batterie-Mindestleistung und der Sprung zündete nie — obwohl die Leistung der Batterie zusteht.
