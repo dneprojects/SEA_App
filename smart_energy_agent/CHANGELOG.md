@@ -2,6 +2,16 @@
 
 ## 0.8.3
 
+- **Solltemperatur-Anhebung bei PV-Überschuss (Wärmepumpe).** Das Software-Gegenstück zu SG-Ready,
+  für jede Wärmepumpe mit stellbaren Heizkreis-Zieltemperaturen (climate/water_heater/number):
+  je Heizkreis eine Anhebung in K (Warmwasser z. B. +10 K, Heizkreis +2 K), je Wärmepumpe
+  Überschuss-Schwelle, Mindesthaltezeit und max. Anhebungen/Tag — konfiguriert an der
+  Komponenten-Karte, funktioniert auch ohne Steuer-Entität. Rückstellung garantiert (Zustand
+  wird persistiert, auch über Neustarts), manuelle Sollwert-Änderungen gewinnen, geschrieben
+  wird nur bei Übergängen (schonend für Cloud-APIs wie myVAILLANT).
+- **Schalt-Verbraucher können „selbstbeendend" sein.** Für Hersteller-Boosts (z. B. Vaillant
+  Warmwasser-Boost, Quick Veto): SEA schaltet nur ein, das Gerät beendet den Lauf selbst —
+  SEA sendet nie Aus.
 - **Heizkreis-Solltemperaturen in Verlauf & Export.** Die Zieltemperatur von climate-/water_heater-
   Entitäten steckt in den Attributen (der Zustand ist nur ein Modus) — Verlaufs-Plots und CSV-Export
   lesen sie jetzt aus und zeigen die Soll-Kurven der Heizkreise statt leerer Spalten.
