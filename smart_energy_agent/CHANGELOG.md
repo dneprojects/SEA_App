@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Einsparung: Baseline „Dynamischer Tarif" rechnet mit echten Börsenpreisen.** Statt des
+  synthetischen Drei-Block-Tarifs verwendet die Baseline jetzt die echten EPEX-Stundenpreise des
+  Zeitraums (effektiv, wie im Börsen-Vergleichstarif konfiguriert); „günstig" fürs Netzladen ist das
+  untere Preis-Quartil des Fensters. Die drei Preisregler bleiben als Fallback, wenn die Börse nicht
+  erreichbar ist — die Info-Tabelle zeigt, welche Preisbasis tatsächlich galt.
 - **Börsen-Vergleichstarif: Aufschlag jetzt NETTO.** Klarere Standard-Darstellung:
   Effektivpreis = (Börsenpreis + **Aufschlag netto**) × (1 + MwSt) — die MwSt wird auf die Summe
   gerechnet, wie bei realen dynamischen Tarifen (Default: 14,5 ct netto, 19 %).
