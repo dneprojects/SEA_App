@@ -2,6 +2,14 @@
 
 ## 0.8.3
 
+- **Hotfix: UI startete in beta.22 nicht** („verbinde…" blieb stehen). Ein Zeilenumbruch war in
+  einen Bestätigungstext des neuen Backup-Dialogs geraten und brach das UI-Skript. Ein neuer
+  automatischer Test prüft das Inline-Skript jetzt auf genau diese Fehlerklasse.
+- **Regelung bleibt bei hängenden Geräten flüssig.** Ein Gerät, dessen Integration nicht antwortet
+  (z. B. sonnen „Timeout on reading data from socket"), bremste den 10-Sekunden-Regeltakt auf
+  ~1 Zyklus/Minute aus. Jetzt: hartes Zeitlimit je Websocket-Befehl (30 s) und je Schreibvorgang
+  im Zyklus (15 s), und nach 3 Fehlversuchen in Folge wird der Aktor 2 Minuten pausiert statt
+  dauerhaft gehämmert — die übrige Regelung (ELWA, Verbraucher) läuft im Takt weiter.
 - **Backup & Wiederherstellung der Einstellungen.** Grundeinstellungen → „Sicherung & Diagnose":
   alle Einstellungen + Komponenten-Konfiguration als lesbare/editierbare JSON-Datei herunterladen
   und wieder einspielen (vorher wird automatisch gesichert). Zusätzlich täglich ein automatisches
