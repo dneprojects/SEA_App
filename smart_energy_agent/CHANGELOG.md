@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Fix II: Anfahr-Sprung holt auch belegte Leistung zurück.** Hielt ein niedriger priorisierter
+  Verbraucher (Heizstab) den Überschuss bereits, blieb der freie Export unter der
+  Batterie-Mindestleistung und der Sprung zündete nie — obwohl die Leistung der Batterie zusteht.
+  Der Sprung zählt jetzt die zurückholbare Leistung niedrigerer Prioritäten mit; die Übergabe
+  passiert im selben Takt ohne Netzbezug. (Replay des Vorfalls: Batterie Ø 845 W statt 0.)
 - **Fix: Batterie fährt jetzt auch bei kleinem Überschuss an (Anfahr-Sprung).** Wechselrichter wie die
   sonnen ignorieren Ladesollwerte unter ihrer Mindestleistung (~650 W). Der gedämpfte Regler-Schritt
   (20 % des Überschusses) blieb darunter — die Batterie kam nie ins Laden, der Heizstab bekam alles.
