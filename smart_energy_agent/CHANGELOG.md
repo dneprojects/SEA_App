@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **Anhebungs-Häkchen synchron.** Das Enable der Anhebungs-Strategie und das Häkchen der
+  Wärmepumpe in der Prioritätenliste spiegeln sich jetzt gegenseitig — zwei Häkchen, eine
+  Bedeutung, kein Widerspruchszustand mehr.
 - **Wärmepumpen-Anhebung jetzt mit echter Priorität.** Die WP steht in der Prioritätenliste
   (auch ohne Steuer-Entität): Für den Start zählt der verfügbare Überschuss = Rest-Export plus
   die Leistung tiefer priorisierter Verbraucher (z. B. Heizstab) — die weichen automatisch,
