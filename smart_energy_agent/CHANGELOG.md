@@ -2,6 +2,17 @@
 
 ## 0.8.3
 
+- **Heizkreis-Absenkung bei Abwesenheit.** Zweiter Arm der Absenkungs-Strategie: je Heizkreis
+  eine Absenkung in K (gleiche Wert+aktiv-Logik wie die Anhebung), gesenkt wird erst nach
+  einstellbarer Abwesenheitsdauer aller Personen (Standard 8 h), Rückkehr stellt sofort zurück.
+  Bei langer Abwesenheit dominiert die Absenkung die Anhebung; Warmwasser ohne Absenkung lädt
+  weiter aus der Sonne.
+- **Zähler für zusätzliche WP-Starts.** Die Anhebungs-Karte zeigt, wie oft SEA die Wärmepumpe
+  aus dem Stillstand gestartet hat (heute/gesamt) — Anhebungen bei laufender Pumpe verlängern
+  nur den Lauf und zählen nicht. So ist der Verschleiß-Effekt belegbar.
+- **Strategien zeigen echte Voraussetzungen.** Peak-Shaving, Einspeise-Limit, Notstrom-Reserve,
+  Batteriepflege und Optimierer sind nur noch „verfügbar", wenn die nötigen Aktoren existieren
+  (steuerbare Batterie, Netzleistung) — vorher erschienen sie auch auf Instanzen ohne PV/Batterie.
 - **Anhebung je Heizkreis pausierbar.** Neben dem Anhebungs-Feld gibt es ein „aktiv"-Häkchen
   (klickbar erst bei Anhebung > 0): die Einstellung bleibt erhalten, wird aber nicht ausgeführt —
   z. B. Heizkreise im Sommer. Wird ein Kreis mitten in einer Anhebung pausiert oder der Hub
