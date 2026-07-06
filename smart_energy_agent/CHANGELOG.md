@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **Heizkreis-Solltemperaturen in Verlauf & Export.** Die Zieltemperatur von climate-/water_heater-
+  Entitäten steckt in den Attributen (der Zustand ist nur ein Modus) — Verlaufs-Plots und CSV-Export
+  lesen sie jetzt aus und zeigen die Soll-Kurven der Heizkreise statt leerer Spalten.
 - **Heizkreis-Sollwert akzeptiert water_heater-Entitäten.** Home Assistant bildet
   Warmwasserkreise (z. B. Vaillant) als eigene Domain `water_heater` ab — die Sollwert-Auswahl der
   Heizkreise bot bisher nur `climate`/`number` an.
