@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Strategie-Einstellungen bei den Strategien.** „Lade-Vorrang bis SoC" steht jetzt in der
+  PV-Überschuss-Karte, die Peak-Shaving-**Zeitfenster** direkt in der Peak-Shaving-Karte (Strategien-
+  Seite) — die Grundeinstellungen enthalten keine Strategie-Parameter mehr. Die frühere Karte
+  „PV-Überschuss & Speicher" heißt jetzt „Regelung" und ist komplett Experten-Modus (Regler-Parameter,
+  Sensor-Angleichung, Schreibintervall).
 - **Feinschliff II:** Beim Ausklappen auf dem Handy wird nur noch der tatsächlich benötigte Platz
   eingefügt (vorher großer Leerraum unter jeder ausgeklappten Gruppe); Kugel-Farbverlauf jetzt mit
   hellerer Mitte und deutlich satterem Rand.
