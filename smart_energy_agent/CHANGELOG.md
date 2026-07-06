@@ -2,6 +2,9 @@
 
 ## 0.8.3
 
+- **UI-Updates greifen sofort.** Die Oberfläche wird mit No-Cache-Header ausgeliefert — nach einem
+  Add-on-Update kann der Browser nicht mehr ein altes UI-Skript mit der neuen API mischen
+  (Geisterkarten/tote Buttons; bisher half nur Strg+F5).
 - **Strategien orthogonal aufgeräumt.** Neue Ziel-Strategie „Batterie deckt Netzbezug": SEA
   entlädt die Batterie zur Deckung des Hausverbrauchs — nötig für Wechselrichter im manuellen
   Modus (z. B. sonnen unter SEA-Steuerung), je Batterie zuschaltbar. Peak-Shaving und
