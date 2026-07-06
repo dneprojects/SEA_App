@@ -2,6 +2,14 @@
 
 ## 0.8.3
 
+- **Backup & Wiederherstellung der Einstellungen.** Grundeinstellungen → „Sicherung & Diagnose":
+  alle Einstellungen + Komponenten-Konfiguration als lesbare/editierbare JSON-Datei herunterladen
+  und wieder einspielen (vorher wird automatisch gesichert). Zusätzlich täglich ein automatisches
+  Backup nach `backups/` (die letzten 14 bleiben). Backups sind versionstolerant: unbekannte Felder
+  werden ignoriert, fehlende mit Standardwerten ergänzt.
+- **Dauerhaftes, herunterladbares Log.** SEA schreibt zusätzlich ein rotierendes Logfile
+  (`logs/sea.log`, überlebt Neustarts und Updates — das Supervisor-Log tat das nicht) und bietet es
+  in „Sicherung & Diagnose" zum Download an. Für Support: Log + Backup + CSV-Export beilegen.
 - **Heizkreis-Absenkung bei Abwesenheit.** Zweiter Arm der Absenkungs-Strategie: je Heizkreis
   eine Absenkung in K (gleiche Wert+aktiv-Logik wie die Anhebung), gesenkt wird erst nach
   einstellbarer Abwesenheitsdauer aller Personen (Standard 8 h), Rückkehr stellt sofort zurück.
