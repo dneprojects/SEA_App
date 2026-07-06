@@ -2,6 +2,15 @@
 
 ## 0.8.3
 
+- **Anhebungs-Strategie: Anzeige & Bedienung.** Die Karte zeigt „operativ", solange eine
+  Anhebung/Absenkung tatsächlich aktiv ist (nicht nur im Schreibmoment), listet die Wärmepumpen
+  mit dem üblichen ⚙-Button zu den Geräte-Einstellungen (statt Text-Button) und erklärt die
+  Schwellen-Logik: Sie misst den Rest-Überschuss nach den anderen Verbrauchern; läuft die WP,
+  weicht der Heizstab automatisch zurück.
+- **Spar-Analyse flutet das Log nicht mehr.** Die interne Simulation (echte Regel-Engine gegen
+  ein Modell) schrieb ihre simulierten Entscheidungen ins echte Entscheidungs-Log — sie sah aus
+  wie reales Schalten einer Entität „number.hz". Simulations-Läufe loggen jetzt nur noch auf
+  Debug-Ebene; an Home Assistant geschrieben hat die Simulation nie.
 - **Hotfix: UI startete in beta.22 nicht** („verbinde…" blieb stehen). Ein Zeilenumbruch war in
   einen Bestätigungstext des neuen Backup-Dialogs geraten und brach das UI-Skript. Ein neuer
   automatischer Test prüft das Inline-Skript jetzt auf genau diese Fehlerklasse.
