@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Anhebung je Heizkreis pausierbar.** Neben dem Anhebungs-Feld gibt es ein „aktiv"-Häkchen
+  (klickbar erst bei Anhebung > 0): die Einstellung bleibt erhalten, wird aber nicht ausgeführt —
+  z. B. Heizkreise im Sommer. Wird ein Kreis mitten in einer Anhebung pausiert oder der Hub
+  gelöscht, stellt SEA den Sollwert trotzdem zuverlässig zurück (kommandierter Boost-Wert wird
+  jetzt mit-persistiert).
 - **Wärmepumpen-Karte entrümpelt.** Die Steuerung-Radios (schalten/Sollwert) erscheinen nur noch
   im Expertenmodus, solange keine Steuerung konfiguriert ist — für Anhebung und SG-Ready sind sie
   nicht nötig. Das Anhebungs-Feld gibt es nur bei Heizkreisen mit Sollwert-Entität (leer/0 = aus,
