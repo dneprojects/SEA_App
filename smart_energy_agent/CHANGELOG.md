@@ -2,6 +2,8 @@
 
 ## 0.8.4
 
+- **„Batterie deckt Netzbezug" läuft unabhängig vom PV-Überschuss-Schalter.** Die Batterie-Entladung zur Netzbezug-Deckung (und die Netzanschluss-Grenze) war fälschlich an den Hauptschalter „PV-Überschuss: Eigenverbrauch und Speicherung" gekoppelt. Wer PV-Überschuss abschaltete, legte damit unbeabsichtigt auch die Batterie-Deckung still — der Speicher stand still und das Haus bezog alles aus dem Netz, obwohl „Batterie deckt Netzbezug" aktiv war. Beide Strategien folgen jetzt ihrem eigenen Schalter; nur die batterie­gestützten Schaltlasten bleiben an den PV-Überschuss gebunden.
+
 - **Netzbezug-Deckung gedämpft (kein Pendeln nachts).** Die Entladeleistung folgt dem Netzbezug jetzt über eine gedämpfte Regelung statt in einem Sprung auf den vollen Bezug. Ein zu großer Sprung konnte unter zeitversetzten Messwerten kurz überschießen, scheinbar einspeisen und die Überschuss-Regelung dagegen laden lassen — ein Lade-/Entlade-Pendeln. Die Dämpfung konvergiert ohne Überschwingen.
 
 - **Version im Log beim Start.** Beim Add-on-Start wird die laufende Version einmal ins Log geschrieben — so ist im Log direkt ersichtlich, welche Version gerade läuft.
