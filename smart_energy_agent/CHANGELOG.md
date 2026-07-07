@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Wächter gegen davonlaufende Batterie.** Die sonnen hält ihren letzten Sollwert — schlagen
+  die Schreibversuche fehl, entlud sie nach einer Wallbox-Session ungebremst weiter (04.07.:
+  79 % → 0 % in den Netz-Export, die 0-Rückstellung landete nie). SEA vergleicht jetzt laufend
+  gemessenen Batteriefluss mit dem kommandierten Wert; weicht er länger als 2 Minuten deutlich ab,
+  wird der Befehl mit Vorrang erzwungen (umgeht Drosselung und Backoff) und eine Warnung geloggt.
 - **UI-Updates greifen sofort.** Die Oberfläche wird mit No-Cache-Header ausgeliefert — nach einem
   Add-on-Update kann der Browser nicht mehr ein altes UI-Skript mit der neuen API mischen
   (Geisterkarten/tote Buttons; bisher half nur Strg+F5).
