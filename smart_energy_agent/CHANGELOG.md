@@ -2,6 +2,11 @@
 
 ## 0.8.4
 
+- **Sankey-Diagramm korrigiert und aufgefrischt.** Die Beitragsbreiten summieren sich jetzt exakt
+  zur Gesamtbreite (links wie rechts) — die frühere Mindestbreite pro Fluss hatte die Erhaltung
+  gebrochen. Bänder liegen lückenlos aneinander, Farben sind kräftiger (weniger grau), das Haus
+  ist cyan; überlappende Beschriftungen kleiner Flüsse werden entzerrt.
+
 - **Batterie ruht bei aktivem PV-Überschuss.** Die Netzbezugs-Deckung entlädt nicht mehr, während
   die PV das Haus deckt: Ein Totband (200 W) plus eine „PV deckt Haus"-Sperre verhindern, dass eine
   volle Batterie kleine Netz-Schwankungen um Null mit sinnlosem Mikro-Zyklen (und Über-Entladung in
