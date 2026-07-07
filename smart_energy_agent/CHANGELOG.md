@@ -2,6 +2,8 @@
 
 ## 0.8.4
 
+- **Weniger Log-Rauschen.** Die Tagesplan-Diagnosezeilen (kein Plan / Prognose-Slots) stehen jetzt nur noch auf Debug-Ebene; ein tatsächlich geplantes Anhebungs-Fenster wird wie bisher als Entscheidung geloggt.
+
 - **Strategien starten zugeklappt.** Beim ersten Öffnen sind alle Strategie-Karten eingeklappt.
 
 - **Hotfix: UI startete nicht.** Die neue gemeinsame Haus-Farbkonstante wurde nach der Serie
