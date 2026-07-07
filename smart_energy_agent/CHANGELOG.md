@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Fix: Netzbezugs-Deckung kämpft nicht mehr gegen das Überschuss-Laden.** Bei PV-Überschuss
+  (oder ladender Batterie) hält sich die Deckung jetzt strikt zurück — vorher konnte sie
+  selbstverursachten Netzbezug „decken" und die Batterie in ein Voll-Lade/Entlade-Pendeln
+  treiben (jeder Schreibzugriff hebt auf manchen Wechselrichtern die Gegenrichtung auf).
+  Simulations-Szenario verankert: bei Überschuss nie eine Entladung, die Batterie lädt.
 - **Langsame Geräte-Antworten sind keine Fehler.** Manche Geräte bestätigen Sollwert-Schreibungen
   erst nach vielen Sekunden; SEA wartet jetzt bis 35 s je Schreibvorgang, statt einen langsamen,
   aber erfolgreichen Write als Fehler zu werten. Ein wirklich totes Gerät bremst höchstens kurz
