@@ -2,6 +2,10 @@
 
 ## 0.8.3
 
+- **Bezug-Kurve rückwirkend & ruhende Sensoren sichtbar.** Die rote Bezug-Kurve der Bilanz wird
+  aus dem (schon immer vorzeichenbehaftet aufgezeichneten) Netzwert abgeleitet und funktioniert
+  damit für die gesamte Historie. Sensoren ohne Änderung im Zeitfenster (z. B. Tanktemperatur in
+  kurzen Fenstern) zeichnen jetzt eine gehaltene Linie statt eines unsichtbaren Einzelpunkts.
 - **Regler berücksichtigt die Abtastzeit.** Aktoren, die nur alle N Takte geschrieben werden
   (Batterie-Schreibintervall), integrierten bisher N-mal langsamer pro Zeit — die Regeldynamik
   hing am Schreibintervall. Der Integral-Schritt wird jetzt auf Zeit normiert (und bleibt hart
