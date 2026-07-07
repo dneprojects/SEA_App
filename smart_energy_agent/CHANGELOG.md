@@ -2,6 +2,13 @@
 
 ## 0.8.4
 
+- **„Batterie deckt Netzbezug" nur operativ bei echter Entladung.** Das Halten der Batterie in
+  Ruhe (0-Kommandos, während die PV das Haus deckt) gilt nicht mehr als operativ — der Balken
+  zeigt jetzt nur die Zeiten echter Entladung.
+- **Preis-Chart durchgängig.** „Mein Tarif" wird bis zum Fensterrand gezeichnet (der Zukunftspreis
+  ist bekannt: statisch/HT-NT aus dem Modell, dynamisch aus der Preisprognose); die Börsenlinie
+  hält den letzten veröffentlichten Wert bis zum Rand.
+
 - **Weniger Log-Rauschen.** Die Tagesplan-Diagnosezeilen (kein Plan / Prognose-Slots) stehen jetzt nur noch auf Debug-Ebene; ein tatsächlich geplantes Anhebungs-Fenster wird wie bisher als Entscheidung geloggt.
 
 - **Strategien starten zugeklappt.** Beim ersten Öffnen sind alle Strategie-Karten eingeklappt.
