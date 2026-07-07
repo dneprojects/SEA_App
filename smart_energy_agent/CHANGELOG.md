@@ -2,16 +2,15 @@
 
 ## 0.8.3
 
-- **Schreib-Budgets an langsame Batterien angepasst.** Die sonnen beantwortet Sollwert-Schreibungen
-  teils erst nach >6 s — mit den bisherigen Budgets wertete SEA langsame, aber erfolgreiche Writes
-  als Fehler (und der Backoff drosselte grundlos). Budget je Schreibvorgang jetzt 35 s,
-  Websocket-Limit 45 s; zusammen mit der gepatchten sonnen-Integration (Timeouts 6 → 30 s)
-  verschwinden die Schein-Fehler.
-- **Wächter gegen davonlaufende Batterie.** Die sonnen hält ihren letzten Sollwert — schlagen
-  die Schreibversuche fehl, entlud sie nach einer Wallbox-Session ungebremst weiter (04.07.:
-  79 % → 0 % in den Netz-Export, die 0-Rückstellung landete nie). SEA vergleicht jetzt laufend
-  gemessenen Batteriefluss mit dem kommandierten Wert; weicht er länger als 2 Minuten deutlich ab,
-  wird der Befehl mit Vorrang erzwungen (umgeht Drosselung und Backoff) und eine Warnung geloggt.
+- **Langsame Geräte-Antworten sind keine Fehler.** Manche Geräte bestätigen Sollwert-Schreibungen
+  erst nach vielen Sekunden; SEA wartet jetzt bis 35 s je Schreibvorgang, statt einen langsamen,
+  aber erfolgreichen Write als Fehler zu werten. Ein wirklich totes Gerät bremst höchstens kurz
+  und wird danach gedrosselt erneut versucht — schnelle Geräte merken von alledem nichts.
+- **Sollwert-Wächter für Speicher.** Viele Batterien halten ihren letzten Sollwert, bis ein neuer
+  ankommt — geht die Rückstellung verloren, läuft das Gerät gegen den aktuellen Befehl weiter
+  (schlimmstenfalls entlädt es sich ins Netz). SEA vergleicht deshalb laufend den gemessenen
+  Batteriefluss mit dem kommandierten Wert; weicht er länger als 2 Minuten deutlich ab, wird der
+  Befehl mit Vorrang neu geschrieben und eine Warnung geloggt.
 - **UI-Updates greifen sofort.** Die Oberfläche wird mit No-Cache-Header ausgeliefert — nach einem
   Add-on-Update kann der Browser nicht mehr ein altes UI-Skript mit der neuen API mischen
   (Geisterkarten/tote Buttons; bisher half nur Strg+F5).
@@ -48,8 +47,8 @@
 - **Hotfix: UI startete in beta.22 nicht** („verbinde…" blieb stehen). Ein Zeilenumbruch war in
   einen Bestätigungstext des neuen Backup-Dialogs geraten und brach das UI-Skript. Ein neuer
   automatischer Test prüft das Inline-Skript jetzt auf genau diese Fehlerklasse.
-- **Regelung bleibt bei hängenden Geräten flüssig.** Ein Gerät, dessen Integration nicht antwortet
-  (z. B. sonnen „Timeout on reading data from socket"), bremste den 10-Sekunden-Regeltakt auf
+- **Regelung bleibt bei hängenden Geräten flüssig.** Ein Gerät, dessen Integration nicht antwortet,
+  bremste den 10-Sekunden-Regeltakt auf
   ~1 Zyklus/Minute aus. Jetzt: hartes Zeitlimit je Websocket-Befehl (30 s) und je Schreibvorgang
   im Zyklus (15 s), und nach 3 Fehlversuchen in Folge wird der Aktor 2 Minuten pausiert statt
   dauerhaft gehämmert — die übrige Regelung (ELWA, Verbraucher) läuft im Takt weiter.
