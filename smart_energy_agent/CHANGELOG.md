@@ -2,6 +2,8 @@
 
 ## 0.8.4
 
+- **Strategien starten zugeklappt.** Beim ersten Öffnen sind alle Strategie-Karten eingeklappt.
+
 - **Hotfix: UI startete nicht.** Die neue gemeinsame Haus-Farbkonstante wurde nach der Serie
   deklariert, die sie nutzt — das brach beim Laden das gesamte UI-Skript (weiße/hängende Seite).
   Behoben; ein neuer automatischer Test fängt „Konstante vor Deklaration verwendet" künftig ab.
