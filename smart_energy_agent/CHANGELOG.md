@@ -2,6 +2,10 @@
 
 ## 0.8.3
 
+- **Regler berücksichtigt die Abtastzeit.** Aktoren, die nur alle N Takte geschrieben werden
+  (Batterie-Schreibintervall), integrierten bisher N-mal langsamer pro Zeit — die Regeldynamik
+  hing am Schreibintervall. Der Integral-Schritt wird jetzt auf Zeit normiert (und bleibt hart
+  am realen Rest-Export gekappt): gleiche Rampe, egal ob alle 10 oder alle 30 s geschrieben wird.
 - **Verlauf zeigt jetzt die Bilanz zweifarbig.** Aus „Überschuss" wird die vorzeichenbehaftete
   Bilanz: Überschuss grün, Netzbezug rot — zwei Legenden-Einträge, einzeln schaltbar.
 - **SEA zeichnet die eigenen Sollwert-Kommandos auf.** Sollwert-Entitäten ohne lesbaren Zustand
