@@ -7,6 +7,8 @@
 
 - **Sankey mobil wieder lesbar.** Auf dem Handy ist der Haus-Kern jetzt kompakt und zentriert, die Quellen- und Verbraucher-Äste spreizen sich über die volle Breite und schwingen wieder zur Seite (statt senkrecht gerade zu laufen).
 
+- **Fluss-Ansicht: einheitliche Linien-Icons.** Die Kreise nutzen jetzt ein durchgängiges Linien-Icon-Set (Netz-Mast, Wallbox/Auto, Heizstab, Wärmepumpe, PV, Batterie, Haus, Verbraucher) statt plattformabhängiger Emojis. Der Netz-Kreis wird wieder gefüllt gezeichnet, und in aufgeklappten Unterkreisen ist die Leistung vertikal zentriert.
+
 ## 0.8.4
 
 - **„Batterie deckt Netzbezug" läuft unabhängig vom PV-Überschuss-Schalter.** Die Batterie-Entladung zur Netzbezug-Deckung (und die Netzanschluss-Grenze) war fälschlich an den Hauptschalter „PV-Überschuss: Eigenverbrauch und Speicherung" gekoppelt. Wer PV-Überschuss abschaltete, legte damit unbeabsichtigt auch die Batterie-Deckung still — der Speicher stand still und das Haus bezog alles aus dem Netz, obwohl „Batterie deckt Netzbezug" aktiv war. Beide Strategien folgen jetzt ihrem eigenen Schalter; nur die batterie­gestützten Schaltlasten bleiben an den PV-Überschuss gebunden.
