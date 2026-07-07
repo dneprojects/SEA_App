@@ -2,6 +2,10 @@
 
 ## 0.8.3
 
+- **Anhebung startet prognosebasiert.** Der Start braucht zusätzlich zum aktuellen Überschuss
+  eine tragfähige Prognose über die nächsten ~90 Minuten — kein Anfahren mehr am kurzen PV-Peak,
+  wenn die eigentliche Heizphase ins Prognose-Tal fiele. Ohne Prognose gilt das bisherige
+  Verhalten; laufende Anhebungen beendet weiterhin nur die gemessene Realität.
 - **Bilanz als Flächen im Hintergrund.** Überschuss (grün) und Bezug (rot) füllen jetzt dezent
   gesättigt die Fläche zur Nulllinie, mit hauchdünner Kontur — alle anderen Kurven zeichnen
   darüber. Die separate „Netz"-Kurve entfällt (Bezug = rote Fläche, Einspeisung steckt im
