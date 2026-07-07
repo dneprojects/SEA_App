@@ -2,6 +2,15 @@
 
 ## 0.8.4
 
+- **Sankey wieder mit geschwungenen Bändern.** Die Kurven sind zurück (waren beim
+  Erhaltungs-Fix verloren gegangen) — Quell-/Senken-Knoten stehen mit Abstand, die Bänder setzen
+  am kompakten Haus-Balken lückenlos an; Breiten summieren sich weiterhin exakt, Farben kräftig.
+- **Tagesplan auf dem Dashboard.** Die Prognose-Vorschau (Anhebungs-Fenster, Batterie-Vollzeit)
+  steht jetzt als eigenes Panel „Heute geplant" über der aktiven Steuerung, nicht mehr in der
+  Anhebungs-Strategiekarte (dort bleibt nur der WP-Starts-Zähler).
+- **Kürzerer Eigenverbrauchs-Text.** Die Beschreibung der PV-Überschuss-Strategie ist auf zwei
+  Zeilen gekürzt; die Details stehen im ℹ.
+
 - **Sankey-Diagramm korrigiert und aufgefrischt.** Die Beitragsbreiten summieren sich jetzt exakt
   zur Gesamtbreite (links wie rechts) — die frühere Mindestbreite pro Fluss hatte die Erhaltung
   gebrochen. Bänder liegen lückenlos aneinander, Farben sind kräftiger (weniger grau), das Haus
