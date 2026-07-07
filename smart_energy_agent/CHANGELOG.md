@@ -2,6 +2,14 @@
 
 ## 0.8.3
 
+- **Verlauf zeigt jetzt die Bilanz zweifarbig.** Aus „Überschuss" wird die vorzeichenbehaftete
+  Bilanz: Überschuss grün, Netzbezug rot — zwei Legenden-Einträge, einzeln schaltbar.
+- **SEA zeichnet die eigenen Sollwert-Kommandos auf.** Sollwert-Entitäten ohne lesbaren Zustand
+  (z. B. Template-Zahlen, die „unknown" liefern) zeigten leere Verläufe — jetzt zeichnen Verlauf
+  und Export die von SEA tatsächlich geschriebenen Werte (erfolgreiche Writes, mit Aufbewahrung).
+- **Charts aufgeräumt.** Detail-Charts ohne Daten im Zeitfenster werden ausgeblendet (die
+  Wertezeile bleibt); der Preis-Chart zeigt „Mein Tarif" auch in kurzen Zeitfenstern (feinere
+  Auflösung + Stufen-Verlängerung bis zum Fensterrand).
 - **Fix: Netzbezugs-Deckung kämpft nicht mehr gegen das Überschuss-Laden.** Bei PV-Überschuss
   (oder ladender Batterie) hält sich die Deckung jetzt strikt zurück — vorher konnte sie
   selbstverursachten Netzbezug „decken" und die Batterie in ein Voll-Lade/Entlade-Pendeln
