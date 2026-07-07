@@ -2,6 +2,11 @@
 
 ## 0.8.4
 
+- **Haus überall cyan.** Die cyane Haus-Farbe des Sankey gilt jetzt auch im Fluss-Diagramm (Kreis)
+  und im Verlauf (Serie „Haus") — eine gemeinsame Farbkonstante, konsistent über alle Ansichten.
+- **Batterie-Plan bei voller Batterie.** Ist die Batterie bereits am Ziel-SoC, zeigt das Dashboard
+  „Batterie bereits voll" statt einer sinnlosen Uhrzeit-Prognose.
+
 - **Sankey wieder mit geschwungenen Bändern.** Die Kurven sind zurück (waren beim
   Erhaltungs-Fix verloren gegangen) — Quell-/Senken-Knoten stehen mit Abstand, die Bänder setzen
   am kompakten Haus-Balken lückenlos an; Breiten summieren sich weiterhin exakt, Farben kräftig.
