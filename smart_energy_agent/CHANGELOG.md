@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Prognose-Gate mit einstellbarer Ladedauer & für bindende Schaltlasten.** Die Wärmepumpe hat
+  jetzt das Feld „Anhebung: typische Ladedauer" (Standard 90 min) — es bestimmt das Prognosefenster
+  für den Start. Dasselbe Gate gilt für geschaltete Lasten, die sich beim Start binden (nicht
+  unterbrechbar oder min. Laufzeit ≥ 30 min): gestartet wird nur, wenn die Prognose ihre Laufzeit
+  trägt. Frei regelbare und unterbrechbare Lasten bleiben rein reaktiv; Deadlines gehen immer vor.
 - **Anhebung startet prognosebasiert.** Der Start braucht zusätzlich zum aktuellen Überschuss
   eine tragfähige Prognose über die nächsten ~90 Minuten — kein Anfahren mehr am kurzen PV-Peak,
   wenn die eigentliche Heizphase ins Prognose-Tal fiele. Ohne Prognose gilt das bisherige
