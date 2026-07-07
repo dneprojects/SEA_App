@@ -2,6 +2,9 @@
 
 ## 0.8.4
 
+- **Bilanz-Kontur durchgehend am Nulldurchgang.** Grün (Einspeisung) und Rot (Bezug) treffen sich
+  jetzt am exakten, interpolierten Nulldurchgang — die Randlinie läuft sauber durch die Nulllinie,
+  statt in der jeweils anderen Phase flach auf der Achse weiterzulaufen.
 - **Fix: Bilanz-Flächen widersprachen sich.** Überschuss und Bezug konnten gleichzeitig
   erscheinen (Grün kam vom Regler-Signal, das eine ladende Batterie als verfügbaren Überschuss
   zählt; Rot vom echten Netzbezug). Beide Flächen leiten sich jetzt aus einer Größe ab — der
