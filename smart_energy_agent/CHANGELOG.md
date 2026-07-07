@@ -2,6 +2,10 @@
 
 ## 0.8.3
 
+- **Bilanz als Flächen im Hintergrund.** Überschuss (grün) und Bezug (rot) füllen jetzt dezent
+  gesättigt die Fläche zur Nulllinie, mit hauchdünner Kontur — alle anderen Kurven zeichnen
+  darüber. Die separate „Netz"-Kurve entfällt (Bezug = rote Fläche, Einspeisung steckt im
+  Überschuss); im CSV-Export bleibt der Netzwert enthalten.
 - **Bezug-Kurve rückwirkend & ruhende Sensoren sichtbar.** Die rote Bezug-Kurve der Bilanz wird
   aus dem (schon immer vorzeichenbehaftet aufgezeichneten) Netzwert abgeleitet und funktioniert
   damit für die gesamte Historie. Sensoren ohne Änderung im Zeitfenster (z. B. Tanktemperatur in
