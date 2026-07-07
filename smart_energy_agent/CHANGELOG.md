@@ -2,6 +2,12 @@
 
 ## 0.8.4
 
+- **Entity-Picker für die PV-Prognose.** Die PV-Prognose-Entität (Solcast o. Ä.) wird jetzt über
+  denselben Auswahl-Dialog gewählt wie die Preis-Entität, statt sie als Text eintippen zu müssen.
+- **„Sollwert unbekannt"-Hinweis nur noch im Log.** Der rein kosmetische Hinweis (Sollwert-Entität
+  ohne lesbaren Zustand) steht nicht mehr im Hinweise-Panel — Regelung und Verlauf laufen ohnehin;
+  er wird jetzt einmalig ins Log geschrieben.
+
 - **Bilanz-Kontur durchgehend am Nulldurchgang.** Grün (Einspeisung) und Rot (Bezug) treffen sich
   jetzt am exakten, interpolierten Nulldurchgang — die Randlinie läuft sauber durch die Nulllinie,
   statt in der jeweils anderen Phase flach auf der Achse weiterzulaufen.
