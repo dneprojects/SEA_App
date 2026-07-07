@@ -2,6 +2,10 @@
 
 ## 0.8.4
 
+- **Fix: Bilanz-Flächen widersprachen sich.** Überschuss und Bezug konnten gleichzeitig
+  erscheinen (Grün kam vom Regler-Signal, das eine ladende Batterie als verfügbaren Überschuss
+  zählt; Rot vom echten Netzbezug). Beide Flächen leiten sich jetzt aus einer Größe ab — der
+  Netzbilanz: Grün = echte Einspeisung, Rot = echter Bezug, nie gleichzeitig.
 - **Tagesplaner (Anzeige).** SEA plant alle 15 Minuten das beste Prognosefenster für die
   Warmwasser-Anhebung (Länge = typische Ladedauer) und schätzt, wann die Batterie voll ist.
   Sichtbar auf der Anhebungs-Karte („heute geplant 12:30–14:00") und als gestricheltes Band
