@@ -2,6 +2,9 @@
 
 ## 0.8.5
 
+- **Strategie-Aktivierung entkoppelt & vereinheitlicht.** Jede Grid-/Batterie-Strategie (Batterie deckt Netzbezug, Bezugs-/Einspeise-Deckel, Notstrom-Reserve, Batteriepflege, Regeln) läuft jetzt unabhängig über ihren EIGENEN Schalter statt versehentlich am PV-Überschuss-Hauptschalter zu hängen — der Abschalten von PV-Überschuss legt sie nicht mehr still. Die Aktivierung liegt in einer einzigen deklarativen Tabelle (weniger Fehlerquellen).
+- **Batterie-Konflikte prioritätsbewusst aufgelöst.** Bei gleichzeitigem Lade- und Entlade-Wunsch gewinnt die höherpriore Pflicht (z. B. Einspeise-Begrenzung vor Arbitrage-Entladung); eine harte Netzanschluss-Grenze wird als Untergrenze erzwungen, statt kurzzeitig überschritten zu werden.
+
 - **Sankey mobil wieder lesbar.** Auf dem Handy ist der Haus-Kern jetzt kompakt und zentriert, die Quellen- und Verbraucher-Äste spreizen sich über die volle Breite und schwingen wieder zur Seite (statt senkrecht gerade zu laufen).
 
 ## 0.8.4
