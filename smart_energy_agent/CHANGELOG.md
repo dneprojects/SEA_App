@@ -2,6 +2,11 @@
 
 ## 0.8.4
 
+- **Batterie ruht bei aktivem PV-Überschuss.** Die Netzbezugs-Deckung entlädt nicht mehr, während
+  die PV das Haus deckt: Ein Totband (200 W) plus eine „PV deckt Haus"-Sperre verhindern, dass eine
+  volle Batterie kleine Netz-Schwankungen um Null mit sinnlosem Mikro-Zyklen (und Über-Entladung in
+  die Einspeisung) beantwortet. Echte Defizite (abends, Lastspitzen) werden weiterhin gedeckt.
+
 - **Entity-Picker für die PV-Prognose.** Die PV-Prognose-Entität (Solcast o. Ä.) wird jetzt über
   denselben Auswahl-Dialog gewählt wie die Preis-Entität, statt sie als Text eintippen zu müssen.
 - **„Sollwert unbekannt"-Hinweis nur noch im Log.** Der rein kosmetische Hinweis (Sollwert-Entität
