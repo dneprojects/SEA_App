@@ -2,6 +2,11 @@
 
 ## 0.8.3
 
+- **Schreib-Budgets an langsame Batterien angepasst.** Die sonnen beantwortet Sollwert-Schreibungen
+  teils erst nach >6 s — mit den bisherigen Budgets wertete SEA langsame, aber erfolgreiche Writes
+  als Fehler (und der Backoff drosselte grundlos). Budget je Schreibvorgang jetzt 35 s,
+  Websocket-Limit 45 s; zusammen mit der gepatchten sonnen-Integration (Timeouts 6 → 30 s)
+  verschwinden die Schein-Fehler.
 - **Wächter gegen davonlaufende Batterie.** Die sonnen hält ihren letzten Sollwert — schlagen
   die Schreibversuche fehl, entlud sie nach einer Wallbox-Session ungebremst weiter (04.07.:
   79 % → 0 % in den Netz-Export, die 0-Rückstellung landete nie). SEA vergleicht jetzt laufend
