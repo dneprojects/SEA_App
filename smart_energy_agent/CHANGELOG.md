@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.4
+
+- **Tagesplaner (Anzeige).** SEA plant alle 15 Minuten das beste Prognosefenster für die
+  Warmwasser-Anhebung (Länge = typische Ladedauer) und schätzt, wann die Batterie voll ist.
+  Sichtbar auf der Anhebungs-Karte („heute geplant 12:30–14:00") und als gestricheltes Band
+  auf der Strategie-Timeline — die Steuerung bleibt in dieser Stufe bewusst unverändert
+  (erst nach ein paar Tagen Beobachtung greift der Plan in die Starts ein).
+
 ## 0.8.3
 
 - **Prognose-Gate mit einstellbarer Ladedauer & für bindende Schaltlasten.** Die Wärmepumpe hat
