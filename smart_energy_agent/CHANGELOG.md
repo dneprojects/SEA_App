@@ -2,6 +2,10 @@
 
 ## 0.8.4
 
+- **Hotfix: UI startete nicht.** Die neue gemeinsame Haus-Farbkonstante wurde nach der Serie
+  deklariert, die sie nutzt — das brach beim Laden das gesamte UI-Skript (weiße/hängende Seite).
+  Behoben; ein neuer automatischer Test fängt „Konstante vor Deklaration verwendet" künftig ab.
+
 - **Haus überall cyan.** Die cyane Haus-Farbe des Sankey gilt jetzt auch im Fluss-Diagramm (Kreis)
   und im Verlauf (Serie „Haus") — eine gemeinsame Farbkonstante, konsistent über alle Ansichten.
 - **Batterie-Plan bei voller Batterie.** Ist die Batterie bereits am Ziel-SoC, zeigt das Dashboard
