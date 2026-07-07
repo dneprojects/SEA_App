@@ -2,6 +2,8 @@
 
 ## 0.8.4
 
+- **Version im Log beim Start.** Beim Add-on-Start wird die laufende Version einmal ins Log geschrieben — so ist im Log direkt ersichtlich, welche Version gerade läuft.
+
 - **„Batterie deckt Netzbezug" nur operativ bei echter Entladung.** Das Halten der Batterie in
   Ruhe (0-Kommandos, während die PV das Haus deckt) gilt nicht mehr als operativ — der Balken
   zeigt jetzt nur die Zeiten echter Entladung.
