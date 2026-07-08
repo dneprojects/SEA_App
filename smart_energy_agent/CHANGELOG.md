@@ -7,7 +7,7 @@
 
 - **Sankey mobil wieder lesbar.** Auf dem Handy ist der Haus-Kern jetzt kompakt und zentriert, die Quellen- und Verbraucher-Äste spreizen sich über die volle Breite und schwingen wieder zur Seite (statt senkrecht gerade zu laufen).
 
-- **Fluss-Ansicht: einheitliche Linien-Icons.** Die Kreise nutzen jetzt ein durchgängiges Linien-Icon-Set (Netz-Mast, Wallbox/Auto, Heizstab, Wärmepumpe, PV, Batterie, Haus, Verbraucher) statt plattformabhängiger Emojis. Der Netz-Kreis wird wieder gefüllt gezeichnet, und in aufgeklappten Unterkreisen ist die Leistung vertikal zentriert.
+- **Einheitliche Linien-Icons statt Emojis.** Fluss-Ansicht, Sankey und das Tagesplan-Panel nutzen jetzt ein durchgängiges Linien-Icon-Set (Netz-Mast, Auto, Heizstab, Wärmepumpe, PV, Batterie, Haus, Verbraucher, Kalender) — plattformunabhängig statt Emoji. Der Netz-Kreis wird wieder gefüllt gezeichnet, und in aufgeklappten Unterkreisen ist die Leistung vertikal zentriert.
 
 ## 0.8.4
 
