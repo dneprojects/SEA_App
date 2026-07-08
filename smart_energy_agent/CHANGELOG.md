@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Schnelleres Ausregeln bei plötzlichem PV-Einbruch.** Bricht die PV-Leistung während des Batterie-Ladens plötzlich ein (Wolke), wird die Ladung jetzt schneller zurückgenommen (asymmetrisch: runter schnell, rauf unverändert). Deutlich kleinere Bezugs-Spitzen — ohne die Schreibrate zur Batterie zu erhöhen. Im Replay der Aufzeichnung: Import −77 %, Spitze 4,4 → 1,8 kW.
+- **Strategie-Status: Leerlauf zählt nicht mehr als operativ.** Eine Strategie, die nur einen Ruhewert neu setzt (z. B. „PV-Überschuss" mit Ladeleistung 0 nachts), erscheint jetzt korrekt als „aktiv" statt „operativ" — der operative Balken zeigt nur noch echte Eingriffe.
 - **Strategie-Aktivierung entkoppelt & vereinheitlicht.** Jede Grid-/Batterie-Strategie (Batterie deckt Netzbezug, Bezugs-/Einspeise-Deckel, Notstrom-Reserve, Batteriepflege, Regeln) läuft jetzt unabhängig über ihren EIGENEN Schalter statt versehentlich am PV-Überschuss-Hauptschalter zu hängen — der Abschalten von PV-Überschuss legt sie nicht mehr still. Die Aktivierung liegt in einer einzigen deklarativen Tabelle (weniger Fehlerquellen).
 - **Batterie-Konflikte prioritätsbewusst aufgelöst.** Bei gleichzeitigem Lade- und Entlade-Wunsch gewinnt die höherpriore Pflicht (z. B. Einspeise-Begrenzung vor Arbitrage-Entladung); eine harte Netzanschluss-Grenze wird als Untergrenze erzwungen, statt kurzzeitig überschritten zu werden.
 
