@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Kein Fehl-Start der WP-Anhebung durch Sensor-Transienten.** Die PV-Überschuss-Anhebung (thermisches Speicherladen der Wärmepumpe) startet erst, wenn der verfügbare Überschuss ~1 min anhält. Ein kurzer Ausreißer der WP-Leistung — z. B. wenn ein Heizstab die aus dem Zähler abgeleitete WP-Leistung beim Schalten transient springen lässt — löst die langsame thermische Anhebung nicht mehr aus. Halten und Beenden einer laufenden Anhebung bleiben unverändert reaktiv.
+
 - **Strompreis-Chart spannt über den ganzen Zeitraum.** Beide Preislinien (eigener Tarif + Börse) reichen jetzt bis an beide Fenster-Ränder, statt am ersten/letzten Datenpunkt zu stoppen. Der Randwert ist der zuletzt *aktive* Preis (Stufenpreis korrekt gehalten, HT/NT-fähig über einen Carry-in-Punkt am Fensterstart). Damit wird auch bei starkem Hineinzoomen (Fenster < ~15 min zwischen zwei Preisänderungen) weiterhin eine gültige Linie gezeichnet statt nichts.
 
 - **Kein Phantom-„PV-Überschuss" nachts.** Fällt nachts eine Last schlagartig ab, las SEA durch Sensor-Zeitversatz kurz einen Netz-Export, der größer war als die Batterie-Entladung — und wertete das als PV-Überschuss (kurzer Wechsel der Strategie auf „PV-Überschuss" samt kleinem Lade-Impuls in die Batterie). PV-Überschuss ist jetzt physikalisch auf die PV-Produktion begrenzt: bei PV ≈ 0 kann die Modulation nur zurückfahren, nie hochfahren — kein Phantom-Flip und keine Phantom-Ladung mehr. Grid-Laden (Tarif/Optimierer) bleibt unberührt.
