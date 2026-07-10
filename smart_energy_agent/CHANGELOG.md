@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Tagesplaner (Anzeige).** Neue „Heute geplant"-Übersicht: aus PV- und Preis-Prognose plant SEA die besten Zeitfenster für **Batterie**, **Auto** (mit Abfahrts-Deadline aus der Fahrzeug-Konfig — reicht die PV nicht, wird bis dahin das günstigste Netz eingeplant) und **einplanbare Verbraucher** (Waschmaschine/Spüler/Trockner). Priorität je Senke kommt aus der bestehenden Prioritäts-Liste. Verbraucher aktivierst du per Checkbox „In Tagesplanung einbeziehen"; auf dem Dashboard erscheint dann je Gerät ein Schalter „einplanen" — Energie und Dauer werden aus der **Leistungshistorie** des Geräts abgeleitet (keine Laufdaten → wird übersprungen, kein geratenes Profil). Button „Neu planen" für sofortige Neuberechnung. **Reine Anzeigestufe** — die 10-s-Regelung bleibt unverändert die letzte Instanz.
+
 - **Kein Fehl-Start der WP-Anhebung durch Sensor-Transienten.** Die PV-Überschuss-Anhebung (thermisches Speicherladen der Wärmepumpe) startet erst, wenn der verfügbare Überschuss ~1 min anhält. Ein kurzer Ausreißer der WP-Leistung — z. B. wenn ein Heizstab die aus dem Zähler abgeleitete WP-Leistung beim Schalten transient springen lässt — löst die langsame thermische Anhebung nicht mehr aus. Halten und Beenden einer laufenden Anhebung bleiben unverändert reaktiv.
 
 - **Strompreis-Chart spannt über den ganzen Zeitraum.** Beide Preislinien (eigener Tarif + Börse) reichen jetzt bis an beide Fenster-Ränder, statt am ersten/letzten Datenpunkt zu stoppen. Der Randwert ist der zuletzt *aktive* Preis (Stufenpreis korrekt gehalten, HT/NT-fähig über einen Carry-in-Punkt am Fensterstart). Damit wird auch bei starkem Hineinzoomen (Fenster < ~15 min zwischen zwei Preisänderungen) weiterhin eine gültige Linie gezeichnet statt nichts.
