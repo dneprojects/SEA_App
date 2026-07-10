@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Strompreis-Chart spannt über den ganzen Zeitraum.** Beide Preislinien (eigener Tarif + Börse) reichen jetzt bis an beide Fenster-Ränder, statt am ersten/letzten Datenpunkt zu stoppen. Der Randwert ist der zuletzt *aktive* Preis (Stufenpreis korrekt gehalten, HT/NT-fähig über einen Carry-in-Punkt am Fensterstart). Damit wird auch bei starkem Hineinzoomen (Fenster < ~15 min zwischen zwei Preisänderungen) weiterhin eine gültige Linie gezeichnet statt nichts.
+
 - **Kein Phantom-„PV-Überschuss" nachts.** Fällt nachts eine Last schlagartig ab, las SEA durch Sensor-Zeitversatz kurz einen Netz-Export, der größer war als die Batterie-Entladung — und wertete das als PV-Überschuss (kurzer Wechsel der Strategie auf „PV-Überschuss" samt kleinem Lade-Impuls in die Batterie). PV-Überschuss ist jetzt physikalisch auf die PV-Produktion begrenzt: bei PV ≈ 0 kann die Modulation nur zurückfahren, nie hochfahren — kein Phantom-Flip und keine Phantom-Ladung mehr. Grid-Laden (Tarif/Optimierer) bleibt unberührt.
 
 - **Vollständigere Entscheidungs-Logs.** Jede Start/Stopp- und Richtungsentscheidung (Wechsel von/zu 0) steht jetzt im Log — auch wenn der Schreibvorgang gerade gedrosselt ist oder im Fehler-Backoff steckt (das war bisher unsichtbar und verbarg z. B. ein Zurücknehmen der Batterie-Deckung). Jede Batterie-Entlade-Entscheidung nennt zusätzlich den Grund und die Eingänge (warum 0 W bzw. warum geregelt). Log-Aufbewahrung erhöht.
