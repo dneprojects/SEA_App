@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Kein Phantom-„PV-Überschuss" nachts.** Fällt nachts eine Last schlagartig ab, las SEA durch Sensor-Zeitversatz kurz einen Netz-Export, der größer war als die Batterie-Entladung — und wertete das als PV-Überschuss (kurzer Wechsel der Strategie auf „PV-Überschuss" samt kleinem Lade-Impuls in die Batterie). PV-Überschuss ist jetzt physikalisch auf die PV-Produktion begrenzt: bei PV ≈ 0 kann die Modulation nur zurückfahren, nie hochfahren — kein Phantom-Flip und keine Phantom-Ladung mehr. Grid-Laden (Tarif/Optimierer) bleibt unberührt.
+
 - **Vollständigere Entscheidungs-Logs.** Jede Start/Stopp- und Richtungsentscheidung (Wechsel von/zu 0) steht jetzt im Log — auch wenn der Schreibvorgang gerade gedrosselt ist oder im Fehler-Backoff steckt (das war bisher unsichtbar und verbarg z. B. ein Zurücknehmen der Batterie-Deckung). Jede Batterie-Entlade-Entscheidung nennt zusätzlich den Grund und die Eingänge (warum 0 W bzw. warum geregelt). Log-Aufbewahrung erhöht.
 
 - **Schnelleres Ausregeln bei plötzlichem PV-Einbruch.** Bricht die PV-Leistung während des Batterie-Ladens plötzlich ein (Wolke), wird die Ladung jetzt schneller zurückgenommen (asymmetrisch: runter schnell, rauf unverändert). Deutlich kleinere Bezugs-Spitzen — ohne die Schreibrate zur Batterie zu erhöhen. Im Replay der Aufzeichnung: Import −77 %, Spitze 4,4 → 1,8 kW.
