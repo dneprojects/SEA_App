@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Einsparungs-Analyse (Vorschau) auf dem Detailgrad des Ausblicks — mit mehr Stellgrößen.** Die 24-h-Vorschau der Spar-Analyse simuliert jetzt dasselbe volle Modell wie der Ausblick: **Fahrzeug, WP-Anhebung und Batterie-Deckung** kommen mit, und alle simulierten Senken (v. a. die Wallbox) werden aus der Grundlast herausgerechnet — damit fällt der bisherige Phantom-Nachmittags-Verbrauch auch hier weg. Die €-Bewertung berücksichtigt zusätzlich die WP-Boost-Wärme und die ins Auto geladene Energie. Zusätzlich vergleicht die Analyse jetzt weitere **Prioritäts-Varianten**: „Auto zuerst/zuletzt laden" (Auto vor oder nach der Hausbatterie) und „WP-Anhebung bevorzugt/nachrangig" — so sieht man in €, ob eine andere Reihenfolge günstiger wäre. Der Rückblick spielt die tatsächlich aufgezeichneten Tage weiter nach (mit Batterie-Deckung).
+
 - **Ausblick: Batterie deckt jetzt auch in der Simulation den Bezug.** Bisher hatte die Sim-Batterie die „Netzbezug-Deckung" nicht — jedes Defizit erschien sofort als „Netzbezug", obwohl die echte Batterie es (bis zur Reserve) abdeckt. Die Sim-Batterie übernimmt jetzt die Deckungs-Einstellung und die Reserve der echten Batterie, sodass Defizite korrekt als „Batterie deckt Bezug" (bis zur Reserve) und erst danach als „Netzbezug" erscheinen.
 
 - **Ausblick: Wärmepumpen-Anhebung als eigene Phase.** Die Zeitraffer-Simulation umfasst jetzt auch die **Sollwert-Anhebung der Wärmepumpe** (thermisches Speicherladen): der echte Boost-Regler hebt im Ausblick den Heizkreis-Sollwert, wenn der Überschuss über der Schwelle hält, und die WP zieht dann Mehrleistung — als eigener Balken „…-Anhebung" im Strahl. Damit sind alle regelbaren Senken (Batterie, regelbare Last, Fahrzeug, WP-Anhebung) abgebildet.
