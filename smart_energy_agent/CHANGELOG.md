@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Ausblick: Batterie deckt jetzt auch in der Simulation den Bezug.** Bisher hatte die Sim-Batterie die „Netzbezug-Deckung" nicht — jedes Defizit erschien sofort als „Netzbezug", obwohl die echte Batterie es (bis zur Reserve) abdeckt. Die Sim-Batterie übernimmt jetzt die Deckungs-Einstellung und die Reserve der echten Batterie, sodass Defizite korrekt als „Batterie deckt Bezug" (bis zur Reserve) und erst danach als „Netzbezug" erscheinen.
+
 - **Ausblick: Wärmepumpen-Anhebung als eigene Phase.** Die Zeitraffer-Simulation umfasst jetzt auch die **Sollwert-Anhebung der Wärmepumpe** (thermisches Speicherladen): der echte Boost-Regler hebt im Ausblick den Heizkreis-Sollwert, wenn der Überschuss über der Schwelle hält, und die WP zieht dann Mehrleistung — als eigener Balken „…-Anhebung" im Strahl. Damit sind alle regelbaren Senken (Batterie, regelbare Last, Fahrzeug, WP-Anhebung) abgebildet.
 
 - **Ausblick erscheint jetzt auch ohne separate regelbare Last.** Bisher brauchte die Zeitraffer-Simulation eine regelbare Batterie **und** eine zusätzliche modulierende Last — wer nur Batterie + Wallbox/Fahrzeug (und eine Wärmepumpe im Boost-Modus) hat, sah dauerhaft „Noch kein Tagesplan". Jetzt simuliert der Ausblick auch die reine Kombination Batterie + Fahrzeug. Ein ladbares Fahrzeug wird zudem korrekt als **Fahrzeug** erkannt (eigene Ladephase, Ziel-SoC-Stopp) statt als generische Last. Die Leer-Meldung nennt jetzt den echten Grund (fehlende PV-Prognose / keine regelbare Batterie / wird gerade berechnet).
