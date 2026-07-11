@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Ausblick-Zeitstrahl als Wasserfall.** Jede Strategie-Phase steht jetzt in einer eigenen Zeile, zeitlich versetzt, mit Klartext-Label und Uhrzeit daneben (oder im Balken). Die gerade laufende Strategie beginnt bei „jetzt", ist hervorgehoben und mit „jetzt aktiv" markiert — so sieht man auf einen Blick, wie lange sie voraussichtlich aktiv bleibt und was danach kommt.
+
 - **Karte „Ausblick" mit Strategie-Zeitstrahl (aus der echten Regelung).** Statt einer nachgebauten Näherung fährt SEA die **echte Regel-Engine im Zeitraffer** über den Prognosetag (PV-Prognose + gelerntes Verbrauchsprofil des Hauses, vom aktuellen SoC aus) und zeichnet die dabei getroffenen Entscheidungen als **Balken-Zeitstrahl**: wann die Batterie lädt, wann eine regelbare Last (z. B. Heizstab) den Überschuss bekommt, ab wann die Batterie den Bezug deckt und ab wann Netzbezug erwartet wird — plus die Planer-Fenster für Auto/Verbraucher/WW-Anhebung. Weil es dieselbe Logik wie die Live-Regelung ist, stimmen alle Randbedingungen (z. B. „Auto erst ab Überschuss-Schwellwert") von selbst. Kurze Textzeilen fassen zusammen, ab wann Batterie-Deckung bzw. Netzbezug beginnt. Reine Vorschau — die 10-s-Regelung bleibt die letzte Instanz.
 
 - **Einheitliche Karten-Gliederung auf allen Seiten.** Jeder Abschnitt sitzt jetzt in einer gerahmten Karte mit größerer Überschrift (ohne Trennstrich) — auch Verlauf („Leistung & Prognose", „Weitere Messgrößen"), Einsparung („Ergebnis", „Energiebilanz im Zeitraum", „Analysen") und Strategien. Die **Info-Kacheln** sind neu gesetzt: Überschrift oben linksbündig, Wert mit Einheit darunter rechtsbündig, beide gleich groß (statt winziger Beschriftung unter einem riesigen Zahlenwert).
