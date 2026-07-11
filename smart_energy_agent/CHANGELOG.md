@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Ausblick-Zeitstrahl: kompaktere Rand-Labels, 5-Minuten-Zeiten.** Der erste Balken zeigt nur „bis HH:MM", der letzte nur „ab HH:MM" (statt des ganzen Intervalls, das an den Rändern ohnehin offen ist). Alle Uhrzeiten auf volle 5 Minuten gerundet.
+
 - **Ausblick: aktueller Zustand + lückenloser Zeitstrahl.** Ganz oben steht jetzt „Jetzt aktiv: … (voraussichtlich bis ~HH:MM)", und die laufende Phase ist im Strahl hervorgehoben. Ruhige Zeitfenster, in denen die PV gerade den Verbrauch deckt (weder Laden noch Bezug), erscheinen als eigene Phase „Eigenverbrauch" — der Strahl hat dadurch keine Löcher mehr.
 
 - **Ausblick-Zeitstrahl als Wasserfall.** Jede Strategie-Phase steht jetzt in einer eigenen Zeile, zeitlich versetzt, mit Klartext-Label und Uhrzeit daneben (oder im Balken). Die gerade laufende Strategie beginnt bei „jetzt", ist hervorgehoben und mit „jetzt aktiv" markiert — so sieht man auf einen Blick, wie lange sie voraussichtlich aktiv bleibt und was danach kommt.
