@@ -2,6 +2,10 @@
 
 ## 0.8.5
 
+- **Karte „Ausblick" mit Zeitstrahl.** Der Tagesplan sitzt jetzt in einer eigenen Karte „Ausblick" und sagt zusätzlich, **wie lange die aktuelle Strategie voraussichtlich nötig ist**: aus der Prognose projiziert SEA den Batterie-SoC über den Tag und schätzt den nächsten Wechsel „PV-Überschuss ↔ Bezug" sowie wann die Batterie die Reserve erreicht — z. B. „PV-Überschuss noch bis ~15:30, danach Batterie/Netz" und „Batterie deckt bis ~19:00 (Reserve erreicht)". Ein **Zeitstrahl** zeigt den prognostizierten SoC-Verlauf (mit Reserve-Linie und Wechsel-Markern) und die geplanten Fenster (Batterie/Auto/Verbraucher/Anhebung) als farbige Bänder. Reine Prognose-Vorschau — die 10-s-Regelung bleibt die letzte Instanz.
+
+- **Drei abgesetzte Karten.** „Aktuell", „Ausblick" und „Energiebilanz" sind jetzt je eine große, gerahmte Karte mit Titel und Inhalten (Strategien + Info-Kacheln bzw. Plan bzw. Balken) darin — visuell klar getrennte Blöcke, einheitlich gestaltet.
+
 - **Dashboard aufgeräumt.** Direkt unter dem Diagramm eine Karte **„Aktuell"** mit den aktiven Strategien und dazu passenden Mini-Karten der *beteiligten* Größen: alle Leistungen > 200 W, Batterie- und (falls beteiligt) Fahrzeug-SoC, und die Temperaturen von Heizkreisen mit aktiver Anhebung. Die generischen KPI-Kacheln und die Rubrik „Aktive Steuerung" entfallen (waren redundant zur Strategie-Anzeige). Die **Energiebilanz (heute)** zeigt Autarkie- und Eigenverbrauchsquote als Balken über den kWh-Flüssen. Auf dem Handy ist das **Sankey** weniger stark gespreizt (Äste fächern über eine zentrierte Breite statt bis an die Ränder).
 
 - **Aktive Strategien unter der Grafik.** Direkt unter dem Fluss-/Sankey-Diagramm zeigt eine farbig hinterlegte Leiste, welche Strategien gerade **operativ** sind und welches Gerät sie deswegen wie ansteuern — z. B. „PV-Überschuss → Batterie: regelbar 1560 W", „Batterie deckt Netzbezug → Entladung 580 W", „WP-Anhebung → Warmwasser +10 K → 60 °C". Farbe je Strategie wie im Verlaufs-Band.
