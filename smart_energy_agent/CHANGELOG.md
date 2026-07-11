@@ -2,6 +2,8 @@
 
 ## 0.8.5
 
+- **Ausblick: aktueller Zustand + lückenloser Zeitstrahl.** Ganz oben steht jetzt „Jetzt aktiv: … (voraussichtlich bis ~HH:MM)", und die laufende Phase ist im Strahl hervorgehoben. Ruhige Zeitfenster, in denen die PV gerade den Verbrauch deckt (weder Laden noch Bezug), erscheinen als eigene Phase „Eigenverbrauch" — der Strahl hat dadurch keine Löcher mehr.
+
 - **Ausblick-Zeitstrahl als Wasserfall.** Jede Strategie-Phase steht jetzt in einer eigenen Zeile, zeitlich versetzt, mit Klartext-Label und Uhrzeit daneben (oder im Balken). Die gerade laufende Strategie beginnt bei „jetzt", ist hervorgehoben und mit „jetzt aktiv" markiert — so sieht man auf einen Blick, wie lange sie voraussichtlich aktiv bleibt und was danach kommt.
 
 - **Karte „Ausblick" mit Strategie-Zeitstrahl (aus der echten Regelung).** Statt einer nachgebauten Näherung fährt SEA die **echte Regel-Engine im Zeitraffer** über den Prognosetag (PV-Prognose + gelerntes Verbrauchsprofil des Hauses, vom aktuellen SoC aus) und zeichnet die dabei getroffenen Entscheidungen als **Balken-Zeitstrahl**: wann die Batterie lädt, wann eine regelbare Last (z. B. Heizstab) den Überschuss bekommt, ab wann die Batterie den Bezug deckt und ab wann Netzbezug erwartet wird — plus die Planer-Fenster für Auto/Verbraucher/WW-Anhebung. Weil es dieselbe Logik wie die Live-Regelung ist, stimmen alle Randbedingungen (z. B. „Auto erst ab Überschuss-Schwellwert") von selbst. Kurze Textzeilen fassen zusammen, ab wann Batterie-Deckung bzw. Netzbezug beginnt. Reine Vorschau — die 10-s-Regelung bleibt die letzte Instanz.
