@@ -2,6 +2,10 @@
 
 ## 0.8.5
 
+- **„Aktuell"-Karte + Ausblick aufgeräumt.** Die Kachel **„Verbrauch"** (Hausverbrauch) erscheint jetzt genau dann, wenn sie zählt — bei Deckung aus der Batterie oder im Neutralbereich (PV deckt das Haus) — nicht beim Laden/Einspeisen. Ein Gerät, das eine Strategie nur noch **abgeschaltet hält** (z. B. „Wallbox: Ziel-SoC erreicht"), wird als Grund fürs Auslaufen kurz gezeigt, aber nicht mehr dauerhaft; ist eine Strategie danach ohne aktives Gerät, verschwindet sie aus der Leiste. Der Button **„Neu planen"** sitzt jetzt oben rechts in der Ausblick-Karte. Der irreführende Planer-Hinweis „Batterie nur teilweise aus PV planbar" entfällt — die Batterie (und das Fahrzeug) werden im Ausblick von der echten Engine simuliert, nicht mehr zusätzlich vom Planer als Aufgabe geführt.
+
+- **Ausblick simuliert jetzt auch die Wallbox/das Fahrzeug.** Die Zeitraffer-Simulation der echten Regelung umfasst nun die Wallbox — sowohl **modulierend** (Ladeleistung folgt dem Überschuss) als auch **geschaltet** (an/aus, bei Bedarf mit **Batterie-Entladung als Ladeunterstützung**, sobald genug PV da ist). Weil es die echte Logik ist, stimmen „Auto lädt erst ab Überschuss-Schwellwert" und der Stopp bei erreichtem Ziel-SoC von selbst; im Zeitstrahl erscheint eine eigene **Fahrzeug-Phase**. Ist das Auto gerade **nicht angeschlossen**, nimmt der Ausblick an, es hängt ab jetzt an der Wallbox (mit Hinweis „bitte rechtzeitig anschließen") — per Klick lässt sich diese Annahme verwerfen, dann wird der Ist-Zustand ohne Fahrzeug simuliert.
+
 - **Ausblick-Zeitstrahl: kompaktere Rand-Labels, 5-Minuten-Zeiten.** Der erste Balken zeigt nur „bis HH:MM", der letzte nur „ab HH:MM" (statt des ganzen Intervalls, das an den Rändern ohnehin offen ist). Alle Uhrzeiten auf volle 5 Minuten gerundet.
 
 - **Ausblick: aktueller Zustand + lückenloser Zeitstrahl.** Ganz oben steht jetzt „Jetzt aktiv: … (voraussichtlich bis ~HH:MM)", und die laufende Phase ist im Strahl hervorgehoben. Ruhige Zeitfenster, in denen die PV gerade den Verbrauch deckt (weder Laden noch Bezug), erscheinen als eigene Phase „Eigenverbrauch" — der Strahl hat dadurch keine Löcher mehr.
