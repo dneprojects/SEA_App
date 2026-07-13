@@ -2,6 +2,7 @@
 
 ## 0.8.6
 
+- **Hierarchie-Zuordnung je Verbraucher (Editor).** In den Geräte-Einstellungen (unter „Zeiten & Grenzen") lässt sich jetzt pro Verbraucher ein **übergeordneter Knoten** und die **Messquelle** wählen (eigener Sensor · Summe der Kinder · Rest unter Zähler · folgt Aktor) — z. B. Heizstab und Wallbox unter einen gemeinsamen Zähler hängen. Falsch verdrahtete Zuordnungen werden direkt an der Karte als Warnung angezeigt. Die verschachtelte Anzeige im Energiefluss folgt als Nächstes.
 - **Verbraucher-Einstellungen jetzt im Backup enthalten.** Die Konfiguration der „weiteren Verbraucher" (bisher in einer separaten `consumers.json`) wird beim ersten Start automatisch in den zentralen Einstellungs-Speicher überführt — damit wird sie ab jetzt auch mitgesichert und mit-wiederhergestellt. Die alte Datei bleibt unangetastet liegen; nichts geht verloren.
 - **Verbraucher-Hierarchie (Grundlage).** Verbraucher können jetzt einem übergeordneten Knoten zugeordnet werden (z. B. Heizstab und Wallbox hinter einer gemeinsamen Messung, Geräte unter einem Unterzähler, Auto an Wallbox). SEA rechnet die Leistung je Knoten korrekt auf — gemessen, als Summe der Kinder oder als Rest unter einem Zähler — und zählt nichts doppelt; falsch verdrahtete Unterzähler werden erkannt und gemeldet. In dieser Version steckt die Grundlage im Hintergrund (Datenmodell + Auflösung); der Baum-Editor und die verschachtelte Anzeige folgen als nächstes.
 
