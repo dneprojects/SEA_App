@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.6
+
+- **Verbraucher-Hierarchie (Grundlage).** Verbraucher können jetzt einem übergeordneten Knoten zugeordnet werden (z. B. Heizstab und Wallbox hinter einer gemeinsamen Messung, Geräte unter einem Unterzähler, Auto an Wallbox). SEA rechnet die Leistung je Knoten korrekt auf — gemessen, als Summe der Kinder oder als Rest unter einem Zähler — und zählt nichts doppelt; falsch verdrahtete Unterzähler werden erkannt und gemeldet. In dieser Version steckt die Grundlage im Hintergrund (Datenmodell + Auflösung); der Baum-Editor und die verschachtelte Anzeige folgen als nächstes.
+
 ## 0.8.5
 
 - **Ausblick/Einsparung modellieren das Netzladen jetzt mit der PV-Schwelle.** Die Vorausberechnung fuhr die Wallbox bisher immer als „nur PV-Überschuss", auch wenn real „Laden aus dem Netz erlaubt" eingestellt ist — sie zeigte dadurch das Netzladen gar nicht und die PV-Schwelle blieb in der Prognose folgenlos. Jetzt übernimmt die Simulation die echte Lade-Betriebsart samt PV-Schwelle: nachts kein Netzladen, tagsüber ab der Schwelle — konsistent mit der Live-Regelung.
