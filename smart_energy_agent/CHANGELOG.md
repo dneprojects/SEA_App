@@ -2,6 +2,7 @@
 
 ## 0.8.6
 
+- **Verbraucher-Einstellungen jetzt im Backup enthalten.** Die Konfiguration der „weiteren Verbraucher" (bisher in einer separaten `consumers.json`) wird beim ersten Start automatisch in den zentralen Einstellungs-Speicher überführt — damit wird sie ab jetzt auch mitgesichert und mit-wiederhergestellt. Die alte Datei bleibt unangetastet liegen; nichts geht verloren.
 - **Verbraucher-Hierarchie (Grundlage).** Verbraucher können jetzt einem übergeordneten Knoten zugeordnet werden (z. B. Heizstab und Wallbox hinter einer gemeinsamen Messung, Geräte unter einem Unterzähler, Auto an Wallbox). SEA rechnet die Leistung je Knoten korrekt auf — gemessen, als Summe der Kinder oder als Rest unter einem Zähler — und zählt nichts doppelt; falsch verdrahtete Unterzähler werden erkannt und gemeldet. In dieser Version steckt die Grundlage im Hintergrund (Datenmodell + Auflösung); der Baum-Editor und die verschachtelte Anzeige folgen als nächstes.
 
 ## 0.8.5
