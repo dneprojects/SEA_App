@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.7
+
+- **Zeitzone von Home Assistant übernommen (Fehler behoben).** Das Add-on lief bislang in UTC — dadurch waren alle uhrzeitabhängigen Entscheidungen (Hoch-/Niedertarif-Fenster, das stunden­genaue Lastprofil, der Ausblick-Zeitstrahl) und die angezeigten Zeiten gegenüber der lokalen Uhr verschoben. SEA übernimmt jetzt die in Home Assistant eingestellte Zeitzone (beim Verbinden aus der HA-Konfiguration, zusätzlich früh beim Start), sodass Uhrzeiten und Prognose wieder zur echten Ortszeit passen.
+- **Zielgetriebene Planung (Grundlage).** Neu ist eine Ebene über der Vorausschau, die ein übergeordnetes Ziel verfolgt statt nur Knöpfe zu vergleichen: Du gibst ein Ziel vor (geringste Kosten, größte Eigenversorgung oder maximaler Eigenverbrauch) plus harte Randbedingungen (Batterie-Reserve nicht unterschreiten, Auto bis zur Abfahrt geladen, Warmwasser über einer Komforttemperatur). SEA spielt alle Szenarien über den Prognosetag durch, sortiert sie so, dass zuerst die zulässigen (keine Randbedingung verletzt) und darunter das beste Ziel-Ergebnis steht — und erklärt, warum. Es ändert dabei nichts selbst, sondern empfiehlt.
+- **Verschiebbare Verbraucher terminieren.** Für eine startbare Last (Waschmaschine, Spülmaschine …) findet SEA in der Prognose das günstigste bzw. „grünste" Zeitfenster — unter Beachtung von frühestem Start und Frist — und nennt Startzeitpunkt, den nötigen Netzbezug und den dabei genutzten PV-Überschuss.
+
 ## 0.8.6
 
 - **Speichergrößen werden aus der Historie geschätzt.** Für Warmwasser-Speicher (und WP-Warmwasser) mit Temperatur- und Leistungssensor schätzt SEA aus vergangenen Aufheiz-Phasen die Wärmekapazität (≈ Volumen), den Wirkungsgrad und den Standby-Verlust — und speist diese Werte automatisch in Ausblick und Einsparung, sodass der Heizstab dort einen echten Speicher füllt und am Zielwert stoppt, statt als einfache Last zu gelten. Werte müssen nicht mehr von Hand gesetzt werden.
