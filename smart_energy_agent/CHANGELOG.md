@@ -2,6 +2,7 @@
 
 ## 0.8.6
 
+- **Verbraucherkarte aufgeräumt + Energiefluss klickbar.** Die Zeile „Leistung" steht jetzt direkt unter dem Namen (wichtigste Größe zuerst) und wird über den Stift bearbeitet (statt „Bearbeiten"-Knopf); sie zeigt kompakt den Sensor + die Zuordnung („Teil von …", „Rest von …", „Summe aus …"). Die Energie-Entität braucht keinen eigenen Namen mehr. Im Energiefluss öffnet ein Klick auf einen Verbraucher-Knoten (nicht Haus) direkt dessen Einstellungskarte. Der „Rest"-Knoten wird im Fluss zuverlässig aus der Hauslast berechnet.
 - **„Rest der Leistung"-Knoten zeigt im Energiefluss jetzt den echten Rest.** Ein Knoten wie „Wohnung Ne" (Rest des Hauses) hat keinen eigenen Sensor — im Fluss-Diagramm blieb er darum bei 0 W ohne Linie. Jetzt übernimmt der Fluss für Rest-/Summen-Knoten die berechnete Leistung (Hauslast − gemessene Verbraucher) und zeichnet die Flusslinie. Solche Knoten werden außerdem nicht mehr in „Weitere Verbraucher" zusammengefasst, sondern als eigener benannter Bereich gezeigt.
 - **Fehler behoben: Hierarchie-Zuordnung ging verloren, wenn ein Verbraucher auf „Rest der Leistung" stand.** Ein „Rest"-Knoten direkt unter „Haus" (ohne übergeordneten Zähler) ließ die interne Berechnung abstürzen — dadurch zeigte das Zuordnungs-Popup nur noch „Haus" und keine übergeordneten Verbraucher mehr. Solche Fälle werden jetzt sauber abgefangen (der Knoten fällt auf „eigener Sensor" zurück, mit Hinweis), die Auswahl funktioniert wieder.
 
