@@ -2,6 +2,8 @@
 
 ## 0.8.8
 
+- **Alle Steuer-Eingriffe protokolliert (auch Schalten).** Bisher wurden nur Sollwert-Eingriffe mit Zeitstempel gespeichert; jetzt auch Ein/Aus-Schaltungen — der Verlauf/CSV zeigt jede Aktion, die SEA ausgeführt hat.
+- **CSV-Export erweitert + Einstellungs-Historie herunterladbar.** Der Verlauf-CSV enthält jetzt zusätzlich den reinen Hausverbrauch und den Preis; ein neuer Knopf „Einstellungen-CSV" lädt die zeitgestempelten Einstellungs-/Konfig-Änderungen (fürs Debugging: was war wann aktiv).
 - **Fundament für faire Szenario-Vergleiche: reiner Hausverbrauch wird aufgezeichnet.** Zusätzlich zum Gesamt-Hausverbrauch speichert SEA jetzt den Grundverbrauch OHNE die von SEA gesteuerten Lasten (Heizstab, Wallbox, schaltbare Verbraucher) — damit ein Rückblick-Vergleich diese Lasten unter anderen Einstellungen sauber neu durchrechnen kann, statt die alten Entscheidungen mitzuschleppen.
 - **Vollständige Einstellungs-Historie.** SEA hält jetzt einen zeitgestempelten Verlauf der plan-relevanten Einstellungen (bei jeder Änderung) vor — Grundlage, um später Szenarien exakt gegen die real aktiven Einstellungen zu vergleichen.
 - **Tagesplan: „Was-wäre-wenn" mit Kosten-Delta.** Unter dem Plan stehen durchgerechnete Alternativen (z. B. Batterie als Backup halten, Auto zuerst laden) mit den Mehrkosten (+) oder der Ersparnis (−) für heute gegenüber dem aktuellen Plan — je Zeile ein echter Simulationslauf.
