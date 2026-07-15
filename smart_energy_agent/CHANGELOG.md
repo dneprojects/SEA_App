@@ -2,6 +2,8 @@
 
 ## 0.8.8
 
+- **Tagesplan: Heizstab in der Wärme-Spur.** Der Heizstab lädt denselben Warmwasser-Speicher wie die Wärmepumpe (thermisch) — er erscheint jetzt in der Spur „Wärme" statt „Geräte".
+- **Tagesplan an HA-Sprachausgabe.** Wähle eine HA-Voice-Entität (Assist-Satellit oder Notify-Ziel) per Auswahl; ein Knopf lässt SEA das Tagesplan-Briefing dort ansagen.
 - **Tagesplan mit Morgen-Briefing zum Vorlesen.** Eine sprechbare Zusammenfassung des Tages (aktuelle Strategie, wann die Batterie deckt bzw. das Netz zieht, Batterie-Tiefststand, erwartete Kosten und Autarkie) steht jetzt oben am Tagesplan — mit „🔊 Vorlesen"-Knopf (Browser-Sprachausgabe).
 - **Tagesplan mit Anforderungs-Leiste.** Auto-Frist (fertig um + Ziel-SoC), Warmwasser-Komfort und Mindest-Reserve stehen jetzt direkt am Tagesplan — Änderungen werden gespeichert und der Plan sofort neu gerechnet.
 - **Neuer Menüpunkt „Tagesplan".** Ein eigener Bildschirm nach dem Dashboard zeigt den Plan für heute als Spuren-Ansicht: Preis-Band (Bezug + Einspeisung), PV und Verbrauch, Batterie-Ladestand als Kurve und je Speicher/Last eine Spur (Strategie, Batterie, Wärme, Auto, Geräte) — Klick auf einen Block zeigt das Warum.
