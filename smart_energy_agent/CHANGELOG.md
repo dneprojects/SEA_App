@@ -2,6 +2,7 @@
 
 ## 0.8.8
 
+- **Tagesplan mit Morgen-Briefing zum Vorlesen.** Eine sprechbare Zusammenfassung des Tages (aktuelle Strategie, wann die Batterie deckt bzw. das Netz zieht, Batterie-Tiefststand, erwartete Kosten und Autarkie) steht jetzt oben am Tagesplan — mit „🔊 Vorlesen"-Knopf (Browser-Sprachausgabe).
 - **Tagesplan mit Anforderungs-Leiste.** Auto-Frist (fertig um + Ziel-SoC), Warmwasser-Komfort und Mindest-Reserve stehen jetzt direkt am Tagesplan — Änderungen werden gespeichert und der Plan sofort neu gerechnet.
 - **Neuer Menüpunkt „Tagesplan".** Ein eigener Bildschirm nach dem Dashboard zeigt den Plan für heute als Spuren-Ansicht: Preis-Band (Bezug + Einspeisung), PV und Verbrauch, Batterie-Ladestand als Kurve und je Speicher/Last eine Spur (Strategie, Batterie, Wärme, Auto, Geräte) — Klick auf einen Block zeigt das Warum.
 - **Tagesplan mit Kosten-Kopf.** Oben stehen jetzt die erwarteten Kosten des Tages, Netzbezug/Einspeisung, Autarkiegrad und PV-Eigenverbrauch — direkt aus dem simulierten Tagesverlauf und deinen Preisen.
