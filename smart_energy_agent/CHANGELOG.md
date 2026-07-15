@@ -2,6 +2,8 @@
 
 ## 0.8.7
 
+- **Ausblick erklärt den ersten Balken („Warum?").** Unter „Jetzt aktiv" steht jetzt die Begründung der Regelung für den Startzeitpunkt (wie im Feld „Aktuell") — z. B. „Netzbezug decken [geregelt]", „Notstromreserve laden" oder „… → Reserve 30 %" —, sodass sofort erkennbar ist, warum die Batterie deckt, lädt oder das Netz das Haus deckt.
+- **Reglerprotokoll nennt die begrenzende Grenze.** Wird ein Sollwert durch eine Grenze gekappt (z. B. Reserve, SoC-Max, Netzanschluss), steht diese jetzt in der Begründung, statt einen Wert auszuweisen, der gar nicht geschrieben wurde.
 - **PV-Überschuss-Anhebung weicht der Batterie (Fehler behoben).** Die Warmwasser-/WP-Anhebung griff im Ausblick über Stunden und zog sich dabei den Überschuss, den eigentlich die höherpriore Batterie laden sollte — jetzt hält sie sich zurück, solange die Batterie noch Ladebedarf hat, und startet erst mit echtem Rest-Überschuss.
 - **Ausblick startet mit dem aktuellen Batterie-Fluss.** Deckt die Batterie gerade den Netzbezug, beginnt der Ausblick jetzt genau damit, statt die Deckung im ersten Schritt „von 0" hochzuregeln und so einen Phantom-Netzbezug am Anfang zu zeigen.
 - **Ausblick-Kurve zeigt den simulierten Batterie-Ladestand.** Im Kurvenplot unter dem Zeitstrahl liegt jetzt zusätzlich die simulierte SoC-Linie (0–100 %, rechte Achse) — der Lade-/Deck-Verlauf ist direkt neben PV und Verbrauch ablesbar.
