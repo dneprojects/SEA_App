@@ -2,6 +2,7 @@
 
 ## 0.8.8
 
+- **Tagesplan: „Was-wäre-wenn" mit Kosten-Delta.** Unter dem Plan stehen durchgerechnete Alternativen (z. B. Batterie als Backup halten, Auto zuerst laden) mit den Mehrkosten (+) oder der Ersparnis (−) für heute gegenüber dem aktuellen Plan — je Zeile ein echter Simulationslauf.
 - **Tagesplan: Heizstab in der Wärme-Spur.** Der Heizstab lädt denselben Warmwasser-Speicher wie die Wärmepumpe (thermisch) — er erscheint jetzt in der Spur „Wärme" statt „Geräte".
 - **Tagesplan an HA-Sprachausgabe.** Wähle eine HA-Voice-Entität (Assist-Satellit oder Notify-Ziel) per Auswahl; ein Knopf lässt SEA das Tagesplan-Briefing dort ansagen.
 - **Tagesplan mit Morgen-Briefing zum Vorlesen.** Eine sprechbare Zusammenfassung des Tages (aktuelle Strategie, wann die Batterie deckt bzw. das Netz zieht, Batterie-Tiefststand, erwartete Kosten und Autarkie) steht jetzt oben am Tagesplan — mit „🔊 Vorlesen"-Knopf (Browser-Sprachausgabe).
