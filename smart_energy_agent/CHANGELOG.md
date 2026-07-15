@@ -2,6 +2,7 @@
 
 ## 0.8.7
 
+- **Ausblick startet exakt beim Ist-Zustand (Fehler behoben).** Der erste Balken übernimmt jetzt die momentane PV- und Verbrauchsleistung aus der Live-Bilanz (dieselbe Quelle wie „Aktuell") statt eines 10-Minuten-Mittels der Historie — das hinkte beim morgendlichen PV-Anstieg hinterher und zeigte „Netzbezug", während live gerade eingespeist und die Batterie geladen wurde. Jetzt stimmt „Jetzt aktiv" mit „Aktuell" überein.
 - **Ausblick erklärt „Jetzt aktiv" („Warum?").** Unter „Jetzt aktiv" steht jetzt die Begründung der Regelung zum gezeigten Zeitpunkt (wie im Feld „Aktuell") — z. B. „Netzbezug decken [geregelt]", „Notstromreserve laden" oder „… → Reserve 30 %" —, sodass sofort erkennbar ist, warum die Batterie deckt, lädt oder das Netz das Haus deckt.
 - **Reglerprotokoll nennt die begrenzende Grenze.** Wird ein Sollwert durch eine Grenze gekappt (z. B. Reserve, SoC-Max, Netzanschluss), steht diese jetzt in der Begründung, statt einen Wert auszuweisen, der gar nicht geschrieben wurde.
 - **PV-Überschuss-Anhebung weicht der Batterie (Fehler behoben).** Die Warmwasser-/WP-Anhebung griff im Ausblick über Stunden und zog sich dabei den Überschuss, den eigentlich die höherpriore Batterie laden sollte — jetzt hält sie sich zurück, solange die Batterie noch Ladebedarf hat, und startet erst mit echtem Rest-Überschuss.
