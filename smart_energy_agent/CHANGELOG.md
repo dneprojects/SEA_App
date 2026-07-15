@@ -1,8 +1,12 @@
 # Changelog
 
-## 0.8.7
+## 0.8.8
 
 - **Neuer Menüpunkt „Tagesplan".** Ein eigener Bildschirm nach dem Dashboard zeigt den Plan für heute als Spuren-Ansicht: Preis-Band (Bezug + Einspeisung), PV und Verbrauch, Batterie-Ladestand als Kurve und je Speicher/Last eine Spur (Strategie, Batterie, Wärme, Auto, Geräte) — Klick auf einen Block zeigt das Warum.
+- **Tagesplan mit Kosten-Kopf.** Oben stehen jetzt die erwarteten Kosten des Tages, Netzbezug/Einspeisung, Autarkiegrad und PV-Eigenverbrauch — direkt aus dem simulierten Tagesverlauf und deinen Preisen.
+
+## 0.8.7
+
 - **Ausblick spricht dieselbe Sprache wie „Aktuell“.** Die Phasen verwenden jetzt die Strategie-Bezeichnungen aus dem Feld „Aktuell“ (z. B. „PV-Überschuss: Eigenverbrauch und Speicherung“, „Batterie deckt Netzbezug“) statt eigener Fluss-Begriffe („Batterie lädt“) — „Jetzt aktiv“ liest sich damit identisch zur aktuell laufenden Strategie.
 - **Ausblick unterstellt kein nicht-angestecktes Auto mehr (Standard).** Bisher nahm der Ausblick standardmäßig an, ein konfiguriertes Fahrzeug hänge „ab jetzt“ an der Wallbox, und lud es — das erzeugte Netzbezug und eine leer werdende Batterie, die live gar nicht existieren. Jetzt spiegelt der Ausblick die Realität (Auto nicht angesteckt); die „Was, wenn ab jetzt angesteckt“-Vorschau bleibt als Opt-in.
 - **Ausblick: invertiertes Vorzeichen von Netz/Batterie berücksichtigt (Fehler behoben).** Hattest du in der Konfiguration die Vorzeichen-Umkehr für Netz- oder Batterieleistung aktiviert, drehte die Simulation die Flussrichtung um — eine **ladende** Batterie wurde als **entladend** gerechnet (und Einspeisung als Netzbezug). Der Ausblick berücksichtigt die Invert-Einstellungen jetzt korrekt und zeigt dieselbe Stromrichtung wie „Aktuell".
