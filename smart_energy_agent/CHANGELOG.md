@@ -2,6 +2,8 @@
 
 ## 0.8.8
 
+- **Ein Debug-Download über den eingestellten Zeitbereich.** Der Verlauf-CSV enthält jetzt alles zum Eingrenzen einzelner Regelartefakte: Messdaten (inkl. reinem Hausverbrauch + Preis), SEAs Eingriffe (Sollwerte UND Schalten) und angehängt die zeitgestempelten Einstellungs-/Eingriffs-Änderungen (auch manuelle Kuratierung) — in einem Download. Der separate „Einstellungen-CSV"-Knopf entfällt.
+- **Datensicherung enthält die manuelle Kuratierung.** Backups (und die Backup-Historie) sichern jetzt auch die Include/Exclude-/Rollen-Overrides mit — das komplette aktuelle Set, sauber wiederherstellbar.
 - **Alle Steuer-Eingriffe protokolliert (auch Schalten).** Bisher wurden nur Sollwert-Eingriffe mit Zeitstempel gespeichert; jetzt auch Ein/Aus-Schaltungen — der Verlauf/CSV zeigt jede Aktion, die SEA ausgeführt hat.
 - **CSV-Export erweitert + Einstellungs-Historie herunterladbar.** Der Verlauf-CSV enthält jetzt zusätzlich den reinen Hausverbrauch und den Preis; ein neuer Knopf „Einstellungen-CSV" lädt die zeitgestempelten Einstellungs-/Konfig-Änderungen (fürs Debugging: was war wann aktiv).
 - **Fundament für faire Szenario-Vergleiche: reiner Hausverbrauch wird aufgezeichnet.** Zusätzlich zum Gesamt-Hausverbrauch speichert SEA jetzt den Grundverbrauch OHNE die von SEA gesteuerten Lasten (Heizstab, Wallbox, schaltbare Verbraucher) — damit ein Rückblick-Vergleich diese Lasten unter anderen Einstellungen sauber neu durchrechnen kann, statt die alten Entscheidungen mitzuschleppen.
