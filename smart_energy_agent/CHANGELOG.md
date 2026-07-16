@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.9.3
+
+- **Die Sprachausgabe meldet jetzt Entscheidungen, statt auf Knopfdruck vorzulesen.** Findet SEA im Modus „Assistiert" eine bessere Einstellung für heute, sagt es das über deine Voice-Entität — einmal je Vorschlag, nicht bei jeder Prüfung. Die Entität wird unter *Einrichtung → Allgemein* gewählt; die Vorlese-Knöpfe entfallen.
+- **Seitenreihenfolge: Heute · Verlauf · Verhalten · Analyse · Status · Einrichtung.** „Geräte" heißt jetzt „Status" — es ist die Momentaufnahme aller Messwerte — und erscheint nur im Experten-Modus. Der Seitenwechsel per Scrollen folgt automatisch dem sichtbaren Menü.
+- **„Ziel & Kontrolle" sachlicher und in sinnvoller Reihenfolge:** erst *Ziel* (Kosten minimieren / Autarkie maximieren / Eigenverbrauch maximieren), dann *Autonomie* (Assistiert/Regelbasiert/Manuell). Die Erklärung steht darunter, nicht im Auswahlfeld.
+- **Anforderungen & Grenzen enthält nur noch echte Bedingungen.** Die Stopp-Temperatur des Heizstabs ist eine Gerätegrenze und steht bei der Komponente; die Notstrom-Reserve nennt jetzt die Batterie beim Namen.
+- **Einsparung: nur noch die beiden aussagekräftigen Vergleiche** (PV-Volleinspeisung, Direkter Eigenverbrauch). Der Text der Analyse stimmt wieder: Sie fährt die echte Regelung über die ganze Anlage, nicht mehr nur Batterie und stärkste Last.
+- **Kleinigkeit:** Das Zustands-Abzeichen bei „Netzanschluss-Grenzen" steht wieder bündig unter den anderen.
+
 ## 0.9.2
 
 - **Größere Schrift im ganzen Fließtext.** Erklärungen, Beschriftungen, Knöpfe und Menü sind jetzt mindestens 14 px; auf dem Handy 12 px. Nur Diagramm-Beschriftungen und Abzeichen bleiben klein.
