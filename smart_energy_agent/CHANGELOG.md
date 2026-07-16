@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.9
+
+- **Ein ausgefallener Leistungssensor bremst die Regelung nicht mehr aus.** SEA hat einen Sensor, der „nicht verfügbar" meldet, bisher als „0 Watt" gelesen und das Gerät deshalb dauerhaft mit nur rund einem Fünftel des Überschusses angesteuert, während der Rest ins Netz ging. Jetzt unterscheidet SEA „das Gerät ist aus" von „ich sehe das Gerät nicht", regelt in dem Fall auf dem quittierten Sollwert weiter und sagt es in der Warum-Zeile und als Hinweis auf „Heute".
+- **Ein Gerät, das die zugeteilte Leistung nicht abnimmt, blockiert sie nicht mehr für die anderen.** Nimmt ein Teilnehmer über drei Minuten deutlich weniger, als SEA ihm befiehlt — etwa die Batterie, die kurz vor voll abregelt —, wird sein Anspruch auf das gekappt, was er wirklich schafft; der Rest fließt an das nächste Gerät in der Prioritätenliste, statt eingespeist zu werden. Kann er später wieder mehr, wächst er von selbst zurück.
+
 ## 0.8.8
 
 - **Ein Ziel für den Tag — und es bewirkt wirklich etwas.** Auf „Heute" wählst du, worauf es dir ankommt (wenig Geld ausgeben, wenig Netzstrom, wenig einspeisen); SEA spielt den Prognosetag mit jeder Einstellungs-Variante durch, sortiert sie nach diesem Ziel und wirft alles raus, was deine Anforderungen verletzt (Reserve, Auto-Frist) — egal wie günstig es wäre. Die Siegervariante lässt sich per Knopf wirklich übernehmen; Varianten, die SEA noch nicht einstellen kann, sagen das offen, statt es zu versprechen. Von allein ändert sich nichts.
