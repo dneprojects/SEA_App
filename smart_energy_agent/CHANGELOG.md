@@ -2,6 +2,7 @@
 
 ## 0.10.0
 
+- **Die Experten-Einstellungen folgen jetzt deinen Home-Assistant-Rechten.** Wer in HA Administrator ist, sieht sie — alle anderen nicht. Die Checkbox entfällt; SEA erkennt den angemeldeten Benutzer selbst. (Lässt sich der Benutzer ausnahmsweise nicht ermitteln, gilt weiter die Add-on-Option „expert", damit niemand plötzlich ohne seine Einstellungen dasteht.)
 - **Lizenzschlüssel statt Habitron-Erkennung.** SEA wird über einen signierten Schlüssel freigeschaltet: ein Kundenschlüssel gilt unbefristet für genau einen Habitron-Router, ein Vorführ-Schlüssel für jede Anlage bis zu seinem Ablaufdatum. Beides steckt fälschungssicher im Schlüssel selbst — kein Server, kein Internet nötig. Die Lizenz-Karte unter *Einrichtung* zeigt den Status und die Router-Seriennummer, die Habitron für die Ausstellung braucht. Ohne gültigen Schlüssel zeichnet SEA weiter auf und zeigt alles an, steuert aber nicht.
 
 ## 0.9.3
