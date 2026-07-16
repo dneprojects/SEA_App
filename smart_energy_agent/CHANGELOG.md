@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.9.1
+
+- **Sechs Menüpunkte statt neun, klar getrennt.** *Heute* (was läuft + der Plan), *Verhalten* (Ziel, Kontroll-Stufe, Anforderungen, Strategien, Temperaturabsenkung), *Geräte*, *Analyse* (Einsparung + Investition), *Verlauf* und *Einrichtung* (Komponenten, Fahrzeuge, Tarife, Grundeinstellungen). Was zusammengehört, steht jetzt beieinander — und jede Einstellung hat genau einen Ort, damit nichts mehr auseinanderlaufen kann.
+- **Einheitliches Karten-Design auf allen Seiten.** Jeder Block sitzt in einer Karte mit roter Überschrift und schwarzem Inhalt; der Energiefluss hat endlich eine eigene Überschrift bekommen. Hinweise stehen ohne Rahmen darum, dafür jeder einzeln als Karte — Money-Guard und Netz-Plausibilität inbegriffen, sie gehören dazu.
+
 ## 0.9.0
 
 - **Du bestimmst, wie viel SEA selbst macht.** Neu auf „Heute": *Assistiert* (SEA prüft von sich aus, ob eine andere Einstellung dein Ziel besser erreicht, und schlägt sie vor), *Regelbasiert* (wie bisher: SEA regelt nach deinen Einstellungen) oder *Manuell* (SEA schaut nur zu und zeichnet auf). Die Umschaltung fasst deine Einstellungen nicht an — zurückschalten stellt alles wieder her. Pflichten laufen in jeder Stufe weiter: Notreserve, Einspeise-Deckel, Zellpflege, das Zurückstellen angehobener Sollwerte und die Netzdeckung deiner Batterie.
