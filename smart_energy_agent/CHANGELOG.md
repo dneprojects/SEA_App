@@ -2,6 +2,13 @@
 
 ## 0.9.3
 
+- **Dynamischer Tarif ohne Preis-Entität: SEA nimmt die Börse.** Ist „Dynamisch" gewählt, aber keine Entität hinterlegt, holt SEA stündlich die Day-Ahead-Preise und rechnet mit (Börsenpreis + dein Aufschlag) × MwSt — ein dynamischer Tarif funktioniert damit ohne Anbieter-Integration. Die Aufschlag-Felder stehen dann sichtbar dort, statt im Experten-Modus.
+- **Die Analyse rechnet in jedem Tarifmodell.** Neue Karte: *Analyseart* (Rückblick/Vorschau/Investition), *Zeitraum* und *Stromtarif* (Fest / HT-NT / Dynamisch, deiner ist als „mein Tarif" markiert) — so lässt sich prüfen, ob sich ein anderes Tarifmodell rechnen würde. Erklärtext und Zeitraum-Auswahl folgen der Analyseart. Fehlen für ein Modell die Preise, sagt SEA das, statt zu raten.
+- **Sprachausgabe auf mehreren Geräten gleichzeitig.** Die Entitäten werden wie überall über den Entitäten-Picker gewählt (mehrere = Ansage auf allen); ein stummes Gerät bringt die anderen nicht zum Schweigen.
+- **PV-Prognose ohne Sonderfall.** Die gewählte Entität gilt — Forecast.Solar, Solcast oder andere, SEA erkennt das Format selbst. Nur wenn nichts gewählt ist, nimmt SEA die Solar-Prognose des HA-Energie-Dashboards.
+- **Einrichtung aufgeräumt:** Komponenten sind wie die anderen Karten einklappbar; PV-Prognose und Sprachausgabe stehen untereinander im selben Zeilen-Layout wie die Komponenten; Tarife übernehmen Eingaben automatisch (kein Speichern-Knopf mehr).
+- **Die Preis-Schwellen fürs Netzladen/Entladen stehen jetzt bei der Tarif-Strategie** (Verhalten) statt in der Tarif-Einrichtung — ein Tarif ist, was du zahlst, nicht was SEA damit tut.
+- **Die Sparanalyse erklärt nur noch die beiden Vergleiche, die es gibt.**
 - **Die Sprachausgabe meldet jetzt Entscheidungen, statt auf Knopfdruck vorzulesen.** Findet SEA im Modus „Assistiert" eine bessere Einstellung für heute, sagt es das über deine Voice-Entität — einmal je Vorschlag, nicht bei jeder Prüfung. Die Entität wird unter *Einrichtung → Allgemein* gewählt; die Vorlese-Knöpfe entfallen.
 - **Seitenreihenfolge: Heute · Verlauf · Verhalten · Analyse · Status · Einrichtung.** „Geräte" heißt jetzt „Status" — es ist die Momentaufnahme aller Messwerte — und erscheint nur im Experten-Modus. Der Seitenwechsel per Scrollen folgt automatisch dem sichtbaren Menü.
 - **„Ziel & Kontrolle" sachlicher und in sinnvoller Reihenfolge:** erst *Ziel* (Kosten minimieren / Autarkie maximieren / Eigenverbrauch maximieren), dann *Autonomie* (Assistiert/Regelbasiert/Manuell). Die Erklärung steht darunter, nicht im Auswahlfeld.
