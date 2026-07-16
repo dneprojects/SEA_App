@@ -2,6 +2,8 @@
 
 ## 0.9.3
 
+- **„Leistung & Zuordnung" wieder einzeilig.** Radio, „Sensor" und die gewählte Entität stehen in einer Zeile, Stift und × rechtsbündig, das + darunter unter dem ×. (Das Popup hatte sich das Spalten-Layout der Komponenten-Seite geliehen, das dort gar nicht gilt — deshalb brach jede Zelle um.)
+- **Bei der Einsparung sind die verwaisten Eingabefelder weg** (Speichergröße, PV-Leistung, Senkentyp, Fallback-Preise). Sie gehörten zu den entfernten Vergleichen; was sie konnten, macht die Investitions-Analyse mit der echten Regelung besser.
 - **Dynamischer Tarif ohne Preis-Entität: SEA nimmt die Börse.** Ist „Dynamisch" gewählt, aber keine Entität hinterlegt, holt SEA stündlich die Day-Ahead-Preise und rechnet mit (Börsenpreis + dein Aufschlag) × MwSt — ein dynamischer Tarif funktioniert damit ohne Anbieter-Integration. Die Aufschlag-Felder stehen dann sichtbar dort, statt im Experten-Modus.
 - **Die Analyse rechnet in jedem Tarifmodell.** Neue Karte: *Analyseart* (Rückblick/Vorschau/Investition), *Zeitraum* und *Stromtarif* (Fest / HT-NT / Dynamisch, deiner ist als „mein Tarif" markiert) — so lässt sich prüfen, ob sich ein anderes Tarifmodell rechnen würde. Erklärtext und Zeitraum-Auswahl folgen der Analyseart. Fehlen für ein Modell die Preise, sagt SEA das, statt zu raten.
 - **Sprachausgabe auf mehreren Geräten gleichzeitig.** Die Entitäten werden wie überall über den Entitäten-Picker gewählt (mehrere = Ansage auf allen); ein stummes Gerät bringt die anderen nicht zum Schweigen.
