@@ -2,6 +2,7 @@
 
 ## 0.8.8
 
+- **Einsparung rechnet jetzt auf dem reinen Hausverbrauch.** Die Rückblick-Vergleiche fahren die aufgezeichnete Basis-Last (SEAs steuerbare Lasten sind schon beim Aufzeichnen abgezogen), statt sie nachträglich zu rekonstruieren — die Szenarien entscheiden diese Lasten damit sauber neu, statt die alten Einstellungen mitzuschleppen. Ältere Aufzeichnungen nutzen weiter die bisherige Rekonstruktion.
 - **Ein Debug-Download über den eingestellten Zeitbereich.** Der Verlauf-CSV enthält jetzt alles zum Eingrenzen einzelner Regelartefakte: Messdaten (inkl. reinem Hausverbrauch + Preis), SEAs Eingriffe (Sollwerte UND Schalten) und angehängt die zeitgestempelten Einstellungs-/Eingriffs-Änderungen (auch manuelle Kuratierung) — in einem Download. Der separate „Einstellungen-CSV"-Knopf entfällt.
 - **Datensicherung enthält die manuelle Kuratierung.** Backups (und die Backup-Historie) sichern jetzt auch die Include/Exclude-/Rollen-Overrides mit — das komplette aktuelle Set, sauber wiederherstellbar.
 - **Alle Steuer-Eingriffe protokolliert (auch Schalten).** Bisher wurden nur Sollwert-Eingriffe mit Zeitstempel gespeichert; jetzt auch Ein/Aus-Schaltungen — der Verlauf/CSV zeigt jede Aktion, die SEA ausgeführt hat.
