@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.0
+
+- **Lizenzschlüssel statt Habitron-Erkennung.** SEA wird über einen signierten Schlüssel freigeschaltet: ein Kundenschlüssel gilt unbefristet für genau einen Habitron-Router, ein Vorführ-Schlüssel für jede Anlage bis zu seinem Ablaufdatum. Beides steckt fälschungssicher im Schlüssel selbst — kein Server, kein Internet nötig. Die Lizenz-Karte unter *Einrichtung* zeigt den Status und die Router-Seriennummer, die Habitron für die Ausstellung braucht. Ohne gültigen Schlüssel zeichnet SEA weiter auf und zeigt alles an, steuert aber nicht.
+
 ## 0.9.3
 
 - **„Kosten heute" zeigte nicht die Stromkosten.** Die Kachel zeigte die Bewertungszahl, nach der die Ziel-Prüfung sortiert — die enthält zusätzlich den Batterie-Verschleiß und rechnet den abends noch gespeicherten Strom gegen (sonst wäre „Batterie leerfahren" immer die günstigste Variante). Jetzt steht dort die **Rechnung** (Bezug × Preis − Einspeisung × Vergütung, mit Ø-Preis), und die Bewertungszahl steht darunter offen aufgeschlüsselt.
