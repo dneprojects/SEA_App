@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.9.2
+
+- **Größere Schrift im ganzen Fließtext.** Erklärungen, Beschriftungen, Knöpfe und Menü sind jetzt mindestens 14 px; auf dem Handy 12 px. Nur Diagramm-Beschriftungen und Abzeichen bleiben klein.
+- **Weniger Kästen im Kasten.** Der Energiefluss trägt seine Überschrift jetzt selbst, ohne zweiten Rahmen darin — und heißt schlicht „Energiefluss". Die Energiebilanz heißt nur noch „Energiebilanz", denn die Seite heißt „Heute".
+- **Alle Hinweise in einer Karte.** Money-Guard, Netz-Plausibilität, Konfigurations-Hinweise und neu auch die Meldungen der Tagesplanung („heute kein Fenster für die Anhebung") stehen zusammen unter „Hinweise" — jeder als eigene Karte. Die geplanten Fenster selbst bleiben beim Plan.
+- **„Globale Strategie" und „Was-wäre-wenn" entfallen.** Beide sind überholt: Das Ziel („Worauf es dir heute ankommt") und die Ziel-Prüfung leisten dasselbe, nur genauer und mit deinen Anforderungen als harter Grenze.
+- **Die Ziel-Prüfung sagt es, wenn nichts zu holen ist.** Kosten alle Varianten gleich viel, erscheint das als ein Satz statt als lange Liste mit sinnlosen „übernehmen"-Knöpfen.
+- **Einrichtung aufgeräumt.** „Allgemein" steht oben (mit der Version), die Fahrzeuge sitzen bei den Komponenten, „Sicherung & Diagnose" ganz unten und übernimmt die Diagnose-Werte; die Karte „Status" entfällt.
+- **Kontroll-Stufen kurz benannt:** Assistiert — SEA optimiert · Regelbasiert — SEA steuert · Manuell — SEA überwacht.
+- **Seitenwechsel per Scrollen folgt wieder dem Menü.** Die Reihenfolge zeigte noch auf Seiten, die es nicht mehr gibt.
+
 ## 0.9.1
 
 - **Sechs Menüpunkte statt neun, klar getrennt.** *Heute* (was läuft + der Plan), *Verhalten* (Ziel, Kontroll-Stufe, Anforderungen, Strategien, Temperaturabsenkung), *Geräte*, *Analyse* (Einsparung + Investition), *Verlauf* und *Einrichtung* (Komponenten, Fahrzeuge, Tarife, Grundeinstellungen). Was zusammengehört, steht jetzt beieinander — und jede Einstellung hat genau einen Ort, damit nichts mehr auseinanderlaufen kann.
