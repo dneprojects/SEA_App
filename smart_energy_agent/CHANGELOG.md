@@ -2,6 +2,7 @@
 
 ## 0.9.3
 
+- **„Kosten heute" zeigte nicht die Stromkosten.** Die Kachel zeigte die Bewertungszahl, nach der die Ziel-Prüfung sortiert — die enthält zusätzlich den Batterie-Verschleiß und rechnet den abends noch gespeicherten Strom gegen (sonst wäre „Batterie leerfahren" immer die günstigste Variante). Jetzt steht dort die **Rechnung** (Bezug × Preis − Einspeisung × Vergütung, mit Ø-Preis), und die Bewertungszahl steht darunter offen aufgeschlüsselt.
 - **„Leistung & Zuordnung" wieder einzeilig.** Radio, „Sensor" und die gewählte Entität stehen in einer Zeile, Stift und × rechtsbündig, das + darunter unter dem ×. (Das Popup hatte sich das Spalten-Layout der Komponenten-Seite geliehen, das dort gar nicht gilt — deshalb brach jede Zelle um.)
 - **Bei der Einsparung sind die verwaisten Eingabefelder weg** (Speichergröße, PV-Leistung, Senkentyp, Fallback-Preise). Sie gehörten zu den entfernten Vergleichen; was sie konnten, macht die Investitions-Analyse mit der echten Regelung besser.
 - **Dynamischer Tarif ohne Preis-Entität: SEA nimmt die Börse.** Ist „Dynamisch" gewählt, aber keine Entität hinterlegt, holt SEA stündlich die Day-Ahead-Preise und rechnet mit (Börsenpreis + dein Aufschlag) × MwSt — ein dynamischer Tarif funktioniert damit ohne Anbieter-Integration. Die Aufschlag-Felder stehen dann sichtbar dort, statt im Experten-Modus.
