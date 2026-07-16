@@ -2,6 +2,7 @@
 
 ## 0.8.8
 
+- **Dashboard und Tagesplan sind zu einer Seite „Heute" verschmolzen.** Beide zeigten dieselbe Vorausschau — jetzt stehen die aktuelle Lage und der Plan für heute untereinander auf einer Seite, sodass „Jetzt aktiv" und „Aktuell" gar nicht mehr auseinanderlaufen können; die geplanten Fenster (Warmwasser, verschiebbare Geräte) hängen als Unterkarte am Plan.
 - **Investitions-Analyse: was bringt mehr PV oder mehr Speicher?** Neu unter Einsparung: SEA spielt die aufgezeichneten Tage mit größerer Batterie bzw. mehr PV noch einmal durch (echte Regelung, je Tag einzeln) und rechnet daneben, was derselbe Zeitraum an der Börse gekostet hätte — jeweils als Ersparnis für den Zeitraum und hochgerechnet aufs Jahr.
 - **Einsparung: Rückblick jetzt in Tages-Scheiben.** Ein Mehrtages-Vergleich simuliert jeden Tag einzeln — mit dem SoC, der an diesem Tag tatsächlich aufgezeichnet wurde — und summiert die Kosten; ein früher falscher Ladestand verfälscht damit nicht mehr alle Folgetage. Die Baseline läuft dabei unter den Einstellungen, die damals wirklich aktiv waren, sodass Baseline und Variante direkt vergleichbar sind.
 - **Einsparung rechnet jetzt auf dem reinen Hausverbrauch.** Die Rückblick-Vergleiche fahren die aufgezeichnete Basis-Last (SEAs steuerbare Lasten sind schon beim Aufzeichnen abgezogen), statt sie nachträglich zu rekonstruieren — die Szenarien entscheiden diese Lasten damit sauber neu, statt die alten Einstellungen mitzuschleppen. Ältere Aufzeichnungen nutzen weiter die bisherige Rekonstruktion.
