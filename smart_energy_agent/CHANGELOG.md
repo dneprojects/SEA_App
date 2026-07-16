@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.9.0
+
+- **Du bestimmst, wie viel SEA selbst macht.** Neu auf „Heute": *Assistiert* (SEA prüft von sich aus, ob eine andere Einstellung dein Ziel besser erreicht, und schlägt sie vor), *Regelbasiert* (wie bisher: SEA regelt nach deinen Einstellungen) oder *Manuell* (SEA schaut nur zu und zeichnet auf). Die Umschaltung fasst deine Einstellungen nicht an — zurückschalten stellt alles wieder her. Pflichten laufen in jeder Stufe weiter: Notreserve, Einspeise-Deckel, Zellpflege, das Zurückstellen angehobener Sollwerte und die Netzdeckung deiner Batterie.
+
 ## 0.8.9
 
 - **Ein ausgefallener Leistungssensor bremst die Regelung nicht mehr aus.** SEA hat einen Sensor, der „nicht verfügbar" meldet, bisher als „0 Watt" gelesen und das Gerät deshalb dauerhaft mit nur rund einem Fünftel des Überschusses angesteuert, während der Rest ins Netz ging. Jetzt unterscheidet SEA „das Gerät ist aus" von „ich sehe das Gerät nicht", regelt in dem Fall auf dem quittierten Sollwert weiter und sagt es in der Warum-Zeile und als Hinweis auf „Heute".
