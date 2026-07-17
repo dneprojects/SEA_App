@@ -2,6 +2,13 @@
 
 ## 0.10.0
 
+- **SEA startet eine Maschine, die jemand befüllen muss, nur noch mit Auftrag.** Bisher schaltete die PV-Überschuss-Strategie die Waschmaschine ein, sobald Sonne da war — auch wenn keine Wäsche drin lag; jetzt ist ohne Auftrag Ruhe.
+- **„Jetzt befüllt" plus Zeitrahmen je Maschine** stehen unter *Verhalten → Vorgaben & Grenzen* (früher „Anforderungen & Grenzen"; die Karte ist jetzt offen, statt zugeklappt): „ab" und „fertig bis" bleiben stehen, der Auftrag ist das Tägliche.
+- **SEA erkennt den Start an der Maschine selbst** — über eine Ein/Aus-Entität (z. B. aus der Hersteller-Cloud) oder die Leistung der Messsteckdose ab einer Schwelle; einzustellen beim Gerät unter *Start erkennen*.
+- **Wer am Gerät startet, gibt SEA einen Moment Zeit:** Direkt nach einem erkannten Start darf SEA die Maschine noch einmal abschalten und in ein günstiges Fenster legen — auch eine „nicht unterbrechbare". Läuft sie erst, wird sie nicht mehr angefasst.
+- **„Fertig bis" wird nicht mehr eingetippt.** Der „späteste Start" ist beim Gerät entfallen — SEA rechnet ihn aus dem Zeitrahmen und der Laufdauer aus, die es aus dem Durchlauf gelernt hat.
+- **„Max. Starts" zählt je Durchlauf statt je Tag** — drei Waschgänge sind drei Durchläufe, und der zweite erbt nicht mehr die Unterbrechungen des ersten. Zusammen mit „min. Auszeit" erscheint das Feld nur noch bei *unterbrechbar*, wo es überhaupt etwas bedeutet.
+- **Ohne Laufdaten wird der Auftrag nicht mehr abgelehnt:** SEA fährt die Maschine und lernt die Laufdauer in diesem Durchlauf; nur das Fenster im Plan fehlt beim ersten Mal.
 - **Diagramme lassen sich auf dem Handy zeitlich schieben.** Statt einen ganzen Tag in die Handy-Breite zu quetschen, behält die Zeichnung ihre Breite und der Rahmen wird seitlich verschiebbar — im Plan wie im Verlauf, wo alle Diagramme (Leistung, Operative Strategien, Strompreis, Detail-Plots) gemeinsam schieben, damit sie dieselbe Zeit zeigen. Zwei Finger zoomen weiterhin die Zeitachse.
 - **Der Ladestand von Batterie und Auto steht jetzt auch im Plan für heute** — gestrichelt, damit er sich von den gemessenen Leistungen unterscheidet; das Auto in eigener Farbe (blau), sonst wäre es mit der Strategie-Farbe verwechselbar gewesen.
 - **Die Balken in den Spuren sind schlanker, „jetzt" kollidiert nicht mehr mit der kW-Beschriftung**, und die Spur-Beschriftung wird nicht mehr am linken Rand abgeschnitten.
