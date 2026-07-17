@@ -2,6 +2,10 @@
 
 ## 0.10.0
 
+- **Diagramme lassen sich auf dem Handy zeitlich schieben.** Statt einen ganzen Tag in die Handy-Breite zu quetschen, behält die Zeichnung ihre Breite und der Rahmen wird seitlich verschiebbar — im Plan wie im Verlauf, wo alle Diagramme (Leistung, Operative Strategien, Strompreis, Detail-Plots) gemeinsam schieben, damit sie dieselbe Zeit zeigen. Zwei Finger zoomen weiterhin die Zeitachse.
+- **Der Ladestand von Batterie und Auto steht jetzt auch im Plan für heute** — gestrichelt, damit er sich von den gemessenen Leistungen unterscheidet; das Auto in eigener Farbe (blau), sonst wäre es mit der Strategie-Farbe verwechselbar gewesen.
+- **Die Balken in den Spuren sind schlanker, „jetzt" kollidiert nicht mehr mit der kW-Beschriftung**, und die Spur-Beschriftung wird nicht mehr am linken Rand abgeschnitten.
+- **Die Klick-Erklärung am Balken bleibt 30 Sekunden stehen.** Bisher hatte sie keine eigene Lebensdauer und wurde vom 5-Sekunden-Takt weggewischt.
 - **Das Tagesplan-Diagramm ist deutlich größer und besser lesbar.** Es ist rund doppelt so hoch, die Spuren sind breiter (die Beschriftung darin passt jetzt hinein statt zu schrumpfen), und es hat Abstand zur Karte darüber.
 - **Gleiche Größe, gleiche Farbe — im Plan wie im Verlauf.** PV ist überall bernsteinfarben, Verbrauch cyan, Ladestand petrol, der eigene Tarif blau. Nebenbei behoben: Im Verlauf hing die PV-Farbe an der Geräte-Reihenfolge — ein neues Gerät färbte sie um.
 - **Neuer Modus „Automatisch — SEA adaptiert".** SEA prüft alle 15 Minuten, ob eine andere Einstellung dein Ziel besser erreicht — und stellt sie selbst um. Mit Bremsen: nur wenn es sich lohnt (ab 10 Cent am Tag), frühestens eine Stunde nach der letzten Umstellung, und nur was SEA wirklich einstellen kann. **Änderst du eine Vorgabe** (Auto-Frist, Ziel-Ladestand, Notreserve, Ziel), plant SEA sofort neu und darf auch sofort umstellen — die Sperrfrist schützt vor Zappeln, nicht vor dir. Jede Anpassung erscheint mit Uhrzeit und Begründung unter *Heute → Hinweise* und wird angesagt; rückgängig über „Alternativen prüfen".
