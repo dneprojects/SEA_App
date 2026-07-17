@@ -8,6 +8,9 @@
 - **Wer am Gerät startet, gibt SEA einen Moment Zeit:** Direkt nach einem erkannten Start darf SEA die Maschine noch einmal abschalten und in ein günstiges Fenster legen — auch eine „nicht unterbrechbare". Läuft sie erst, wird sie nicht mehr angefasst.
 - **„Fertig bis" wird nicht mehr eingetippt.** Der „späteste Start" ist beim Gerät entfallen — SEA rechnet ihn aus dem Zeitrahmen und der Laufdauer aus, die es aus dem Durchlauf gelernt hat.
 - **„Max. Starts" zählt je Durchlauf statt je Tag** — drei Waschgänge sind drei Durchläufe, und der zweite erbt nicht mehr die Unterbrechungen des ersten. Zusammen mit „min. Auszeit" erscheint das Feld nur noch bei *unterbrechbar*, wo es überhaupt etwas bedeutet.
+- **„Wird beladen" steht nur noch an einer Stelle** — in der Geräte-Frage „Was soll SEA damit tun?". Das rohe Häkchen unter *Erweitert – Zeiten & Grenzen* war dasselbe zweimal.
+- **Die Auswahl der Geräte-Absicht ist nicht mehr eingequetscht** und zeigt den ganzen Text.
+- **„Stopp bei" lässt sich wieder entfernen** — eine einmal gewählte Entität klebte für immer, es gab überhaupt keinen Löschen-Knopf. Sie steht jetzt bei den anderen Einrichtungs-Angaben unter *Erweitert – Zeiten & Grenzen*, und das Entfernen nimmt die Schwelle gleich mit.
 - **Knopf „sofort starten"** neben „jetzt befüllt": SEA wartet dann nicht auf ein günstiges Fenster, sondern fährt die Maschine jetzt.
 - **Auch die Tarif-Strategie startet keine leere Maschine mehr** — sie hatte dieselbe Lücke wie die PV-Strategie: ein günstiges Fenster war ihr Grund genug.
 - **Eine Maschine, die wegen ihrer Frist laufen muss, wird nicht mehr abgeworfen.** Fristzwang und Netzbezugs-Abschaltung haben sich um sie gestritten — im Zweifel gewinnt die Frist.
