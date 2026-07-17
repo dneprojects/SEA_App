@@ -2,6 +2,12 @@
 
 ## 0.10.0
 
+- **Hinweise verschwinden sofort, wenn das Problem behoben ist.** Sie wurden nur alle fünf Minuten geholt — eine korrigierte Entität blieb bis zu fünf Minuten lang angemahnt. Jetzt lädt SEA sie neu, sobald sich etwas ändert, das einen Hinweis auslösen oder beenden kann.
+- **Jede Strategie hat eine Farbe — überall dieselbe.** Sie steht als farbiges Quadrat hinter dem Namen der Strategie und taucht damit erkennbar in den Spuren unter „Plan für heute" und im Streifen „Operative Strategien" wieder auf. (Bisher pflegten drei getrennte Farbtabellen dieselbe Sache — und widersprachen sich.)
+- **Die Temperaturabsenkung sitzt jetzt in ihrer eigenen Strategie-Karte**, mit Farbe und den Gruppen direkt darin. Der Knopf dorthin zeigte seit der Menü-Neugliederung ins Leere.
+- **Der Plan rechnet sich neu, wenn du ein Gerät ein- oder ausschaltest.** Bisher musste man „Neu planen" drücken — und sah nicht, wenn die Plan-Simulation scheiterte: Ein Fehler wurde als „wird gerade berechnet" ausgegeben, für immer. Jetzt sagt SEA, was schiefging.
+- **Energiebilanz mit Preisen:** Hinter jeder Kilowattstunde steht, was sie gekostet hat. Bei HT/NT erscheinen zwei Zeilen (eine je Preis), bei dynamischem Tarif der mengengewichtete Durchschnitt.
+
 - **Die Experten-Einstellungen folgen jetzt deinen Home-Assistant-Rechten.** Wer in HA Administrator ist, sieht sie — alle anderen nicht. Die Checkbox entfällt; SEA erkennt den angemeldeten Benutzer selbst. (Lässt sich der Benutzer ausnahmsweise nicht ermitteln, gilt weiter die Add-on-Option „expert", damit niemand plötzlich ohne seine Einstellungen dasteht.)
 - **Der Lizenz-Signierschlüssel lässt sich wechseln, ohne Kunden auszusperren.** SEA akzeptiert mehrere öffentliche Schlüssel: Geht der private verloren oder wird er bekannt, kommt ein zweiter dazu — alle ausgegebenen Lizenzen laufen weiter, neue werden mit dem neuen Paar ausgestellt.
 - **Lizenzschlüssel statt Habitron-Erkennung.** SEA wird über einen signierten Schlüssel freigeschaltet: ein Kundenschlüssel gilt unbefristet für genau einen Habitron-Router, ein Vorführ-Schlüssel für jede Anlage bis zu seinem Ablaufdatum. Beides steckt fälschungssicher im Schlüssel selbst — kein Server, kein Internet nötig. Die Lizenz-Karte unter *Einrichtung* zeigt den Status und die Router-Seriennummer, die Habitron für die Ausstellung braucht. Ohne gültigen Schlüssel zeichnet SEA weiter auf und zeigt alles an, steuert aber nicht.
