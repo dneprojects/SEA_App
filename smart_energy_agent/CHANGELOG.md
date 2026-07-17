@@ -8,6 +8,11 @@
 - **Wer am Gerät startet, gibt SEA einen Moment Zeit:** Direkt nach einem erkannten Start darf SEA die Maschine noch einmal abschalten und in ein günstiges Fenster legen — auch eine „nicht unterbrechbare". Läuft sie erst, wird sie nicht mehr angefasst.
 - **„Fertig bis" wird nicht mehr eingetippt.** Der „späteste Start" ist beim Gerät entfallen — SEA rechnet ihn aus dem Zeitrahmen und der Laufdauer aus, die es aus dem Durchlauf gelernt hat.
 - **„Max. Starts" zählt je Durchlauf statt je Tag** — drei Waschgänge sind drei Durchläufe, und der zweite erbt nicht mehr die Unterbrechungen des ersten. Zusammen mit „min. Auszeit" erscheint das Feld nur noch bei *unterbrechbar*, wo es überhaupt etwas bedeutet.
+- **Die Geräte-Absicht setzt „unterbrechbar" und „selbstbeendend" — und zeigt sie nur noch unter „Angepasst".** Bisher standen sie daneben und konnten der Absicht widersprechen; ein Haken machte sie stillschweigend zu „Angepasst".
+- **„Selbstbeendend" und „unterbrechbar" widersprechen sich nicht mehr:** Bei selbstbeendend schaltet SEA überhaupt nie ab, „unterbrechbar" hatte dort nie eine Wirkung — die Auswahl ist jetzt weg statt wirkungslos.
+- **Die Absichten sagen, für welche Geräte sie gedacht sind** („Läuft ohne Zutun — Pool-Pumpe, Entfeuchter, Heizstab" gegenüber „Wird befüllt — Waschmaschine, Spülmaschine"), damit niemand eine Waschmaschine auf „läuft, wenn die Sonne reicht" stellt.
+- **Negative Zahlen werden abgefangen.** „max. Starts = −1" hieß nicht „unbegrenzt", sondern: Die Last durfte nie starten. Die Felder lassen es nicht mehr zu, und SEA klemmt es auch serverseitig ab.
+- **Bezeichnungen stehen bei mehrzeiligen Eingaben oben** (Start erkennen, Stopp bei) statt in der Mitte.
 - **„Wird beladen" steht nur noch an einer Stelle** — in der Geräte-Frage „Was soll SEA damit tun?". Das rohe Häkchen unter *Erweitert – Zeiten & Grenzen* war dasselbe zweimal.
 - **Die Auswahl der Geräte-Absicht ist nicht mehr eingequetscht** und zeigt den ganzen Text.
 - **„Stopp bei" lässt sich wieder entfernen** — eine einmal gewählte Entität klebte für immer, es gab überhaupt keinen Löschen-Knopf. Sie steht jetzt bei den anderen Einrichtungs-Angaben unter *Erweitert – Zeiten & Grenzen*, und das Entfernen nimmt die Schwelle gleich mit.
