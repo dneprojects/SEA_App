@@ -2,6 +2,9 @@
 
 ## 0.10.0
 
+- **„Plan für heute" klarer gegliedert:** Das Briefing beginnt mit der Überschrift **Jetzt** und listet jede Aussage als eigenen Punkt statt als Textblock. Die Kacheln sehen aus wie bei „Aktuell"; unter den Stromkosten stehen Bezug und Einspeisung je mit kWh **und** Euro. Die Bewertungszahl der Ziel-Prüfung wird nicht mehr angezeigt — sie ist ein Sortier-Kriterium, keine Aussage über deinen Tag, und hat mehr verwirrt als erklärt.
+- **SEA sagt und schreibt jetzt dieselbe Zahl:** Auch im Briefing standen bisher die „erwarteten Kosten" der Bewertung; jetzt steht dort die Rechnung, die man mit kWh × Preis nachrechnen kann.
+- **Die Karten unter „Verhalten" lassen sich einklappen** (Ziel & Kontrolle, Anforderungen & Grenzen, Strategien & Regeln) — der Zustand bleibt beim Ändern erhalten. Der Knopf heißt jetzt „Alternativen prüfen".
 - **Hinweise verschwinden sofort, wenn das Problem behoben ist.** Sie wurden nur alle fünf Minuten geholt — eine korrigierte Entität blieb bis zu fünf Minuten lang angemahnt. Jetzt lädt SEA sie neu, sobald sich etwas ändert, das einen Hinweis auslösen oder beenden kann.
 - **Jede Strategie hat eine Farbe — überall dieselbe.** Sie steht als farbiges Quadrat hinter dem Namen der Strategie und taucht damit erkennbar in den Spuren unter „Plan für heute" und im Streifen „Operative Strategien" wieder auf. (Bisher pflegten drei getrennte Farbtabellen dieselbe Sache — und widersprachen sich.)
 - **Die Temperaturabsenkung sitzt jetzt in ihrer eigenen Strategie-Karte**, mit Farbe und den Gruppen direkt darin. Der Knopf dorthin zeigte seit der Menü-Neugliederung ins Leere.
