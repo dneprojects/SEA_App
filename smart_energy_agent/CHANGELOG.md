@@ -2,6 +2,8 @@
 
 ## 0.10.1
 
+- **Fahrzeuge haben jetzt eine eigene Entität für die Ladeleistung** — hängen zwei Autos an einer Wallbox, wurde die Leistung bisher dem erstbesten zugeschrieben; der Gast lud, angezeigt wurde es beim eigenen Auto.
+- **Alle angesteckten Fahrzeuge werden im Flussdiagramm gezeigt**, jedes mit eigenem Ladestand und eigener Leistung.
 - **Ein Verbraucher, der einen anderen als Elternteil hat, lässt sich jetzt auch dann aufklappen, wenn er das einzige Kind ist** — bisher brauchte ein Knoten mindestens zwei Kinder, um ein „+" zu bekommen.
 - **Auf dem Handy wird beim Aufklappen wieder der passende Platz freigemacht** — die nächste Zeile rutschte dem Fahrzeug bisher auf den Kreis.
 - **„Sonnenstrom und günstige Stunden nutzen" nutzt die günstigen Stunden jetzt wirklich** — die zweite Hälfte der Einstellung blieb bisher wirkungslos, im Winter also die ganze Saison.
