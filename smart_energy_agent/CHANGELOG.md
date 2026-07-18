@@ -2,6 +2,8 @@
 
 ## 0.10.1
 
+- **Neu je Gerät: „Wert je kWh"** — damit entscheidet SEA nicht nur, wer zuerst drankommt, sondern auch, ob sich eine Stunde für dieses Gerät überhaupt lohnt; leer lassen ändert nichts.
+- **Eine günstige Stunde gilt nicht mehr für alle Geräte gleich** — dieselbe Stunde kann fürs Warmwasser lohnen und fürs Auto zu teuer sein.
 - **Fahrzeuge haben jetzt eine eigene Entität für die Ladeleistung** — hängen zwei Autos an einer Wallbox, wurde die Leistung bisher dem erstbesten zugeschrieben; der Gast lud, angezeigt wurde es beim eigenen Auto.
 - **Alle angesteckten Fahrzeuge werden im Flussdiagramm gezeigt**, jedes mit eigenem Ladestand und eigener Leistung.
 - **Ein Verbraucher, der einen anderen als Elternteil hat, lässt sich jetzt auch dann aufklappen, wenn er das einzige Kind ist** — bisher brauchte ein Knoten mindestens zwei Kinder, um ein „+" zu bekommen.
