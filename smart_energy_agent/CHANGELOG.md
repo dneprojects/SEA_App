@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.1
+
+- **Ein Verbraucher, der einen anderen als Elternteil hat, lässt sich jetzt auch dann aufklappen, wenn er das einzige Kind ist** — bisher brauchte ein Knoten mindestens zwei Kinder, um ein „+" zu bekommen.
+- **Auf dem Handy wird beim Aufklappen wieder der passende Platz freigemacht** — die nächste Zeile rutschte dem Fahrzeug bisher auf den Kreis.
+- **„Sonnenstrom und günstige Stunden nutzen" nutzt die günstigen Stunden jetzt wirklich** — die zweite Hälfte der Einstellung blieb bisher wirkungslos, im Winter also die ganze Saison.
+- **In einer günstigen Stunde starten nicht mehr alle Geräte gleichzeitig** — SEA verteilt die Leistung des Hausanschlusses nach deiner Prioritätenliste; ein Gerät mit Frist geht vor.
+
 ## 0.10.0
 
 - **SEA rechnet aus, wann das Auto spätestens laden muss** — aus der fehlenden Energie und der Ladeleistung statt aus einer eingetippten Uhrzeit; vorher wird nur freier Überschuss genutzt.
