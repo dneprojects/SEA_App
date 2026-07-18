@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.10.3
+
+- **Die Wärmepumpen-Leistung wurde ohne Einheit gelesen** — meldet der Sensor in kW (deiner tut das), kam 2,8 statt 2800 an: jede Sollwert-Anhebung zählte als zusätzlicher Verdichterstart und endete zu früh.
+- **Im Modus „Automatisch" prüft SEA jetzt wirklich alle 15 Minuten** — bisher nur, solange jemand die Oberfläche offen hatte.
+- **„Notstrom-Reserve" aus nimmt nicht mehr die harten Lade-Grenzen mit** — die Reserve-Untergrenze und die SoC-Obergrenze gelten immer, abschaltbar ist nur das aktive Nachladen.
+- **„Batterie deckt Netzbezug" schaltet den Bezugs-Deckel nicht mehr still ab** — wer beides konfiguriert, bekommt jetzt auch beides.
+- **Eine Maschine ohne eingetragene Nennleistung startet nicht mehr bei fast jedem Überschuss** — SEA nimmt, was sie im letzten Durchlauf wirklich gezogen hat.
+- **Gestufte Geräte halten jetzt auch eine Frist aus einem Auftrag ein** und laufen ohne Auftrag nicht mehr los.
+- **Deine eigenen Regeln erscheinen als Strategie** — bisher war ausgerechnet das Selbstgeschriebene auf der Strategien-Seite unsichtbar.
+- **Eine Regel und die Regelung sind sich jetzt einig, ob eine Entität an ist** — bei Steckern wie „plugged_in" widersprachen sie sich.
+- **Uhrzeiten mit Sekunden („22:00:00") brechen die Regelung nicht mehr ab.**
+
 ## 0.10.1
 
 - **„Geplante Fenster" und das Diagramm darüber zeigen jetzt dieselbe Rechnung** — bisher stammten sie aus zwei getrennten Vorausberechnungen und konnten sich widersprechen.
