@@ -2,6 +2,10 @@
 
 ## 0.10.0
 
+- **SEA rechnet aus, wann das Auto spätestens laden muss** — aus der fehlenden Energie und der Ladeleistung statt aus einer eingetippten Uhrzeit; vorher wird nur freier Überschuss genutzt.
+- **Reicht die Sonne für den Mindest-Ladestand nicht, sagt SEA es rechtzeitig** — mit der Menge, die offen bleibt, statt es am Ende festzustellen.
+- **Widerspruch zwischen Ladeziel und Betriebsart wird sichtbar aufgelöst:** „Automatisch" setzt das Ziel durch, „Assistiert" bietet Netzstrom per Knopf an, sonst bleibt es beim Hinweis.
+- **Die „PV-Schwelle" bei der Wallbox ist ohne Wirkung, sobald ein Mindest-Ladestand mit Uhrzeit hinterlegt ist** — das Feld sagt das jetzt, statt es stillschweigend zu sein.
 - **SEA startet eine Maschine, die jemand befüllen muss, nur noch mit Auftrag.** Bisher schaltete die PV-Überschuss-Strategie die Waschmaschine ein, sobald Sonne da war — auch wenn keine Wäsche drin lag; jetzt ist ohne Auftrag Ruhe.
 - **„Jetzt befüllt" plus Zeitrahmen je Maschine** stehen unter *Verhalten → Vorgaben & Grenzen* (früher „Anforderungen & Grenzen"; die Karte ist jetzt offen, statt zugeklappt): „ab" und „fertig bis" bleiben stehen, der Auftrag ist das Tägliche.
 - **SEA erkennt den Start an der Maschine selbst** — über eine Ein/Aus-Entität (z. B. aus der Hersteller-Cloud) oder die Leistung der Messsteckdose ab einer Schwelle; einzustellen beim Gerät unter *Start erkennen*.
