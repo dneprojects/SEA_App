@@ -2,6 +2,7 @@
 
 ## 0.10.1
 
+- **„Plan für heute" folgt einem Eingriff sofort** — bisher zeigte die Karte nach einer Änderung bis zu 15 Minuten lang noch den alten Tag; auch ein geänderter Tarif rechnet die Vorschau jetzt neu.
 - **Neu je Gerät: „Wert je kWh"** — damit entscheidet SEA nicht nur, wer zuerst drankommt, sondern auch, ob sich eine Stunde für dieses Gerät überhaupt lohnt; leer lassen ändert nichts.
 - **Ein Gerät, dem eine kWh weniger wert ist als die Einspeisevergütung, nimmt den Sonnenstrom nicht mehr** — die Energie verdient im Netz mehr; ein laufendes Gerät wird davon nicht unterbrochen.
 - **Haben alle beteiligten Geräte einen Wert, entscheidet er die Reihenfolge** statt der eingetragenen Rangzahl; gemischt bleibt es bei deiner Liste.
