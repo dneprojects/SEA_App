@@ -2,6 +2,8 @@
 
 ## 0.10.3
 
+- **Ein wiederhergestelltes Backup wird nicht mehr blind geglaubt** — negative Werte wie eine Mindestlaufzeit von −18 Minuten kamen bisher ungeprüft zurück und kehrten den Schutz um, den sie eigentlich bilden.
+- **Beim Wiederherstellen werden Einstellungen für nicht mehr vorhandene Geräte entfernt.**
 - **Die Wärmepumpen-Leistung wurde ohne Einheit gelesen** — meldet der Sensor in kW (deiner tut das), kam 2,8 statt 2800 an: jede Sollwert-Anhebung zählte als zusätzlicher Verdichterstart und endete zu früh.
 - **Im Modus „Automatisch" prüft SEA jetzt wirklich alle 15 Minuten** — bisher nur, solange jemand die Oberfläche offen hatte.
 - **„Notstrom-Reserve" aus nimmt nicht mehr die harten Lade-Grenzen mit** — die Reserve-Untergrenze und die SoC-Obergrenze gelten immer, abschaltbar ist nur das aktive Nachladen.
