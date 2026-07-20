@@ -2,6 +2,7 @@
 
 ## 0.10.3
 
+- **SEA fragt jetzt, WANN die Sonne kommt, nicht nur wie viel** — bisher konnte eine günstige Nacht ausgelassen werden, weil die Sonne des Folgetags den Speicher rechnerisch füllt; die teure Abendspitze dazwischen wurde dann aus dem Netz bezahlt.
 - **Der Prognose-Optimierer lädt die Batterie nicht mehr bei jeder noch so kleinen Preisspanne** — sie muss jetzt die Wandlungsverluste und den Zyklenverschleiß tragen, genau wie der Wächter es nachträglich schon immer nachgerechnet hat.
 - **Ein Gerät, dem Sonnenstrom zu schade ist, kann trotzdem eine sehr günstige Netzstunde nutzen** — bisher entschied darüber eine einzige Bedingung.
 - **Beim Freimachen von Leistung für ein wichtigeres Gerät zählt nur noch, was SEA wirklich abschalten kann** — ein geregelter Heizstab zählt jetzt mit, ein fremdes Fahrzeug an derselben Wallbox nicht mehr.
