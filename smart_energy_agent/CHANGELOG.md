@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.10.4
+
+- **Überall steht jetzt der Name, den Home Assistant anzeigt** — nicht mehr die Entity-ID; die ID steht im Tooltip, wenn du sie brauchst.
+- **Hat ein Gerät schon eine Entität, stehen die übrigen Entitäten desselben Geräts beim nächsten Auswählen ganz oben** — der Energiezähler direkt nach dem Leistungssensor, ohne Suchen.
+- **Entitäten werden überall mit demselben Stift-Knopf gewählt und geändert** — der letzte Text-Knopf bei den Thermostaten ist weg.
+- **Der Einstellungs-Editor für Verbraucher, den man gar nicht öffnen konnte, ist entfernt** — samt zehn Feldern, die gespeichert, aber von nichts gelesen wurden.
+
 ## 0.10.3
 
 - **SEA fragt jetzt, WANN die Sonne kommt, nicht nur wie viel** — bisher konnte eine günstige Nacht ausgelassen werden, weil die Sonne des Folgetags den Speicher rechnerisch füllt; die teure Abendspitze dazwischen wurde dann aus dem Netz bezahlt.
