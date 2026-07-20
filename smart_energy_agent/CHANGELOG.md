@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.5
+
+- **Die PV-Prognose-Quelle ist jetzt eine sichtbare Entscheidung** — eine Checkbox für die Prognose von Home Assistant statt eines leeren Feldes, dessen Leere die eigentliche Einstellung war.
+- **Daneben steht, welche Quelle tatsächlich greift** und wie viele Prognosepunkte ankommen — fehlt die Prognose ganz, sagt SEA das, statt den Tag stillschweigend nicht vorauszuplanen.
+
 ## 0.10.4
 
 - **Überall steht jetzt der Name, den Home Assistant anzeigt** — nicht mehr die Entity-ID; die ID steht im Tooltip, wenn du sie brauchst.
