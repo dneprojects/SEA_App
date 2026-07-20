@@ -2,6 +2,11 @@
 
 ## 0.10.3
 
+- **Der Prognose-Optimierer lädt die Batterie nicht mehr bei jeder noch so kleinen Preisspanne** — sie muss jetzt die Wandlungsverluste und den Zyklenverschleiß tragen, genau wie der Wächter es nachträglich schon immer nachgerechnet hat.
+- **Ein Gerät, dem Sonnenstrom zu schade ist, kann trotzdem eine sehr günstige Netzstunde nutzen** — bisher entschied darüber eine einzige Bedingung.
+- **Beim Freimachen von Leistung für ein wichtigeres Gerät zählt nur noch, was SEA wirklich abschalten kann** — ein geregelter Heizstab zählt jetzt mit, ein fremdes Fahrzeug an derselben Wallbox nicht mehr.
+- **Bei langsam beschriebenen Aktoren bleibt der Rest des Überschusses für die nächste Last übrig** — bisher wurde der ganze Topf geleert, auch wenn die Batterie nur einen Teil davon nehmen konnte.
+- **Der gespeicherte Strom wird danach bewertet, was er später einspart** — nicht danach, was er beim Laden gekostet hat.
 - **Ein wiederhergestelltes Backup wird nicht mehr blind geglaubt** — negative Werte wie eine Mindestlaufzeit von −18 Minuten kamen bisher ungeprüft zurück und kehrten den Schutz um, den sie eigentlich bilden.
 - **Beim Wiederherstellen werden Einstellungen für nicht mehr vorhandene Geräte entfernt.**
 - **Die Wärmepumpen-Leistung wurde ohne Einheit gelesen** — meldet der Sensor in kW (deiner tut das), kam 2,8 statt 2800 an: jede Sollwert-Anhebung zählte als zusätzlicher Verdichterstart und endete zu früh.
