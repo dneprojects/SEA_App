@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.10
+
+- **Bei Festtarif verstummt die Tarif-Lastverschiebung** — SEA regelt, plant und warnt tarifgetrieben nur noch, wenn die Strategie aktiviert ist **und** ein echter Preisunterschied besteht; die 236 irreführenden „Tarif-Netzladen — kein günstiges Fenster"-Meldungen bei Festtarif entfallen.
+- **Der CSV-Export enthält jetzt auch die Steuer-Entscheidungen** — Gründe und Schaltungen (z. B. „Steckdose → AN — Deadline") mit Zeitstempel, passend zum gewählten Zeitraum, als eigene Sektion neben den Messwerten.
+
 ## 0.10.9
 
 - **Meldungen sagen jetzt den Tag dazu, wenn eine Uhrzeit erst morgen gilt** — „Fertig bis morgen, 11:00" statt eines scheinbar schon vergangenen „Fertig bis 11:00"; nach Mitternacht aktualisiert sich der Hinweis von selbst auf die bloße Uhrzeit.
