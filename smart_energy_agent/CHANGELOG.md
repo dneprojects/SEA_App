@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.9
+
+- **Meldungen sagen jetzt den Tag dazu, wenn eine Uhrzeit erst morgen gilt** — „Fertig bis morgen, 11:00" statt eines scheinbar schon vergangenen „Fertig bis 11:00"; nach Mitternacht aktualisiert sich der Hinweis von selbst auf die bloße Uhrzeit.
+
 ## 0.10.8
 
 - **„Fertig bis" ist jetzt eine harte Grenze** — SEA legt das Waschfenster so, dass die Maschine spätestens zur genannten Zeit fertig ist; die Sonne darf es nur nach vorne ziehen, nie darüber hinaus. Reicht die Zeit nicht, sagt der Plan das ehrlich, statt heimlich zu überziehen.
