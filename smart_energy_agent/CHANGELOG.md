@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.10.6
+
+- **Das Frontend ist entflochten** — das CSS liegt jetzt in `app.css`, das JavaScript in neun thematischen Dateien unter `web/ui/`; `index.html` schrumpft von 5.393 auf 376 Zeilen. Kein Verhaltensunterschied: reine Umverteilung, byte-genau geprüft.
+
 ## 0.10.5
 
 - **Die PV-Prognose-Quelle ist jetzt eine sichtbare Entscheidung** — eine Checkbox für die Prognose von Home Assistant statt eines leeren Feldes, dessen Leere die eigentliche Einstellung war.
