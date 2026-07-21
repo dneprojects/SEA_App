@@ -2,6 +2,8 @@
 
 ## 0.10.10
 
+- **Das „Jetzt"-Briefing nennt die aktuelle Strategie beim Namen** (z. B. „Batteriedeckung") statt der rohen Aktion „deckt" — und sagt „seit HH:MM" für einen bereits gemessenen Beginn statt „voraussichtlich ab", wenn die Zeit nicht mehr in der Zukunft liegt; die doppelte Zeile entfällt.
+- **Die Ausblick-Grafik ist am Desktop jetzt zeitlich gestreckt und horizontal scrollbar** — per Mausrad, Ziehen der Leiste oder Pfeil-Buttons am Rand (ein Klick = 25 %), wie bisher schon auf dem Handy.
 - **Die Ende-Erkennung verschiebbarer Geräte greift erst unter 1/4 der Start-Schwelle** (statt 1/2) — so kann der Start-Schwellwert sicher über den Standby der Maschine gelegt werden, ohne dass Spül-/Weichphasen (die knapp unter der halben Schwelle liegen) fälschlich als „fertig" gelesen werden; der angezeigte Ende-Text und die berechnete Leistung passen sich automatisch an.
 - **Die Auftrags-Ereignisse verschiebbarer Geräte erscheinen jetzt im CSV-Export** — Start erkannt/übernommen, verschoben, läuft und beendet (mit Zeitstempel/Grund) stehen in der Sektion „Steuer-Entscheidungen", nicht mehr nur in den Benachrichtigungen.
 - **Die Strategiespur im Ausblick zeigt jetzt die echte operative Strategie** — abgeleitet aus demselben Code wie die Strategieseite (nicht mehr aus einer eigenen Heuristik), dadurch lückenlos, überlappungsfrei und deckungsgleich mit „Aktuell"; der ELWA-Heizbetrieb erscheint korrekt unter „PV-Überschuss" statt fälschlich neben „Eigenverbrauch".
