@@ -4,6 +4,7 @@
 
 - **Bei Festtarif verstummt die Tarif-Lastverschiebung** — SEA regelt, plant und warnt tarifgetrieben nur noch, wenn die Strategie aktiviert ist **und** ein echter Preisunterschied besteht; die 236 irreführenden „Tarif-Netzladen — kein günstiges Fenster"-Meldungen bei Festtarif entfallen.
 - **Der CSV-Export enthält jetzt auch die Steuer-Entscheidungen** — Gründe und Schaltungen (z. B. „Steckdose → AN — Deadline") mit Zeitstempel, passend zum gewählten Zeitraum, als eigene Sektion neben den Messwerten.
+- **Verschiebbare Verbraucher haben im Ausblick eine eigene „Geräte"-Spur** — Waschmaschine & Co. getrennt von Wärme (ELWA/WP), je Gerät ein eigener Blauton und ein Tooltip; sie erscheinen nur noch für ihre geplante, gelernte Dauer statt als Dauerlast über den ganzen Tag.
 
 ## 0.10.9
 
