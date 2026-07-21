@@ -2,6 +2,8 @@
 
 ## 0.10.10
 
+- **Die Strategiespur im Ausblick zeigt jetzt die echte operative Strategie** — abgeleitet aus demselben Code wie die Strategieseite (nicht mehr aus einer eigenen Heuristik), dadurch lückenlos, überlappungsfrei und deckungsgleich mit „Aktuell"; der ELWA-Heizbetrieb erscheint korrekt unter „PV-Überschuss" statt fälschlich neben „Eigenverbrauch".
+- **Strategie-Namen und -Farben kommen aus einer einzigen Quelle** — Ausblick, Verlauf-Streifen, „Aktuell"-Karte und Strategiekarten greifen auf dieselbe Tabelle zu, sodass eine Strategie überall gleich heißt und gefärbt ist.
 - **Bei Festtarif verstummt die Tarif-Lastverschiebung** — SEA regelt, plant und warnt tarifgetrieben nur noch, wenn die Strategie aktiviert ist **und** ein echter Preisunterschied besteht; die 236 irreführenden „Tarif-Netzladen — kein günstiges Fenster"-Meldungen bei Festtarif entfallen.
 - **Der CSV-Export enthält jetzt auch die Steuer-Entscheidungen** — Gründe und Schaltungen (z. B. „Steckdose → AN — Deadline") mit Zeitstempel, passend zum gewählten Zeitraum, als eigene Sektion neben den Messwerten.
 - **Verschiebbare Verbraucher haben im Ausblick eine eigene „Geräte"-Spur** — Waschmaschine & Co. getrennt von Wärme (ELWA/WP), je Gerät ein eigener Blauton und ein Tooltip; sie erscheinen nur noch für ihre geplante, gelernte Dauer statt als Dauerlast über den ganzen Tag.
