@@ -2,6 +2,8 @@
 
 ## 0.10.10
 
+- **Die Ende-Erkennung verschiebbarer Geräte greift erst unter 1/4 der Start-Schwelle** (statt 1/2) — so kann der Start-Schwellwert sicher über den Standby der Maschine gelegt werden, ohne dass Spül-/Weichphasen (die knapp unter der halben Schwelle liegen) fälschlich als „fertig" gelesen werden; der angezeigte Ende-Text und die berechnete Leistung passen sich automatisch an.
+- **Die Auftrags-Ereignisse verschiebbarer Geräte erscheinen jetzt im CSV-Export** — Start erkannt/übernommen, verschoben, läuft und beendet (mit Zeitstempel/Grund) stehen in der Sektion „Steuer-Entscheidungen", nicht mehr nur in den Benachrichtigungen.
 - **Die Strategiespur im Ausblick zeigt jetzt die echte operative Strategie** — abgeleitet aus demselben Code wie die Strategieseite (nicht mehr aus einer eigenen Heuristik), dadurch lückenlos, überlappungsfrei und deckungsgleich mit „Aktuell"; der ELWA-Heizbetrieb erscheint korrekt unter „PV-Überschuss" statt fälschlich neben „Eigenverbrauch".
 - **Strategie-Namen und -Farben kommen aus einer einzigen Quelle** — Ausblick, Verlauf-Streifen, „Aktuell"-Karte und Strategiekarten greifen auf dieselbe Tabelle zu, sodass eine Strategie überall gleich heißt und gefärbt ist.
 - **Bei Festtarif verstummt die Tarif-Lastverschiebung** — SEA regelt, plant und warnt tarifgetrieben nur noch, wenn die Strategie aktiviert ist **und** ein echter Preisunterschied besteht; die 236 irreführenden „Tarif-Netzladen — kein günstiges Fenster"-Meldungen bei Festtarif entfallen.
