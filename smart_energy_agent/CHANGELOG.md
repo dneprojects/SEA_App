@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.7
+
+- **Ein klarer Maschinenstart wird jetzt sofort übernommen** — läuft die Leistung auf ein Vielfaches der Schwelle, gilt der Start ohne Wartezeit; nur ein Wackler knapp über der Schwelle muss erst eine Minute halten, damit ein Standby-Zucken keinen Auftrag „0,0 kWh" mehr auslöst.
+- **Das Programmende wird jetzt fünf statt drei Minuten abgewartet** — robuster, wenn die Erkennungsschwelle höher steht; am Ende bleibt die Steckdose an, SEA schließt nur den Auftrag und meldet ihn.
+
 ## 0.10.6
 
 - **Das Frontend ist entflochten** — das CSS liegt jetzt in `app.css`, das JavaScript in neun thematischen Dateien unter `web/ui/`; `index.html` schrumpft von 5.393 auf 376 Zeilen. Kein Verhaltensunterschied: reine Umverteilung, byte-genau geprüft.
