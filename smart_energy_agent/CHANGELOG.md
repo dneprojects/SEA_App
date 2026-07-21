@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.10.8
+
+- **„Fertig bis" ist jetzt eine harte Grenze** — SEA legt das Waschfenster so, dass die Maschine spätestens zur genannten Zeit fertig ist; die Sonne darf es nur nach vorne ziehen, nie darüber hinaus. Reicht die Zeit nicht, sagt der Plan das ehrlich, statt heimlich zu überziehen.
+- **SEA unterstellt jetzt das längste bisher gesehene Programm** einer Maschine — ein kurzer Waschgang überschreibt das gelernte Profil nicht mehr nach unten, damit die Planung eine lange Kochwäsche nicht zu optimistisch einplant.
+
 ## 0.10.7
 
 - **Ein klarer Maschinenstart wird jetzt sofort übernommen** — läuft die Leistung auf ein Vielfaches der Schwelle, gilt der Start ohne Wartezeit; nur ein Wackler knapp über der Schwelle muss erst eine Minute halten, damit ein Standby-Zucken keinen Auftrag „0,0 kWh" mehr auslöst.
