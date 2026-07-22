@@ -2,6 +2,7 @@
 
 ## 0.10.10
 
+- **„Plan für heute" beginnt jetzt konsequent bei „jetzt"** — die Grafik und die Liste „Geplante Fenster" blenden den bereits vergangenen Teil der (bis zu 15 min alten) Prognose aus, sodass beide dieselben, noch anstehenden Fenster zeigen; bereits beendete Fenster verschwinden aus der Liste.
 - **Die Energiefluss-Karte hat den Fluss/Sankey-Umschalter jetzt oben rechts in der Überschrift** und darunter eine eigene Statuszeile „PV-Überschuss: xx kW" bzw. „Netzbezug: yy kW" — vorher überlappten sich Umschalter und Wert auf dem Handy.
 - **Das „Jetzt"-Briefing nennt die aktuelle Strategie beim Namen** (z. B. „Batteriedeckung") statt der rohen Aktion „deckt" — und sagt „seit HH:MM" für einen bereits gemessenen Beginn statt „voraussichtlich ab", wenn die Zeit nicht mehr in der Zukunft liegt; die doppelte Zeile entfällt.
 - **Die Ausblick-Grafik ist am Desktop jetzt zeitlich gestreckt und horizontal scrollbar** — über die Bildlaufleiste oder Umschalt+Mausrad; das normale (senkrechte) Mausrad scrollt weiter die Seite. Die Streckung wirkt nur waagerecht (Höhe/Y-Achse unverändert), und die seitliche Scroll-Position bleibt beim 5-Sekunden-Neuaufbau erhalten.
