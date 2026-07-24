@@ -2,6 +2,7 @@
 
 ## 0.11.0
 
+- **Die Analyse-Seite ist auf drei Karten mit einem gemeinsamen Zeitraum zusammengeführt** — *Einsparung* (gegen eine Vergleichs-Baseline), *Tarifvergleich* (Kosten & Autarkie je Tarifmodell) und *Investition* (Batterie/PV-Stufen) teilen sich jetzt denselben Zeitraum-Selektor (Tag/Woche/Monat/Jahr); Tarifvergleich und Investition kommen aus dem Tages-Cache. Die alten Analysearten „Rückblick" (Einstellungs-Vergleich) und „Vorschau" (die 24-h-Vorschau gibt es weiter als Ausblick-Seite) sowie die separate „Investition"-Analyse entfallen.
 - **Nachts keine Benachrichtigungen** — proaktive Ansagen/Push-Meldungen (Plan geändert, Gerät gestartet, Vorschlag) bleiben zwischen 22:00 und 07:00 stumm; sie stehen weiter unter „Heute". Ein manueller Sprachtest funktioniert weiterhin.
 - **Planänderungen mehr als 4 Stunden in der Zukunft lösen keine Meldung mehr aus** — der assistierte Modus meldet einen geänderten Plan nur noch, wenn sich in den nächsten 4 Stunden etwas ändert; weiter entfernte Fenster verschieben sich ohnehin oder werden näher am Termin neu gesetzt.
 - **Die WP-Anhebung wird nachts nicht mehr aus der Batterie gestartet** — die Option „Batterie darf die Wärmepumpe mittragen" hat den Boost auch ohne PV gestartet (rund um die Uhr), weil die Batterie-Unterstützung schon als Auslöser zählte — das zog den Akku leer, um nachts Wasser zu heizen. Jetzt wird die Batterie-Unterstützung nur bei tatsächlichem PV-Überschuss angerechnet (tagsüber, wenn sie eine wolkige Lücke überbrücken kann); nachts (PV = 0) startet der Boost so nicht mehr.
