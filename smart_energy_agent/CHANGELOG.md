@@ -2,6 +2,8 @@
 
 ## 0.11.0
 
+- **Durchsagen kommen jetzt, wenn das Ereignis eintritt** — sie wurden erst beim Abruf durch die geoeffnete App ausgesprochen, sammelten sich bei geschlossener App an und kamen dann alle auf einmal. Der Agent spricht sie jetzt selbst aus; was laenger als 30 Minuten gewartet hat, entfaellt statt verspaetet nachgereicht zu werden, und bei Rueckstau gewinnen die NEUESTEN Meldungen statt der aeltesten.
+
 - **Dokumentation nachgezogen** — Kapitel „Fehlerbehebung / FAQ" entfaellt (12 Kapitel); zwei Punkte daraus sind erhalten geblieben: warum die Analysen andere Kosten zeigen als die Vorausschau auf „Heute" (jetzt in Kap. 11) und dass SEA allen Nutzern offensteht, nicht nur Administratoren (Kap. 2). Neu beschrieben: Haushaltsgeraete erscheinen im Plan nur, wenn sie laufen oder eingeplant sind, und die Begruendungen dort sind als Absicht formuliert; die naechtlich dauerhaft festgeschriebenen Tagesergebnisse und der Rueckgriff darauf, wenn Rohdaten fehlen.
 
 - **Analysen: ganze Kalendereinheiten heissen jetzt beim Namen** — ein voller Monat steht als „Januar 2026", ein volles Jahr als „2026" statt als Datumsbereich. Rollende Fenster („bis jetzt") bleiben ein Bereich, denn sie ueberschreiten die Grenze bewusst.
