@@ -2,6 +2,8 @@
 
 ## 0.11.0
 
+- **Fluss-Darstellung auf dem Telefon als kompakter Stern** — PV über dem Haus, Netz links, Batterie rechts davon, die Verbraucher in zwei Spalten darunter; aufgeklappte PV-Anlagen und Speicher schieben nur das nach unten, was unter ihnen liegt. Die Web-Ansicht bleibt unverändert.
+
 - **Lange Auswertungen rechnen nicht mehr endlos** — der Zwischenspeicher der Tages-Simulationen wurde bisher bei JEDER Code-Änderung verworfen, auch bei einer bloß umformulierten Erklärung; die nächste Monats- oder Jahresauswertung rechnete dann bis zu 400 Tage neu, während jemand wartete. Der Fingerabdruck beachtet jetzt nur noch das Verhalten, eine Auswertung füllt nur noch den gewählten Zeitraum und höchstens 25 Sekunden lang, nennt die noch offenen Tage und überlässt den Rest dem nächtlichen Lauf.
 
 - **Simulationen schreiben nicht mehr ins Protokoll** — sie fahren die echte Regelung, deshalb standen erfundene Batterie-Warnungen und Gerätemeldungen im Add-on-Log und verdeckten die wirklichen Ereignisse.
