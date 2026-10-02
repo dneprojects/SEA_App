@@ -2,6 +2,14 @@
 
 ## 0.11.0
 
+- **Batterie-Wirkungsgrad wird gemessen und überall gleich verwendet** — SEA bestimmt den Gesamtwirkungsgrad Laden/Entladen aus vollständigen Zyklen der eigenen Batterie und zeigt ihn auf der Status-Seite an. Vorher rechneten fünf Stellen mit fünf Werten (81–100 %); die Simulation für Tagesplan und Vorausschau kannte gar keine Batterieverluste.
+
+- **Investitionsrechnung: eine größere Batterie wird nicht mehr nebenbei „regelbar“** — ohne eingetragene Batterieleistung rechnete die Variante mit geregelten 3,3 kW × Faktor, die Basis mit ungeregelter Batterie; der Unterschied ging fälschlich auf die Investition. Eine Annahme für unbekannte Batterieleistung in allen Rechnungen.
+
+- **Gerätenamen und Fehlertexte werden vollständig maskiert** — ein „<“ in einem Home-Assistant-Namen oder in einer Fehlermeldung wurde als HTML gelesen und verschwand oder veränderte die Seite.
+
+- **Analysen: eine Differenz von null erscheint nicht mehr als Ersparnis** — „−0,00 €“ (grün) wird zu „0,00 €“ (neutral); ein fehlender Tarifbetrag steht als „–“ statt „0,00 €“.
+
 - **Altes Ziel „Eigenverbrauch“ wird beim Laden auf „Kosten“ umgestellt** — das Backend plante bereits auf Kosten, die Oberfläche zeigte aber noch „Eigenverbrauch“ an.
 
 - **Kein Netzladen mehr bei unbekanntem Batterie-Ladestand** — meldete der SoC-Sensor nichts, las der Planer das als 0 % und plante in jeder günstigen Stunde volles Laden aus dem Netz, das in der Automatik auch ausgeführt wurde. Jetzt entfällt dann nur der Batterie-Fahrplan; die Batterie folgt dem Überschuss, Geräte werden weiter eingeplant.
