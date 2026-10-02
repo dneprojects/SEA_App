@@ -2,6 +2,10 @@
 
 ## 0.11.0
 
+- **Eine Farbe je Gerät in allen Ansichten** — die Batterie ist überall orange (ihr Ladestand petrol), Wärme rot, das Auto blau; jedes andere Gerät hat in Fluss-Bild, Tagesplan und Verlauf dieselbe Farbe. Vorher hatte die Batterie drei Farben, und vier Paletten vergaben Batterie-Orange oder PV-Gelb auch an Waschmaschinen.
+
+- **Einheitliche Zahlenformate in der ganzen Oberfläche** — Dezimalkomma, Tausenderpunkt, echtes Minus und „–“ für fehlende Werte überall (vorher u. a. „-1.3 kW“ neben „9,1 kWh“, fehlende Beträge als „0,00 €“ oder „+0,00 €“).
+
 - **Batterie-Wirkungsgrad wird gemessen und überall gleich verwendet** — SEA bestimmt den Gesamtwirkungsgrad Laden/Entladen aus vollständigen Zyklen der eigenen Batterie und zeigt ihn auf der Status-Seite an. Vorher rechneten fünf Stellen mit fünf Werten (81–100 %); die Simulation für Tagesplan und Vorausschau kannte gar keine Batterieverluste.
 
 - **Investitionsrechnung: eine größere Batterie wird nicht mehr nebenbei „regelbar“** — ohne eingetragene Batterieleistung rechnete die Variante mit geregelten 3,3 kW × Faktor, die Basis mit ungeregelter Batterie; der Unterschied ging fälschlich auf die Investition. Eine Annahme für unbekannte Batterieleistung in allen Rechnungen.
