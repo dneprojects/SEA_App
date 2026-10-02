@@ -2,6 +2,10 @@
 
 ## 0.11.0
 
+- **Altes Ziel „Eigenverbrauch“ wird beim Laden auf „Kosten“ umgestellt** — das Backend plante bereits auf Kosten, die Oberfläche zeigte aber noch „Eigenverbrauch“ an.
+
+- **Kein Netzladen mehr bei unbekanntem Batterie-Ladestand** — meldete der SoC-Sensor nichts, las der Planer das als 0 % und plante in jeder günstigen Stunde volles Laden aus dem Netz, das in der Automatik auch ausgeführt wurde. Jetzt entfällt dann nur der Batterie-Fahrplan; die Batterie folgt dem Überschuss, Geräte werden weiter eingeplant.
+
 - **Fluss-Darstellung auf dem Telefon als kompakter Stern** — PV über dem Haus, Netz links, Batterie rechts davon, die Verbraucher in zwei Spalten darunter; aufgeklappte PV-Anlagen und Speicher schieben nur das nach unten, was unter ihnen liegt. Die Web-Ansicht bleibt unverändert.
 
 - **Lange Auswertungen rechnen nicht mehr endlos** — der Zwischenspeicher der Tages-Simulationen wurde bisher bei JEDER Code-Änderung verworfen, auch bei einer bloß umformulierten Erklärung; die nächste Monats- oder Jahresauswertung rechnete dann bis zu 400 Tage neu, während jemand wartete. Der Fingerabdruck beachtet jetzt nur noch das Verhalten, eine Auswertung füllt nur noch den gewählten Zeitraum und höchstens 25 Sekunden lang, nennt die noch offenen Tage und überlässt den Rest dem nächtlichen Lauf.
