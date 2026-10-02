@@ -2,6 +2,10 @@
 
 ## 0.12.0
 
+- **Keine falsche „verschoben“-Meldung mehr nach dem Ende eines Auftrags** — endete ein Auftrag, während SEA die Steckdose pausiert hatte, und kam das Wiedereinschalten nicht binnen 90 s an, wurde die Maschine erneut übernommen.
+- **Ein Text statt einer Zahl bei „max. Starts“ legt die Regelung nicht mehr still** — z. B. „3.0“ aus einem Backup ließ jeden Regelzyklus scheitern; der Wert wird jetzt gelesen und beim Einspielen bereinigt.
+- **Gerätenamen mit „&“ oder „<“ werden überall richtig angezeigt** — Vorgaben, Einrichtung, Verlaufs-Legende und Flussdiagramm setzten Namen noch roh ins HTML.
+- **Ein eingespieltes Backup behält die Standardwerte** — was ein älteres Backup nicht enthielt (z. B. der ganze Tarif), fehlte bis zum Neustart; das abgeschaffte Ziel „Eigenverbrauch“ wird auch beim Einspielen auf „Kosten“ gesetzt.
 - **Store in Themenmodule aufgeteilt** — Einstellungen, Laufzustand, Preise, Live-Zustand, Einrichtung und Verlaufs-Datenbank in eigenen Dateien; ohne Änderung für die Bedienung.
 
 ## 0.11.0
