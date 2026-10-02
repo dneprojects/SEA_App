@@ -2,6 +2,8 @@
 
 ## 0.11.0
 
+- **Keine Verschiebe-Meldung mehr fuer eine Maschine, die niemand beladen hat** — eine Steckdose, die kurz als „nicht verfuegbar" gemeldet wird oder beim Start von SEA schon aus war, galt als Uebergabe: SEA legte einen Auftrag an, sagte „verschoben" an und schaltete die Maschine im guenstigen Fenster ein. Als Uebergabe zaehlt jetzt nur ein tatsaechliches Ausschalten (vorher eingeschaltet gesehen, 90 Sekunden aus), eine Geste ergibt genau einen Auftrag, und die Schaltflaeche „an SEA uebergeben" wirkt weiterhin sofort.
+
 - **Durchsagen kommen jetzt, wenn das Ereignis eintritt** — sie wurden erst beim Abruf durch die geoeffnete App ausgesprochen, sammelten sich bei geschlossener App an und kamen dann alle auf einmal. Der Agent spricht sie jetzt selbst aus; was laenger als 30 Minuten gewartet hat, entfaellt statt verspaetet nachgereicht zu werden, und bei Rueckstau gewinnen die NEUESTEN Meldungen statt der aeltesten.
 
 - **Dokumentation nachgezogen** — Kapitel „Fehlerbehebung / FAQ" entfaellt (12 Kapitel); zwei Punkte daraus sind erhalten geblieben: warum die Analysen andere Kosten zeigen als die Vorausschau auf „Heute" (jetzt in Kap. 11) und dass SEA allen Nutzern offensteht, nicht nur Administratoren (Kap. 2). Neu beschrieben: Haushaltsgeraete erscheinen im Plan nur, wenn sie laufen oder eingeplant sind, und die Begruendungen dort sind als Absicht formuliert; die naechtlich dauerhaft festgeschriebenen Tagesergebnisse und der Rueckgriff darauf, wenn Rohdaten fehlen.
