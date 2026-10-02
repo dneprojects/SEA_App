@@ -2,6 +2,10 @@
 
 ## 0.11.0
 
+- **Lange Auswertungen rechnen nicht mehr endlos** — der Zwischenspeicher der Tages-Simulationen wurde bisher bei JEDER Code-Änderung verworfen, auch bei einer bloß umformulierten Erklärung; die nächste Monats- oder Jahresauswertung rechnete dann bis zu 400 Tage neu, während jemand wartete. Der Fingerabdruck beachtet jetzt nur noch das Verhalten, eine Auswertung füllt nur noch den gewählten Zeitraum und höchstens 25 Sekunden lang, nennt die noch offenen Tage und überlässt den Rest dem nächtlichen Lauf.
+
+- **Simulationen schreiben nicht mehr ins Protokoll** — sie fahren die echte Regelung, deshalb standen erfundene Batterie-Warnungen und Gerätemeldungen im Add-on-Log und verdeckten die wirklichen Ereignisse.
+
 - **Kopfzeile wie im Smart Configurator** — das rote Band ist in beiden Ansichten 70 Pixel hoch (vorher 68 breit / 52 schmal), und der Titel im schmalen Zustand steht im selben Grau (#c8c8c8) statt in Weiß.
 
 - **Keine Verschiebe-Meldung mehr fuer eine Maschine, die niemand beladen hat** — eine Steckdose, die kurz als „nicht verfuegbar" gemeldet wird oder beim Start von SEA schon aus war, galt als Uebergabe: SEA legte einen Auftrag an, sagte „verschoben" an und schaltete die Maschine im guenstigen Fenster ein. Als Uebergabe zaehlt jetzt nur ein tatsaechliches Ausschalten (vorher eingeschaltet gesehen, 90 Sekunden aus), eine Geste ergibt genau einen Auftrag, und die Schaltflaeche „an SEA uebergeben" wirkt weiterhin sofort.
