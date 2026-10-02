@@ -2,6 +2,10 @@
 
 ## 0.11.0
 
+- **Planer rechnet den Batterie-Ladestand mit Verlusten** — Fahrplan, „Füllt die Sonne den Speicher ohnehin?“, Zeitpunkt „voll“ und die Zeitleiste nutzen den gemessenen Wirkungsgrad, wie die Vorausschau; vorher plante der Planer eine verlustfreie Batterie.
+
+- **Kartenränder wieder in den früheren Farben** — Rot für Fehler, Orange für Warnungen, Gold für „Plan geändert“.
+
 - **Einheitliche Hinweiskästen und Status-Plaketten** — eine Farbe je Bedeutung (Fehler, Achtung, Hinweis, erledigt; aktiv, verfügbar, nicht verfügbar …); vorher u. a. drei Orangetöne für „Achtung“ und „nicht verfügbar“ je nach Seite grau oder beige.
 
 - **Jedes Ziel hat überall denselben Namen** — „Kosten minimieren“ / „Autarkie maximieren“ auch im Hinweis nach einer automatischen Anpassung (dort stand bisher „Möglichst wenig Geld ausgeben“).
