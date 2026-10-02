@@ -2,6 +2,14 @@
 
 ## 0.11.0
 
+- **Abgelaufener Auftrag hält keine Maschine mehr im Tagesplan** — Tagesplan und Vorausschau lasen die Auftragsliste ungefiltert, ein überfälliger Auftrag blieb dort stehen, bis ein neuer kam.
+
+- **Gespeichertes „unterbrechbar: leer“ gilt als „an“** — Regelung und Einrichtungs-Anzeige lasen den Wert verschieden; jetzt beide wie „nicht gesetzt“.
+
+- **Vorausschau rechnet ohne eingetragenen COP mit 3,0 statt 2,5** — derselbe Wert wie die Analysen.
+
+- **Interne Aufräumarbeiten (Review B/C)** — Gerätekonfiguration, Schlüssel und Ersatzwerte an je einer Stelle; Auswertungen, Ereignisse und der frühere Advisor in eigenen Modulen; ohne Änderung für die Bedienung.
+
 - **Eine Farbe je Gerät in allen Ansichten** — die Batterie ist überall orange (ihr Ladestand petrol), Wärme rot, das Auto blau; jedes andere Gerät hat in Fluss-Bild, Tagesplan und Verlauf dieselbe Farbe. Vorher hatte die Batterie drei Farben, und vier Paletten vergaben Batterie-Orange oder PV-Gelb auch an Waschmaschinen.
 
 - **Einheitliche Zahlenformate in der ganzen Oberfläche** — Dezimalkomma, Tausenderpunkt, echtes Minus und „–“ für fehlende Werte überall (vorher u. a. „-1.3 kW“ neben „9,1 kWh“, fehlende Beträge als „0,00 €“ oder „+0,00 €“).
