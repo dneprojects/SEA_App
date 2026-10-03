@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Vorgaben: Maschinen-Einstellungen rechtsbündig** — „fertig bis/nicht vor“, Uhrzeit und „an SEA übergeben“ sitzen wie die übrigen Vorgaben am rechten Rand, auch wenn sie umbrechen.
 - **Oberfläche: Farben und wiederkehrende Abstände an einer Stelle** — Ansichten nutzen gemeinsame Farbwerte und Klassen statt eigener Werte; sichtbar bleibt alles gleich.
 - **Zahlen überall mit Dezimalkomma** — Preis-Tooltip im Plan, Tarif-Übersicht, Ladestände, Autarkie, Wirkungsgrad und rund 40 weitere Stellen zeigten noch „23.5 ct/kWh“ oder „null %“.
 - **Regel-Engine und Web-Schnittstelle in Themenmodule aufgeteilt** — Planer und Regler, Maschinen-Aufträge, Eingangsdaten, Plan-Seite und die Handler je Seitenbereich in eigenen Dateien; die gespeicherten Tages-Simulationen werden einmal neu gerechnet.
