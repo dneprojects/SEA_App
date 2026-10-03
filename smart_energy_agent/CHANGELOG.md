@@ -2,6 +2,8 @@
 
 ## 0.12.0
 
+- **Heute: der Eigenverbrauch-Balken zeigt wieder den Anteil** — er zeigte nach der Begriffs-Vereinheitlichung die kWh-Zahl als Prozent (z. B. 4 %).
+
 - **Status: eine Batteriekapazität statt zwei** — die Karte zeigt die nachts gemessene Kapazität, mit der die Planung rechnet, statt daneben eine Live-Schätzung über ein anderes Zeitfenster (10,8 vs. 11,0 kWh).
 - **Strategiefarben verwechseln sich nicht mehr mit Gerätefarben** — z. B. war „Dyn. Tarif“ genau das Auto-Blau und „WP-Anhebung“ fast das Batterie-Orange.
 - **Analysen: Ersparnis ist überall positiv** — die Investitionstabelle zeigte sie als negatives Δ; „keine Verlaufsdaten“ beim CSV-Export kommt als Hinweis statt als Dialog.
