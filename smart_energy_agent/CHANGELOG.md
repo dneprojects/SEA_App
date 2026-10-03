@@ -2,6 +2,10 @@
 
 ## 0.12.0
 
+- **Eigene Regeln setzen bei einem nicht verfügbaren Sensor aus** — vorher galt sein Wert als 0, sodass z. B. „Speicher < 40 → Heizstab an“ bei einem ausgefallenen Sensor schaltete.
+- **Absenkung überschreibt eine Hand-Einstellung nicht mehr** — SEA setzt die Temperatur nur noch beim Gehen, Heimkommen oder Vorheizen, statt alle zwei Minuten auf den Komfortwert zurück.
+- **Börsentarif ohne Preis-Entität: der Planer sieht die Stundenpreise** — vorher plante er mit einem einzigen Preis für den ganzen Tag; ein Börsenpreis gilt außerdem nur noch für seine Stunde statt nach einem Abruffehler unbegrenzt.
+- **Analysen: unverständlicher Gutschrift-Hinweis unter den Vergleichsszenarien entfernt** — die Gutschriften bleiben in „Ohne Steuerung“ eingerechnet.
 - **Zahnrad an einer Strategie öffnet das Gerät sichtbar** — der Abschnitt „Komponenten“ wird mit aufgeklappt und die Seite scrollt erst nach dem Laden zum Gerät.
 - **Nach einem Update keine veralteten Styles mehr** — die Dateien der Oberfläche werden am Inhalt erkannt; vorher öffnete sich z. B. die Strategie-Info links unten.
 - **Vorgaben: Maschinen-Einstellungen rechtsbündig** — „fertig bis/nicht vor“, Uhrzeit und „an SEA übergeben“ sitzen wie die übrigen Vorgaben am rechten Rand, auch wenn sie umbrechen.
