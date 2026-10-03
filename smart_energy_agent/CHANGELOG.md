@@ -2,6 +2,8 @@
 
 ## 0.12.0
 
+- **Notstrom-Reserve und Lade-Frist des Autos werden nur noch unter Vorgaben eingestellt** — Batterie- und Fahrzeugkarte zeigen den Wert mit Link dorthin.
+- **„Stromkosten heute“ heißt jetzt „Stromkosten nächste 16 h“** — die Kacheln sind eine Vorausschau, abends schon mit dem nächsten Morgen.
 - **Texte aufgeräumt** — Verweise auf umbenannte Seiten und Schalter stimmen wieder, Fachbegriffe (Sankey, Baselines, operativ, Knoten/Kinder) sind durch Alltagssprache ersetzt, lange Hilfen gekürzt; Personen und Ansage-Geräte erscheinen mit Namen statt Entitäts-ID.
 - **Status: keine roten Entitäts-Zähler mehr in den Kartentiteln**, und „PV-Anlage (PV-Anlage)“ heißt nur noch „PV-Anlage“.
 - **Ein Wort je Sache** — überall „Ladestand“ statt SoC/Ladezustand, „Notstrom-Reserve“ (gesamt) und „Entlade-Untergrenze“ (je Batterie), „Batteriepflege“, „Autarkie“ und „Eigenverbrauch“.
