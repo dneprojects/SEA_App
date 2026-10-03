@@ -2,6 +2,11 @@
 
 ## 0.12.0
 
+- **Batteriepflege lädt zuerst mit Sonne** — am Pflegetag wird die Ladegrenze aufgehoben; aus dem Netz geladen wird erst ab 15 Uhr und nicht in teuren Stunden, statt ab Mitternacht mit voller Leistung.
+- **Dynamischer Tarif: eine verstummte Preis-Entität gilt nach einer Stunde als unbekannt** — vorher galt ihr letzter Preis unbegrenzt weiter, z. B. ein negativer.
+- **Tarifsteuerung lässt am Gerät gestartete Maschinen in Ruhe** — sie schaltete einen solchen Lauf in teuren Stunden ab und meldete danach fälschlich „verschoben“.
+- **Maschine: kein erzwungener Sofort-Start mehr, wenn die Frist erst morgen ist** — „fertig bis 07:00“ um 08:00 übergeben startete die Maschine sofort statt am nächsten Morgen.
+- **Wallbox: „Sofort laden“ und fällige Mindest-Ladung mit voller Leistung** — vorher mit Minimalstrom; „Netz erlaubt“ ist jetzt eine Untergrenze, der PV-Überschuss darf mehr laden.
 - **Geplante Entladung deckt das Haus statt mit voller Leistung einzuspeisen** — im Automatik-Modus lief ein Entlade-Abschnitt mit maximaler Leistung; die Tarif-Zwangsentladung bleibt unverändert.
 - **Einspeise-Limit hält, statt zu pendeln** — die Batterie lädt die aktuelle Leistung plus den Überschuss über dem Limit; die PV-Abregelung öffnet schrittweise statt schlagartig.
 - **Ausgefallener Netz- oder Batteriezähler: SEA regelt nicht auf einen erfundenen Wert** — vorher hielt die Signal-Glättung den letzten Wert; die Batterie konnte so ins Netz entladen. Jetzt halten die Lasten, die Batterie deckt nicht.
