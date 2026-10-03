@@ -2,6 +2,9 @@
 
 ## 0.12.0
 
+- **Maschinen: „nicht vor“ lässt sich wieder einstellen** — die Uhrzeit wurde als „fertig bis“ gespeichert.
+- **Tarif aus dem Energy-Dashboard wird einmalig übernommen**, solange der Tarif noch auf den Werksvorgaben steht; der Hinweis erscheint nur dann.
+- **Eingaben gehen beim Speichern nicht mehr verloren** — Einrichtung und Tarife überschreiben das Feld nicht, in dem gerade getippt wird; schnelles Umschalten des Zeitraums in Verlauf und Analysen zeigt nie eine verspätete alte Antwort.
 - **SG-Ready pendelt nicht mehr und kehrt in den Normalbetrieb zurück** — ein Zustand gilt mindestens 10 Minuten, die eigene Leistung der Wärmepumpe zählt mit, und ohne aktive Strategie bleiben die Relais nicht auf Sperre oder Zwang stehen.
 - **Maschine ohne gelerntes Profil wird rechtzeitig fertig** — der späteste Start rechnet mit der längsten bekannten Programmdauer (sonst 2 h) statt zur Fertig-Zeit zu starten.
 - **Analysen: Energiebilanz rechnet Kosten über denselben Zeitraum wie die kWh**; fehlen nachts die Börsenpreise, wird der Tag später gespeichert statt dauerhaft mit Ersatzpreisen.
