@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Status: eine Batteriekapazität statt zwei** — die Karte zeigt die nachts gemessene Kapazität, mit der die Planung rechnet, statt daneben eine Live-Schätzung über ein anderes Zeitfenster (10,8 vs. 11,0 kWh).
 - **Strategiefarben verwechseln sich nicht mehr mit Gerätefarben** — z. B. war „Dyn. Tarif“ genau das Auto-Blau und „WP-Anhebung“ fast das Batterie-Orange.
 - **Analysen: Ersparnis ist überall positiv** — die Investitionstabelle zeigte sie als negatives Δ; „keine Verlaufsdaten“ beim CSV-Export kommt als Hinweis statt als Dialog.
 - **Notstrom-Reserve und Lade-Frist des Autos werden nur noch unter Vorgaben eingestellt** — Batterie- und Fahrzeugkarte zeigen den Wert mit Link dorthin.
