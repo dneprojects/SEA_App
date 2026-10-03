@@ -2,6 +2,8 @@
 
 ## 0.12.0
 
+- **Strategiefarben verwechseln sich nicht mehr mit Gerätefarben** — z. B. war „Dyn. Tarif“ genau das Auto-Blau und „WP-Anhebung“ fast das Batterie-Orange.
+- **Analysen: Ersparnis ist überall positiv** — die Investitionstabelle zeigte sie als negatives Δ; „keine Verlaufsdaten“ beim CSV-Export kommt als Hinweis statt als Dialog.
 - **Notstrom-Reserve und Lade-Frist des Autos werden nur noch unter Vorgaben eingestellt** — Batterie- und Fahrzeugkarte zeigen den Wert mit Link dorthin.
 - **„Stromkosten heute“ heißt jetzt „Stromkosten nächste 16 h“** — die Kacheln sind eine Vorausschau, abends schon mit dem nächsten Morgen.
 - **Texte aufgeräumt** — Verweise auf umbenannte Seiten und Schalter stimmen wieder, Fachbegriffe (Sankey, Baselines, operativ, Knoten/Kinder) sind durch Alltagssprache ersetzt, lange Hilfen gekürzt; Personen und Ansage-Geräte erscheinen mit Namen statt Entitäts-ID.
