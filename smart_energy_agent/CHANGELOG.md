@@ -2,6 +2,9 @@
 
 ## 0.12.0
 
+- **SG-Ready pendelt nicht mehr und kehrt in den Normalbetrieb zurück** — ein Zustand gilt mindestens 10 Minuten, die eigene Leistung der Wärmepumpe zählt mit, und ohne aktive Strategie bleiben die Relais nicht auf Sperre oder Zwang stehen.
+- **Maschine ohne gelerntes Profil wird rechtzeitig fertig** — der späteste Start rechnet mit der längsten bekannten Programmdauer (sonst 2 h) statt zur Fertig-Zeit zu starten.
+- **Analysen: Energiebilanz rechnet Kosten über denselben Zeitraum wie die kWh**; fehlen nachts die Börsenpreise, wird der Tag später gespeichert statt dauerhaft mit Ersatzpreisen.
 - **Nach einem Neuverbinden mit Home Assistant stimmen die Live-Werte sofort** — z. B. galt ein in der Zwischenzeit abgestecktes Auto bis zur nächsten Änderung als angesteckt.
 - **Daten robuster** — ein fehlerhaftes Backup kann SEA nicht mehr in eine Endlos-Neuverbindung bringen; der Ausblick startet eine leere Batterie bei 0 % statt 50 %; ein Tippfehler im Jahr der Preisgrafik blockiert den Server nicht mehr; Aufzeichnungslücken werden in den Tages-Simulationen nicht mehr mit den letzten Werten gefüllt.
 - **Ein alter Lade- oder Entlade-Sollwert bleibt nicht mehr stehen** — z. B. in „Manuell“ lud die Batterie mit dem Mittagswert abends aus dem Netz; SEA nimmt nicht mehr beanspruchte Sollwerte auf 0 zurück.
