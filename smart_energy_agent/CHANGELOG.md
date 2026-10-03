@@ -2,6 +2,12 @@
 
 ## 0.12.0
 
+- **Verlauf: „Mein Tarif“ folgt in der Zukunft der Preisprognose** — vorher lief die Linie flach weiter; Ausblick und Planer lesen Viertelstundenpreise jetzt genauso.
+- **Entscheidungs-Verlauf schreibt nur bei echten Änderungen** — eine wechselnde Leistungsangabe im Grund schrieb jeden Takt eine Zeile.
+- **Sprachansagen laufen neben der Regelung** — eine hängende Ansage hält die Regelung nicht mehr auf.
+- **Ausgeblendete Hinweise bleiben ausgeblendet** — Hinweise wie „Kostet gerade Geld“ oder „Netz-Messung unplausibel“ kamen nach dem Neuladen zurück; sie bleiben jetzt 14 Tage weg.
+- **Backup und Einstellungsdatei werden auf Typen geprüft** — z. B. ein Preis „30,5“ als Text ließ alle Analysen scheitern; Werte werden jetzt umgewandelt oder fallen auf die Vorgabe zurück.
+- **Verbindung zu Home Assistant stabiler** — eine ruhige Verbindung wurde nach rund 80 s grundlos getrennt; scheitert der Erstabruf, verbindet SEA neu, statt ohne Zustandsmeldungen weiterzulaufen.
 - **Batteriepflege lädt zuerst mit Sonne** — am Pflegetag wird die Ladegrenze aufgehoben; aus dem Netz geladen wird erst ab 15 Uhr und nicht in teuren Stunden, statt ab Mitternacht mit voller Leistung.
 - **Dynamischer Tarif: eine verstummte Preis-Entität gilt nach einer Stunde als unbekannt** — vorher galt ihr letzter Preis unbegrenzt weiter, z. B. ein negativer.
 - **Tarifsteuerung lässt am Gerät gestartete Maschinen in Ruhe** — sie schaltete einen solchen Lauf in teuren Stunden ab und meldete danach fälschlich „verschoben“.
