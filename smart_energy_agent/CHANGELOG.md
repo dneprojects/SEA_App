@@ -2,6 +2,12 @@
 
 ## 0.12.0
 
+- **Eigene Regeln stehen in ihrer Strategiekarte** — nicht gespeicherte Änderungen gehen beim Speichern anderer Einstellungen nicht mehr verloren, und vor dem Verlassen der Seite kommt eine Warnung.
+- **Hinweis-Knöpfe wie „Netzstrom erlauben“ funktionieren wieder** — auch bei Titeln mit Anführungszeichen oder Apostroph.
+- **Offenes Geräte-Popup: Scrollen blättert die Seite darunter nicht mehr um**; die wirkungslose Zeile „Experten-Einstellungen: sichtbar“ ist entfernt.
+- **„gespeichert“ erscheint nur noch, wenn der Server das Speichern bestätigt** — sonst steht „Nicht gespeichert“ mit Grund da; auch Schalter und Fahrzeuge melden sich jetzt einheitlich unten.
+- **Rückfrage vor dem Entfernen** von Geräten, Heizkreisen, Fahrzeugen, Absenk-Gruppen und Regeln.
+- **Klarere Knöpfe** — „Auftrag zurücknehmen“ heißt jetzt „ohne SEA einschalten“ (es schaltet die Steckdose ein), „Freigeben“ heißt jetzt „Übernahme aufheben“.
 - **Verlauf: „Mein Tarif“ folgt in der Zukunft der Preisprognose** — vorher lief die Linie flach weiter; Ausblick und Planer lesen Viertelstundenpreise jetzt genauso.
 - **Entscheidungs-Verlauf schreibt nur bei echten Änderungen** — eine wechselnde Leistungsangabe im Grund schrieb jeden Takt eine Zeile.
 - **Sprachansagen laufen neben der Regelung** — eine hängende Ansage hält die Regelung nicht mehr auf.
