@@ -2,6 +2,12 @@
 
 ## 0.12.0
 
+- **Geplante Entladung deckt das Haus statt mit voller Leistung einzuspeisen** — im Automatik-Modus lief ein Entlade-Abschnitt mit maximaler Leistung; die Tarif-Zwangsentladung bleibt unverändert.
+- **Einspeise-Limit hält, statt zu pendeln** — die Batterie lädt die aktuelle Leistung plus den Überschuss über dem Limit; die PV-Abregelung öffnet schrittweise statt schlagartig.
+- **Ausgefallener Netz- oder Batteriezähler: SEA regelt nicht auf einen erfundenen Wert** — vorher hielt die Signal-Glättung den letzten Wert; die Batterie konnte so ins Netz entladen. Jetzt halten die Lasten, die Batterie deckt nicht.
+- **Mehrere Batterien: jede wird nach ihrer eigenen Leistung geregelt** — vorher rechnete jede Bank mit der Summe aller Bänke; das konnte beide auf volle Ladeleistung treiben und Netzstrom ziehen.
+- **Weniger Schreiblast auf der SD-Karte** — eine laufende Maschine schrieb ihren Fortschritt alle 10 s in die Einstellungen und jeden Recorder-Takt in die Datenbank; alte Einstellungs-Stände werden jetzt mit der Aufbewahrungsfrist aufgeräumt.
+- **Analysen: ein vergangener Zeitraum zählt nicht mehr den Folgetag mit** — beim Zurückblättern kam der Tag danach aus den gespeicherten Tageswerten dazu.
 - **Verlauf: Prognosen in der Farbe ihrer Messreihe** — gestrichelt, ohne eigenen Legenden-Eintrag; nur eine Prognose ohne passende Messreihe behält Farbe und Eintrag.
 - **Planung rechnet mit der gemessenen nutzbaren Batteriekapazität** — sobald genug Lade-/Entladeabschnitte vorliegen (statt der eingetragenen); die Status-Seite sagt, mit welcher Kapazität gerechnet wird.
 - **Flussdiagramm: fehlender Messwert als „–“ statt „0 W“** — liefert der Netz- oder Batteriesensor nichts, zeigen Netz, Batterie und Haus einen Strich und die Statuszeile „Messwert fehlt“.
