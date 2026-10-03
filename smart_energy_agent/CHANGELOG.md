@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Texte aufgeräumt** — Verweise auf umbenannte Seiten und Schalter stimmen wieder, Fachbegriffe (Sankey, Baselines, operativ, Knoten/Kinder) sind durch Alltagssprache ersetzt, lange Hilfen gekürzt; Personen und Ansage-Geräte erscheinen mit Namen statt Entitäts-ID.
 - **Status: keine roten Entitäts-Zähler mehr in den Kartentiteln**, und „PV-Anlage (PV-Anlage)“ heißt nur noch „PV-Anlage“.
 - **Ein Wort je Sache** — überall „Ladestand“ statt SoC/Ladezustand, „Notstrom-Reserve“ (gesamt) und „Entlade-Untergrenze“ (je Batterie), „Batteriepflege“, „Autarkie“ und „Eigenverbrauch“.
 - **Eigene Regeln stehen in ihrer Strategiekarte** — nicht gespeicherte Änderungen gehen beim Speichern anderer Einstellungen nicht mehr verloren, und vor dem Verlassen der Seite kommt eine Warnung.
