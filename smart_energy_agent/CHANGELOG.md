@@ -2,6 +2,9 @@
 
 ## 0.12.0
 
+- **„Netzbezug decken“ und die Tarif-Teilnahme werden am Gerät eingestellt** — die Strategiekarten zeigen sie nur noch an (mit Zahnrad zum Gerät); Batterie und Fahrzeug haben keine doppelten Felder mehr.
+- **Begriffe und Verweise** — „Reserve“ nur noch für die Notstrom-Reserve, „Kontroll-Stufe“ statt „Autonomie“, Karte „Geräte und Auto“, Hinweise nennen die echte Betriebsart und den richtigen Ort; Knöpfe einheitlich groß geschrieben.
+- **Handy: Ziel und Kontroll-Stufe werden nicht mehr abgeschnitten**; „Neu planen“, „Alternativen prüfen“ und „Beheben“ melden Fehler, statt sie zu verschlucken.
 - **Maschinen: „nicht vor“ lässt sich wieder einstellen** — die Uhrzeit wurde als „fertig bis“ gespeichert.
 - **Tarif aus dem Energy-Dashboard wird einmalig übernommen**, solange der Tarif noch auf den Werksvorgaben steht; der Hinweis erscheint nur dann.
 - **Eingaben gehen beim Speichern nicht mehr verloren** — Einrichtung und Tarife überschreiben das Feld nicht, in dem gerade getippt wird; schnelles Umschalten des Zeitraums in Verlauf und Analysen zeigt nie eine verspätete alte Antwort.
