@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Flussdiagramm: fehlender Messwert als „–“ statt „0 W“** — liefert der Netz- oder Batteriesensor nichts, zeigen Netz, Batterie und Haus einen Strich und die Statuszeile „Messwert fehlt“.
 - **Eigene Regeln setzen bei einem nicht verfügbaren Sensor aus** — vorher galt sein Wert als 0, sodass z. B. „Speicher < 40 → Heizstab an“ bei einem ausgefallenen Sensor schaltete.
 - **Absenkung überschreibt eine Hand-Einstellung nicht mehr** — SEA setzt die Temperatur nur noch beim Gehen, Heimkommen oder Vorheizen, statt alle zwei Minuten auf den Komfortwert zurück.
 - **Börsentarif ohne Preis-Entität: der Planer sieht die Stundenpreise** — vorher plante er mit einem einzigen Preis für den ganzen Tag; ein Börsenpreis gilt außerdem nur noch für seine Stunde statt nach einem Abruffehler unbegrenzt.
