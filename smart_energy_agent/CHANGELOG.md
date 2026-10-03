@@ -2,6 +2,9 @@
 
 ## 0.12.0
 
+- **Fertig-Zeiten stimmen auch in der Nacht der Zeitumstellung** — „fertig bis 07:00“ wurde dort zu 08:00 oder 06:00.
+- **Ein ausgefallener Netz- oder Batteriezähler wird als „unbekannt“ aufgezeichnet, nicht als 0 W** — sonst entstand eine negative Hauslast in Prognose und Tageswerten.
+- **Ohne Lizenzschlüssel öffnet die App weiter** — statt einer Sperrseite, die auch das Eingabefeld für den Schlüssel verbarg; „Heute“ meldet, dass SEA nicht steuert.
 - **Heute: der Eigenverbrauch-Balken zeigt wieder den Anteil** — er zeigte nach der Begriffs-Vereinheitlichung die kWh-Zahl als Prozent (z. B. 4 %).
 
 - **Status: eine Batteriekapazität statt zwei** — die Karte zeigt die nachts gemessene Kapazität, mit der die Planung rechnet, statt daneben eine Live-Schätzung über ein anderes Zeitfenster (10,8 vs. 11,0 kWh).
