@@ -2,6 +2,11 @@
 
 ## 0.12.0
 
+- **Ein alter Lade- oder Entlade-Sollwert bleibt nicht mehr stehen** — z. B. in „Manuell“ lud die Batterie mit dem Mittagswert abends aus dem Netz; SEA nimmt nicht mehr beanspruchte Sollwerte auf 0 zurück.
+- **Einspeise-Limit wirkt auch in „Manuell“ und bei ausgeschaltetem PV-Überschuss.**
+- **Mehrere Batterien: die Hausdeckung nutzt die Batterie mit „Netzbezug decken“** und wechselt zur nächsten, wenn eine an ihrer Untergrenze ist; Batterien im Automatik-Modus bekommen keine Befehle mehr.
+- **SG-Ready-Sperre nur noch in echten Spitzenstunden und nie bei PV-Überschuss** — bei HT/NT war die Wärmepumpe den ganzen Hochtarif-Tag gesperrt.
+- **Rücknahme von WP-Anhebung und Absenkung kommt sicher an** — endete sie in den ersten 5 Minuten oder scheiterte der Schreibbefehl, blieb der Sollwert angehoben.
 - **Fertig-Zeiten stimmen auch in der Nacht der Zeitumstellung** — „fertig bis 07:00“ wurde dort zu 08:00 oder 06:00.
 - **Ein ausgefallener Netz- oder Batteriezähler wird als „unbekannt“ aufgezeichnet, nicht als 0 W** — sonst entstand eine negative Hauslast in Prognose und Tageswerten.
 - **Ohne Lizenzschlüssel öffnet die App weiter** — statt einer Sperrseite, die auch das Eingabefeld für den Schlüssel verbarg; „Heute“ meldet, dass SEA nicht steuert.
