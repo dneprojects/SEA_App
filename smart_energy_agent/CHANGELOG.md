@@ -2,6 +2,9 @@
 
 ## 0.12.0
 
+- **Oberfläche: Farben und wiederkehrende Abstände an einer Stelle** — Ansichten nutzen gemeinsame Farbwerte und Klassen statt eigener Werte; sichtbar bleibt alles gleich.
+- **Zahlen überall mit Dezimalkomma** — Preis-Tooltip im Plan, Tarif-Übersicht, Ladestände, Autarkie, Wirkungsgrad und rund 40 weitere Stellen zeigten noch „23.5 ct/kWh“ oder „null %“.
+- **Regel-Engine und Web-Schnittstelle in Themenmodule aufgeteilt** — Planer und Regler, Maschinen-Aufträge, Eingangsdaten, Plan-Seite und die Handler je Seitenbereich in eigenen Dateien; die gespeicherten Tages-Simulationen werden einmal neu gerechnet.
 - **Altes Verbraucher-Modell entfernt** — die „verwalteten Verbraucher“ (nach Entität, ohne Editor) und acht ungenutzte Schnittstellen sind weg; die Verbraucher-Hierarchie zeigt nur noch eingerichtete Geräte statt aller gefundenen Schalter.
 - **Keine falsche „verschoben“-Meldung mehr nach dem Ende eines Auftrags** — endete ein Auftrag, während SEA die Steckdose pausiert hatte, und kam das Wiedereinschalten nicht binnen 90 s an, wurde die Maschine erneut übernommen.
 - **Ein Text statt einer Zahl bei „max. Starts“ legt die Regelung nicht mehr still** — z. B. „3.0“ aus einem Backup ließ jeden Regelzyklus scheitern; der Wert wird jetzt gelesen und beim Einspielen bereinigt.
