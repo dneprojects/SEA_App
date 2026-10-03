@@ -2,6 +2,8 @@
 
 ## 0.12.0
 
+- **Zahnrad an einer Strategie öffnet das Gerät sichtbar** — der Abschnitt „Komponenten“ wird mit aufgeklappt und die Seite scrollt erst nach dem Laden zum Gerät.
+- **Nach einem Update keine veralteten Styles mehr** — die Dateien der Oberfläche werden am Inhalt erkannt; vorher öffnete sich z. B. die Strategie-Info links unten.
 - **Vorgaben: Maschinen-Einstellungen rechtsbündig** — „fertig bis/nicht vor“, Uhrzeit und „an SEA übergeben“ sitzen wie die übrigen Vorgaben am rechten Rand, auch wenn sie umbrechen.
 - **Oberfläche: Farben und wiederkehrende Abstände an einer Stelle** — Ansichten nutzen gemeinsame Farbwerte und Klassen statt eigener Werte; sichtbar bleibt alles gleich.
 - **Zahlen überall mit Dezimalkomma** — Preis-Tooltip im Plan, Tarif-Übersicht, Ladestände, Autarkie, Wirkungsgrad und rund 40 weitere Stellen zeigten noch „23.5 ct/kWh“ oder „null %“.
