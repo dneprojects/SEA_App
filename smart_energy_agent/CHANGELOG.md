@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Verlauf: Prognosen in der Farbe ihrer Messreihe** — gestrichelt, ohne eigenen Legenden-Eintrag; nur eine Prognose ohne passende Messreihe behält Farbe und Eintrag.
 - **Planung rechnet mit der gemessenen nutzbaren Batteriekapazität** — sobald genug Lade-/Entladeabschnitte vorliegen (statt der eingetragenen); die Status-Seite sagt, mit welcher Kapazität gerechnet wird.
 - **Flussdiagramm: fehlender Messwert als „–“ statt „0 W“** — liefert der Netz- oder Batteriesensor nichts, zeigen Netz, Batterie und Haus einen Strich und die Statuszeile „Messwert fehlt“.
 - **Eigene Regeln setzen bei einem nicht verfügbaren Sensor aus** — vorher galt sein Wert als 0, sodass z. B. „Speicher < 40 → Heizstab an“ bei einem ausgefallenen Sensor schaltete.
