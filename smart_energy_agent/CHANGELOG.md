@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **In „Assistiert“ lädt ein übernommener Plan das Auto nur mit Netzlade-Erlaubnis aus dem Netz** — wie in der Hilfe beschrieben.
 - **Eine Reserve wird in einem Zug nachgeladen statt in vielen kurzen Ladestößen** — Nachladen beginnt 2 % unter der Reserve und läuft bis zu ihr.
 - **Eine übergebene Maschine startet bei Teil-Sonne, wenn bis zur Frist nichts Besseres kommt** — ab etwa 60 % Sonne im sonnigsten Fenster statt später ganz aus dem Netz.
 - **Das Auto lädt nicht mehr aus der Hausbatterie, und der Ladeplan wählt sein Fenster nach Kosten** — ohne Batterie-Unterstützung deckt die Batterie nur das Haus; ein sonniges Planfenster lädt ab Minimum mit Überschuss obendrauf, volle Leistung erst ab dem spätesten Start.
