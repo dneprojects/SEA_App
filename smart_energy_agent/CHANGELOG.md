@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Eine beschädigte Einstellungsdatei wird beiseitegelegt und das neueste Backup geladen** — vorher liefen still die Werkseinstellungen und überschrieben die Datei; Hinweis auf „Heute“.
 - **Auch die geplante und die Schwellen-Entladung decken das ladende Auto nicht mehr** — bisher ließ nur die Netzbezug-Deckung das Auto aus.
 - **„Rückgängig“ stellt jetzt genau zurück, was die automatische Anpassung geändert hat** — auch Auto, Wärmepumpe, Heizstab und Lade-Vorrang; nur einmal; Meldungen verdrängen den Knopf nicht mehr und verlängern die Mindestpause nicht; eine geänderte Vorgabe hebt die Sperre auf.
 - **Ein Heizstab unter voller Batterie nimmt bei langsamem Batterie-Schreibintervall wieder den ganzen Überschuss** — er blieb rund 20 % darunter, der Rest ging ins Netz.
