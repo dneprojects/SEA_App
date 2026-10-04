@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Eine gesättigte Batterie über dem Heizstab gibt den Überschuss wirklich weiter** — ihr Deckel liegt beim Gemessenen statt 150 W darüber (bis 1,1 kWh/h Einspeisung); mehr Leistung wird alle 5 min schrittweise angeboten statt den Heizstab minutenlang zu verdrängen.
 - **Auch ohne steuerbare Hausbatterie gibt es einen Plan für Auto und Maschinen** — vorher gar keinen, und das Auto lud am spätesten Start zu jedem Preis.
 - **Der Ausblick rechnet in „Automatisch“ mit dem Plan, dem die Regelung folgt** — die Simulation verwarf ihn im ersten Schritt.
 - **Eine beschädigte Einstellungsdatei wird beiseitegelegt und das neueste Backup geladen** — vorher liefen still die Werkseinstellungen und überschrieben die Datei; Hinweis auf „Heute“.
