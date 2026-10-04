@@ -2,6 +2,8 @@
 
 ## 0.12.0
 
+- **Oberfläche: letzte Review-Punkte** — der Haken „Prognose von Home Assistant“ springt nicht mehr zurück; die Flussanzeige meldet Einspeisung statt „Netzbezug 0 W“; Rückfrage vor dem Entfernen von Thermostaten und Zeitfenstern; Tarif-Speichern meldet sich unten wie alles andere; einheitliche Strategienamen, unpersönliche Ansprache und weniger Fachbegriffe (z. B. „Zustand“ statt SoH).
+- **Prognose bremst die Regelung nicht mehr** — die Verbrauchsprognose rechnet außerhalb der Ereignisschleife, die Genauigkeitsprüfung nur noch für die Anzeige.
 - **Tarif-Laden und -Entladen der Batterie wirkt auch bei ausgeschaltetem PV-Überschuss**; mehrere Batterien teilen sich die geplante Hausdeckung, statt sich gegenseitig aufzuschaukeln.
 - **Heizstab-Stufen schalten mit Hysterese** und zählen die Tagesenergie aus der gemessenen Leistung; eigene Regeln sehen in der Simulation den Preis der simulierten Stunde.
 - **Kleinere Datenkorrekturen** — ein leeres NT-Fenster gilt überall als „kein NT“; Zeilen ohne Preis werden mit dem Tarif ihrer Uhrzeit bewertet; Tage der Zeitumstellung haben 23/25 Stunden; alte Rohdaten werden bis Mitternacht gelöscht; der Börsenpreis-Speicher wächst nicht mehr; ein geleertes Datenbank-Feld fällt nicht mehr auf /data zurück.
