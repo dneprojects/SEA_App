@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Auch ohne steuerbare Hausbatterie gibt es einen Plan für Auto und Maschinen** — vorher gar keinen, und das Auto lud am spätesten Start zu jedem Preis.
 - **Der Ausblick rechnet in „Automatisch“ mit dem Plan, dem die Regelung folgt** — die Simulation verwarf ihn im ersten Schritt.
 - **Eine beschädigte Einstellungsdatei wird beiseitegelegt und das neueste Backup geladen** — vorher liefen still die Werkseinstellungen und überschrieben die Datei; Hinweis auf „Heute“.
 - **Auch die geplante und die Schwellen-Entladung decken das ladende Auto nicht mehr** — bisher ließ nur die Netzbezug-Deckung das Auto aus.
