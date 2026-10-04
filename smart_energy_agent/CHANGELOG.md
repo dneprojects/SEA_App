@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Das Auto lädt nicht mehr aus der Hausbatterie, und der Ladeplan wählt sein Fenster nach Kosten** — ohne Batterie-Unterstützung deckt die Batterie nur das Haus; ein sonniges Planfenster lädt ab Minimum mit Überschuss obendrauf, volle Leistung erst ab dem spätesten Start.
 - **Ohne PV-Prognose wird kein Plan mehr ausgeführt, ein veralteter Plan verfällt nach einer Stunde, und eine geänderte Vorgabe plant sofort neu** — vorher galt fehlende Sonne als „keine Sonne“ und der alte Plan lief bis zu 15 min weiter.
 - **Die Verbrauchsprognose zählt SEAs eigene Lasten nicht mehr mit** — ein gestriger Heizstab-Lauf am Mittag ließ den Plan heute weniger Überschuss erwarten.
 - **Die Notstrom-Reserve gilt auch, wenn nur Tarif oder eigene Regeln laufen** — vorher konnte eine Tarif-Entladung oder eine Regel die Batterie unter die Reserve fahren.
