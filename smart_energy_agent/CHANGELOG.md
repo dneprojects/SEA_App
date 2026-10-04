@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Ein Heizstab unter voller Batterie nimmt bei langsamem Batterie-Schreibintervall wieder den ganzen Überschuss** — er blieb rund 20 % darunter, der Rest ging ins Netz.
 - **Netzladen der Batterie bleibt unter dem Bezugs-Deckel** — es lädt nur, was darunter passt; das Hin und Her zwischen Laden und Entladen ist weg.
 - **Geplantes und Tarif-Netzladen kommt bei „Batterie deckt Netzbezug“ wieder durch** — die Deckung entlud stattdessen die Batterie, die laden sollte.
 - **Handeingriffe an geregelten Lasten werden jetzt erkannt** — gegen SEAs eigene Werte der letzten Minute statt gegen den Zeitpunkt des letzten Schreibens; nur ein Hochsetzen zählt; kein Fehlalarm bei selbst endenden Programmen; Wallbox-Knöpfe gelten immer.
