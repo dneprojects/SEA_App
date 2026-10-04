@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Handeingriffe an Heizstab, Schaltlasten oder Wallbox-Ladestrom haben eine Stunde Vorrang** — SEA schaltet ein von Hand eingeschaltetes Gerät nicht mehr sofort zurück und meldet den Eingriff.
 - **In günstigen Stunden hält der Plan den Akku für die teuren zurück** — die billige Nachtlast lief sonst mit Verlust über den Akku, der dafür vorher geladen wurde.
 - **Ein wegen der Sonne geplantes WP-Vorheizfenster hält die Anhebung nicht mehr ohne Sonne** — bei zu sonniger Prognose lief sie sonst aus Akku und Netz.
 - **Hilfe: Temperatur-Absenkung und übergebene Maschinen-Aufträge laufen auch in „Manuell“** — als angeordnete Pflichten aufgeführt.
