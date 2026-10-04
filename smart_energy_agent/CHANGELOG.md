@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Die Batterie deckt auch kleine Grundlasten** — unter 200 W Netzbezug blieb sie nachts stehen; eine laufende Deckung hört erst unter 50 W auf. Dabei behoben: die Regel „PV deckt das Haus“ sah die PV-Leistung nie.
 - **Ein eingefrorener Netzwert lässt die Batterie nicht mehr ins Netz entladen** — antwortet der Netzwert nicht mehr auf die eigene Entladung, gilt er als unbekannt.
 - **Heizstab und Wallbox behalten ihren Sollwert nicht mehr, wenn die Überschuss-Regelung aus ist** — SEA nimmt seinen eigenen Wert einmal zurück, einen von Hand gesetzten nicht.
 - **Ziel „Autarkie maximieren“ lädt die Batterie nie im günstigen Tarif aus dem Netz** — auch nicht über die Netzlade-Schwelle (nur die Notstrom-Reserve wird nachgeladen); das automatische Umstellen misst den Gewinn dann in kWh statt in Euro. Hilfe, Strategie-Info und Dokumentation sagen es.
