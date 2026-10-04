@@ -2,6 +2,9 @@
 
 ## 0.12.0
 
+- **Tarif-Laden und -Entladen der Batterie wirkt auch bei ausgeschaltetem PV-Überschuss**; mehrere Batterien teilen sich die geplante Hausdeckung, statt sich gegenseitig aufzuschaukeln.
+- **Heizstab-Stufen schalten mit Hysterese** und zählen die Tagesenergie aus der gemessenen Leistung; eigene Regeln sehen in der Simulation den Preis der simulierten Stunde.
+- **Kleinere Datenkorrekturen** — ein leeres NT-Fenster gilt überall als „kein NT“; Zeilen ohne Preis werden mit dem Tarif ihrer Uhrzeit bewertet; Tage der Zeitumstellung haben 23/25 Stunden; alte Rohdaten werden bis Mitternacht gelöscht; der Börsenpreis-Speicher wächst nicht mehr; ein geleertes Datenbank-Feld fällt nicht mehr auf /data zurück.
 - **„Netzbezug decken“ und die Tarif-Teilnahme werden am Gerät eingestellt** — die Strategiekarten zeigen sie nur noch an (mit Zahnrad zum Gerät); Batterie und Fahrzeug haben keine doppelten Felder mehr.
 - **Begriffe und Verweise** — „Reserve“ nur noch für die Notstrom-Reserve, „Kontroll-Stufe“ statt „Autonomie“, Karte „Geräte und Auto“, Hinweise nennen die echte Betriebsart und den richtigen Ort; Knöpfe einheitlich groß geschrieben.
 - **Handy: Ziel und Kontroll-Stufe werden nicht mehr abgeschnitten**; „Neu planen“, „Alternativen prüfen“ und „Beheben“ melden Fehler, statt sie zu verschlucken.
