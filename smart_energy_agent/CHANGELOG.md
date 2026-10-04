@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Der Ausblick rechnet in „Automatisch“ mit dem Plan, dem die Regelung folgt** — die Simulation verwarf ihn im ersten Schritt.
 - **Eine beschädigte Einstellungsdatei wird beiseitegelegt und das neueste Backup geladen** — vorher liefen still die Werkseinstellungen und überschrieben die Datei; Hinweis auf „Heute“.
 - **Auch die geplante und die Schwellen-Entladung decken das ladende Auto nicht mehr** — bisher ließ nur die Netzbezug-Deckung das Auto aus.
 - **„Rückgängig“ stellt jetzt genau zurück, was die automatische Anpassung geändert hat** — auch Auto, Wärmepumpe, Heizstab und Lade-Vorrang; nur einmal; Meldungen verdrängen den Knopf nicht mehr und verlängern die Mindestpause nicht; eine geänderte Vorgabe hebt die Sperre auf.
