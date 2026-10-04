@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Langsam meldende Batteriesensoren bremsen die Regelung nicht mehr** — ist der Messwert älter als der letzte Sollwert, rechnet SEA mit dem Sollwert, bis ein neuer Wert kommt.
 - **Bei längerem Schreibintervall der Batterie reagieren Abbau und Deckung genauso schnell** — bei 30 s dauerte ein Wolken- oder Lastwechsel dreimal so lange und kostete entsprechend mehr Netzstrom.
 - **Die Batterie deckt auch kleine Grundlasten** — unter 200 W Netzbezug blieb sie nachts stehen; eine laufende Deckung hört erst unter 50 W auf. Dabei behoben: die Regel „PV deckt das Haus“ sah die PV-Leistung nie.
 - **Ein eingefrorener Netzwert lässt die Batterie nicht mehr ins Netz entladen** — antwortet der Netzwert nicht mehr auf die eigene Entladung, gilt er als unbekannt.
