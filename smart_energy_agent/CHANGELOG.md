@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Die Analysen brauchen rund ein Viertel des Speichers** — die Rohdaten liegen kompakt statt als Zeilen-Objekte im Speicher (90 Tage: 20 statt 91 MB je Anfrage).
 - **Stoppt die Batterie nahe voll von selbst, friert die Regelung nicht mehr ein** — nach 5 min Schweigen gilt ihr letzter Wert, bei Netzbezug wird auch im Halten abgeworfen (Wolke: 12 statt rund 800 Wh Bezug).
 - **Eine gesättigte Batterie über dem Heizstab gibt den Überschuss wirklich weiter** — ihr Deckel liegt beim Gemessenen statt 150 W darüber (bis 1,1 kWh/h Einspeisung); mehr Leistung wird alle 5 min schrittweise angeboten statt den Heizstab minutenlang zu verdrängen.
 - **Auch ohne steuerbare Hausbatterie gibt es einen Plan für Auto und Maschinen** — vorher gar keinen, und das Auto lud am spätesten Start zu jedem Preis.
