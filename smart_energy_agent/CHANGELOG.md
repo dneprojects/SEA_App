@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Der Plan behält nachmittags die Nacht** — der Horizont endete beim Sonnenuntergang, und das Auto lud am teuren Nachmittag statt in der günstigen Nacht.
 - **Ein Heizstab im günstigen Tarif-Fenster läuft wieder durch** — die Leerlauf-Freigabe setzte ihn zwischen zwei Tarif-Entscheidungen auf 0; Regel-Sollwerte bleiben stehen.
 - **Handeingriffe an Heizstab, Schaltlasten oder Wallbox-Ladestrom haben eine Stunde Vorrang** — SEA schaltet ein von Hand eingeschaltetes Gerät nicht mehr sofort zurück und meldet den Eingriff.
 - **In günstigen Stunden hält der Plan den Akku für die teuren zurück** — die billige Nachtlast lief sonst mit Verlust über den Akku, der dafür vorher geladen wurde.
