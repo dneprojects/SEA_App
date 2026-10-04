@@ -2,6 +2,11 @@
 
 ## 0.12.0
 
+- **Der Bezugs-Deckel ist jetzt eine harte Grenze** — reicht die Batterie nicht, drosselt SEA Wallbox und Heizstab oder schaltet sie nicht ein; Fristen planen mit der Leistung unter dem Deckel. Ist eine Frist nur mit Überschreiten zu halten, gewinnt der Deckel und SEA warnt (auch per Ansage).
+- **Eine an SEA übergebene Maschine läuft in jeder Kontroll-Stufe** — in „Manuell“ oder bei ausgeschaltetem PV-Überschuss wurde „verschoben“ angesagt, gestartet aber nie.
+- **Tarif-Schwellen: „Entladen ab X ct“ deckt nur noch das Haus, „Netzladen bis Y ct“ kauft nicht, was die Sonne bringt** — vorher entlud die Batterie mit voller Leistung ins Netz und lud nachts auf 100 %, auch wenn es sich nach Verlusten nicht lohnte.
+- **Ein Verbraucher, der nichts abnimmt, blockiert die nachrangigen nicht mehr** — ein volles, angestecktes Auto, ein abgeschalteter Heizstab oder eine fast volle Batterie bekamen weiter Leistung zugeteilt, während der Überschuss ins Netz ging.
+- **Eine ruhende Batterie friert die Regelung nicht mehr ein** — meldet sie unverändert 0 W, galt ihr Wert nach 5 Minuten als veraltet; morgens starteten dann weder Akku noch Heizstab und die PV ging ins Netz.
 - **Oberfläche: letzte Review-Punkte** — der Haken „Prognose von Home Assistant“ springt nicht mehr zurück; die Flussanzeige meldet Einspeisung statt „Netzbezug 0 W“; Rückfrage vor dem Entfernen von Thermostaten und Zeitfenstern; Tarif-Speichern meldet sich unten wie alles andere; einheitliche Strategienamen, unpersönliche Ansprache und weniger Fachbegriffe (z. B. „Zustand“ statt SoH).
 - **Prognose bremst die Regelung nicht mehr** — die Verbrauchsprognose rechnet außerhalb der Ereignisschleife, die Genauigkeitsprüfung nur noch für die Anzeige.
 - **Tarif-Laden und -Entladen der Batterie wirkt auch bei ausgeschaltetem PV-Überschuss**; mehrere Batterien teilen sich die geplante Hausdeckung, statt sich gegenseitig aufzuschaukeln.
