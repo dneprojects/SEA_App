@@ -2,6 +2,8 @@
 
 ## 0.12.0
 
+- **Ein eingefrorener Netzwert lässt die Batterie nicht mehr ins Netz entladen** — antwortet der Netzwert nicht mehr auf die eigene Entladung, gilt er als unbekannt.
+- **Heizstab und Wallbox behalten ihren Sollwert nicht mehr, wenn die Überschuss-Regelung aus ist** — SEA nimmt seinen eigenen Wert einmal zurück, einen von Hand gesetzten nicht.
 - **Ziel „Autarkie maximieren“ lädt die Batterie nie im günstigen Tarif aus dem Netz** — auch nicht über die Netzlade-Schwelle (nur die Notstrom-Reserve wird nachgeladen); das automatische Umstellen misst den Gewinn dann in kWh statt in Euro. Hilfe, Strategie-Info und Dokumentation sagen es.
 - **Der Bezugs-Deckel ist jetzt eine harte Grenze** — reicht die Batterie nicht, drosselt SEA Wallbox und Heizstab oder schaltet sie nicht ein; Fristen planen mit der Leistung unter dem Deckel. Ist eine Frist nur mit Überschreiten zu halten, gewinnt der Deckel und SEA warnt (auch per Ansage).
 - **Eine an SEA übergebene Maschine läuft in jeder Kontroll-Stufe** — in „Manuell“ oder bei ausgeschaltetem PV-Überschuss wurde „verschoben“ angesagt, gestartet aber nie.
