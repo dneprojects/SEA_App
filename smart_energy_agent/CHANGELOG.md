@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Eine automatische Anpassung lässt sich mit „Rückgängig“ zurücknehmen und bleibt es bis Mitternacht** — auch eine selbst übernommene Variante stellt SEA heute nicht mehr um.
 - **Tarif-Laden und eigene Regeln zeigen ihre Strategie an, Plan-Netzladen heißt „Netzladen (Plan)“** — und die Plan-Änderungsmeldung verspricht keinen „günstigeren“ Plan mehr, den SEA nicht verglichen hat.
 - **In „Assistiert“ lädt ein übernommener Plan das Auto nur mit Netzlade-Erlaubnis aus dem Netz** — wie in der Hilfe beschrieben.
 - **Eine Reserve wird in einem Zug nachgeladen statt in vielen kurzen Ladestößen** — Nachladen beginnt 2 % unter der Reserve und läuft bis zu ihr.
