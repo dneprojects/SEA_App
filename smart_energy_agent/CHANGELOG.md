@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **„Rückgängig“ stellt jetzt genau zurück, was die automatische Anpassung geändert hat** — auch Auto, Wärmepumpe, Heizstab und Lade-Vorrang; nur einmal; Meldungen verdrängen den Knopf nicht mehr und verlängern die Mindestpause nicht; eine geänderte Vorgabe hebt die Sperre auf.
 - **Ein Heizstab unter voller Batterie nimmt bei langsamem Batterie-Schreibintervall wieder den ganzen Überschuss** — er blieb rund 20 % darunter, der Rest ging ins Netz.
 - **Netzladen der Batterie bleibt unter dem Bezugs-Deckel** — es lädt nur, was darunter passt; das Hin und Her zwischen Laden und Entladen ist weg.
 - **Geplantes und Tarif-Netzladen kommt bei „Batterie deckt Netzbezug“ wieder durch** — die Deckung entlud stattdessen die Batterie, die laden sollte.
