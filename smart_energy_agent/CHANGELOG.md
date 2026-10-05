@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Der Fahrplan liegt wieder auf seinen Stunden** — jeder Schritt trug die Daten der Folgestunde (bis zu 1 h zu früh: Laden im letzten HT-Abschnitt, Maschine vor der Sonne).
 - **Lange Analysen (Jahr) halten die Regelung nicht mehr an** — sie geben alle paar tausend Zeilen ab (7 s → 0,03 s Stillstand); die kompakten Zeilen laufen wieder schnell durch.
 - **Der Sättigungs-Deckel der Batterie sinkt nicht mehr mit SEAs eigenen Absenkungen** — nach Wolke oder Nacht lud sie nur 150 W je 5 min nach (Morgen: 2,2 kWh Einspeisung statt 0,2).
 - **Börsenpreise im Viertelstundentakt gelten nur für ihre Viertelstunde** — nach dem Ende der Reihe galt der letzte Preis noch eine Stunde.
