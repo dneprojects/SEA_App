@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Der Verlauf über Woche/Monat/Jahr lädt die Gerätehistorie ausgedünnt und außerhalb der Regelung** — vorher Punkt für Punkt, auf dem Pi sekundenlang.
 - **Simulationen vergangener Tage übernehmen keine heutigen Handeingriff-Sperren oder laufenden Anhebungen mehr.**
 - **Der Regelzyklus wartet nicht mehr auf den Planbau** — der Plan wird im Hintergrund gebaut und übernommen, sobald er fertig ist; der Wärmepumpen-Wirkungsgrad wird dafür vorab gelesen (kein Abbruch bei gleichzeitiger Einstellungsänderung).
 - **Eine fällige Last, die der Bezugs-Deckel nicht anlaufen lässt, blockiert das Abschalten anderer Lasten nicht mehr** — eine Pumpe lief sonst stundenlang aus dem Netz weiter.
