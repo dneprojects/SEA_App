@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Toten Pfad „Maschine einplanen“ (/api/plan/queue) entfernt** — er wurde nicht mehr aufgerufen und hätte ein gelerntes Programmprofil verkürzt.
 - **Der Verlauf über Woche/Monat/Jahr lädt die Gerätehistorie ausgedünnt und außerhalb der Regelung** — vorher Punkt für Punkt, auf dem Pi sekundenlang.
 - **Simulationen vergangener Tage übernehmen keine heutigen Handeingriff-Sperren oder laufenden Anhebungen mehr.**
 - **Der Regelzyklus wartet nicht mehr auf den Planbau** — der Plan wird im Hintergrund gebaut und übernommen, sobald er fertig ist; der Wärmepumpen-Wirkungsgrad wird dafür vorab gelesen (kein Abbruch bei gleichzeitiger Einstellungsänderung).
