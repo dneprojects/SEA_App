@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Aufbewahrung „0“ heißt wieder „Standard“** — seit beta.120 wurde daraus 1 Tag, und die nächtliche Bereinigung löschte den Verlauf bis auf den letzten Tag.
 - **Kleinigkeiten in der Oberfläche** — „50 %“ mit Leerzeichen, Vorlaufzeit mit Komma, deutsches Schlusszeichen, „–“ statt „ W“ bei leerem Wert, Regel-ID sicher im Klick-Handler.
 - **Nach einem Ladefehler speichert die Einrichtung nichts** — das Speichern des ganzen Formulars hätte sonst Sprachausgabe und Signal-Sync überschrieben.
 - **Die Karte „Fahrzeuge“ steht neben „Komponenten“ statt darin.**
