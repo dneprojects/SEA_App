@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Börsenpreise im Viertelstundentakt gelten nur für ihre Viertelstunde** — nach dem Ende der Reihe galt der letzte Preis noch eine Stunde.
 - **Weniger Last je HA-Ereignis und kein endloses Warten auf die HA-Begrüßung** — die Liste der beobachteten Entitäten wird zwischengespeichert, der Verbindungsaufbau ist begrenzt.
 - **Ein Planschritt bricht das Nachladen auf die Entlade-Untergrenze nicht mehr ab, und ein langsam meldender Netzzähler gilt nicht als eingefroren.**
 - **Hilfe und Texte vereinheitlicht** — Pflichten-Liste überall gleich, übergebene Maschinen und Assistiert-Plan richtig beschrieben, „Bezugs-/Einspeise-Deckel“, „Batteriekapazität“ und „HA-Energie-Dashboard“ durchgängig, Klarname in der Testansage.
