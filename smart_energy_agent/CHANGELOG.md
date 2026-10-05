@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **„Automatisch“ stellt Handänderungen an Reihenfolge, Teilnahme oder Lade-Vorrang nicht mehr sofort zurück** — sie gelten wie eine übernommene Variante bis Mitternacht.
 - **Bei „Autarkie“ lädt auch ein vorher übernommener Plan nicht mehr günstig aus dem Netz** (Batterie und Wärmepumpen-Vorheizen).
 - **Der Planer rechnet mit der Notstrom-Reserve** — er kannte nur die Entlade-Untergrenze und plante darunter.
 - **Analysen › Investition zeigt immer das Ergebnis des gewählten Zeitraums** — ein während einer laufenden Rechnung gewählter Zeitraum wurde verworfen; ein Startfehler wird gemeldet.
