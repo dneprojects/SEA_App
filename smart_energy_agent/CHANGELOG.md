@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Ein Planschritt rechnet bei Viertelstunden-Börsenpreisen mit dem Mittel seiner Viertelstunden** — er nahm nur die erste, günstig und teuer konnten sich vertauschen.
 - **Im Plan sinkt der Ladestand auch in Ruhe-Schritten, wenn die Batterie das Haus deckt** — spätere Schritte rechneten mit einem zu vollen Akku.
 - **„Automatisch“ stellt Handänderungen an Reihenfolge, Teilnahme oder Lade-Vorrang nicht mehr sofort zurück** — sie gelten wie eine übernommene Variante bis Mitternacht.
 - **Bei „Autarkie“ lädt auch ein vorher übernommener Plan nicht mehr günstig aus dem Netz** (Batterie und Wärmepumpen-Vorheizen).
