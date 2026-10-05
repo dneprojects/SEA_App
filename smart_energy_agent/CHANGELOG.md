@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Einheitliche Begriffe für Ladestände** — „Ladestand“ statt „SoC“ in Gründen und Verlauf, beim Fahrzeug „Mindest-“ und „Höchst-Ladestand“, bei der Batterie „Netzlade-Ziel“ und „Ladegrenze“; Verweise korrigiert.
 - **Server-Texte und Ansagen mit Dezimalkomma** — Hinweise, Gründe auf „Aktuell“ und Maschinen-Ansagen sagten „1.5 kWh“.
 - **Die Entitäten-Auswahl hebt die anderen Entitäten desselben Geräts nach oben, und die Lizenz-Meldung bleibt stehen** — der Hinweis wurde nie gelesen bzw. die Meldung sofort gelöscht.
 - **Toten Pfad „Maschine einplanen“ (/api/plan/queue) entfernt** — er wurde nicht mehr aufgerufen und hätte ein gelerntes Programmprofil verkürzt.
