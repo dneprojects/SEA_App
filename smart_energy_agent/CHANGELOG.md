@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Ein Planschritt bricht das Nachladen auf die Entlade-Untergrenze nicht mehr ab, und ein langsam meldender Netzzähler gilt nicht als eingefroren.**
 - **Hilfe und Texte vereinheitlicht** — Pflichten-Liste überall gleich, übergebene Maschinen und Assistiert-Plan richtig beschrieben, „Bezugs-/Einspeise-Deckel“, „Batteriekapazität“ und „HA-Energie-Dashboard“ durchgängig, Klarname in der Testansage.
 - **Planungs-Details** — Auto-Ladefenster unter dem Bezugs-Deckel mit der möglichen Leistung, kein WP-Vorheizfenster ohne aktive Anhebung, bei „Autarkie“ kein Vorheizen aus dem Netz, Maschinenfenster nennen ihre Energiequelle.
 - **Ein laufender Handeingriff übersteht einen Neustart** — SEA schaltete das Gerät danach sofort zurück.
