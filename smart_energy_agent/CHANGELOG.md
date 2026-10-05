@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Lange Analysen (Jahr) halten die Regelung nicht mehr an** — sie geben alle paar tausend Zeilen ab (7 s → 0,03 s Stillstand); die kompakten Zeilen laufen wieder schnell durch.
 - **Der Sättigungs-Deckel der Batterie sinkt nicht mehr mit SEAs eigenen Absenkungen** — nach Wolke oder Nacht lud sie nur 150 W je 5 min nach (Morgen: 2,2 kWh Einspeisung statt 0,2).
 - **Börsenpreise im Viertelstundentakt gelten nur für ihre Viertelstunde** — nach dem Ende der Reihe galt der letzte Preis noch eine Stunde.
 - **Weniger Last je HA-Ereignis und kein endloses Warten auf die HA-Begrüßung** — die Liste der beobachteten Entitäten wird zwischengespeichert, der Verbindungsaufbau ist begrenzt.
