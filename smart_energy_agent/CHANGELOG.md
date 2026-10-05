@@ -2,6 +2,12 @@
 
 ## 0.12.0
 
+- **Ohne Ladestand-Messwert entlädt SEA die Batterie nicht unter die Reserve** — vorher deckte sie das Haus bis 0 %.
+- **Getrennte Netzsensoren (Bezug/Einspeisung) frieren die Regelung nicht mehr ein** — der ruhende Bezugs-Sensor galt beim Einspeisen als veraltet.
+- **Der Einspeise-Deckel hält auch, wenn die Batterie nahe voll drosselt und nach Wolken** — gezählt wird, was die Batterie wirklich nimmt; die PV-Begrenzung öffnet schrittweise entlang der Erzeugung (über einen Tag 14–41 statt 460–530 Wh über dem Deckel, ein Zehntel der Schreibvorgänge).
+- **Fehlt der Netz- oder Batteriewert länger als eine Minute, schaltet SEA seine eigenen Überschuss-Verbraucher ab** — vorher liefen Heizstab und Batterieladung aus dem Netz weiter; Hilfe: Absenkung „bei Abwesenheit“ statt „nach Zeitplan“.
+- **Eine Wallbox mit Mindeststrom taktet nicht mehr** — mindestens 3 min Laufzeit und 2 min Pause, kein Hochdrehen während das Auto anläuft, SEAs eigener Anlauf gilt nicht als Störung; Netzbezug wird nicht mehr als Überschuss an Batterie und Heizstab verteilt.
+- **Das Ladefenster des Plans lädt das Auto nur bis zum Mindest-Ladestand aus dem Netz, auch an einer nur schaltbaren Wallbox** — ein Sonnenfenster erzwingt nichts, „Assistiert“ braucht die Netz-Erlaubnis.
 - **„Heizstab voll an“ von Hand zählt als Handeingriff** — das Hochstellen auf das Geräte-Maximum wurde bisher übergangen.
 - **Tages-Testbank:** ganze Tage mit realistischen Sensoren (Takt, Versatz, nur bei Änderung, Rauschen), sonnen-Batterie und my-PV-Heizstab; feste Regeln für jede Regel-Änderung.
 - **Netzlade-Ziel begrenzt nur das Laden aus dem Netz** — mit Sonnenstrom lädt die Batterie bis voll (vorher hörte sie auch bei Sonne am Netzlade-Ziel auf, der Rest wurde eingespeist).
