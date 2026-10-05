@@ -2,6 +2,21 @@
 
 ## 0.12.0
 
+- **Kleinigkeiten in der Oberfläche** — „50 %“ mit Leerzeichen, Vorlaufzeit mit Komma, deutsches Schlusszeichen, „–“ statt „ W“ bei leerem Wert, Regel-ID sicher im Klick-Handler.
+- **Nach einem Ladefehler speichert die Einrichtung nichts** — das Speichern des ganzen Formulars hätte sonst Sprachausgabe und Signal-Sync überschrieben.
+- **Die Karte „Fahrzeuge“ steht neben „Komponenten“ statt darin.**
+- **„Plan übernehmen“ und „Sofort laden“ melden, warum sie nicht gingen** — vorher kam keine Rückmeldung.
+- **Verwaiste Oberflächen-Helfer entfernt** (Strategie-Namen aus der alten Ablaufanzeige, Strategie-Abzeichen, Experten-Umschalter ohne Wirkung).
+- **Die Tagesziel-Prüfung berücksichtigt jedes anwesende Auto** — vorher zählte nur das erste Fahrzeug der Liste, auch wenn es weg war.
+- **Geplante Fenster teilen sich den Sonnenüberschuss** — Auto und Wärmepumpe wurden auf denselben Überschuss gelegt, den schon eine Maschine nutzt.
+- **Ein Lesefehler in der Verlaufs-Datenbank lässt keinen offenen Cursor zurück.**
+- **Beim Beenden wird der Regel-Zustand gespeichert** — sonst gingen bis zu 5 Minuten (Energiezähler, Sperren, Plan) verloren.
+- **Aus dem Backup wiederhergestellte Einstellungen werden sofort gespeichert** — ein Neustart davor lief still mit Werkseinstellungen.
+- **Verbraucher-Einstellungen lehnen „unendlich“ ab** — ein solcher Wert machte die Einstellungen für den Browser unlesbar.
+- **Hinweis zu „Automatisch“ nennt auch die Schwelle unter Autarkie (0,3 kWh)**; veraltete Code-Beschreibungen und ARCHITEKTUR §8.7 angeglichen.
+- **Ein abgelaufener übernommener Plan wird verworfen** — danach meldete „Assistiert“ dauerhaft „Plan geändert“, obwohl SEA ohne Plan regelte.
+- **Ein vom Plan gestarteter Verbraucher nennt als Grund „Start im geplanten Fenster“** — vorher hieß es auch bei Festpreis „günstiger Tarif“.
+- **Eine Batterie, die wieder antwortet, gilt nicht mehr als „folgt nicht“** — die Markierung blieb nach einer stillen Phase stehen.
 - **Einheitliche Begriffe für Ladestände** — „Ladestand“ statt „SoC“ in Gründen und Verlauf, beim Fahrzeug „Mindest-“ und „Höchst-Ladestand“, bei der Batterie „Netzlade-Ziel“ und „Ladegrenze“; Verweise korrigiert.
 - **Server-Texte und Ansagen mit Dezimalkomma** — Hinweise, Gründe auf „Aktuell“ und Maschinen-Ansagen sagten „1.5 kWh“.
 - **Die Entitäten-Auswahl hebt die anderen Entitäten desselben Geräts nach oben, und die Lizenz-Meldung bleibt stehen** — der Hinweis wurde nie gelesen bzw. die Meldung sofort gelöscht.
