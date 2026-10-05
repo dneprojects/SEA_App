@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Texte aus Home Assistant werden in der Oberfläche überall maskiert, Zahlen deutsch formatiert** — Zustände, Einheiten, Diagnosewerte; „Verlaufs-Datenbank“ statt „History-DB“.
 - **Die Web-Schnittstelle weist ungültige Eingaben ab** — kein JSON-Objekt, NaN/Unendlich oder eine unbekannte Wallbox ergeben eine klare Fehlermeldung statt Absturz oder gespeichertem Unsinn.
 - **Die Sprachansage eines Vorschlags endet ihren Satz wieder mit Punkt** — der Satzpunkt wurde mit zum Komma.
 - **UI-Texte bereinigt** — Tarif-Status mit Komma und „ct“, Batteriepflege nur noch an einer Stelle, Fehler-Meldungen 6 s sichtbar, „Hinweis ausblenden“ meldet Fehler, Verweise auf Vorgaben und „Plan für heute“ korrigiert, kaputter Satz repariert.
