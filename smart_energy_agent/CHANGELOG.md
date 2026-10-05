@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Analysen › Investition zeigt immer das Ergebnis des gewählten Zeitraums** — ein während einer laufenden Rechnung gewählter Zeitraum wurde verworfen; ein Startfehler wird gemeldet.
 - **Mehrere Batteriebänke decken das Haus und halten den Bezugs-Deckel gemeinsam** — mit einer zuständigen Bank stand die zweite ungenutzt daneben (2 kWh/h Bezug, Deckel um 1,5 kW überschritten).
 - **Eine Fertig-Zeit hinter dem Planungshorizont startet die Maschine nicht mehr sofort aus dem Netz** — eingeplant wird nur ein Fenster, das wirklich etwas bringt; sonst startet die Maschine bei Sonne oder spätestens zur Frist.
 - **Der Fahrplan liegt wieder auf seinen Stunden** — jeder Schritt trug die Daten der Folgestunde (bis zu 1 h zu früh: Laden im letzten HT-Abschnitt, Maschine vor der Sonne).
