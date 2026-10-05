@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Eine fällige Last, die der Bezugs-Deckel nicht anlaufen lässt, blockiert das Abschalten anderer Lasten nicht mehr** — eine Pumpe lief sonst stundenlang aus dem Netz weiter.
 - **„Assistiert“ meldet „Plan geändert“ nicht mehr bei Fenstern, die nur durch die Viertelstunden-Neuplanung gewandert sind.**
 - **Ein Planschritt rechnet bei Viertelstunden-Börsenpreisen mit dem Mittel seiner Viertelstunden** — er nahm nur die erste, günstig und teuer konnten sich vertauschen.
 - **Im Plan sinkt der Ladestand auch in Ruhe-Schritten, wenn die Batterie das Haus deckt** — spätere Schritte rechneten mit einem zu vollen Akku.
