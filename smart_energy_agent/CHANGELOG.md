@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Handeingriffe werden auch an Stufen-Heizstäben und an Lasten mit Batterie-Unterstützung erkannt.**
 - **Aufgeräumt** — ungenutzte Analyse-Endpunkte und tote Anzeige-Funktionen entfernt, fehlendes Tag in der Lizenzkarte ergänzt.
 - **Texte aus Home Assistant werden in der Oberfläche überall maskiert, Zahlen deutsch formatiert** — Zustände, Einheiten, Diagnosewerte; „Verlaufs-Datenbank“ statt „History-DB“.
 - **Die Web-Schnittstelle weist ungültige Eingaben ab** — kein JSON-Objekt, NaN/Unendlich oder eine unbekannte Wallbox ergeben eine klare Fehlermeldung statt Absturz oder gespeichertem Unsinn.
