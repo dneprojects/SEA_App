@@ -2,6 +2,13 @@
 
 ## 0.12.0
 
+- **„Heizstab voll an“ von Hand zählt als Handeingriff** — das Hochstellen auf das Geräte-Maximum wurde bisher übergangen.
+- **Tages-Testbank:** ganze Tage mit realistischen Sensoren (Takt, Versatz, nur bei Änderung, Rauschen), sonnen-Batterie und my-PV-Heizstab; feste Regeln für jede Regel-Änderung.
+- **Netzlade-Ziel begrenzt nur das Laden aus dem Netz** — mit Sonnenstrom lädt die Batterie bis voll (vorher hörte sie auch bei Sonne am Netzlade-Ziel auf, der Rest wurde eingespeist).
+- **Eine Stelle für „was SEA welchem Gerät gesagt hat“** — Bezugs-Deckel sieht laufende Lasten und alle Heizstufen, Tarif-Heizstab wird freigegeben, ELWA heizt in „Manuell“ nicht weiter, Handeingriff an Tarif-Geräten wird erkannt.
+- **Preis-Schwellen erklärt, wie sie wirken** — Netzladen-Schwelle ist ein Höchstpreis (geladen wird nur, wenn es sich lohnt), Entladen deckt nur das Haus (Entscheidung).
+- **Hilfe: Beim Bezugs-Deckel darf die Batterie auch dem ladenden Auto helfen**, besonders bei einer nur schaltbaren Wallbox (Entscheidung).
+- **Hilfe zu „Autarkie“ nennt auch das Nachladen der Entlade-Untergrenze** (Entscheidung: bleibt so).
 - **Aufbewahrung „0“ heißt wieder „Standard“** — seit beta.120 wurde daraus 1 Tag, und die nächtliche Bereinigung löschte den Verlauf bis auf den letzten Tag.
 - **Kleinigkeiten in der Oberfläche** — „50 %“ mit Leerzeichen, Vorlaufzeit mit Komma, deutsches Schlusszeichen, „–“ statt „ W“ bei leerem Wert, Regel-ID sicher im Klick-Handler.
 - **Nach einem Ladefehler speichert die Einrichtung nichts** — das Speichern des ganzen Formulars hätte sonst Sprachausgabe und Signal-Sync überschrieben.
