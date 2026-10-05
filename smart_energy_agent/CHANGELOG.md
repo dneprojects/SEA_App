@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Simulationen vergangener Tage übernehmen keine heutigen Handeingriff-Sperren oder laufenden Anhebungen mehr.**
 - **Der Regelzyklus wartet nicht mehr auf den Planbau** — der Plan wird im Hintergrund gebaut und übernommen, sobald er fertig ist; der Wärmepumpen-Wirkungsgrad wird dafür vorab gelesen (kein Abbruch bei gleichzeitiger Einstellungsänderung).
 - **Eine fällige Last, die der Bezugs-Deckel nicht anlaufen lässt, blockiert das Abschalten anderer Lasten nicht mehr** — eine Pumpe lief sonst stundenlang aus dem Netz weiter.
 - **„Assistiert“ meldet „Plan geändert“ nicht mehr bei Fenstern, die nur durch die Viertelstunden-Neuplanung gewandert sind.**
