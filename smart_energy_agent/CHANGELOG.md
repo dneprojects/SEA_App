@@ -2,6 +2,7 @@
 
 ## 0.12.0
 
+- **Bei „Autarkie“ lädt auch ein vorher übernommener Plan nicht mehr günstig aus dem Netz** (Batterie und Wärmepumpen-Vorheizen).
 - **Der Planer rechnet mit der Notstrom-Reserve** — er kannte nur die Entlade-Untergrenze und plante darunter.
 - **Analysen › Investition zeigt immer das Ergebnis des gewählten Zeitraums** — ein während einer laufenden Rechnung gewählter Zeitraum wurde verworfen; ein Startfehler wird gemeldet.
 - **Mehrere Batteriebänke decken das Haus und halten den Bezugs-Deckel gemeinsam** — mit einer zuständigen Bank stand die zweite ungenutzt daneben (2 kWh/h Bezug, Deckel um 1,5 kW überschritten).
