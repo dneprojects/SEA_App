@@ -2,6 +2,35 @@
 
 ## 0.12.0
 
+- **Planer und Ausführung rechnen den Rest einer pausierten Maschine gleich; eine alte Sicherung verbirgt keinen offenen Wiederherstellungs-Hinweis.**
+- **Eine spätere Einstellungs-Wiederherstellung wird nicht mehr durch eine alte Quittierung verborgen.**
+- **Der Batterieplan rechnet nicht mehr mit Entladung ins Netzlade-Fenster eines Autos ohne Batterie-Unterstützung.**
+- **Eine unterbrechbare Maschine lässt sich nach dem Start wieder pausieren** — ihr Rest wird neu eingeplant, nur durchlaufende Programme behalten den festen Rest-Lauf.
+- **Fällt eine Hälfte des Batterie-Sollwertpaars aus, wird die andere nicht mehr jede Runde mitgeschrieben.**
+- **Begriffe vereinheitlicht (Bezugs-Deckel, HA-Energie-Dashboard), totes Gerätefeld entfernt, ARCHITEKTUR zum Maschinen-Auftrag aktualisiert.**
+- **Lade-Buttons nur an Wallboxen, die SEA schalten kann; eine alte Zeile mit Text-Preis leert keine Analyse mehr.**
+- **Die Steckdosen-Fernbedienung schaltet nur noch verschiebbare Maschinen**; eine Liste statt eines Objekts beim Gerätespeichern gibt eine Fehlermeldung statt eines Serverfehlers.
+- **Vergleichsbericht: wer zum laufenden Zeitraum zurückwechselt, bekommt danach keinen anderen mehr nachgeschoben**; „days: Infinity“ führt nicht mehr zu einem Serverfehler.
+- **Nach beschädigten Einstellungen keine leere Tagessicherung mehr, und der Hinweis bleibt bis zum Quittieren** — Sicherungen werden ganz oder gar nicht geschrieben.
+- **Lange Verlaufszeiträume mitteln nach Zeit statt nach Messpunkten** — eine Minute Heizstab pro Stunde erschien vorher als 1000 W statt 50 W.
+- **Der Entscheidungs-Export hält die Regelung nicht mehr an** — lange Zeiträume werden im Hintergrund aufbereitet (90 Tage: 2 s Stillstand → unter 0,1 s).
+- **Prognose-Check vergleicht Gleiches: „erreicht“ zählt nur die eingeplanten Maschinen und die Warmwasser-Anhebung** — Auto auf Sonne und Direktstarts sagt der Plan nie voraus; ältere Tage ohne getrennten Anteil entfallen.
+- **Das Briefing nennt die Stromkosten der nächsten 16 Stunden statt „heute“** — gerechnet wurde schon immer über den Planungszeitraum.
+- **Die letzte Planstunde zählt wieder eine ganze Stunde** — vorher nur 15 min, der Rest der Stunde fehlte der Planung.
+- **Eine laufende Maschine behält im Plan ihren Rest-Lauf** — vorher wurde sie alle 15 min als ganzer neuer Lauf eingeplant (Phantom-Lauf, „Plan geändert“ mitten im Lauf).
+- **Liegt die Batterie schon unter der Notstrom-Reserve, ist nicht mehr jede Variante unzulässig** — gewertet wird nur ein Absinken, das die Variante selbst verursacht.
+- **Die Simulation kennt jedes Auto an seiner Wallbox mit echtem Ladestand und Anwesenheit** — vorher galt jede weitere Wallbox als belegt mit 40 %, und mit zwei Autos war jede Variante unzulässig.
+- **Ausblick und Zielprüfung kaufen keinen Netzstrom nach Preis-Schwelle, den die echte Regelung auslässt** — die Simulation kannte die Prognose nicht, mit der die Regelung „füllt die Sonne ohnehin“ prüft.
+- **Ausblick und Zielprüfung rechnen mit derselben PV-Prognose und denselben Preisen wie der Plan** — gewählte Entität zuerst, Stundenmittel zur Stundenmitte (die PV lief eine halbe Stunde vor), Preis je Schritt auch bei HT/NT und Preis-Entität.
+- **Fristen unter einem Bezugs-Deckel mit Zeitfenster rechnen mit dem niedrigsten Deckel bis zur Frist** — vorher fehlten ab Fensterbeginn bis zu 17,6 kWh.
+- **Der Batterieplan rechnet nur mit dem Überschuss, den vorgezogene Fenster übrig lassen** — erzwungene Fenster und Sonnenfenster von Geräten über der Batterie in der Liste.
+- **Der Teil-Sonnen-Start einer Maschine schaut bis zum spätesten Start voraus** — eine Wäsche für morgen Mittag startete heute mit 65 % Sonne, weil morgen jenseits der 16 h lag.
+- **Verbrauchsprognose und Spar-Gutschrift zählen nur Lasten als SEAs, die SEA selbst eingeschaltet hat** — ein von Hand oder vom Thermostat betriebener Heizstab fehlte in der Prognose (9,6 statt 13,1 kWh am Tag).
+- **Die „Rückgängig“-Sperre bis Mitternacht hält bei Geräte-Einstellungen; nur echte Vorgaben heben sie auf** — eine geänderte Fertig-Zeit erreicht auch einen schon übergebenen Auftrag; `{}` an die Fahrzeug-Schnittstelle löscht keine Fahrzeuge mehr.
+- **Netzladen nach Preis-Schwelle mit Riegel und „Halten“** — einmal bis zum Netzlade-Ziel, danach versorgt das günstige Netz das Haus und die Batterie bleibt voll (vorher 126 Richtungswechsel in einer Nacht); unter Autarkie hält auch ein übernommener Plan nicht.
+- **Unter dem Bezugs-Deckel startet ein nicht unterbrechbares Programm nur, wenn die Batterie den Deckel die ganze Laufzeit halten kann** — sonst Warnung; ohne eingetragene Kapazität bleibt es bei der Leistungsprüfung.
+- **Ohne Netzwert startet ein fälliger Verbraucher trotzdem** (Frist, Tarif-/Planfenster, übergebene Maschine) — das Abschalten der Überschuss-Lasten verhinderte seit beta.171 auch fällige Starts.
+- **Eine Batterie, die schon zeigt, was SEA verlangt, friert die Regelung nicht mehr ein; Lade- und Entlade-Sollwert gehen gemeinsam an die Batterie** — statt alle 10–20 s versetzt (800 → rund 100 enge Zugriffe am Tag).
 - **Ohne Ladestand-Messwert entlädt SEA die Batterie nicht unter die Reserve** — vorher deckte sie das Haus bis 0 %.
 - **Getrennte Netzsensoren (Bezug/Einspeisung) frieren die Regelung nicht mehr ein** — der ruhende Bezugs-Sensor galt beim Einspeisen als veraltet.
 - **Der Einspeise-Deckel hält auch, wenn die Batterie nahe voll drosselt und nach Wolken** — gezählt wird, was die Batterie wirklich nimmt; die PV-Begrenzung öffnet schrittweise entlang der Erzeugung (über einen Tag 14–41 statt 460–530 Wh über dem Deckel, ein Zehntel der Schreibvorgänge).
