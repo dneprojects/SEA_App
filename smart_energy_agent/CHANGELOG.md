@@ -1,20 +1,16 @@
 # Changelog
 
+## 0.13.0
+
+- **Die Beta-Zählung beginnt mit jeder neuen Version bei 0.**
+
 ## 0.12.0
 
-- **Planer und Ausführung rechnen den Rest einer pausierten Maschine gleich; eine alte Sicherung verbirgt keinen offenen Wiederherstellungs-Hinweis.**
-- **Eine spätere Einstellungs-Wiederherstellung wird nicht mehr durch eine alte Quittierung verborgen.**
+### Plan, Ausblick & Prognose
+
+- **Der Ausblick folgt keinem veralteten Plan mehr**, dem die Regelung selbst nicht mehr folgt (Planung über eine Stunde gestört).
+- **Die angebrochene Stunde wird mit ihrem eigenen Hausverbrauch geplant** (gemessen, letzte 15 min) statt mit dem der nächsten; der Ausblick zählt SEAs laufende Geräte in der ersten Stunde nicht mehr doppelt.
 - **Der Batterieplan rechnet nicht mehr mit Entladung ins Netzlade-Fenster eines Autos ohne Batterie-Unterstützung.**
-- **Eine unterbrechbare Maschine lässt sich nach dem Start wieder pausieren** — ihr Rest wird neu eingeplant, nur durchlaufende Programme behalten den festen Rest-Lauf.
-- **Fällt eine Hälfte des Batterie-Sollwertpaars aus, wird die andere nicht mehr jede Runde mitgeschrieben.**
-- **Begriffe vereinheitlicht (Bezugs-Deckel, HA-Energie-Dashboard), totes Gerätefeld entfernt, ARCHITEKTUR zum Maschinen-Auftrag aktualisiert.**
-- **Lade-Buttons nur an Wallboxen, die SEA schalten kann; eine alte Zeile mit Text-Preis leert keine Analyse mehr.**
-- **Die Steckdosen-Fernbedienung schaltet nur noch verschiebbare Maschinen**; eine Liste statt eines Objekts beim Gerätespeichern gibt eine Fehlermeldung statt eines Serverfehlers.
-- **Vergleichsbericht: wer zum laufenden Zeitraum zurückwechselt, bekommt danach keinen anderen mehr nachgeschoben**; „days: Infinity“ führt nicht mehr zu einem Serverfehler.
-- **Nach beschädigten Einstellungen keine leere Tagessicherung mehr, und der Hinweis bleibt bis zum Quittieren** — Sicherungen werden ganz oder gar nicht geschrieben.
-- **Lange Verlaufszeiträume mitteln nach Zeit statt nach Messpunkten** — eine Minute Heizstab pro Stunde erschien vorher als 1000 W statt 50 W.
-- **Der Entscheidungs-Export hält die Regelung nicht mehr an** — lange Zeiträume werden im Hintergrund aufbereitet (90 Tage: 2 s Stillstand → unter 0,1 s).
-- **Prognose-Check vergleicht Gleiches: „erreicht“ zählt nur die eingeplanten Maschinen und die Warmwasser-Anhebung** — Auto auf Sonne und Direktstarts sagt der Plan nie voraus; ältere Tage ohne getrennten Anteil entfallen.
 - **Das Briefing nennt die Stromkosten der nächsten 16 Stunden statt „heute“** — gerechnet wurde schon immer über den Planungszeitraum.
 - **Die letzte Planstunde zählt wieder eine ganze Stunde** — vorher nur 15 min, der Rest der Stunde fehlte der Planung.
 - **Eine laufende Maschine behält im Plan ihren Rest-Lauf** — vorher wurde sie alle 15 min als ganzer neuer Lauf eingeplant (Phantom-Lauf, „Plan geändert“ mitten im Lauf).
@@ -22,144 +18,201 @@
 - **Die Simulation kennt jedes Auto an seiner Wallbox mit echtem Ladestand und Anwesenheit** — vorher galt jede weitere Wallbox als belegt mit 40 %, und mit zwei Autos war jede Variante unzulässig.
 - **Ausblick und Zielprüfung kaufen keinen Netzstrom nach Preis-Schwelle, den die echte Regelung auslässt** — die Simulation kannte die Prognose nicht, mit der die Regelung „füllt die Sonne ohnehin“ prüft.
 - **Ausblick und Zielprüfung rechnen mit derselben PV-Prognose und denselben Preisen wie der Plan** — gewählte Entität zuerst, Stundenmittel zur Stundenmitte (die PV lief eine halbe Stunde vor), Preis je Schritt auch bei HT/NT und Preis-Entität.
-- **Fristen unter einem Bezugs-Deckel mit Zeitfenster rechnen mit dem niedrigsten Deckel bis zur Frist** — vorher fehlten ab Fensterbeginn bis zu 17,6 kWh.
 - **Der Batterieplan rechnet nur mit dem Überschuss, den vorgezogene Fenster übrig lassen** — erzwungene Fenster und Sonnenfenster von Geräten über der Batterie in der Liste.
-- **Der Teil-Sonnen-Start einer Maschine schaut bis zum spätesten Start voraus** — eine Wäsche für morgen Mittag startete heute mit 65 % Sonne, weil morgen jenseits der 16 h lag.
 - **Verbrauchsprognose und Spar-Gutschrift zählen nur Lasten als SEAs, die SEA selbst eingeschaltet hat** — ein von Hand oder vom Thermostat betriebener Heizstab fehlte in der Prognose (9,6 statt 13,1 kWh am Tag).
-- **Die „Rückgängig“-Sperre bis Mitternacht hält bei Geräte-Einstellungen; nur echte Vorgaben heben sie auf** — eine geänderte Fertig-Zeit erreicht auch einen schon übergebenen Auftrag; `{}` an die Fahrzeug-Schnittstelle löscht keine Fahrzeuge mehr.
-- **Netzladen nach Preis-Schwelle mit Riegel und „Halten“** — einmal bis zum Netzlade-Ziel, danach versorgt das günstige Netz das Haus und die Batterie bleibt voll (vorher 126 Richtungswechsel in einer Nacht); unter Autarkie hält auch ein übernommener Plan nicht.
-- **Unter dem Bezugs-Deckel startet ein nicht unterbrechbares Programm nur, wenn die Batterie den Deckel die ganze Laufzeit halten kann** — sonst Warnung; ohne eingetragene Kapazität bleibt es bei der Leistungsprüfung.
-- **Ohne Netzwert startet ein fälliger Verbraucher trotzdem** (Frist, Tarif-/Planfenster, übergebene Maschine) — das Abschalten der Überschuss-Lasten verhinderte seit beta.171 auch fällige Starts.
-- **Eine Batterie, die schon zeigt, was SEA verlangt, friert die Regelung nicht mehr ein; Lade- und Entlade-Sollwert gehen gemeinsam an die Batterie** — statt alle 10–20 s versetzt (800 → rund 100 enge Zugriffe am Tag).
-- **Ohne Ladestand-Messwert entlädt SEA die Batterie nicht unter die Reserve** — vorher deckte sie das Haus bis 0 %.
-- **Getrennte Netzsensoren (Bezug/Einspeisung) frieren die Regelung nicht mehr ein** — der ruhende Bezugs-Sensor galt beim Einspeisen als veraltet.
-- **Der Einspeise-Deckel hält auch, wenn die Batterie nahe voll drosselt und nach Wolken** — gezählt wird, was die Batterie wirklich nimmt; die PV-Begrenzung öffnet schrittweise entlang der Erzeugung (über einen Tag 14–41 statt 460–530 Wh über dem Deckel, ein Zehntel der Schreibvorgänge).
-- **Fehlt der Netz- oder Batteriewert länger als eine Minute, schaltet SEA seine eigenen Überschuss-Verbraucher ab** — vorher liefen Heizstab und Batterieladung aus dem Netz weiter; Hilfe: Absenkung „bei Abwesenheit“ statt „nach Zeitplan“.
-- **Eine Wallbox mit Mindeststrom taktet nicht mehr** — mindestens 3 min Laufzeit und 2 min Pause, kein Hochdrehen während das Auto anläuft, SEAs eigener Anlauf gilt nicht als Störung; Netzbezug wird nicht mehr als Überschuss an Batterie und Heizstab verteilt.
-- **Das Ladefenster des Plans lädt das Auto nur bis zum Mindest-Ladestand aus dem Netz, auch an einer nur schaltbaren Wallbox** — ein Sonnenfenster erzwingt nichts, „Assistiert“ braucht die Netz-Erlaubnis.
-- **„Heizstab voll an“ von Hand zählt als Handeingriff** — das Hochstellen auf das Geräte-Maximum wurde bisher übergangen.
-- **Tages-Testbank:** ganze Tage mit realistischen Sensoren (Takt, Versatz, nur bei Änderung, Rauschen), sonnen-Batterie und my-PV-Heizstab; feste Regeln für jede Regel-Änderung.
-- **Netzlade-Ziel begrenzt nur das Laden aus dem Netz** — mit Sonnenstrom lädt die Batterie bis voll (vorher hörte sie auch bei Sonne am Netzlade-Ziel auf, der Rest wurde eingespeist).
-- **Eine Stelle für „was SEA welchem Gerät gesagt hat“** — Bezugs-Deckel sieht laufende Lasten und alle Heizstufen, Tarif-Heizstab wird freigegeben, ELWA heizt in „Manuell“ nicht weiter, Handeingriff an Tarif-Geräten wird erkannt.
-- **Preis-Schwellen erklärt, wie sie wirken** — Netzladen-Schwelle ist ein Höchstpreis (geladen wird nur, wenn es sich lohnt), Entladen deckt nur das Haus (Entscheidung).
-- **Hilfe: Beim Bezugs-Deckel darf die Batterie auch dem ladenden Auto helfen**, besonders bei einer nur schaltbaren Wallbox (Entscheidung).
-- **Hilfe zu „Autarkie“ nennt auch das Nachladen der Entlade-Untergrenze** (Entscheidung: bleibt so).
-- **Aufbewahrung „0“ heißt wieder „Standard“** — seit beta.120 wurde daraus 1 Tag, und die nächtliche Bereinigung löschte den Verlauf bis auf den letzten Tag.
-- **Kleinigkeiten in der Oberfläche** — „50 %“ mit Leerzeichen, Vorlaufzeit mit Komma, deutsches Schlusszeichen, „–“ statt „ W“ bei leerem Wert, Regel-ID sicher im Klick-Handler.
-- **Nach einem Ladefehler speichert die Einrichtung nichts** — das Speichern des ganzen Formulars hätte sonst Sprachausgabe und Signal-Sync überschrieben.
-- **Die Karte „Fahrzeuge“ steht neben „Komponenten“ statt darin.**
-- **„Plan übernehmen“ und „Sofort laden“ melden, warum sie nicht gingen** — vorher kam keine Rückmeldung.
-- **Verwaiste Oberflächen-Helfer entfernt** (Strategie-Namen aus der alten Ablaufanzeige, Strategie-Abzeichen, Experten-Umschalter ohne Wirkung).
 - **Die Tagesziel-Prüfung berücksichtigt jedes anwesende Auto** — vorher zählte nur das erste Fahrzeug der Liste, auch wenn es weg war.
 - **Geplante Fenster teilen sich den Sonnenüberschuss** — Auto und Wärmepumpe wurden auf denselben Überschuss gelegt, den schon eine Maschine nutzt.
-- **Ein Lesefehler in der Verlaufs-Datenbank lässt keinen offenen Cursor zurück.**
-- **Beim Beenden wird der Regel-Zustand gespeichert** — sonst gingen bis zu 5 Minuten (Energiezähler, Sperren, Plan) verloren.
-- **Aus dem Backup wiederhergestellte Einstellungen werden sofort gespeichert** — ein Neustart davor lief still mit Werkseinstellungen.
-- **Verbraucher-Einstellungen lehnen „unendlich“ ab** — ein solcher Wert machte die Einstellungen für den Browser unlesbar.
-- **Hinweis zu „Automatisch“ nennt auch die Schwelle unter Autarkie (0,3 kWh)**; veraltete Code-Beschreibungen und ARCHITEKTUR §8.7 angeglichen.
 - **Ein abgelaufener übernommener Plan wird verworfen** — danach meldete „Assistiert“ dauerhaft „Plan geändert“, obwohl SEA ohne Plan regelte.
 - **Ein vom Plan gestarteter Verbraucher nennt als Grund „Start im geplanten Fenster“** — vorher hieß es auch bei Festpreis „günstiger Tarif“.
-- **Eine Batterie, die wieder antwortet, gilt nicht mehr als „folgt nicht“** — die Markierung blieb nach einer stillen Phase stehen.
-- **Einheitliche Begriffe für Ladestände** — „Ladestand“ statt „SoC“ in Gründen und Verlauf, beim Fahrzeug „Mindest-“ und „Höchst-Ladestand“, bei der Batterie „Netzlade-Ziel“ und „Ladegrenze“; Verweise korrigiert.
-- **Server-Texte und Ansagen mit Dezimalkomma** — Hinweise, Gründe auf „Aktuell“ und Maschinen-Ansagen sagten „1.5 kWh“.
-- **Die Entitäten-Auswahl hebt die anderen Entitäten desselben Geräts nach oben, und die Lizenz-Meldung bleibt stehen** — der Hinweis wurde nie gelesen bzw. die Meldung sofort gelöscht.
-- **Toten Pfad „Maschine einplanen“ (/api/plan/queue) entfernt** — er wurde nicht mehr aufgerufen und hätte ein gelerntes Programmprofil verkürzt.
-- **Der Verlauf über Woche/Monat/Jahr lädt die Gerätehistorie ausgedünnt und außerhalb der Regelung** — vorher Punkt für Punkt, auf dem Pi sekundenlang.
 - **Simulationen vergangener Tage übernehmen keine heutigen Handeingriff-Sperren oder laufenden Anhebungen mehr.**
-- **Der Regelzyklus wartet nicht mehr auf den Planbau** — der Plan wird im Hintergrund gebaut und übernommen, sobald er fertig ist; der Wärmepumpen-Wirkungsgrad wird dafür vorab gelesen (kein Abbruch bei gleichzeitiger Einstellungsänderung).
-- **Eine fällige Last, die der Bezugs-Deckel nicht anlaufen lässt, blockiert das Abschalten anderer Lasten nicht mehr** — eine Pumpe lief sonst stundenlang aus dem Netz weiter.
 - **„Assistiert“ meldet „Plan geändert“ nicht mehr bei Fenstern, die nur durch die Viertelstunden-Neuplanung gewandert sind.**
 - **Ein Planschritt rechnet bei Viertelstunden-Börsenpreisen mit dem Mittel seiner Viertelstunden** — er nahm nur die erste, günstig und teuer konnten sich vertauschen.
 - **Im Plan sinkt der Ladestand auch in Ruhe-Schritten, wenn die Batterie das Haus deckt** — spätere Schritte rechneten mit einem zu vollen Akku.
-- **„Automatisch“ stellt Handänderungen an Reihenfolge, Teilnahme oder Lade-Vorrang nicht mehr sofort zurück** — sie gelten wie eine übernommene Variante bis Mitternacht.
 - **Bei „Autarkie“ lädt auch ein vorher übernommener Plan nicht mehr günstig aus dem Netz** (Batterie und Wärmepumpen-Vorheizen).
 - **Der Planer rechnet mit der Notstrom-Reserve** — er kannte nur die Entlade-Untergrenze und plante darunter.
-- **Analysen › Investition zeigt immer das Ergebnis des gewählten Zeitraums** — ein während einer laufenden Rechnung gewählter Zeitraum wurde verworfen; ein Startfehler wird gemeldet.
-- **Mehrere Batteriebänke decken das Haus und halten den Bezugs-Deckel gemeinsam** — mit einer zuständigen Bank stand die zweite ungenutzt daneben (2 kWh/h Bezug, Deckel um 1,5 kW überschritten).
-- **Eine Fertig-Zeit hinter dem Planungshorizont startet die Maschine nicht mehr sofort aus dem Netz** — eingeplant wird nur ein Fenster, das wirklich etwas bringt; sonst startet die Maschine bei Sonne oder spätestens zur Frist.
 - **Der Fahrplan liegt wieder auf seinen Stunden** — jeder Schritt trug die Daten der Folgestunde (bis zu 1 h zu früh: Laden im letzten HT-Abschnitt, Maschine vor der Sonne).
-- **Lange Analysen (Jahr) halten die Regelung nicht mehr an** — sie geben alle paar tausend Zeilen ab (7 s → 0,03 s Stillstand); die kompakten Zeilen laufen wieder schnell durch.
-- **Der Sättigungs-Deckel der Batterie sinkt nicht mehr mit SEAs eigenen Absenkungen** — nach Wolke oder Nacht lud sie nur 150 W je 5 min nach (Morgen: 2,2 kWh Einspeisung statt 0,2).
 - **Börsenpreise im Viertelstundentakt gelten nur für ihre Viertelstunde** — nach dem Ende der Reihe galt der letzte Preis noch eine Stunde.
-- **Weniger Last je HA-Ereignis und kein endloses Warten auf die HA-Begrüßung** — die Liste der beobachteten Entitäten wird zwischengespeichert, der Verbindungsaufbau ist begrenzt.
-- **Ein Planschritt bricht das Nachladen auf die Entlade-Untergrenze nicht mehr ab, und ein langsam meldender Netzzähler gilt nicht als eingefroren.**
-- **Hilfe und Texte vereinheitlicht** — Pflichten-Liste überall gleich, übergebene Maschinen und Assistiert-Plan richtig beschrieben, „Bezugs-/Einspeise-Deckel“, „Batteriekapazität“ und „HA-Energie-Dashboard“ durchgängig, Klarname in der Testansage.
 - **Planungs-Details** — Auto-Ladefenster unter dem Bezugs-Deckel mit der möglichen Leistung, kein WP-Vorheizfenster ohne aktive Anhebung, bei „Autarkie“ kein Vorheizen aus dem Netz, Maschinenfenster nennen ihre Energiequelle.
-- **Ein laufender Handeingriff übersteht einen Neustart** — SEA schaltete das Gerät danach sofort zurück.
-- **Handeingriffe werden auch an Stufen-Heizstäben und an Lasten mit Batterie-Unterstützung erkannt.**
-- **Aufgeräumt** — ungenutzte Analyse-Endpunkte und tote Anzeige-Funktionen entfernt, fehlendes Tag in der Lizenzkarte ergänzt.
-- **Texte aus Home Assistant werden in der Oberfläche überall maskiert, Zahlen deutsch formatiert** — Zustände, Einheiten, Diagnosewerte; „Verlaufs-Datenbank“ statt „History-DB“.
-- **Die Web-Schnittstelle weist ungültige Eingaben ab** — kein JSON-Objekt, NaN/Unendlich oder eine unbekannte Wallbox ergeben eine klare Fehlermeldung statt Absturz oder gespeichertem Unsinn.
-- **Die Sprachansage eines Vorschlags endet ihren Satz wieder mit Punkt** — der Satzpunkt wurde mit zum Komma.
-- **UI-Texte bereinigt** — Tarif-Status mit Komma und „ct“, Batteriepflege nur noch an einer Stelle, Fehler-Meldungen 6 s sichtbar, „Hinweis ausblenden“ meldet Fehler, Verweise auf Vorgaben und „Plan für heute“ korrigiert, kaputter Satz repariert.
-- **Die Analysen brauchen rund ein Viertel des Speichers** — die Rohdaten liegen kompakt statt als Zeilen-Objekte im Speicher (90 Tage: 20 statt 91 MB je Anfrage).
-- **Stoppt die Batterie nahe voll von selbst, friert die Regelung nicht mehr ein** — nach 5 min Schweigen gilt ihr letzter Wert, bei Netzbezug wird auch im Halten abgeworfen (Wolke: 12 statt rund 800 Wh Bezug).
-- **Eine gesättigte Batterie über dem Heizstab gibt den Überschuss wirklich weiter** — ihr Deckel liegt beim Gemessenen statt 150 W darüber (bis 1,1 kWh/h Einspeisung); mehr Leistung wird alle 5 min schrittweise angeboten statt den Heizstab minutenlang zu verdrängen.
 - **Auch ohne steuerbare Hausbatterie gibt es einen Plan für Auto und Maschinen** — vorher gar keinen, und das Auto lud am spätesten Start zu jedem Preis.
 - **Der Ausblick rechnet in „Automatisch“ mit dem Plan, dem die Regelung folgt** — die Simulation verwarf ihn im ersten Schritt.
-- **Eine beschädigte Einstellungsdatei wird beiseitegelegt und das neueste Backup geladen** — vorher liefen still die Werkseinstellungen und überschrieben die Datei; Hinweis auf „Heute“.
-- **Auch die geplante und die Schwellen-Entladung decken das ladende Auto nicht mehr** — bisher ließ nur die Netzbezug-Deckung das Auto aus.
-- **„Rückgängig“ stellt jetzt genau zurück, was die automatische Anpassung geändert hat** — auch Auto, Wärmepumpe, Heizstab und Lade-Vorrang; nur einmal; Meldungen verdrängen den Knopf nicht mehr und verlängern die Mindestpause nicht; eine geänderte Vorgabe hebt die Sperre auf.
-- **Ein Heizstab unter voller Batterie nimmt bei langsamem Batterie-Schreibintervall wieder den ganzen Überschuss** — er blieb rund 20 % darunter, der Rest ging ins Netz.
-- **Netzladen der Batterie bleibt unter dem Bezugs-Deckel** — es lädt nur, was darunter passt; das Hin und Her zwischen Laden und Entladen ist weg.
-- **Geplantes und Tarif-Netzladen kommt bei „Batterie deckt Netzbezug“ wieder durch** — die Deckung entlud stattdessen die Batterie, die laden sollte.
-- **Handeingriffe an geregelten Lasten werden jetzt erkannt** — gegen SEAs eigene Werte der letzten Minute statt gegen den Zeitpunkt des letzten Schreibens; nur ein Hochsetzen zählt; kein Fehlalarm bei selbst endenden Programmen; Wallbox-Knöpfe gelten immer.
-- **Ein Sonnen-Ladefenster zwingt das Auto bei Wolken nicht mehr ans Netz** — dort entscheidet der Überschuss; volle Leistung erst ab dem spätesten Start.
 - **Der Plan behält nachmittags die Nacht** — der Horizont endete beim Sonnenuntergang, und das Auto lud am teuren Nachmittag statt in der günstigen Nacht.
-- **Ein Heizstab im günstigen Tarif-Fenster läuft wieder durch** — die Leerlauf-Freigabe setzte ihn zwischen zwei Tarif-Entscheidungen auf 0; Regel-Sollwerte bleiben stehen.
-- **Handeingriffe an Heizstab, Schaltlasten oder Wallbox-Ladestrom haben eine Stunde Vorrang** — SEA schaltet ein von Hand eingeschaltetes Gerät nicht mehr sofort zurück und meldet den Eingriff.
 - **In günstigen Stunden hält der Plan den Akku für die teuren zurück** — die billige Nachtlast lief sonst mit Verlust über den Akku, der dafür vorher geladen wurde.
-- **Ein wegen der Sonne geplantes WP-Vorheizfenster hält die Anhebung nicht mehr ohne Sonne** — bei zu sonniger Prognose lief sie sonst aus Akku und Netz.
-- **Hilfe: Temperatur-Absenkung und übergebene Maschinen-Aufträge laufen auch in „Manuell“** — als angeordnete Pflichten aufgeführt.
-- **Eine automatische Anpassung lässt sich mit „Rückgängig“ zurücknehmen und bleibt es bis Mitternacht** — auch eine selbst übernommene Variante stellt SEA heute nicht mehr um.
-- **Tarif-Laden und eigene Regeln zeigen ihre Strategie an, Plan-Netzladen heißt „Netzladen (Plan)“** — und die Plan-Änderungsmeldung verspricht keinen „günstigeren“ Plan mehr, den SEA nicht verglichen hat.
-- **In „Assistiert“ lädt ein übernommener Plan das Auto nur mit Netzlade-Erlaubnis aus dem Netz** — wie in der Hilfe beschrieben.
-- **Eine Reserve wird in einem Zug nachgeladen statt in vielen kurzen Ladestößen** — Nachladen beginnt 2 % unter der Reserve und läuft bis zu ihr.
-- **Eine übergebene Maschine startet bei Teil-Sonne, wenn bis zur Frist nichts Besseres kommt** — ab etwa 60 % Sonne im sonnigsten Fenster statt später ganz aus dem Netz.
-- **Das Auto lädt nicht mehr aus der Hausbatterie, und der Ladeplan wählt sein Fenster nach Kosten** — ohne Batterie-Unterstützung deckt die Batterie nur das Haus; ein sonniges Planfenster lädt ab Minimum mit Überschuss obendrauf, volle Leistung erst ab dem spätesten Start.
 - **Ohne PV-Prognose wird kein Plan mehr ausgeführt, ein veralteter Plan verfällt nach einer Stunde, und eine geänderte Vorgabe plant sofort neu** — vorher galt fehlende Sonne als „keine Sonne“ und der alte Plan lief bis zu 15 min weiter.
 - **Die Verbrauchsprognose zählt SEAs eigene Lasten nicht mehr mit** — ein gestriger Heizstab-Lauf am Mittag ließ den Plan heute weniger Überschuss erwarten.
+- **Dynamischer Tarif: eine verstummte Preis-Entität gilt nach einer Stunde als unbekannt** — vorher galt ihr letzter Preis unbegrenzt weiter, z. B. ein negativer.
+- **Planung rechnet mit der gemessenen nutzbaren Batteriekapazität** — sobald genug Lade-/Entladeabschnitte vorliegen (statt der eingetragenen); die Status-Seite sagt, mit welcher Kapazität gerechnet wird.
+- **Börsentarif ohne Preis-Entität: der Planer sieht die Stundenpreise** — vorher plante er mit einem einzigen Preis für den ganzen Tag; ein Börsenpreis gilt außerdem nur noch für seine Stunde statt nach einem Abruffehler unbegrenzt.
+
+### Batterie
+
+- **Fällt eine Hälfte des Batterie-Sollwertpaars aus, wird die andere nicht mehr jede Runde mitgeschrieben.**
+- **Netzladen nach Preis-Schwelle mit Riegel und „Halten“** — einmal bis zum Netzlade-Ziel, danach versorgt das günstige Netz das Haus und die Batterie bleibt voll (vorher 126 Richtungswechsel in einer Nacht); unter Autarkie hält auch ein übernommener Plan nicht.
+- **Eine Batterie, die schon zeigt, was SEA verlangt, friert die Regelung nicht mehr ein; Lade- und Entlade-Sollwert gehen gemeinsam an die Batterie** — statt alle 10–20 s versetzt (800 → rund 100 enge Zugriffe am Tag).
+- **Ohne Ladestand-Messwert entlädt SEA die Batterie nicht unter die Reserve** — vorher deckte sie das Haus bis 0 %.
+- **Netzlade-Ziel begrenzt nur das Laden aus dem Netz** — mit Sonnenstrom lädt die Batterie bis voll (vorher hörte sie auch bei Sonne am Netzlade-Ziel auf, der Rest wurde eingespeist).
+- **Eine Batterie, die wieder antwortet, gilt nicht mehr als „folgt nicht“** — die Markierung blieb nach einer stillen Phase stehen.
+- **Mehrere Batteriebänke decken das Haus und halten den Bezugs-Deckel gemeinsam** — mit einer zuständigen Bank stand die zweite ungenutzt daneben (2 kWh/h Bezug, Deckel um 1,5 kW überschritten).
+- **Der Sättigungs-Deckel der Batterie sinkt nicht mehr mit SEAs eigenen Absenkungen** — nach Wolke oder Nacht lud sie nur 150 W je 5 min nach (Morgen: 2,2 kWh Einspeisung statt 0,2).
+- **Ein Planschritt bricht das Nachladen auf die Entlade-Untergrenze nicht mehr ab, und ein langsam meldender Netzzähler gilt nicht als eingefroren.**
+- **Stoppt die Batterie nahe voll von selbst, friert die Regelung nicht mehr ein** — nach 5 min Schweigen gilt ihr letzter Wert, bei Netzbezug wird auch im Halten abgeworfen (Wolke: 12 statt rund 800 Wh Bezug).
+- **Eine gesättigte Batterie über dem Heizstab gibt den Überschuss wirklich weiter** — ihr Deckel liegt beim Gemessenen statt 150 W darüber (bis 1,1 kWh/h Einspeisung); mehr Leistung wird alle 5 min schrittweise angeboten statt den Heizstab minutenlang zu verdrängen.
+- **Auch die geplante und die Schwellen-Entladung decken das ladende Auto nicht mehr** — bisher ließ nur die Netzbezug-Deckung das Auto aus.
+- **Geplantes und Tarif-Netzladen kommt bei „Batterie deckt Netzbezug“ wieder durch** — die Deckung entlud stattdessen die Batterie, die laden sollte.
+- **Eine Reserve wird in einem Zug nachgeladen statt in vielen kurzen Ladestößen** — Nachladen beginnt 2 % unter der Reserve und läuft bis zu ihr.
 - **Die Notstrom-Reserve gilt auch, wenn nur Tarif oder eigene Regeln laufen** — vorher konnte eine Tarif-Entladung oder eine Regel die Batterie unter die Reserve fahren.
-- **Langsam meldende Batteriesensoren bremsen die Regelung nicht mehr** — ist der Messwert älter als der letzte Sollwert, rechnet SEA mit dem Sollwert, bis ein neuer Wert kommt.
 - **Bei längerem Schreibintervall der Batterie reagieren Abbau und Deckung genauso schnell** — bei 30 s dauerte ein Wolken- oder Lastwechsel dreimal so lange und kostete entsprechend mehr Netzstrom.
 - **Die Batterie deckt auch kleine Grundlasten** — unter 200 W Netzbezug blieb sie nachts stehen; eine laufende Deckung hört erst unter 50 W auf. Dabei behoben: die Regel „PV deckt das Haus“ sah die PV-Leistung nie.
-- **Ein eingefrorener Netzwert lässt die Batterie nicht mehr ins Netz entladen** — antwortet der Netzwert nicht mehr auf die eigene Entladung, gilt er als unbekannt.
-- **Heizstab und Wallbox behalten ihren Sollwert nicht mehr, wenn die Überschuss-Regelung aus ist** — SEA nimmt seinen eigenen Wert einmal zurück, einen von Hand gesetzten nicht.
 - **Ziel „Autarkie maximieren“ lädt die Batterie nie im günstigen Tarif aus dem Netz** — auch nicht über die Netzlade-Schwelle (nur die Notstrom-Reserve wird nachgeladen); das automatische Umstellen misst den Gewinn dann in kWh statt in Euro. Hilfe, Strategie-Info und Dokumentation sagen es.
-- **Der Bezugs-Deckel ist jetzt eine harte Grenze** — reicht die Batterie nicht, drosselt SEA Wallbox und Heizstab oder schaltet sie nicht ein; Fristen planen mit der Leistung unter dem Deckel. Ist eine Frist nur mit Überschreiten zu halten, gewinnt der Deckel und SEA warnt (auch per Ansage).
-- **Eine an SEA übergebene Maschine läuft in jeder Kontroll-Stufe** — in „Manuell“ oder bei ausgeschaltetem PV-Überschuss wurde „verschoben“ angesagt, gestartet aber nie.
 - **Tarif-Schwellen: „Entladen ab X ct“ deckt nur noch das Haus, „Netzladen bis Y ct“ kauft nicht, was die Sonne bringt** — vorher entlud die Batterie mit voller Leistung ins Netz und lud nachts auf 100 %, auch wenn es sich nach Verlusten nicht lohnte.
-- **Ein Verbraucher, der nichts abnimmt, blockiert die nachrangigen nicht mehr** — ein volles, angestecktes Auto, ein abgeschalteter Heizstab oder eine fast volle Batterie bekamen weiter Leistung zugeteilt, während der Überschuss ins Netz ging.
 - **Eine ruhende Batterie friert die Regelung nicht mehr ein** — meldet sie unverändert 0 W, galt ihr Wert nach 5 Minuten als veraltet; morgens starteten dann weder Akku noch Heizstab und die PV ging ins Netz.
-- **Oberfläche: letzte Review-Punkte** — der Haken „Prognose von Home Assistant“ springt nicht mehr zurück; die Flussanzeige meldet Einspeisung statt „Netzbezug 0 W“; Rückfrage vor dem Entfernen von Thermostaten und Zeitfenstern; Tarif-Speichern meldet sich unten wie alles andere; einheitliche Strategienamen, unpersönliche Ansprache und weniger Fachbegriffe (z. B. „Zustand“ statt SoH).
-- **Prognose bremst die Regelung nicht mehr** — die Verbrauchsprognose rechnet außerhalb der Ereignisschleife, die Genauigkeitsprüfung nur noch für die Anzeige.
 - **Tarif-Laden und -Entladen der Batterie wirkt auch bei ausgeschaltetem PV-Überschuss**; mehrere Batterien teilen sich die geplante Hausdeckung, statt sich gegenseitig aufzuschaukeln.
+- **Ein alter Lade- oder Entlade-Sollwert bleibt nicht mehr stehen** — z. B. in „Manuell“ lud die Batterie mit dem Mittagswert abends aus dem Netz; SEA nimmt nicht mehr beanspruchte Sollwerte auf 0 zurück.
+- **Mehrere Batterien: die Hausdeckung nutzt die Batterie mit „Netzbezug decken“** und wechselt zur nächsten, wenn eine an ihrer Untergrenze ist; Batterien im Automatik-Modus bekommen keine Befehle mehr.
+- **Batteriepflege lädt zuerst mit Sonne** — am Pflegetag wird die Ladegrenze aufgehoben; aus dem Netz geladen wird erst ab 15 Uhr und nicht in teuren Stunden, statt ab Mitternacht mit voller Leistung.
+- **Geplante Entladung deckt das Haus statt mit voller Leistung einzuspeisen** — im Automatik-Modus lief ein Entlade-Abschnitt mit maximaler Leistung; die Tarif-Zwangsentladung bleibt unverändert.
+- **Mehrere Batterien: jede wird nach ihrer eigenen Leistung geregelt** — vorher rechnete jede Bank mit der Summe aller Bänke; das konnte beide auf volle Ladeleistung treiben und Netzstrom ziehen.
+
+### Bezugs- & Einspeise-Deckel
+
+- **Fristen unter einem Bezugs-Deckel mit Zeitfenster rechnen mit dem niedrigsten Deckel bis zur Frist** — vorher fehlten ab Fensterbeginn bis zu 17,6 kWh.
+- **Unter dem Bezugs-Deckel startet ein nicht unterbrechbares Programm nur, wenn die Batterie den Deckel die ganze Laufzeit halten kann** — sonst Warnung; ohne eingetragene Kapazität bleibt es bei der Leistungsprüfung.
+- **Der Einspeise-Deckel hält auch, wenn die Batterie nahe voll drosselt und nach Wolken** — gezählt wird, was die Batterie wirklich nimmt; die PV-Begrenzung öffnet schrittweise entlang der Erzeugung (über einen Tag 14–41 statt 460–530 Wh über dem Deckel, ein Zehntel der Schreibvorgänge).
+- **Eine fällige Last, die der Bezugs-Deckel nicht anlaufen lässt, blockiert das Abschalten anderer Lasten nicht mehr** — eine Pumpe lief sonst stundenlang aus dem Netz weiter.
+- **Netzladen der Batterie bleibt unter dem Bezugs-Deckel** — es lädt nur, was darunter passt; das Hin und Her zwischen Laden und Entladen ist weg.
+- **Der Bezugs-Deckel ist jetzt eine harte Grenze** — reicht die Batterie nicht, drosselt SEA Wallbox und Heizstab oder schaltet sie nicht ein; Fristen planen mit der Leistung unter dem Deckel. Ist eine Frist nur mit Überschreiten zu halten, gewinnt der Deckel und SEA warnt (auch per Ansage).
+- **Einspeise-Limit wirkt auch in „Manuell“ und bei ausgeschaltetem PV-Überschuss.**
+- **Einspeise-Limit hält, statt zu pendeln** — die Batterie lädt die aktuelle Leistung plus den Überschuss über dem Limit; die PV-Abregelung öffnet schrittweise statt schlagartig.
+
+### Maschinen, Auto & Wärme
+
+- **Planer und Ausführung rechnen den Rest einer pausierten Maschine gleich; eine alte Sicherung verbirgt keinen offenen Wiederherstellungs-Hinweis.**
+- **Eine unterbrechbare Maschine lässt sich nach dem Start wieder pausieren** — ihr Rest wird neu eingeplant, nur durchlaufende Programme behalten den festen Rest-Lauf.
+- **Lade-Buttons nur an Wallboxen, die SEA schalten kann; eine alte Zeile mit Text-Preis leert keine Analyse mehr.**
+- **Die Steckdosen-Fernbedienung schaltet nur noch verschiebbare Maschinen**; eine Liste statt eines Objekts beim Gerätespeichern gibt eine Fehlermeldung statt eines Serverfehlers.
+- **Der Teil-Sonnen-Start einer Maschine schaut bis zum spätesten Start voraus** — eine Wäsche für morgen Mittag startete heute mit 65 % Sonne, weil morgen jenseits der 16 h lag.
+- **Eine Wallbox mit Mindeststrom taktet nicht mehr** — mindestens 3 min Laufzeit und 2 min Pause, kein Hochdrehen während das Auto anläuft, SEAs eigener Anlauf gilt nicht als Störung; Netzbezug wird nicht mehr als Überschuss an Batterie und Heizstab verteilt.
+- **Das Ladefenster des Plans lädt das Auto nur bis zum Mindest-Ladestand aus dem Netz, auch an einer nur schaltbaren Wallbox** — ein Sonnenfenster erzwingt nichts, „Assistiert“ braucht die Netz-Erlaubnis.
+- **Eine Fertig-Zeit hinter dem Planungshorizont startet die Maschine nicht mehr sofort aus dem Netz** — eingeplant wird nur ein Fenster, das wirklich etwas bringt; sonst startet die Maschine bei Sonne oder spätestens zur Frist.
+- **Ein Heizstab unter voller Batterie nimmt bei langsamem Batterie-Schreibintervall wieder den ganzen Überschuss** — er blieb rund 20 % darunter, der Rest ging ins Netz.
+- **Ein Sonnen-Ladefenster zwingt das Auto bei Wolken nicht mehr ans Netz** — dort entscheidet der Überschuss; volle Leistung erst ab dem spätesten Start.
+- **Ein Heizstab im günstigen Tarif-Fenster läuft wieder durch** — die Leerlauf-Freigabe setzte ihn zwischen zwei Tarif-Entscheidungen auf 0; Regel-Sollwerte bleiben stehen.
+- **Ein wegen der Sonne geplantes WP-Vorheizfenster hält die Anhebung nicht mehr ohne Sonne** — bei zu sonniger Prognose lief sie sonst aus Akku und Netz.
+- **In „Assistiert“ lädt ein übernommener Plan das Auto nur mit Netzlade-Erlaubnis aus dem Netz** — wie in der Hilfe beschrieben.
+- **Eine übergebene Maschine startet bei Teil-Sonne, wenn bis zur Frist nichts Besseres kommt** — ab etwa 60 % Sonne im sonnigsten Fenster statt später ganz aus dem Netz.
+- **Das Auto lädt nicht mehr aus der Hausbatterie, und der Ladeplan wählt sein Fenster nach Kosten** — ohne Batterie-Unterstützung deckt die Batterie nur das Haus; ein sonniges Planfenster lädt ab Minimum mit Überschuss obendrauf, volle Leistung erst ab dem spätesten Start.
+- **Heizstab und Wallbox behalten ihren Sollwert nicht mehr, wenn die Überschuss-Regelung aus ist** — SEA nimmt seinen eigenen Wert einmal zurück, einen von Hand gesetzten nicht.
+- **Eine an SEA übergebene Maschine läuft in jeder Kontroll-Stufe** — in „Manuell“ oder bei ausgeschaltetem PV-Überschuss wurde „verschoben“ angesagt, gestartet aber nie.
+- **Ein Verbraucher, der nichts abnimmt, blockiert die nachrangigen nicht mehr** — ein volles, angestecktes Auto, ein abgeschalteter Heizstab oder eine fast volle Batterie bekamen weiter Leistung zugeteilt, während der Überschuss ins Netz ging.
 - **Heizstab-Stufen schalten mit Hysterese** und zählen die Tagesenergie aus der gemessenen Leistung; eigene Regeln sehen in der Simulation den Preis der simulierten Stunde.
-- **Kleinere Datenkorrekturen** — ein leeres NT-Fenster gilt überall als „kein NT“; Zeilen ohne Preis werden mit dem Tarif ihrer Uhrzeit bewertet; Tage der Zeitumstellung haben 23/25 Stunden; alte Rohdaten werden bis Mitternacht gelöscht; der Börsenpreis-Speicher wächst nicht mehr; ein geleertes Datenbank-Feld fällt nicht mehr auf /data zurück.
-- **„Netzbezug decken“ und die Tarif-Teilnahme werden am Gerät eingestellt** — die Strategiekarten zeigen sie nur noch an (mit Zahnrad zum Gerät); Batterie und Fahrzeug haben keine doppelten Felder mehr.
-- **Begriffe und Verweise** — „Reserve“ nur noch für die Notstrom-Reserve, „Kontroll-Stufe“ statt „Autonomie“, Karte „Geräte und Auto“, Hinweise nennen die echte Betriebsart und den richtigen Ort; Knöpfe einheitlich groß geschrieben.
-- **Handy: Ziel und Kontroll-Stufe werden nicht mehr abgeschnitten**; „Neu planen“, „Alternativen prüfen“ und „Beheben“ melden Fehler, statt sie zu verschlucken.
 - **Maschinen: „nicht vor“ lässt sich wieder einstellen** — die Uhrzeit wurde als „fertig bis“ gespeichert.
-- **Tarif aus dem Energy-Dashboard wird einmalig übernommen**, solange der Tarif noch auf den Werksvorgaben steht; der Hinweis erscheint nur dann.
-- **Eingaben gehen beim Speichern nicht mehr verloren** — Einrichtung und Tarife überschreiben das Feld nicht, in dem gerade getippt wird; schnelles Umschalten des Zeitraums in Verlauf und Analysen zeigt nie eine verspätete alte Antwort.
 - **SG-Ready pendelt nicht mehr und kehrt in den Normalbetrieb zurück** — ein Zustand gilt mindestens 10 Minuten, die eigene Leistung der Wärmepumpe zählt mit, und ohne aktive Strategie bleiben die Relais nicht auf Sperre oder Zwang stehen.
 - **Maschine ohne gelerntes Profil wird rechtzeitig fertig** — der späteste Start rechnet mit der längsten bekannten Programmdauer (sonst 2 h) statt zur Fertig-Zeit zu starten.
-- **Analysen: Energiebilanz rechnet Kosten über denselben Zeitraum wie die kWh**; fehlen nachts die Börsenpreise, wird der Tag später gespeichert statt dauerhaft mit Ersatzpreisen.
-- **Nach einem Neuverbinden mit Home Assistant stimmen die Live-Werte sofort** — z. B. galt ein in der Zwischenzeit abgestecktes Auto bis zur nächsten Änderung als angesteckt.
-- **Daten robuster** — ein fehlerhaftes Backup kann SEA nicht mehr in eine Endlos-Neuverbindung bringen; der Ausblick startet eine leere Batterie bei 0 % statt 50 %; ein Tippfehler im Jahr der Preisgrafik blockiert den Server nicht mehr; Aufzeichnungslücken werden in den Tages-Simulationen nicht mehr mit den letzten Werten gefüllt.
-- **Ein alter Lade- oder Entlade-Sollwert bleibt nicht mehr stehen** — z. B. in „Manuell“ lud die Batterie mit dem Mittagswert abends aus dem Netz; SEA nimmt nicht mehr beanspruchte Sollwerte auf 0 zurück.
-- **Einspeise-Limit wirkt auch in „Manuell“ und bei ausgeschaltetem PV-Überschuss.**
-- **Mehrere Batterien: die Hausdeckung nutzt die Batterie mit „Netzbezug decken“** und wechselt zur nächsten, wenn eine an ihrer Untergrenze ist; Batterien im Automatik-Modus bekommen keine Befehle mehr.
 - **SG-Ready-Sperre nur noch in echten Spitzenstunden und nie bei PV-Überschuss** — bei HT/NT war die Wärmepumpe den ganzen Hochtarif-Tag gesperrt.
 - **Rücknahme von WP-Anhebung und Absenkung kommt sicher an** — endete sie in den ersten 5 Minuten oder scheiterte der Schreibbefehl, blieb der Sollwert angehoben.
 - **Fertig-Zeiten stimmen auch in der Nacht der Zeitumstellung** — „fertig bis 07:00“ wurde dort zu 08:00 oder 06:00.
-- **Ein ausgefallener Netz- oder Batteriezähler wird als „unbekannt“ aufgezeichnet, nicht als 0 W** — sonst entstand eine negative Hauslast in Prognose und Tageswerten.
-- **Ohne Lizenzschlüssel öffnet die App weiter** — statt einer Sperrseite, die auch das Eingabefeld für den Schlüssel verbarg; „Heute“ meldet, dass SEA nicht steuert.
-- **Heute: der Eigenverbrauch-Balken zeigt wieder den Anteil** — er zeigte nach der Begriffs-Vereinheitlichung die kWh-Zahl als Prozent (z. B. 4 %).
+- **Tarifsteuerung lässt am Gerät gestartete Maschinen in Ruhe** — sie schaltete einen solchen Lauf in teuren Stunden ab und meldete danach fälschlich „verschoben“.
+- **Maschine: kein erzwungener Sofort-Start mehr, wenn die Frist erst morgen ist** — „fertig bis 07:00“ um 08:00 übergeben startete die Maschine sofort statt am nächsten Morgen.
+- **Wallbox: „Sofort laden“ und fällige Mindest-Ladung mit voller Leistung** — vorher mit Minimalstrom; „Netz erlaubt“ ist jetzt eine Untergrenze, der PV-Überschuss darf mehr laden.
+- **Absenkung überschreibt eine Hand-Einstellung nicht mehr** — SEA setzt die Temperatur nur noch beim Gehen, Heimkommen oder Vorheizen, statt alle zwei Minuten auf den Komfortwert zurück.
+- **Keine falsche „verschoben“-Meldung mehr nach dem Ende eines Auftrags** — endete ein Auftrag, während SEA die Steckdose pausiert hatte, und kam das Wiedereinschalten nicht binnen 90 s an, wurde die Maschine erneut übernommen.
 
+### Handeingriffe & Kontroll-Stufen
+
+- **Die „Rückgängig“-Sperre bis Mitternacht hält bei Geräte-Einstellungen; nur echte Vorgaben heben sie auf** — eine geänderte Fertig-Zeit erreicht auch einen schon übergebenen Auftrag; `{}` an die Fahrzeug-Schnittstelle löscht keine Fahrzeuge mehr.
+- **„Heizstab voll an“ von Hand zählt als Handeingriff** — das Hochstellen auf das Geräte-Maximum wurde bisher übergangen.
+- **Eine Stelle für „was SEA welchem Gerät gesagt hat“** — Bezugs-Deckel sieht laufende Lasten und alle Heizstufen, Tarif-Heizstab wird freigegeben, ELWA heizt in „Manuell“ nicht weiter, Handeingriff an Tarif-Geräten wird erkannt.
+- **„Automatisch“ stellt Handänderungen an Reihenfolge, Teilnahme oder Lade-Vorrang nicht mehr sofort zurück** — sie gelten wie eine übernommene Variante bis Mitternacht.
+- **Ein laufender Handeingriff übersteht einen Neustart** — SEA schaltete das Gerät danach sofort zurück.
+- **Handeingriffe werden auch an Stufen-Heizstäben und an Lasten mit Batterie-Unterstützung erkannt.**
+- **„Rückgängig“ stellt jetzt genau zurück, was die automatische Anpassung geändert hat** — auch Auto, Wärmepumpe, Heizstab und Lade-Vorrang; nur einmal; Meldungen verdrängen den Knopf nicht mehr und verlängern die Mindestpause nicht; eine geänderte Vorgabe hebt die Sperre auf.
+- **Handeingriffe an geregelten Lasten werden jetzt erkannt** — gegen SEAs eigene Werte der letzten Minute statt gegen den Zeitpunkt des letzten Schreibens; nur ein Hochsetzen zählt; kein Fehlalarm bei selbst endenden Programmen; Wallbox-Knöpfe gelten immer.
+- **Handeingriffe an Heizstab, Schaltlasten oder Wallbox-Ladestrom haben eine Stunde Vorrang** — SEA schaltet ein von Hand eingeschaltetes Gerät nicht mehr sofort zurück und meldet den Eingriff.
+- **Eine automatische Anpassung lässt sich mit „Rückgängig“ zurücknehmen und bleibt es bis Mitternacht** — auch eine selbst übernommene Variante stellt SEA heute nicht mehr um.
+
+### Messwerte, Home Assistant & Robustheit
+
+- **Simulationen und Planbau rechnen auf einem eingefrorenen Schnappschuss der Anlage** — sie brachen sonst gelegentlich ab, wenn sich Einstellungen gerade änderten.
+- **Ohne Netzwert startet ein fälliger Verbraucher trotzdem** (Frist, Tarif-/Planfenster, übergebene Maschine) — das Abschalten der Überschuss-Lasten verhinderte seit beta.171 auch fällige Starts.
+- **Getrennte Netzsensoren (Bezug/Einspeisung) frieren die Regelung nicht mehr ein** — der ruhende Bezugs-Sensor galt beim Einspeisen als veraltet.
+- **Fehlt der Netz- oder Batteriewert länger als eine Minute, schaltet SEA seine eigenen Überschuss-Verbraucher ab** — vorher liefen Heizstab und Batterieladung aus dem Netz weiter; Hilfe: Absenkung „bei Abwesenheit“ statt „nach Zeitplan“.
+- **Ein Lesefehler in der Verlaufs-Datenbank lässt keinen offenen Cursor zurück.**
+- **Beim Beenden wird der Regel-Zustand gespeichert** — sonst gingen bis zu 5 Minuten (Energiezähler, Sperren, Plan) verloren.
+- **Der Regelzyklus wartet nicht mehr auf den Planbau** — der Plan wird im Hintergrund gebaut und übernommen, sobald er fertig ist; der Wärmepumpen-Wirkungsgrad wird dafür vorab gelesen (kein Abbruch bei gleichzeitiger Einstellungsänderung).
+- **Weniger Last je HA-Ereignis und kein endloses Warten auf die HA-Begrüßung** — die Liste der beobachteten Entitäten wird zwischengespeichert, der Verbindungsaufbau ist begrenzt.
+- **Langsam meldende Batteriesensoren bremsen die Regelung nicht mehr** — ist der Messwert älter als der letzte Sollwert, rechnet SEA mit dem Sollwert, bis ein neuer Wert kommt.
+- **Ein eingefrorener Netzwert lässt die Batterie nicht mehr ins Netz entladen** — antwortet der Netzwert nicht mehr auf die eigene Entladung, gilt er als unbekannt.
+- **Prognose bremst die Regelung nicht mehr** — die Verbrauchsprognose rechnet außerhalb der Ereignisschleife, die Genauigkeitsprüfung nur noch für die Anzeige.
+- **Nach einem Neuverbinden mit Home Assistant stimmen die Live-Werte sofort** — z. B. galt ein in der Zwischenzeit abgestecktes Auto bis zur nächsten Änderung als angesteckt.
+- **Ein ausgefallener Netz- oder Batteriezähler wird als „unbekannt“ aufgezeichnet, nicht als 0 W** — sonst entstand eine negative Hauslast in Prognose und Tageswerten.
+- **Entscheidungs-Verlauf schreibt nur bei echten Änderungen** — eine wechselnde Leistungsangabe im Grund schrieb jeden Takt eine Zeile.
+- **Sprachansagen laufen neben der Regelung** — eine hängende Ansage hält die Regelung nicht mehr auf.
+- **Verbindung zu Home Assistant stabiler** — eine ruhige Verbindung wurde nach rund 80 s grundlos getrennt; scheitert der Erstabruf, verbindet SEA neu, statt ohne Zustandsmeldungen weiterzulaufen.
+- **Ausgefallener Netz- oder Batteriezähler: SEA regelt nicht auf einen erfundenen Wert** — vorher hielt die Signal-Glättung den letzten Wert; die Batterie konnte so ins Netz entladen. Jetzt halten die Lasten, die Batterie deckt nicht.
+- **Weniger Schreiblast auf der SD-Karte** — eine laufende Maschine schrieb ihren Fortschritt alle 10 s in die Einstellungen und jeden Recorder-Takt in die Datenbank; alte Einstellungs-Stände werden jetzt mit der Aufbewahrungsfrist aufgeräumt.
+- **Eigene Regeln setzen bei einem nicht verfügbaren Sensor aus** — vorher galt sein Wert als 0, sodass z. B. „Speicher < 40 → Heizstab an“ bei einem ausgefallenen Sensor schaltete.
+- **Ein Text statt einer Zahl bei „max. Starts“ legt die Regelung nicht mehr still** — z. B. „3.0“ aus einem Backup ließ jeden Regelzyklus scheitern; der Wert wird jetzt gelesen und beim Einspielen bereinigt.
+
+### Analysen & Verlauf
+
+- **Vergleichsbericht: wer zum laufenden Zeitraum zurückwechselt, bekommt danach keinen anderen mehr nachgeschoben**; „days: Infinity“ führt nicht mehr zu einem Serverfehler.
+- **Lange Verlaufszeiträume mitteln nach Zeit statt nach Messpunkten** — eine Minute Heizstab pro Stunde erschien vorher als 1000 W statt 50 W.
+- **Der Entscheidungs-Export hält die Regelung nicht mehr an** — lange Zeiträume werden im Hintergrund aufbereitet (90 Tage: 2 s Stillstand → unter 0,1 s).
+- **Prognose-Check vergleicht Gleiches: „erreicht“ zählt nur die eingeplanten Maschinen und die Warmwasser-Anhebung** — Auto auf Sonne und Direktstarts sagt der Plan nie voraus; ältere Tage ohne getrennten Anteil entfallen.
+- **Der Verlauf über Woche/Monat/Jahr lädt die Gerätehistorie ausgedünnt und außerhalb der Regelung** — vorher Punkt für Punkt, auf dem Pi sekundenlang.
+- **Analysen › Investition zeigt immer das Ergebnis des gewählten Zeitraums** — ein während einer laufenden Rechnung gewählter Zeitraum wurde verworfen; ein Startfehler wird gemeldet.
+- **Lange Analysen (Jahr) halten die Regelung nicht mehr an** — sie geben alle paar tausend Zeilen ab (7 s → 0,03 s Stillstand); die kompakten Zeilen laufen wieder schnell durch.
+- **Die Analysen brauchen rund ein Viertel des Speichers** — die Rohdaten liegen kompakt statt als Zeilen-Objekte im Speicher (90 Tage: 20 statt 91 MB je Anfrage).
+- **Analysen: Energiebilanz rechnet Kosten über denselben Zeitraum wie die kWh**; fehlen nachts die Börsenpreise, wird der Tag später gespeichert statt dauerhaft mit Ersatzpreisen.
+- **Analysen: Ersparnis ist überall positiv** — die Investitionstabelle zeigte sie als negatives Δ; „keine Verlaufsdaten“ beim CSV-Export kommt als Hinweis statt als Dialog.
+- **Verlauf: „Mein Tarif“ folgt in der Zukunft der Preisprognose** — vorher lief die Linie flach weiter; Ausblick und Planer lesen Viertelstundenpreise jetzt genauso.
+- **Analysen: ein vergangener Zeitraum zählt nicht mehr den Folgetag mit** — beim Zurückblättern kam der Tag danach aus den gespeicherten Tageswerten dazu.
+- **Verlauf: Prognosen in der Farbe ihrer Messreihe** — gestrichelt, ohne eigenen Legenden-Eintrag; nur eine Prognose ohne passende Messreihe behält Farbe und Eintrag.
+- **Analysen: unverständlicher Gutschrift-Hinweis unter den Vergleichsszenarien entfernt** — die Gutschriften bleiben in „Ohne Steuerung“ eingerechnet.
+
+### Einstellungen, Sicherung & Schnittstelle
+
+- **Eine spätere Einstellungs-Wiederherstellung wird nicht mehr durch eine alte Quittierung verborgen.**
+- **Nach beschädigten Einstellungen keine leere Tagessicherung mehr, und der Hinweis bleibt bis zum Quittieren** — Sicherungen werden ganz oder gar nicht geschrieben.
+- **Aufbewahrung „0“ heißt wieder „Standard“** — seit beta.120 wurde daraus 1 Tag, und die nächtliche Bereinigung löschte den Verlauf bis auf den letzten Tag.
+- **Nach einem Ladefehler speichert die Einrichtung nichts** — das Speichern des ganzen Formulars hätte sonst Sprachausgabe und Signal-Sync überschrieben.
+- **Aus dem Backup wiederhergestellte Einstellungen werden sofort gespeichert** — ein Neustart davor lief still mit Werkseinstellungen.
+- **Verbraucher-Einstellungen lehnen „unendlich“ ab** — ein solcher Wert machte die Einstellungen für den Browser unlesbar.
+- **Die Web-Schnittstelle weist ungültige Eingaben ab** — kein JSON-Objekt, NaN/Unendlich oder eine unbekannte Wallbox ergeben eine klare Fehlermeldung statt Absturz oder gespeichertem Unsinn.
+- **Eine beschädigte Einstellungsdatei wird beiseitegelegt und das neueste Backup geladen** — vorher liefen still die Werkseinstellungen und überschrieben die Datei; Hinweis auf „Heute“.
+- **Kleinere Datenkorrekturen** — ein leeres NT-Fenster gilt überall als „kein NT“; Zeilen ohne Preis werden mit dem Tarif ihrer Uhrzeit bewertet; Tage der Zeitumstellung haben 23/25 Stunden; alte Rohdaten werden bis Mitternacht gelöscht; der Börsenpreis-Speicher wächst nicht mehr; ein geleertes Datenbank-Feld fällt nicht mehr auf /data zurück.
+- **Tarif aus dem Energy-Dashboard wird einmalig übernommen**, solange der Tarif noch auf den Werksvorgaben steht; der Hinweis erscheint nur dann.
+- **Daten robuster** — ein fehlerhaftes Backup kann SEA nicht mehr in eine Endlos-Neuverbindung bringen; der Ausblick startet eine leere Batterie bei 0 % statt 50 %; ein Tippfehler im Jahr der Preisgrafik blockiert den Server nicht mehr; Aufzeichnungslücken werden in den Tages-Simulationen nicht mehr mit den letzten Werten gefüllt.
+- **Ohne Lizenzschlüssel öffnet die App weiter** — statt einer Sperrseite, die auch das Eingabefeld für den Schlüssel verbarg; „Heute“ meldet, dass SEA nicht steuert.
+- **Backup und Einstellungsdatei werden auf Typen geprüft** — z. B. ein Preis „30,5“ als Text ließ alle Analysen scheitern; Werte werden jetzt umgewandelt oder fallen auf die Vorgabe zurück.
+- **Ein eingespieltes Backup behält die Standardwerte** — was ein älteres Backup nicht enthielt (z. B. der ganze Tarif), fehlte bis zum Neustart; das abgeschaffte Ziel „Eigenverbrauch“ wird auch beim Einspielen auf „Kosten“ gesetzt.
+
+### Oberfläche, Hilfe & Texte
+
+- **Begriffe vereinheitlicht (Bezugs-Deckel, HA-Energie-Dashboard), totes Gerätefeld entfernt, ARCHITEKTUR zum Maschinen-Auftrag aktualisiert.**
+- **Preis-Schwellen erklärt, wie sie wirken** — Netzladen-Schwelle ist ein Höchstpreis (geladen wird nur, wenn es sich lohnt), Entladen deckt nur das Haus (Entscheidung).
+- **Hilfe: Beim Bezugs-Deckel darf die Batterie auch dem ladenden Auto helfen**, besonders bei einer nur schaltbaren Wallbox (Entscheidung).
+- **Hilfe zu „Autarkie“ nennt auch das Nachladen der Entlade-Untergrenze** (Entscheidung: bleibt so).
+- **Kleinigkeiten in der Oberfläche** — „50 %“ mit Leerzeichen, Vorlaufzeit mit Komma, deutsches Schlusszeichen, „–“ statt „ W“ bei leerem Wert, Regel-ID sicher im Klick-Handler.
+- **Die Karte „Fahrzeuge“ steht neben „Komponenten“ statt darin.**
+- **„Plan übernehmen“ und „Sofort laden“ melden, warum sie nicht gingen** — vorher kam keine Rückmeldung.
+- **Hinweis zu „Automatisch“ nennt auch die Schwelle unter Autarkie (0,3 kWh)**; veraltete Code-Beschreibungen und ARCHITEKTUR §8.7 angeglichen.
+- **Einheitliche Begriffe für Ladestände** — „Ladestand“ statt „SoC“ in Gründen und Verlauf, beim Fahrzeug „Mindest-“ und „Höchst-Ladestand“, bei der Batterie „Netzlade-Ziel“ und „Ladegrenze“; Verweise korrigiert.
+- **Server-Texte und Ansagen mit Dezimalkomma** — Hinweise, Gründe auf „Aktuell“ und Maschinen-Ansagen sagten „1.5 kWh“.
+- **Die Entitäten-Auswahl hebt die anderen Entitäten desselben Geräts nach oben, und die Lizenz-Meldung bleibt stehen** — der Hinweis wurde nie gelesen bzw. die Meldung sofort gelöscht.
+- **Hilfe und Texte vereinheitlicht** — Pflichten-Liste überall gleich, übergebene Maschinen und Assistiert-Plan richtig beschrieben, „Bezugs-/Einspeise-Deckel“, „Batteriekapazität“ und „HA-Energie-Dashboard“ durchgängig, Klarname in der Testansage.
+- **Texte aus Home Assistant werden in der Oberfläche überall maskiert, Zahlen deutsch formatiert** — Zustände, Einheiten, Diagnosewerte; „Verlaufs-Datenbank“ statt „History-DB“.
+- **Die Sprachansage eines Vorschlags endet ihren Satz wieder mit Punkt** — der Satzpunkt wurde mit zum Komma.
+- **UI-Texte bereinigt** — Tarif-Status mit Komma und „ct“, Batteriepflege nur noch an einer Stelle, Fehler-Meldungen 6 s sichtbar, „Hinweis ausblenden“ meldet Fehler, Verweise auf Vorgaben und „Plan für heute“ korrigiert, kaputter Satz repariert.
+- **Hilfe: Temperatur-Absenkung und übergebene Maschinen-Aufträge laufen auch in „Manuell“** — als angeordnete Pflichten aufgeführt.
+- **Tarif-Laden und eigene Regeln zeigen ihre Strategie an, Plan-Netzladen heißt „Netzladen (Plan)“** — und die Plan-Änderungsmeldung verspricht keinen „günstigeren“ Plan mehr, den SEA nicht verglichen hat.
+- **Oberfläche: letzte Review-Punkte** — der Haken „Prognose von Home Assistant“ springt nicht mehr zurück; die Flussanzeige meldet Einspeisung statt „Netzbezug 0 W“; Rückfrage vor dem Entfernen von Thermostaten und Zeitfenstern; Tarif-Speichern meldet sich unten wie alles andere; einheitliche Strategienamen, unpersönliche Ansprache und weniger Fachbegriffe (z. B. „Zustand“ statt SoH).
+- **„Netzbezug decken“ und die Tarif-Teilnahme werden am Gerät eingestellt** — die Strategiekarten zeigen sie nur noch an (mit Zahnrad zum Gerät); Batterie und Fahrzeug haben keine doppelten Felder mehr.
+- **Begriffe und Verweise** — „Reserve“ nur noch für die Notstrom-Reserve, „Kontroll-Stufe“ statt „Autonomie“, Karte „Geräte und Auto“, Hinweise nennen die echte Betriebsart und den richtigen Ort; Knöpfe einheitlich groß geschrieben.
+- **Handy: Ziel und Kontroll-Stufe werden nicht mehr abgeschnitten**; „Neu planen“, „Alternativen prüfen“ und „Beheben“ melden Fehler, statt sie zu verschlucken.
+- **Eingaben gehen beim Speichern nicht mehr verloren** — Einrichtung und Tarife überschreiben das Feld nicht, in dem gerade getippt wird; schnelles Umschalten des Zeitraums in Verlauf und Analysen zeigt nie eine verspätete alte Antwort.
+- **Heute: der Eigenverbrauch-Balken zeigt wieder den Anteil** — er zeigte nach der Begriffs-Vereinheitlichung die kWh-Zahl als Prozent (z. B. 4 %).
 - **Status: eine Batteriekapazität statt zwei** — die Karte zeigt die nachts gemessene Kapazität, mit der die Planung rechnet, statt daneben eine Live-Schätzung über ein anderes Zeitfenster (10,8 vs. 11,0 kWh).
 - **Strategiefarben verwechseln sich nicht mehr mit Gerätefarben** — z. B. war „Dyn. Tarif“ genau das Auto-Blau und „WP-Anhebung“ fast das Batterie-Orange.
-- **Analysen: Ersparnis ist überall positiv** — die Investitionstabelle zeigte sie als negatives Δ; „keine Verlaufsdaten“ beim CSV-Export kommt als Hinweis statt als Dialog.
 - **Notstrom-Reserve und Lade-Frist des Autos werden nur noch unter Vorgaben eingestellt** — Batterie- und Fahrzeugkarte zeigen den Wert mit Link dorthin.
 - **„Stromkosten heute“ heißt jetzt „Stromkosten nächste 16 h“** — die Kacheln sind eine Vorausschau, abends schon mit dem nächsten Morgen.
 - **Texte aufgeräumt** — Verweise auf umbenannte Seiten und Schalter stimmen wieder, Fachbegriffe (Sankey, Baselines, operativ, Knoten/Kinder) sind durch Alltagssprache ersetzt, lange Hilfen gekürzt; Personen und Ansage-Geräte erscheinen mit Namen statt Entitäts-ID.
@@ -171,41 +224,23 @@
 - **„gespeichert“ erscheint nur noch, wenn der Server das Speichern bestätigt** — sonst steht „Nicht gespeichert“ mit Grund da; auch Schalter und Fahrzeuge melden sich jetzt einheitlich unten.
 - **Rückfrage vor dem Entfernen** von Geräten, Heizkreisen, Fahrzeugen, Absenk-Gruppen und Regeln.
 - **Klarere Knöpfe** — „Auftrag zurücknehmen“ heißt jetzt „ohne SEA einschalten“ (es schaltet die Steckdose ein), „Freigeben“ heißt jetzt „Übernahme aufheben“.
-- **Verlauf: „Mein Tarif“ folgt in der Zukunft der Preisprognose** — vorher lief die Linie flach weiter; Ausblick und Planer lesen Viertelstundenpreise jetzt genauso.
-- **Entscheidungs-Verlauf schreibt nur bei echten Änderungen** — eine wechselnde Leistungsangabe im Grund schrieb jeden Takt eine Zeile.
-- **Sprachansagen laufen neben der Regelung** — eine hängende Ansage hält die Regelung nicht mehr auf.
 - **Ausgeblendete Hinweise bleiben ausgeblendet** — Hinweise wie „Kostet gerade Geld“ oder „Netz-Messung unplausibel“ kamen nach dem Neuladen zurück; sie bleiben jetzt 14 Tage weg.
-- **Backup und Einstellungsdatei werden auf Typen geprüft** — z. B. ein Preis „30,5“ als Text ließ alle Analysen scheitern; Werte werden jetzt umgewandelt oder fallen auf die Vorgabe zurück.
-- **Verbindung zu Home Assistant stabiler** — eine ruhige Verbindung wurde nach rund 80 s grundlos getrennt; scheitert der Erstabruf, verbindet SEA neu, statt ohne Zustandsmeldungen weiterzulaufen.
-- **Batteriepflege lädt zuerst mit Sonne** — am Pflegetag wird die Ladegrenze aufgehoben; aus dem Netz geladen wird erst ab 15 Uhr und nicht in teuren Stunden, statt ab Mitternacht mit voller Leistung.
-- **Dynamischer Tarif: eine verstummte Preis-Entität gilt nach einer Stunde als unbekannt** — vorher galt ihr letzter Preis unbegrenzt weiter, z. B. ein negativer.
-- **Tarifsteuerung lässt am Gerät gestartete Maschinen in Ruhe** — sie schaltete einen solchen Lauf in teuren Stunden ab und meldete danach fälschlich „verschoben“.
-- **Maschine: kein erzwungener Sofort-Start mehr, wenn die Frist erst morgen ist** — „fertig bis 07:00“ um 08:00 übergeben startete die Maschine sofort statt am nächsten Morgen.
-- **Wallbox: „Sofort laden“ und fällige Mindest-Ladung mit voller Leistung** — vorher mit Minimalstrom; „Netz erlaubt“ ist jetzt eine Untergrenze, der PV-Überschuss darf mehr laden.
-- **Geplante Entladung deckt das Haus statt mit voller Leistung einzuspeisen** — im Automatik-Modus lief ein Entlade-Abschnitt mit maximaler Leistung; die Tarif-Zwangsentladung bleibt unverändert.
-- **Einspeise-Limit hält, statt zu pendeln** — die Batterie lädt die aktuelle Leistung plus den Überschuss über dem Limit; die PV-Abregelung öffnet schrittweise statt schlagartig.
-- **Ausgefallener Netz- oder Batteriezähler: SEA regelt nicht auf einen erfundenen Wert** — vorher hielt die Signal-Glättung den letzten Wert; die Batterie konnte so ins Netz entladen. Jetzt halten die Lasten, die Batterie deckt nicht.
-- **Mehrere Batterien: jede wird nach ihrer eigenen Leistung geregelt** — vorher rechnete jede Bank mit der Summe aller Bänke; das konnte beide auf volle Ladeleistung treiben und Netzstrom ziehen.
-- **Weniger Schreiblast auf der SD-Karte** — eine laufende Maschine schrieb ihren Fortschritt alle 10 s in die Einstellungen und jeden Recorder-Takt in die Datenbank; alte Einstellungs-Stände werden jetzt mit der Aufbewahrungsfrist aufgeräumt.
-- **Analysen: ein vergangener Zeitraum zählt nicht mehr den Folgetag mit** — beim Zurückblättern kam der Tag danach aus den gespeicherten Tageswerten dazu.
-- **Verlauf: Prognosen in der Farbe ihrer Messreihe** — gestrichelt, ohne eigenen Legenden-Eintrag; nur eine Prognose ohne passende Messreihe behält Farbe und Eintrag.
-- **Planung rechnet mit der gemessenen nutzbaren Batteriekapazität** — sobald genug Lade-/Entladeabschnitte vorliegen (statt der eingetragenen); die Status-Seite sagt, mit welcher Kapazität gerechnet wird.
 - **Flussdiagramm: fehlender Messwert als „–“ statt „0 W“** — liefert der Netz- oder Batteriesensor nichts, zeigen Netz, Batterie und Haus einen Strich und die Statuszeile „Messwert fehlt“.
-- **Eigene Regeln setzen bei einem nicht verfügbaren Sensor aus** — vorher galt sein Wert als 0, sodass z. B. „Speicher < 40 → Heizstab an“ bei einem ausgefallenen Sensor schaltete.
-- **Absenkung überschreibt eine Hand-Einstellung nicht mehr** — SEA setzt die Temperatur nur noch beim Gehen, Heimkommen oder Vorheizen, statt alle zwei Minuten auf den Komfortwert zurück.
-- **Börsentarif ohne Preis-Entität: der Planer sieht die Stundenpreise** — vorher plante er mit einem einzigen Preis für den ganzen Tag; ein Börsenpreis gilt außerdem nur noch für seine Stunde statt nach einem Abruffehler unbegrenzt.
-- **Analysen: unverständlicher Gutschrift-Hinweis unter den Vergleichsszenarien entfernt** — die Gutschriften bleiben in „Ohne Steuerung“ eingerechnet.
 - **Zahnrad an einer Strategie öffnet das Gerät sichtbar** — der Abschnitt „Komponenten“ wird mit aufgeklappt und die Seite scrollt erst nach dem Laden zum Gerät.
 - **Nach einem Update keine veralteten Styles mehr** — die Dateien der Oberfläche werden am Inhalt erkannt; vorher öffnete sich z. B. die Strategie-Info links unten.
 - **Vorgaben: Maschinen-Einstellungen rechtsbündig** — „fertig bis/nicht vor“, Uhrzeit und „an SEA übergeben“ sitzen wie die übrigen Vorgaben am rechten Rand, auch wenn sie umbrechen.
 - **Oberfläche: Farben und wiederkehrende Abstände an einer Stelle** — Ansichten nutzen gemeinsame Farbwerte und Klassen statt eigener Werte; sichtbar bleibt alles gleich.
 - **Zahlen überall mit Dezimalkomma** — Preis-Tooltip im Plan, Tarif-Übersicht, Ladestände, Autarkie, Wirkungsgrad und rund 40 weitere Stellen zeigten noch „23.5 ct/kWh“ oder „null %“.
+- **Gerätenamen mit „&“ oder „<“ werden überall richtig angezeigt** — Vorgaben, Einrichtung, Verlaufs-Legende und Flussdiagramm setzten Namen noch roh ins HTML.
+
+### Intern
+
+- **Tages-Testbank:** ganze Tage mit realistischen Sensoren (Takt, Versatz, nur bei Änderung, Rauschen), sonnen-Batterie und my-PV-Heizstab; feste Regeln für jede Regel-Änderung.
+- **Verwaiste Oberflächen-Helfer entfernt** (Strategie-Namen aus der alten Ablaufanzeige, Strategie-Abzeichen, Experten-Umschalter ohne Wirkung).
+- **Toten Pfad „Maschine einplanen“ (/api/plan/queue) entfernt** — er wurde nicht mehr aufgerufen und hätte ein gelerntes Programmprofil verkürzt.
+- **Aufgeräumt** — ungenutzte Analyse-Endpunkte und tote Anzeige-Funktionen entfernt, fehlendes Tag in der Lizenzkarte ergänzt.
 - **Regel-Engine und Web-Schnittstelle in Themenmodule aufgeteilt** — Planer und Regler, Maschinen-Aufträge, Eingangsdaten, Plan-Seite und die Handler je Seitenbereich in eigenen Dateien; die gespeicherten Tages-Simulationen werden einmal neu gerechnet.
 - **Altes Verbraucher-Modell entfernt** — die „verwalteten Verbraucher“ (nach Entität, ohne Editor) und acht ungenutzte Schnittstellen sind weg; die Verbraucher-Hierarchie zeigt nur noch eingerichtete Geräte statt aller gefundenen Schalter.
-- **Keine falsche „verschoben“-Meldung mehr nach dem Ende eines Auftrags** — endete ein Auftrag, während SEA die Steckdose pausiert hatte, und kam das Wiedereinschalten nicht binnen 90 s an, wurde die Maschine erneut übernommen.
-- **Ein Text statt einer Zahl bei „max. Starts“ legt die Regelung nicht mehr still** — z. B. „3.0“ aus einem Backup ließ jeden Regelzyklus scheitern; der Wert wird jetzt gelesen und beim Einspielen bereinigt.
-- **Gerätenamen mit „&“ oder „<“ werden überall richtig angezeigt** — Vorgaben, Einrichtung, Verlaufs-Legende und Flussdiagramm setzten Namen noch roh ins HTML.
-- **Ein eingespieltes Backup behält die Standardwerte** — was ein älteres Backup nicht enthielt (z. B. der ganze Tarif), fehlte bis zum Neustart; das abgeschaffte Ziel „Eigenverbrauch“ wird auch beim Einspielen auf „Kosten“ gesetzt.
 - **Store in Themenmodule aufgeteilt** — Einstellungen, Laufzustand, Preise, Live-Zustand, Einrichtung und Verlaufs-Datenbank in eigenen Dateien; ohne Änderung für die Bedienung.
 
 ## 0.11.0
