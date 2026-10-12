@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.13.1
+
+### PV-Prognose
+
+- **Die PV-Prognose wird geprüft und geeicht** — Morgenprognose gegen Messung je Stunde, Korrektur je Tagesstunde ab 7 Tagen, Güte in der PV-Karte unter Status; abschaltbar.
+- **Netzladen rechnet vorsichtig mit der Sonne** — „füllt die Sonne den Speicher?“ nimmt einen gemessenen schwachen Tag an statt der vollen Prognose.
+- **Prognose im evcc-Format lesbar** (z. B. von Solar Forecast ML).
+- **Nach einem Neustart gilt die PV-Prognose-Entität sofort** — vorher erst mit ihrer nächsten Änderung (bis dahin plante SEA mit der HA-Prognose).
+
+### Einspeise-Deckel
+
+- **Die PV-Leistungsgrenze wird laufend gelesen** — der Einspeise-Deckel rechnete nach dem Verbinden mit einem eingefrorenen Wert.
+- **Ist das Einspeise-Limit aus, gibt SEA seine PV-Begrenzung frei** (auch nach einem Neustart) — sie blieb auf dem letzten Wert stehen.
+- **Der Ausblick zeigt die Abregelung durch den Einspeise-Deckel.**
+- **Kein negativer PV-Grenzwert mehr** — über dem Deckel ohne PV-Erzeugung schrieb SEA jeden Zyklus einen negativen Wert.
+
 ## 0.13.0
 
 - **Die Beta-Zählung beginnt mit jeder neuen Version bei 0.**
