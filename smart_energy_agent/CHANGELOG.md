@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.13.2
+
+- **Wetterprognose und eigene Messung** — Außentemperatur und Wind aus einer HA-Wetter-Entität, gegen den eigenen Fühler (z. B. Smart Nature) geprüft und geeicht; Karte „Wetter“ unter Status.
+
 ## 0.13.1
 
 ### PV-Prognose
