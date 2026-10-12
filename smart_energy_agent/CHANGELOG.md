@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.14.0
+
+### Heizung beobachten
+- **Heizkreise und Räume einrichten, beobachten und verstehen** — je Raum Auskühl- und Aufheizzeit, Wind- und Sonneneinfluss, Estrich-Verzögerung; Energiekennlinie mit Wärmeverlust des Hauses und Heizlast (Analysen).
+
+### Heizung schalten
+- **Vorausschauend vorheizen** — je Absenk-Gruppe zuschaltbar: Vorheizbeginn aus Raummodell, Außentemperatur-Prognose und Vorlauf; tägliche Absenkung nur in flinken Räumen; offenes Fenster = Frostschutz.
+- **Urlaub** — von–bis: alle Räume abgesenkt, auch Fußbodenheizung, rechtzeitig zur Rückkehr wieder warm.
+- **Räume als Wärmespeicher** — bei PV-Überschuss oder günstigem Strom träge Räume bis zu 2 K über Komfort heizen, wenn sie die Wärme bald brauchen.
+- **Räume im Tagesplan** — eigene Spur je Raum: abgesenkt, Vorheizen, Wärme speichern, Urlaub, Fenster offen.
+
 ## 0.13.2
 
 - **Wetterprognose und eigene Messung** — Außentemperatur und Wind aus einer HA-Wetter-Entität, gegen den eigenen Fühler (z. B. Smart Nature) geprüft und geeicht; Karte „Wetter“ unter Status.
