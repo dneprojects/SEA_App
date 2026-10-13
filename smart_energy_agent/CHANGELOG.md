@@ -2,9 +2,11 @@
 
 ## 0.14.1
 
+- **Heizkreis-Führung** — SEA verschiebt das Raumsoll des Heizkreises: beobachten, den Räumen folgen oder vorsichtig lernend tiefer (bessere Leistungszahl der Wärmepumpe).
+- **Ein Heizkreis-Begriff** — Anhebung, Abwesenheits-Absenkung und Führung am Heizkreis unter Heizung; Wärmepumpen-Kreise mit gleichem Sollwert werden übernommen.
 - **Haus, Wohnungen, Räume, Thermostate** — eine Hierarchie für Heizung und Absenkung; die Absenk-Gruppen werden übernommen.
 - **Mehrere Thermostate je Raum** — eine Entscheidung je Raum an alle Heizkörper.
-- **Wärmezähler auf jeder Ebene** — eigener Zähler, Rest des Zählers darüber oder Summe darunter; Kennzahlen je Ebene.
+- **Wärmezähler auf jeder Ebene** — auch mehrere je Ebene (addieren sich), Rest des Zählers darüber oder Summe darunter; Kennzahlen je Ebene.
 - **Heizkörper-Normleistung** — Wärme in Watt, Schätzung je Raum ohne Zähler, nötige Vorlauftemperatur je Raum.
 - **Raumsoll des Heizkreises aus einer Klima-Entität** — dann gilt deren Solltemperatur.
 - **PV-Begrenzung neu** — Obergrenze aus Hausverbrauch, Netzbezug, Deckel und Batterie-Spielraum: viel weniger verschenkte PV; der Einspeise-Deckel wirkt jetzt auch ohne steuerbare Batterie, nur mit der Leistungsgrenze des Wechselrichters.
