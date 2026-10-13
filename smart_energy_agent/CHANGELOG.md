@@ -2,7 +2,10 @@
 
 ## 0.14.1
 
-- **Mehrere Wärmezähler** — sie ergeben zusammen die Wärme des Hauses; je Zähler eine Wohnfläche, Räume einer Wohnung zuordnen, Kennlinie je Wohnung.
+- **Haus, Wohnungen, Räume, Thermostate** — eine Hierarchie für Heizung und Absenkung; die Absenk-Gruppen werden übernommen.
+- **Mehrere Thermostate je Raum** — eine Entscheidung je Raum an alle Heizkörper.
+- **Wärmezähler auf jeder Ebene** — eigener Zähler, Rest des Zählers darüber oder Summe darunter; Kennzahlen je Ebene.
+- **Heizkörper-Normleistung** — Wärme in Watt, Schätzung je Raum ohne Zähler, nötige Vorlauftemperatur je Raum.
 - **Raumsoll des Heizkreises aus einer Klima-Entität** — dann gilt deren Solltemperatur.
 - **PV-Begrenzung neu** — Obergrenze aus Hausverbrauch, Netzbezug, Deckel und Batterie-Spielraum: viel weniger verschenkte PV; der Einspeise-Deckel wirkt jetzt auch ohne steuerbare Batterie, nur mit der Leistungsgrenze des Wechselrichters.
 - **Hinweis zur gesetzlichen Einspeisegrenze** — die muss der Wechselrichter selbst halten; SEA reagiert dafür zu langsam.
