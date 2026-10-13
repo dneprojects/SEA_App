@@ -3,6 +3,7 @@
 ## 0.14.1
 
 - **Heizkreis-Führung** — SEA verschiebt das Raumsoll des Heizkreises: beobachten, den Räumen folgen oder vorsichtig lernend tiefer (bessere Leistungszahl der Wärmepumpe).
+- **Heizkreis-Führung sicherer** — eigene Schreibungen nie als Handänderung, „aus“ und entfernte Kreise stellen zurück, Lernen nur aus wirksamer Absenkung, nie über die eigene Kurve.
 - **Ein Heizkreis-Begriff** — Anhebung, Abwesenheits-Absenkung und Führung am Heizkreis unter Heizung; Wärmepumpen-Kreise mit gleichem Sollwert werden übernommen.
 - **Haus, Wohnungen, Räume, Thermostate** — eine Hierarchie für Heizung und Absenkung; die Absenk-Gruppen werden übernommen.
 - **Mehrere Thermostate je Raum** — eine Entscheidung je Raum an alle Heizkörper.
