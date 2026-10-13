@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.14.1
+
+- **Mehrere Wärmezähler** — sie ergeben zusammen die Wärme des Hauses; je Zähler eine Wohnfläche, Räume einer Wohnung zuordnen, Kennlinie je Wohnung.
+- **Raumsoll des Heizkreises aus einer Klima-Entität** — dann gilt deren Solltemperatur.
+- **PV-Begrenzung neu** — Obergrenze aus Hausverbrauch, Netzbezug, Deckel und Batterie-Spielraum: viel weniger verschenkte PV; der Einspeise-Deckel wirkt jetzt auch ohne steuerbare Batterie, nur mit der Leistungsgrenze des Wechselrichters.
+- **Hinweis zur gesetzlichen Einspeisegrenze** — die muss der Wechselrichter selbst halten; SEA reagiert dafür zu langsam.
+
 ## 0.14.0
 
 ### Heizung beobachten
