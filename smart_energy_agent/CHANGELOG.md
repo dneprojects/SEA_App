@@ -2,6 +2,9 @@
 
 ## 0.14.1
 
+- **„Laden beenden“ endet mit dem Abstecken** — und Wallbox-Zustände wie „SuspendedEV“ zählen als angesteckt (das Auto lud sonst nie zum Mindestwert).
+- **Heizung als Klappkarten** — Heizkreise und Haus wie die Komponenten; Wohnungen, Räume und Thermostate darin aufklappbar.
+- **Mindest-Ladestand immer durchgesetzt** — in jeder Stufe außer „Manuell“; der Hinweis nennt den echten Grund statt „früher anstecken“.
 - **Absenkung ausschalten stellt Räume zurück** — abgesenkte Räume bekommen einmal ihre Komforttemperatur, wie die Heizkreise.
 - **Heizkreis folgt den Räumen richtig** — ein Raum auf Komfort hält den Kreis oben (vorher reichte ein abgesenkter Raum).
 - **Anhebung je Speicher in der Prioritätenliste** — Warmwasser und jeder Heizkreis mit eigener Stelle, eigenem Häkchen und eigener Batterie-Unterstützung; die eigene Karte entfällt.
