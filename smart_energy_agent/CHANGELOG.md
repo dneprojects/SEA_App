@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Wärmezähler je Heizkreis** — Haus → Heizkreis → Raum; gemessene Kreiswärme wird anteilig auf die Räume verteilt; die Heizungs-Karte ist das Haus, darin Heizkreise und Wohnungen.
 - **Leere Batterie wird nicht mehr zum Entladen aufgefordert** — „Aktuell“ zeigt bei der Batterie, was wirklich fließt.
 - **Normleistung klar benannt** — Bezugspunkt 75/65/20 °C (EN 442) steht am Feld; ein anderer Punkt ist immer eintragbar.
 - **„Laden beenden“ endet mit dem Abstecken** — und Wallbox-Zustände wie „SuspendedEV“ zählen als angesteckt (das Auto lud sonst nie zum Mindestwert).
