@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Anhebung bei Überschuss lesbar** — die Zahl ist die Anhebung in K (keine Priorität); Erklärung in eigener Zeile, gleich in Heizung und Wärmepumpe.
 - **Wärmequelle als Dialog** — je Ebene eine Zeile „Wärme“; der Dialog zeigt nur die passende Auswahl, eine Wohnung an einem gemessenen Heizkreis ist dessen Rest statt des Hauszählers.
 - **Wärmezähler je Heizkreis** — Haus → Heizkreis → Raum; gemessene Kreiswärme wird anteilig auf die Räume verteilt; die Heizungs-Karte ist das Haus, darin Heizkreise und Wohnungen.
 - **Leere Batterie wird nicht mehr zum Entladen aufgefordert** — „Aktuell“ zeigt bei der Batterie, was wirklich fließt.
