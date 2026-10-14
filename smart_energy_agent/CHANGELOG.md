@@ -2,6 +2,9 @@
 
 ## 0.14.1
 
+- **Stellventil als Ventil-Entität** — HA-`valve` (offen/zu) wählbar, gezählt wird die Zeit offen; dazu Öffnung in % oder Ein/Aus.
+- **Wohnungen und Räume umsortieren** — ▲▼ in der Kopfzeile ihrer Klappkarte.
+- **Fußbodenheizung nach Fläche** — ohne Normleistung teilt sich die gemessene Kreiswärme nach Fläche × Heizzeit × Übertemperatur; Beschriftung „Anteil am Heizkreis“ / „Wärme des Heizkreises“.
 - **Anhebung bei Überschuss lesbar** — die Zahl ist die Anhebung in K (keine Priorität); Erklärung in eigener Zeile, gleich in Heizung und Wärmepumpe.
 - **Wärmequelle als Dialog** — je Ebene eine Zeile „Wärme“; der Dialog zeigt nur die passende Auswahl, eine Wohnung an einem gemessenen Heizkreis ist dessen Rest statt des Hauszählers.
 - **Wärmezähler je Heizkreis** — Haus → Heizkreis → Raum; gemessene Kreiswärme wird anteilig auf die Räume verteilt; die Heizungs-Karte ist das Haus, darin Heizkreise und Wohnungen.
