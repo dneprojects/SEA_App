@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Leere Batterie wird nicht mehr zum Entladen aufgefordert** — „Aktuell“ zeigt bei der Batterie, was wirklich fließt.
 - **Normleistung klar benannt** — Bezugspunkt 75/65/20 °C (EN 442) steht am Feld; ein anderer Punkt ist immer eintragbar.
 - **„Laden beenden“ endet mit dem Abstecken** — und Wallbox-Zustände wie „SuspendedEV“ zählen als angesteckt (das Auto lud sonst nie zum Mindestwert).
 - **Heizung als Klappkarten** — Heizkreise und Haus wie die Komponenten; Wohnungen, Räume und Thermostate darin aufklappbar.
