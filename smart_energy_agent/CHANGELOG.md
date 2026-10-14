@@ -2,6 +2,14 @@
 
 ## 0.14.1
 
+- **Absenkung ausschalten stellt Räume zurück** — abgesenkte Räume bekommen einmal ihre Komforttemperatur, wie die Heizkreise.
+- **Heizkreis folgt den Räumen richtig** — ein Raum auf Komfort hält den Kreis oben (vorher reichte ein abgesenkter Raum).
+- **Anhebung je Speicher in der Prioritätenliste** — Warmwasser und jeder Heizkreis mit eigener Stelle, eigenem Häkchen und eigener Batterie-Unterstützung; die eigene Karte entfällt.
+- **Heizkreis-Spur auf „Heute“** — zeigt, wann ein geführter Kreis tiefer oder höher läuft (blass = nur Vorschlag).
+- **Heizkreise unter Vorgaben** — Absenkung und Führung je Kreis in ihren Strategie-Karten; ein Speichern unter Einrichtung überschreibt keine Vorgaben mehr.
+- **Heizkreis-Führung als eigene Strategie** — mit eigenem Schalter, unabhängig von „PV-Überschuss“ (vorher schrieb sie nur mit diesem).
+- **„Manuell“ ruht auch die Absenkung** — Räume und Heizkreise bekommen einmal ihren eigenen Wert zurück.
+- **Verlauf ordnet richtig zu** — Absenkung und Führung erscheinen nicht mehr als „WP-Anhebung“; eine Absenkung zählt nicht mehr als Anhebungs-Einsparung.
 - **Heizkreis-Führung** — SEA verschiebt das Raumsoll des Heizkreises: beobachten, den Räumen folgen oder vorsichtig lernend tiefer (bessere Leistungszahl der Wärmepumpe).
 - **Heizkreis-Führung sicherer** — eigene Schreibungen nie als Handänderung, „aus“ und entfernte Kreise stellen zurück, Lernen nur aus wirksamer Absenkung, nie über die eigene Kurve.
 - **Ein Heizkreis-Begriff** — Anhebung, Abwesenheits-Absenkung und Führung am Heizkreis unter Heizung; Wärmepumpen-Kreise mit gleichem Sollwert werden übernommen.
