@@ -2,6 +2,8 @@
 
 ## 0.14.1
 
+- **Heizzustand je Raum** — „Ventil offen · heizt“ / „Ventil zu“, ohne Ventil „heizt“ / „heizt nicht“, auch ohne Raumtemperatur; „1 Raum“ / „3 Räume“.
+- **Offen/zu-Ventile richtig gezählt** — jede Öffnung zählt mit (vorher nur die letzte: Taktventile zu hoch).
 - **Stellventil als Ventil-Entität** — HA-`valve` (offen/zu) wählbar, gezählt wird die Zeit offen; dazu Öffnung in % oder Ein/Aus.
 - **Wohnungen und Räume umsortieren** — ▲▼ in der Kopfzeile ihrer Klappkarte.
 - **Fußbodenheizung nach Fläche** — ohne Normleistung teilt sich die gemessene Kreiswärme nach Fläche × Heizzeit × Übertemperatur; Beschriftung „Anteil am Heizkreis“ / „Wärme des Heizkreises“.
