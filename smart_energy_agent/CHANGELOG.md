@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Normleistung klar benannt** — Bezugspunkt 75/65/20 °C (EN 442) steht am Feld; ein anderer Punkt ist immer eintragbar.
 - **„Laden beenden“ endet mit dem Abstecken** — und Wallbox-Zustände wie „SuspendedEV“ zählen als angesteckt (das Auto lud sonst nie zum Mindestwert).
 - **Heizung als Klappkarten** — Heizkreise und Haus wie die Komponenten; Wohnungen, Räume und Thermostate darin aufklappbar.
 - **Mindest-Ladestand immer durchgesetzt** — in jeder Stufe außer „Manuell“; der Hinweis nennt den echten Grund statt „früher anstecken“.
