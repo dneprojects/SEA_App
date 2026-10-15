@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Analysen als Klappkarten** — jede Karte außer „Zeitraum“ klappt und bleibt im Browser gemerkt; „Räume & Wärmeverlust“ mit klappbaren Teilen.
 - **Heizung gegliedert wie Komponenten** — „Heizung“ mit den Hausangaben, darin die Karten „Heizkreise“ und „Wohnungen“.
 - **Heizzustand je Raum** — „Ventil offen · heizt“ / „Ventil zu“, ohne Ventil „heizt“ / „heizt nicht“, auch ohne Raumtemperatur; „1 Raum“ / „3 Räume“.
 - **Offen/zu-Ventile richtig gezählt** — jede Öffnung zählt mit (vorher nur die letzte: Taktventile zu hoch).
