@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Vorgaben merken sich offene Karten** — Ziel, Grenzen, Strategien & Regeln, jede Strategie und Regel bleiben im Browser auf- oder zugeklappt.
 - **Analysen als Klappkarten** — jede Karte außer „Zeitraum“ klappt und bleibt im Browser gemerkt; „Räume & Wärmeverlust“ mit klappbaren Teilen.
 - **Heizung gegliedert wie Komponenten** — „Heizung“ mit den Hausangaben, darin die Karten „Heizkreise“ und „Wohnungen“.
 - **Heizzustand je Raum** — „Ventil offen · heizt“ / „Ventil zu“, ohne Ventil „heizt“ / „heizt nicht“, auch ohne Raumtemperatur; „1 Raum“ / „3 Räume“.
