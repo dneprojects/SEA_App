@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Rest mehrerer Heizkreise** — eine Wohnung an Heizkörpern und Fußbodenheizung ist der Rest dieser Kreise, nicht des Hauszählers; der Dialog nennt sonst den Grund.
 - **Vorgaben merken sich offene Karten** — Ziel, Grenzen, Strategien & Regeln, jede Strategie und Regel bleiben im Browser auf- oder zugeklappt.
 - **Analysen als Klappkarten** — jede Karte außer „Zeitraum“ klappt und bleibt im Browser gemerkt; „Räume & Wärmeverlust“ mit klappbaren Teilen.
 - **Heizung gegliedert wie Komponenten** — „Heizung“ mit den Hausangaben, darin die Karten „Heizkreise“ und „Wohnungen“.
