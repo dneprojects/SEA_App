@@ -2,6 +2,8 @@
 
 ## 0.14.1
 
+- **Sofort laden fragt den End-Ladestand** — dort endet das Laden, bis abgesteckt oder „Automatisch laden“.
+- **Analyse nennt, was der Heizungsaufteilung fehlt** — welche Räume ohne Normleistung, zwei angekreuzte Rest-Kreise; summierter Kreis in der Analyse; 0-W-Räume ohne Anteil.
 - **21 °C statt 20 °C** — angenommene Raumtemperatur, wo kein Raumwert vorliegt.
 - **Heizkreis als Summe seiner Räume** — so kann der andere Kreis der Rest des Hauszählers sein; Normleistung 0 = kein Heizkörper; Räume ohne Thermostat heizen wie ihr Kreis.
 - **Analyse sagt, wenn die Außentemperatur fehlt** — mit dem Weg zur Einstellung (Einrichtung → Wetter).
