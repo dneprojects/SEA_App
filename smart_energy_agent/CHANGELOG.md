@@ -2,6 +2,8 @@
 
 ## 0.14.1
 
+- **21 °C statt 20 °C** — angenommene Raumtemperatur, wo kein Raumwert vorliegt.
+- **Heizkreis als Summe seiner Räume** — so kann der andere Kreis der Rest des Hauszählers sein; Normleistung 0 = kein Heizkörper; Räume ohne Thermostat heizen wie ihr Kreis.
 - **Analyse sagt, wenn die Außentemperatur fehlt** — mit dem Weg zur Einstellung (Einrichtung → Wetter).
 - **Neuer Wärmezähler: Analyse sagt, dass der erste ganze Tag noch fehlt** — statt nur „keine Wärmemenge“.
 - **Analyse nennt fehlende Wohnfläche** — „im Heizkreis fehlt die Wohnfläche bei: Bad“; zwei Rechenfehler bei Wohnungen an mehreren Kreisen behoben.
