@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Analyse nennt fehlende Wohnfläche** — „im Heizkreis fehlt die Wohnfläche bei: Bad“; zwei Rechenfehler bei Wohnungen an mehreren Kreisen behoben.
 - **Fußbodenheizung teilt auch ohne Raumtemperatur** — Räume nur mit Ventil oder ganz ohne Angabe bekommen ihren Flächenanteil; mehrere Wohnungen als Rest eines Kreises teilen ihn nach ihren Räumen.
 - **Rest mehrerer Heizkreise** — eine Wohnung an Heizkörpern und Fußbodenheizung ist der Rest dieser Kreise, nicht des Hauszählers; der Dialog nennt sonst den Grund.
 - **Vorgaben merken sich offene Karten** — Ziel, Grenzen, Strategien & Regeln, jede Strategie und Regel bleiben im Browser auf- oder zugeklappt.
