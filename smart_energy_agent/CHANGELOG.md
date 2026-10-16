@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Sofort laden sicherer; Strom-Klasse mit Jahresarbeitszahl Heizung** — Fenster warnt bei Ziel unter Ladestand/Minimum; ohne Stecker-Erkennung übernimmt SEA am Ziel wieder; Heute zeigt „Laden beendet“ mit „Automatisch laden“.
 - **Raum-Hinweise einheitlich** — eine Ursache, eine Meldung: zu wenig Verlauf (mit den Lücken), keine Raumtemperatur, Außentemperatur nicht eingerichtet.
 - **Energieklasse als Richtwert** — Heizwärme im typischen Jahr aus der Kennlinie, je m² und als Klasse; mit Wärmepumpe auch als Strom (÷ Leistungszahl).
 - **Wohnfläche zeigt die Summe darunter** — grau im leeren Feld; ein eigener Wert neben einer anderen Summe nennt sie.
