@@ -2,6 +2,9 @@
 
 ## 0.14.1
 
+- **Energieklasse als Richtwert** — Heizwärme im typischen Jahr aus der Kennlinie, je m² und als Klasse; mit Wärmepumpe auch als Strom (÷ Leistungszahl).
+- **Wohnfläche zeigt die Summe darunter** — grau im leeren Feld; ein eigener Wert neben einer anderen Summe nennt sie.
+- **Analysen in zwei Bereichen** — „Energie & Kosten“ mit dem Zeitraum, „Heizung & Gebäude“ mit eigenem Zeitraum (30/90 Tage, Heizperiode).
 - **Sofort laden fragt den End-Ladestand** — dort endet das Laden, bis abgesteckt oder „Automatisch laden“.
 - **Analyse nennt, was der Heizungsaufteilung fehlt** — welche Räume ohne Normleistung, zwei angekreuzte Rest-Kreise; summierter Kreis in der Analyse; 0-W-Räume ohne Anteil.
 - **21 °C statt 20 °C** — angenommene Raumtemperatur, wo kein Raumwert vorliegt.
