@@ -2,6 +2,9 @@
 
 ## 0.14.1
 
+- **Wärmezähler robust gegen Ausreißer und seltene Meldungen** — stündlich oder grob meldende Zähler zählen voll, auch über Mitternacht; falsche Werte, Tausch und Ausreißer zählen nichts; Hinweise nennen den passenden neuen Zähler und bei Elektroheizungen die fehlende Heizzeit.
+- **Heizungsanalyse nennt die echte Ursache** — Rest geht an die offene Wohnung (Reihenfolge egal); Heiztage, Raumhinweise, fehlender Vorlauf, Zähler ohne Werte oder mit unbekannter Einheit; „3 K aufheizen“ mit dem Heiz-Vorlauf; neue Fühler und Arbeitszahl sofort; Einheit „kwh“ erkannt; Tabellen auf dem Handy wischbar.
+- **Heizung: Einrichtung und Zähler robuster** — gelernte Aufheizrate bleibt beim Speichern; mehrere Wohnungen als Rest des Hauses werden genannt; Heizkreis-Löschen fragt nach; ein falscher Zählerwert verfälscht keinen Tag mehr.
 - **Arbeitszahlen der Wärmepumpe per Stift** — Warmwasser und Heizung je als fester Wert oder aus einer oder mehreren Entitäten (Kaskade: Mittelwert); Heizkreis-Anhebung in Plan und Ausblick mit der Jahresarbeitszahl Heizung.
 - **Heizung schreibt verlässlicher** — Sollwerte auf dem Raster des Geräts (gerundete Werte gelten nicht mehr als Handänderung); Kreis-Absenkung nach den Personen seiner Räume; gehaltene Thermostate bekommen auch nach Neustart oder Entfernen ihren Komfort zurück; SG-Ready lässt selbst geschaltete Relais in Ruhe; Mindest-Vorlauf gilt auch beim Folgen.
 - **Sofort laden sicherer; Strom-Klasse mit Jahresarbeitszahl Heizung** — Fenster warnt bei Ziel unter Ladestand/Minimum; ohne Stecker-Erkennung übernimmt SEA am Ziel wieder; Heute zeigt „Laden beendet“ mit „Automatisch laden“.
