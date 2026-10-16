@@ -2,6 +2,8 @@
 
 ## 0.14.1
 
+- **Arbeitszahlen der Wärmepumpe per Stift** — Warmwasser und Heizung je als fester Wert oder aus einer oder mehreren Entitäten (Kaskade: Mittelwert); Heizkreis-Anhebung in Plan und Ausblick mit der Jahresarbeitszahl Heizung.
+- **Heizung schreibt verlässlicher** — Sollwerte auf dem Raster des Geräts (gerundete Werte gelten nicht mehr als Handänderung); Kreis-Absenkung nach den Personen seiner Räume; gehaltene Thermostate bekommen auch nach Neustart oder Entfernen ihren Komfort zurück; SG-Ready lässt selbst geschaltete Relais in Ruhe; Mindest-Vorlauf gilt auch beim Folgen.
 - **Sofort laden sicherer; Strom-Klasse mit Jahresarbeitszahl Heizung** — Fenster warnt bei Ziel unter Ladestand/Minimum; ohne Stecker-Erkennung übernimmt SEA am Ziel wieder; Heute zeigt „Laden beendet“ mit „Automatisch laden“.
 - **Raum-Hinweise einheitlich** — eine Ursache, eine Meldung: zu wenig Verlauf (mit den Lücken), keine Raumtemperatur, Außentemperatur nicht eingerichtet.
 - **Energieklasse als Richtwert** — Heizwärme im typischen Jahr aus der Kennlinie, je m² und als Klasse; mit Wärmepumpe auch als Strom (÷ Leistungszahl).
