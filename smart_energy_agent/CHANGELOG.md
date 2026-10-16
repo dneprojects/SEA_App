@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Raum-Hinweise einheitlich** — eine Ursache, eine Meldung: zu wenig Verlauf (mit den Lücken), keine Raumtemperatur, Außentemperatur nicht eingerichtet.
 - **Energieklasse als Richtwert** — Heizwärme im typischen Jahr aus der Kennlinie, je m² und als Klasse; mit Wärmepumpe auch als Strom (÷ Leistungszahl).
 - **Wohnfläche zeigt die Summe darunter** — grau im leeren Feld; ein eigener Wert neben einer anderen Summe nennt sie.
 - **Analysen in zwei Bereichen** — „Energie & Kosten“ mit dem Zeitraum, „Heizung & Gebäude“ mit eigenem Zeitraum (30/90 Tage, Heizperiode).
