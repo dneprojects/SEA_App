@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Wärmezähler: Rücksprung = Neustart mit Offset** — fortlaufende, Monats- und Tageszähler; springt ein Wert zurück, zählt der Zähler vom letzten Stand als Offset weiter (auch Tages- und Stundenzähler, grob meldend, über Mitternacht); falsche Werte, auch mehrere hintereinander, und ein Sprung nach einem flachen Tag zählen nichts.
 - **Heizkreise: „Kreis für“ Heizung/Warmwasser; Personen-Regel überall gleich** — Simulation nimmt die passende Arbeitszahl; eine Regel für die Personen eines Raums (eigene, sonst die der Wohnung) überall gleich; SG-Relais nach Neustart einmal zurückgesetzt; gelernte Raster und SG-Merker entfernter Entitäten werden aufgeräumt.
 - **Wärmezähler robust gegen Ausreißer und seltene Meldungen** — stündlich oder grob meldende Zähler zählen voll, auch über Mitternacht; falsche Werte, Tausch und Ausreißer zählen nichts; Hinweise nennen den passenden neuen Zähler und bei Elektroheizungen die fehlende Heizzeit.
 - **Heizungsanalyse nennt die echte Ursache** — Rest geht an die offene Wohnung (Reihenfolge egal); Heiztage, Raumhinweise, fehlender Vorlauf, Zähler ohne Werte oder mit unbekannter Einheit; „3 K aufheizen“ mit dem Heiz-Vorlauf; neue Fühler und Arbeitszahl sofort; Einheit „kwh“ erkannt; Tabellen auf dem Handy wischbar.
