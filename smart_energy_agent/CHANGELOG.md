@@ -2,6 +2,7 @@
 
 ## 0.14.1
 
+- **Verlauf: Kurven in allen Plots ein-/ausblendbar** — Klick auf den Legenden-Eintrag auch bei „Weitere Messgrößen“ und Strompreis; Auswahl bleibt gespeichert.
 - **Online-Hilfe mit F1 und ?** — Hilfe springt zur angeklickten Karte, Dokumentation durchgehend verlinkt mit Bildern einer Beispielanlage; Seite links bündig auf weißem Grund wie der Smart Configurator.
 - **Wärmezähler: Rücksprung = Neustart mit Offset** — fortlaufende, Monats- und Tageszähler; springt ein Wert zurück, zählt der Zähler vom letzten Stand als Offset weiter (auch Tages- und Stundenzähler, grob meldend, über Mitternacht); falsche Werte, auch mehrere hintereinander, und ein Sprung nach einem flachen Tag zählen nichts.
 - **Heizkreise: „Kreis für“ Heizung/Warmwasser; Personen-Regel überall gleich** — Simulation nimmt die passende Arbeitszahl; eine Regel für die Personen eines Raums (eigene, sonst die der Wohnung) überall gleich; SG-Relais nach Neustart einmal zurückgesetzt; gelernte Raster und SG-Merker entfernter Entitäten werden aufgeräumt.
