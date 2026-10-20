@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- **Taktende Last** — bei einem im Minutentakt schaltenden Gerät (Backofen) lädt die Batterie ruhig mit dem mittleren Überschuss, statt jedem Sprung hinterherzulaufen.
+- **Eine Karte zur Zeit** — eine geöffnete Karte schließt die anderen derselben Ebene; F1/? springt zum Hilfetext der geöffneten Karte.
 - **Ausgeliefert als Kompilat** — das Image enthält den Regelkern nur noch als Maschinencode; jeder Bau testet die kompilierte Fassung vollständig, bevor er ausgeliefert wird.
 - **Ohne Lizenz gibt SEA die Geräte zurück** — eine Stunde lang zurück, wie das Haus ohne SEA läuft (PV frei, Sollwerte 0, Lasten aus, Steckdosen/Wallbox an, Heizung und Räume zurück), dann Hände weg.
 - **30 Tage Probezeit** — eine neue Anlage steuert ohne Schlüssel; gesperrt nennt „Heute“, was SEA in den letzten Tagen gespart hätte.
