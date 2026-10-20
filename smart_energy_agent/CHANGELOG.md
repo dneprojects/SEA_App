@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- **Ohne Lizenz gibt SEA die Geräte zurück** — eine Stunde lang zurück, wie das Haus ohne SEA läuft (PV frei, Sollwerte 0, Lasten aus, Steckdosen/Wallbox an, Heizung und Räume zurück), dann Hände weg.
+- **30 Tage Probezeit** — eine neue Anlage steuert ohne Schlüssel; gesperrt nennt „Heute“, was SEA in den letzten Tagen gespart hätte.
 - **Lizenz-Ablauf angekündigt** — ein befristeter Schlüssel nennt sein Ende 14 Tage vorher auf „Heute“; abgelaufen sagt der Hinweis, seit wann.
 - **Lizenzierung aktiv** — SEA steuert nur mit gültigem Lizenzschlüssel (an den Raspberry Pi gebunden, Eingabe unter Einrichtung → Lizenz); ohne Schlüssel zeichnet es weiter auf und zeigt alles an.
 
