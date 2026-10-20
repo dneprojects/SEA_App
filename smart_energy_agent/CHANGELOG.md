@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Ausgeliefert als Kompilat** — das Image enthält den Regelkern nur noch als Maschinencode; jeder Bau testet die kompilierte Fassung vollständig, bevor er ausgeliefert wird.
 - **Ohne Lizenz gibt SEA die Geräte zurück** — eine Stunde lang zurück, wie das Haus ohne SEA läuft (PV frei, Sollwerte 0, Lasten aus, Steckdosen/Wallbox an, Heizung und Räume zurück), dann Hände weg.
 - **30 Tage Probezeit** — eine neue Anlage steuert ohne Schlüssel; gesperrt nennt „Heute“, was SEA in den letzten Tagen gespart hätte.
 - **Lizenz-Ablauf angekündigt** — ein befristeter Schlüssel nennt sein Ende 14 Tage vorher auf „Heute“; abgelaufen sagt der Hinweis, seit wann.
