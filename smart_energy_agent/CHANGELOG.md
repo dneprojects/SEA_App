@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Lizenz-Ablauf angekündigt** — ein befristeter Schlüssel nennt sein Ende 14 Tage vorher auf „Heute“; abgelaufen sagt der Hinweis, seit wann.
 - **Lizenzierung aktiv** — SEA steuert nur mit gültigem Lizenzschlüssel (an den Raspberry Pi gebunden, Eingabe unter Einrichtung → Lizenz); ohne Schlüssel zeichnet es weiter auf und zeigt alles an.
 
 ## 0.14.1
