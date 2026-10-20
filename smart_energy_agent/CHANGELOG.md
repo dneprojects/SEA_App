@@ -1,64 +1,79 @@
 # Changelog
 
+## 0.15.0
+
+- **Lizenzierung aktiv** — SEA steuert nur mit gültigem Lizenzschlüssel (an den Raspberry Pi gebunden, Eingabe unter Einrichtung → Lizenz); ohne Schlüssel zeichnet es weiter auf und zeigt alles an.
+
 ## 0.14.1
 
-- **Verlauf: Kurven in allen Plots ein-/ausblendbar** — Klick auf den Legenden-Eintrag auch bei „Weitere Messgrößen“ und Strompreis; Auswahl bleibt gespeichert.
-- **Online-Hilfe mit F1 und ?** — Hilfe springt zur angeklickten Karte, Dokumentation durchgehend verlinkt mit Bildern einer Beispielanlage; Seite links bündig auf weißem Grund wie der Smart Configurator.
-- **Wärmezähler: Rücksprung = Neustart mit Offset** — fortlaufende, Monats- und Tageszähler; springt ein Wert zurück, zählt der Zähler vom letzten Stand als Offset weiter (auch Tages- und Stundenzähler, grob meldend, über Mitternacht); falsche Werte, auch mehrere hintereinander, und ein Sprung nach einem flachen Tag zählen nichts.
-- **Heizkreise: „Kreis für“ Heizung/Warmwasser; Personen-Regel überall gleich** — Simulation nimmt die passende Arbeitszahl; eine Regel für die Personen eines Raums (eigene, sonst die der Wohnung) überall gleich; SG-Relais nach Neustart einmal zurückgesetzt; gelernte Raster und SG-Merker entfernter Entitäten werden aufgeräumt.
-- **Wärmezähler robust gegen Ausreißer und seltene Meldungen** — stündlich oder grob meldende Zähler zählen voll, auch über Mitternacht; falsche Werte, Tausch und Ausreißer zählen nichts; Hinweise nennen den passenden neuen Zähler und bei Elektroheizungen die fehlende Heizzeit.
-- **Heizungsanalyse nennt die echte Ursache** — Rest geht an die offene Wohnung (Reihenfolge egal); Heiztage, Raumhinweise, fehlender Vorlauf, Zähler ohne Werte oder mit unbekannter Einheit; „3 K aufheizen“ mit dem Heiz-Vorlauf; neue Fühler und Arbeitszahl sofort; Einheit „kwh“ erkannt; Tabellen auf dem Handy wischbar.
-- **Heizung: Einrichtung und Zähler robuster** — gelernte Aufheizrate bleibt beim Speichern; mehrere Wohnungen als Rest des Hauses werden genannt; Heizkreis-Löschen fragt nach; ein falscher Zählerwert verfälscht keinen Tag mehr.
-- **Arbeitszahlen der Wärmepumpe per Stift** — Warmwasser und Heizung je als fester Wert oder aus einer oder mehreren Entitäten (Kaskade: Mittelwert); Heizkreis-Anhebung in Plan und Ausblick mit der Jahresarbeitszahl Heizung.
-- **Heizung schreibt verlässlicher** — Sollwerte auf dem Raster des Geräts (gerundete Werte gelten nicht mehr als Handänderung); Kreis-Absenkung nach den Personen seiner Räume; gehaltene Thermostate bekommen auch nach Neustart oder Entfernen ihren Komfort zurück; SG-Ready lässt selbst geschaltete Relais in Ruhe; Mindest-Vorlauf gilt auch beim Folgen.
-- **Sofort laden sicherer; Strom-Klasse mit Jahresarbeitszahl Heizung** — Fenster warnt bei Ziel unter Ladestand/Minimum; ohne Stecker-Erkennung übernimmt SEA am Ziel wieder; Heute zeigt „Laden beendet“ mit „Automatisch laden“.
-- **Raum-Hinweise einheitlich** — eine Ursache, eine Meldung: zu wenig Verlauf (mit den Lücken), keine Raumtemperatur, Außentemperatur nicht eingerichtet.
-- **Energieklasse als Richtwert** — Heizwärme im typischen Jahr aus der Kennlinie, je m² und als Klasse; mit Wärmepumpe auch als Strom (÷ Leistungszahl).
-- **Wohnfläche zeigt die Summe darunter** — grau im leeren Feld; ein eigener Wert neben einer anderen Summe nennt sie.
-- **Analysen in zwei Bereichen** — „Energie & Kosten“ mit dem Zeitraum, „Heizung & Gebäude“ mit eigenem Zeitraum (30/90 Tage, Heizperiode).
-- **Sofort laden fragt den End-Ladestand** — dort endet das Laden, bis abgesteckt oder „Automatisch laden“.
-- **Analyse nennt, was der Heizungsaufteilung fehlt** — welche Räume ohne Normleistung, zwei angekreuzte Rest-Kreise; summierter Kreis in der Analyse; 0-W-Räume ohne Anteil.
-- **21 °C statt 20 °C** — angenommene Raumtemperatur, wo kein Raumwert vorliegt.
-- **Heizkreis als Summe seiner Räume** — so kann der andere Kreis der Rest des Hauszählers sein; Normleistung 0 = kein Heizkörper; Räume ohne Thermostat heizen wie ihr Kreis.
-- **Analyse sagt, wenn die Außentemperatur fehlt** — mit dem Weg zur Einstellung (Einrichtung → Wetter).
-- **Neuer Wärmezähler: Analyse sagt, dass der erste ganze Tag noch fehlt** — statt nur „keine Wärmemenge“.
-- **Analyse nennt fehlende Wohnfläche** — „im Heizkreis fehlt die Wohnfläche bei: Bad“; zwei Rechenfehler bei Wohnungen an mehreren Kreisen behoben.
-- **Fußbodenheizung teilt auch ohne Raumtemperatur** — Räume nur mit Ventil oder ganz ohne Angabe bekommen ihren Flächenanteil; mehrere Wohnungen als Rest eines Kreises teilen ihn nach ihren Räumen.
-- **Rest mehrerer Heizkreise** — eine Wohnung an Heizkörpern und Fußbodenheizung ist der Rest dieser Kreise, nicht des Hauszählers; der Dialog nennt sonst den Grund.
-- **Vorgaben merken sich offene Karten** — Ziel, Grenzen, Strategien & Regeln, jede Strategie und Regel bleiben im Browser auf- oder zugeklappt.
-- **Analysen als Klappkarten** — jede Karte außer „Zeitraum“ klappt und bleibt im Browser gemerkt; „Räume & Wärmeverlust“ mit klappbaren Teilen.
-- **Heizung gegliedert wie Komponenten** — „Heizung“ mit den Hausangaben, darin die Karten „Heizkreise“ und „Wohnungen“.
-- **Heizzustand je Raum** — „Ventil offen · heizt“ / „Ventil zu“, ohne Ventil „heizt“ / „heizt nicht“, auch ohne Raumtemperatur; „1 Raum“ / „3 Räume“.
-- **Offen/zu-Ventile richtig gezählt** — jede Öffnung zählt mit (vorher nur die letzte: Taktventile zu hoch).
-- **Stellventil als Ventil-Entität** — HA-`valve` (offen/zu) wählbar, gezählt wird die Zeit offen; dazu Öffnung in % oder Ein/Aus.
-- **Wohnungen und Räume umsortieren** — ▲▼ in der Kopfzeile ihrer Klappkarte.
-- **Fußbodenheizung nach Fläche** — ohne Normleistung teilt sich die gemessene Kreiswärme nach Fläche × Heizzeit × Übertemperatur; Beschriftung „Anteil am Heizkreis“ / „Wärme des Heizkreises“.
-- **Anhebung bei Überschuss lesbar** — die Zahl ist die Anhebung in K (keine Priorität); Erklärung in eigener Zeile, gleich in Heizung und Wärmepumpe.
-- **Wärmequelle als Dialog** — je Ebene eine Zeile „Wärme“; der Dialog zeigt nur die passende Auswahl, eine Wohnung an einem gemessenen Heizkreis ist dessen Rest statt des Hauszählers.
-- **Wärmezähler je Heizkreis** — Haus → Heizkreis → Raum; gemessene Kreiswärme wird anteilig auf die Räume verteilt; die Heizungs-Karte ist das Haus, darin Heizkreise und Wohnungen.
-- **Leere Batterie wird nicht mehr zum Entladen aufgefordert** — „Aktuell“ zeigt bei der Batterie, was wirklich fließt.
-- **Normleistung klar benannt** — Bezugspunkt 75/65/20 °C (EN 442) steht am Feld; ein anderer Punkt ist immer eintragbar.
-- **„Laden beenden“ endet mit dem Abstecken** — und Wallbox-Zustände wie „SuspendedEV“ zählen als angesteckt (das Auto lud sonst nie zum Mindestwert).
-- **Heizung als Klappkarten** — Heizkreise und Haus wie die Komponenten; Wohnungen, Räume und Thermostate darin aufklappbar.
-- **Mindest-Ladestand immer durchgesetzt** — in jeder Stufe außer „Manuell“; der Hinweis nennt den echten Grund statt „früher anstecken“.
-- **Absenkung ausschalten stellt Räume zurück** — abgesenkte Räume bekommen einmal ihre Komforttemperatur, wie die Heizkreise.
-- **Heizkreis folgt den Räumen richtig** — ein Raum auf Komfort hält den Kreis oben (vorher reichte ein abgesenkter Raum).
-- **Anhebung je Speicher in der Prioritätenliste** — Warmwasser und jeder Heizkreis mit eigener Stelle, eigenem Häkchen und eigener Batterie-Unterstützung; die eigene Karte entfällt.
-- **Heizkreis-Spur auf „Heute“** — zeigt, wann ein geführter Kreis tiefer oder höher läuft (blass = nur Vorschlag).
-- **Heizkreise unter Vorgaben** — Absenkung und Führung je Kreis in ihren Strategie-Karten; ein Speichern unter Einrichtung überschreibt keine Vorgaben mehr.
-- **Heizkreis-Führung als eigene Strategie** — mit eigenem Schalter, unabhängig von „PV-Überschuss“ (vorher schrieb sie nur mit diesem).
-- **„Manuell“ ruht auch die Absenkung** — Räume und Heizkreise bekommen einmal ihren eigenen Wert zurück.
-- **Verlauf ordnet richtig zu** — Absenkung und Führung erscheinen nicht mehr als „WP-Anhebung“; eine Absenkung zählt nicht mehr als Anhebungs-Einsparung.
-- **Heizkreis-Führung** — SEA verschiebt das Raumsoll des Heizkreises: beobachten, den Räumen folgen oder vorsichtig lernend tiefer (bessere Leistungszahl der Wärmepumpe).
-- **Heizkreis-Führung sicherer** — eigene Schreibungen nie als Handänderung, „aus“ und entfernte Kreise stellen zurück, Lernen nur aus wirksamer Absenkung, nie über die eigene Kurve.
-- **Ein Heizkreis-Begriff** — Anhebung, Abwesenheits-Absenkung und Führung am Heizkreis unter Heizung; Wärmepumpen-Kreise mit gleichem Sollwert werden übernommen.
+### Haus, Wohnungen & Räume
 - **Haus, Wohnungen, Räume, Thermostate** — eine Hierarchie für Heizung und Absenkung; die Absenk-Gruppen werden übernommen.
 - **Mehrere Thermostate je Raum** — eine Entscheidung je Raum an alle Heizkörper.
 - **Wärmezähler auf jeder Ebene** — auch mehrere je Ebene (addieren sich), Rest des Zählers darüber oder Summe darunter; Kennzahlen je Ebene.
+- **Wärmezähler je Heizkreis** — Haus → Heizkreis → Raum; gemessene Kreiswärme wird anteilig auf die Räume verteilt; die Heizungs-Karte ist das Haus, darin Heizkreise und Wohnungen.
 - **Heizkörper-Normleistung** — Wärme in Watt, Schätzung je Raum ohne Zähler, nötige Vorlauftemperatur je Raum.
 - **Raumsoll des Heizkreises aus einer Klima-Entität** — dann gilt deren Solltemperatur.
+- **Ein Heizkreis-Begriff** — Anhebung, Abwesenheits-Absenkung und Führung am Heizkreis unter Heizung; Wärmepumpen-Kreise mit gleichem Sollwert werden übernommen.
+- **Heizung gegliedert wie Komponenten** — „Heizung“ mit den Hausangaben, darin die Karten „Heizkreise“ und „Wohnungen“.
+- **Heizung als Klappkarten** — Heizkreise und Haus wie die Komponenten; Wohnungen, Räume und Thermostate darin aufklappbar.
+- **Wohnungen und Räume umsortieren** — ▲▼ in der Kopfzeile ihrer Klappkarte.
+- **Wärmequelle als Dialog** — je Ebene eine Zeile „Wärme“; der Dialog zeigt nur die passende Auswahl, eine Wohnung an einem gemessenen Heizkreis ist dessen Rest statt des Hauszählers.
+- **Heizkreis als Summe seiner Räume** — so kann der andere Kreis der Rest des Hauszählers sein; Normleistung 0 = kein Heizkörper; Räume ohne Thermostat heizen wie ihr Kreis.
+- **Fußbodenheizung nach Fläche** — ohne Normleistung teilt sich die gemessene Kreiswärme nach Fläche × Heizzeit × Übertemperatur; Beschriftung „Anteil am Heizkreis“ / „Wärme des Heizkreises“.
+- **Fußbodenheizung teilt auch ohne Raumtemperatur** — Räume nur mit Ventil oder ganz ohne Angabe bekommen ihren Flächenanteil; mehrere Wohnungen als Rest eines Kreises teilen ihn nach ihren Räumen.
+- **Rest mehrerer Heizkreise** — eine Wohnung an Heizkörpern und Fußbodenheizung ist der Rest dieser Kreise, nicht des Hauszählers; der Dialog nennt sonst den Grund.
+- **Normleistung klar benannt** — Bezugspunkt 75/65/20 °C (EN 442) steht am Feld; ein anderer Punkt ist immer eintragbar.
+- **Wohnfläche zeigt die Summe darunter** — grau im leeren Feld; ein eigener Wert neben einer anderen Summe nennt sie.
+- **Heizzustand je Raum** — „Ventil offen · heizt“ / „Ventil zu“, ohne Ventil „heizt“ / „heizt nicht“, auch ohne Raumtemperatur; „1 Raum“ / „3 Räume“.
+- **Offen/zu-Ventile richtig gezählt** — jede Öffnung zählt mit (vorher nur die letzte: Taktventile zu hoch).
+- **Stellventil als Ventil-Entität** — HA-`valve` (offen/zu) wählbar, gezählt wird die Zeit offen; dazu Öffnung in % oder Ein/Aus.
+- **Heizkreise: „Kreis für“ Heizung/Warmwasser; Personen-Regel überall gleich** — Simulation nimmt die passende Arbeitszahl; eine Regel für die Personen eines Raums (eigene, sonst die der Wohnung) überall gleich; SG-Relais nach Neustart einmal zurückgesetzt; gelernte Raster und SG-Merker entfernter Entitäten werden aufgeräumt.
+- **Heizung: Einrichtung und Zähler robuster** — gelernte Aufheizrate bleibt beim Speichern; mehrere Wohnungen als Rest des Hauses werden genannt; Heizkreis-Löschen fragt nach; ein falscher Zählerwert verfälscht keinen Tag mehr.
+- **21 °C statt 20 °C** — angenommene Raumtemperatur, wo kein Raumwert vorliegt.
+
+### Heizung steuern
+- **Heizkreis-Führung** — SEA verschiebt das Raumsoll des Heizkreises: beobachten, den Räumen folgen oder vorsichtig lernend tiefer (bessere Leistungszahl der Wärmepumpe).
+- **Heizkreis-Führung sicherer** — eigene Schreibungen nie als Handänderung, „aus“ und entfernte Kreise stellen zurück, Lernen nur aus wirksamer Absenkung, nie über die eigene Kurve.
+- **Heizkreis-Führung als eigene Strategie** — mit eigenem Schalter, unabhängig von „PV-Überschuss“ (vorher schrieb sie nur mit diesem).
+- **Heizkreise unter Vorgaben** — Absenkung und Führung je Kreis in ihren Strategie-Karten; ein Speichern unter Einrichtung überschreibt keine Vorgaben mehr.
+- **Heizkreis-Spur auf „Heute“** — zeigt, wann ein geführter Kreis tiefer oder höher läuft (blass = nur Vorschlag).
+- **„Manuell“ ruht auch die Absenkung** — Räume und Heizkreise bekommen einmal ihren eigenen Wert zurück.
+- **Absenkung ausschalten stellt Räume zurück** — abgesenkte Räume bekommen einmal ihre Komforttemperatur, wie die Heizkreise.
+- **Heizkreis folgt den Räumen richtig** — ein Raum auf Komfort hält den Kreis oben (vorher reichte ein abgesenkter Raum).
+- **Anhebung je Speicher in der Prioritätenliste** — Warmwasser und jeder Heizkreis mit eigener Stelle, eigenem Häkchen und eigener Batterie-Unterstützung; die eigene Karte entfällt.
+- **Anhebung bei Überschuss lesbar** — die Zahl ist die Anhebung in K (keine Priorität); Erklärung in eigener Zeile, gleich in Heizung und Wärmepumpe.
+- **Heizung schreibt verlässlicher** — Sollwerte auf dem Raster des Geräts (gerundete Werte gelten nicht mehr als Handänderung); Kreis-Absenkung nach den Personen seiner Räume; gehaltene Thermostate bekommen auch nach Neustart oder Entfernen ihren Komfort zurück; SG-Ready lässt selbst geschaltete Relais in Ruhe; Mindest-Vorlauf gilt auch beim Folgen.
+- **Arbeitszahlen der Wärmepumpe per Stift** — Warmwasser und Heizung je als fester Wert oder aus einer oder mehreren Entitäten (Kaskade: Mittelwert); Heizkreis-Anhebung in Plan und Ausblick mit der Jahresarbeitszahl Heizung.
+- **Verlauf ordnet richtig zu** — Absenkung und Führung erscheinen nicht mehr als „WP-Anhebung“; eine Absenkung zählt nicht mehr als Anhebungs-Einsparung.
+
+### Wärmezähler & Heizungsanalyse
+- **Wärmezähler: Rücksprung = Neustart mit Offset** — fortlaufende, Monats- und Tageszähler; springt ein Wert zurück, zählt der Zähler vom letzten Stand als Offset weiter (auch Tages- und Stundenzähler, grob meldend, über Mitternacht); falsche Werte, auch mehrere hintereinander, und ein Sprung nach einem flachen Tag zählen nichts.
+- **Wärmezähler robust gegen Ausreißer und seltene Meldungen** — stündlich oder grob meldende Zähler zählen voll, auch über Mitternacht; falsche Werte, Tausch und Ausreißer zählen nichts; Hinweise nennen den passenden neuen Zähler und bei Elektroheizungen die fehlende Heizzeit.
+- **Heizungsanalyse nennt die echte Ursache** — Rest geht an die offene Wohnung (Reihenfolge egal); Heiztage, Raumhinweise, fehlender Vorlauf, Zähler ohne Werte oder mit unbekannter Einheit; „3 K aufheizen“ mit dem Heiz-Vorlauf; neue Fühler und Arbeitszahl sofort; Einheit „kwh“ erkannt; Tabellen auf dem Handy wischbar.
+- **Analyse nennt, was der Heizungsaufteilung fehlt** — welche Räume ohne Normleistung, zwei angekreuzte Rest-Kreise; summierter Kreis in der Analyse; 0-W-Räume ohne Anteil.
+- **Analyse sagt, wenn die Außentemperatur fehlt** — mit dem Weg zur Einstellung (Einrichtung → Wetter).
+- **Neuer Wärmezähler: Analyse sagt, dass der erste ganze Tag noch fehlt** — statt nur „keine Wärmemenge“.
+- **Analyse nennt fehlende Wohnfläche** — „im Heizkreis fehlt die Wohnfläche bei: Bad“; zwei Rechenfehler bei Wohnungen an mehreren Kreisen behoben.
+- **Raum-Hinweise einheitlich** — eine Ursache, eine Meldung: zu wenig Verlauf (mit den Lücken), keine Raumtemperatur, Außentemperatur nicht eingerichtet.
+- **Energieklasse als Richtwert** — Heizwärme im typischen Jahr aus der Kennlinie, je m² und als Klasse; mit Wärmepumpe auch als Strom (÷ Leistungszahl).
+- **Analysen in zwei Bereichen** — „Energie & Kosten“ mit dem Zeitraum, „Heizung & Gebäude“ mit eigenem Zeitraum (30/90 Tage, Heizperiode).
+- **Analysen als Klappkarten** — jede Karte außer „Zeitraum“ klappt und bleibt im Browser gemerkt; „Räume & Wärmeverlust“ mit klappbaren Teilen.
+
+### Auto & Laden
+- **Mindest-Ladestand immer durchgesetzt** — in jeder Stufe außer „Manuell“; der Hinweis nennt den echten Grund statt „früher anstecken“.
+- **„Laden beenden“ endet mit dem Abstecken** — und Wallbox-Zustände wie „SuspendedEV“ zählen als angesteckt (das Auto lud sonst nie zum Mindestwert).
+- **Sofort laden fragt den End-Ladestand** — dort endet das Laden, bis abgesteckt oder „Automatisch laden“.
+- **Sofort laden sicherer; Strom-Klasse mit Jahresarbeitszahl Heizung** — Fenster warnt bei Ziel unter Ladestand/Minimum; ohne Stecker-Erkennung übernimmt SEA am Ziel wieder; Heute zeigt „Laden beendet“ mit „Automatisch laden“.
+
+### PV & Batterie
 - **PV-Begrenzung neu** — Obergrenze aus Hausverbrauch, Netzbezug, Deckel und Batterie-Spielraum: viel weniger verschenkte PV; der Einspeise-Deckel wirkt jetzt auch ohne steuerbare Batterie, nur mit der Leistungsgrenze des Wechselrichters.
 - **Hinweis zur gesetzlichen Einspeisegrenze** — die muss der Wechselrichter selbst halten; SEA reagiert dafür zu langsam.
+- **Leere Batterie wird nicht mehr zum Entladen aufgefordert** — „Aktuell“ zeigt bei der Batterie, was wirklich fließt.
+
+### Bedienung & Hilfe
+- **Online-Hilfe mit F1 und ?** — Hilfe springt zur angeklickten Karte, Dokumentation durchgehend verlinkt mit Bildern einer Beispielanlage; Seite links bündig auf weißem Grund wie der Smart Configurator.
+- **Verlauf: Kurven in allen Plots ein-/ausblendbar** — Klick auf den Legenden-Eintrag auch bei „Weitere Messgrößen“ und Strompreis; Auswahl bleibt gespeichert.
+- **Vorgaben merken sich offene Karten** — Ziel, Grenzen, Strategien & Regeln, jede Strategie und Regel bleiben im Browser auf- oder zugeklappt.
 
 ## 0.14.0
 
