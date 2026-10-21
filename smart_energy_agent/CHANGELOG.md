@@ -2,6 +2,9 @@
 
 ## 0.15.0
 
+- **Warm-/Kaltwassertemperatur gemessen** — je eine Entität oder ein fester Wert; je Monat gemittelt, beim Kaltwasser aus den Tagestiefstwerten (Rohrfühler).
+- **Zähler, die täglich oder monatlich melden** — je Wärmezähler wählbar (z. B. Messdienst-Werte); sie zählen für den Tag bzw. Monat davor, mit Hinweis bei falscher Einstellung.
+- **Warmwasser je Monat** — WW-Wärme der Wärmepumpe gegen die Warmwasserzähler der Wohnungen: Verluste von Speicher und Zirkulation und der Anteil je Wohnung.
 - **Taktende Last** — bei einem im Minutentakt schaltenden Gerät (Backofen) lädt die Batterie ruhig mit dem mittleren Überschuss, statt jedem Sprung hinterherzulaufen.
 - **Eine Karte zur Zeit** — eine geöffnete Karte schließt die anderen derselben Ebene; F1/? springt zum Hilfetext der geöffneten Karte.
 - **Ausgeliefert als Kompilat** — das Image enthält den Regelkern nur noch als Maschinencode; jeder Bau testet die kompilierte Fassung vollständig, bevor er ausgeliefert wird.
