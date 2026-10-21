@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- **Nach einem Update** lädt eine offene SEA-Seite sich selbst neu (sie zeigte sonst die alte Oberfläche mit den neuen Daten).
+- **Warmwasserbereiter** — ein Kreis mit einem Warmwasserbereiter als Sollwert ist immer Art Warmwasser; ein Heizkreis, der den Sollwert eines Karten-Kreises schon besaß, übernimmt dessen Art.
 - **Warmwasser-Temperatur** — gemessen zählt je Tag der Wert, den das Wasser mindestens 6 Stunden erreicht, statt des Monatsmittels mit der Abkühlung im Stillstand; die Verluste fallen nicht mehr zu hoch aus.
 - **Laufende Wasserzähler** — rechnen mit denselben Zählerregeln wie die Wärmezähler; ein kurzer Ausreißer zählt nicht mehr als ganzer Zählerstand.
 - **Ein Heizkreis-Begriff** — alle Kreise, auch die Warmwasserbereitung, werden unter Heizung angelegt (Art Heizung/Warmwasser); die Kreise der Wärmepumpen-Karte wurden einmal dorthin übernommen.
