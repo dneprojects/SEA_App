@@ -2,6 +2,12 @@
 
 ## 0.15.0
 
+- **Warmwasser-Temperatur** — gemessen zählt je Tag der Wert, den das Wasser mindestens 6 Stunden erreicht, statt des Monatsmittels mit der Abkühlung im Stillstand; die Verluste fallen nicht mehr zu hoch aus.
+- **Laufende Wasserzähler** — rechnen mit denselben Zählerregeln wie die Wärmezähler; ein kurzer Ausreißer zählt nicht mehr als ganzer Zählerstand.
+- **Ein Heizkreis-Begriff** — alle Kreise, auch die Warmwasserbereitung, werden unter Heizung angelegt (Art Heizung/Warmwasser); die Kreise der Wärmepumpen-Karte wurden einmal dorthin übernommen.
+- **Einheitliche Dialoge und sichtbare Hilfe** — alle Dialoge über ein Gerüst (× schließt immer richtig), gleiche Listen und Quellen-Wahl, ⓘ an jeder Beschriftung mit Hilfe (auch am Handy), Konflikte rot, Einheiten hinter dem Feld.
+- **Heizungsanalyse sparsamer** — rechnet nur bei geänderter Struktur neu, nie mehrfach gleichzeitig; Warmwasser wird gemerkt; Fehler einmal gemeldet statt ständig.
+- **Heizung geprüft und berichtigt** — Monats-/Wasserzähler robust gegen kurze Nullen, Korrekturen und Tage ohne Verbrauch; Grenzen für Heizkurve und Raumtemperaturen; Dialoge schließen richtig, Eingaben bleiben beim Speichern erhalten.
 - **Warm-/Kaltwassertemperatur gemessen** — je eine Entität oder ein fester Wert; je Monat gemittelt, beim Kaltwasser aus den Tagestiefstwerten (Rohrfühler).
 - **Zähler, die täglich oder monatlich melden** — je Wärmezähler wählbar (z. B. Messdienst-Werte); sie zählen für den Tag bzw. Monat davor, mit Hinweis bei falscher Einstellung.
 - **Warmwasser je Monat** — WW-Wärme der Wärmepumpe gegen die Warmwasserzähler der Wohnungen: Verluste von Speicher und Zirkulation und der Anteil je Wohnung.
