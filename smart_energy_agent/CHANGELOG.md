@@ -2,6 +2,37 @@
 
 ## 0.15.0
 
+- **Ein Zuhause je Wert** — Anhebung/Netzbezug-Decken folgen ihren Einträgen in der Prioritätenliste; Batterie-Unterstützung nur noch Ja/Nein; Leistungszahl nur an der Wärmepumpe; „Vorzeichen umkehren“ nur am Netz (alte Werte werden übernommen).
+- **Weniger Last auf dem Pi** — die Batterie-Gesundheit wird höchstens stündlich neu aus dem Verlauf gerechnet, die Einstellungen je Seitenaufruf einmal geladen; HT/NT, Ladestand mehrerer Batterien und Uhrzeiten nach je einer Regel.
+- **Auto** — ohne eingetragene Kapazität plant SEA mit der Vorgabe (vorher kein Ladeplan); Ausblick und Zielprüfung rechnen mit den Ladeverlusten und der kleineren Leistung von Wallbox und Auto.
+- **Heizstab an der Steckdose** — bekommt in Ausblick und Zielprüfung seinen Speicher (heizte dort endlos).
+- **Ausblick = Tagesplan** — beide rechnen mit derselben Hauslast-Prognose; Planfenster werden mit den dynamischen Preisen bewertet; „Speicher +50 %“ vergrößert bei mehreren Batterien die eine um ihre eigene Größe.
+- **Solarprognose** — ein Fehler beim Abruf beendet die Aktualisierung nicht mehr bis zum Neustart.
+- **Oberfläche aus einem Guss** — Entitätszeilen, Hilfe-Fenster, Auto- und Maschinenknöpfe kommen je aus einem Baustein; „Automatisch laden“ steht unter Heute jetzt auch nach „Sofort laden“.
+- **Batterie „Wechselrichter regelt selbst“** — der Automatik-Modus ist jetzt einstellbar (Häkchen oder Entität).
+- **Aufgeräumt** — die alte globale Strategie-Auswahl und weitere ausgemusterte Einstellungen entfallen; der Live-Ladestand mehrerer Batterien wird mit der gemessenen Kapazität gewichtet; Neuplanung nur noch für Einstellungen, die es gibt.
+- **Anzeige bei Sensor-Ausfall** — Fluss, Sankey, Kacheln und Überschuss zeigen „–“ statt eines erfundenen Hausverbrauchs; die Kacheln sagen Netzbezug/Einspeisung und Batterie lädt/entlädt statt eines Vorzeichens.
+- **Energiebilanz Heute** — dieselben kWh wie unter Analysen (vom Server aus den Rohdaten, mit Batterie geladen/entladen).
+- **Verlauf** — Batterie mit umgekehrtem Vorzeichen richtig herum; Zeitmarken nach der Zeitumstellung richtig; „Heute“/„jetzt“ folgen der Uhr; Strategie-Zeiten mit Datum in Mehrtagesansichten; Gerätefarben wie überall.
+- **Geld** — negative Journal-Zeilen rot; der Ziel-Vorschlag nennt die Ersparnis auf der Stromrechnung (sonst „bewertet … besser“); Ø-Preis im Plan = Kosten ÷ bezogene kWh; kein „−−“ bei negativer Einspeisung; „Fest = Ist-Kosten“ korrigiert.
+- **Hilfe** — ⓘ auch bei Fahrzeugen, Strategie-Regeln und Tabellenköpfen; die Bedeutung von „fertig bis/nicht vor“ sichtbar.
+- **Priorität WP-Anhebung ↔ Batterie** — die Liste entscheidet: eine Wärmepumpe über der Batterie bekommt deren Überschuss, eine Batterie darüber behält ihren Laderaum; Batterie-Unterstützung nur für Kreise über ihr.
+- **Sensor-Ausfall** — getrennte Bezug/Einspeisung oder eine von mehreren PV-Anlagen unlesbar gilt als unbekannt statt 0 W (ein schlafender Wechselrichter nachts bleibt 0 W).
+- **Auto** — die Ladegrenze steht nur noch am Fahrzeug (die alte 99-%-Grenze der Wallbox entfällt); Ladeverluste einstellbar (Vorgabe 10 %), die Frist rechnet mit ihnen.
+- **Tarif** — ein Gerät nach seinem spätesten Start läuft auch im günstigen Fenster trotz Budget; das Fristfenster reicht über Mitternacht; Börsenpreis ohne Entität zählt als Preisquelle; eine einzige Regel „günstig jetzt“ (live wie im Ausblick, mit Einheiten).
+- **Zyklenkosten** — je Batterie einstellbar, Vorgabe 0 ct; Planer und Regelung rechnen mit demselben Wert.
+- **Plan** — eine teure Stunde entlädt nur den Netzbezug, nicht den ganzen Hausverbrauch.
+- **Ausblick & Zielprüfung** — dynamische Preise immer dabei, nur Heizstäbe zählen als Wärme, kW-Verläufe richtig gelesen, alle Batteriebänke im Speicherwert.
+- **Analysen** — unbekannte Netz-/PV-Werte werden übersprungen statt als 0 gezählt; gespeicherte Tage zu ihren echten Zeiten bepreist; Batterie-Kapazität ohne Lücken-Fehler.
+- **Zeitumstellung** — Vorheizen, Heizstab-Tagesmenge, Tagesausblick und Batteriepflege rechnen mit der echten Uhr.
+- **Robustheit** — Messwerte mit Komma gelesen, unbekannter Ladestand löst keinen Geld-Wächter aus, kein versteckter Import-Kreis mehr.
+- **Zirkulation** — beim Haus angeben (ständig, Zeitfenster, Entität oder keine): die gemessene Warmwasser-Temperatur zählt dann, wenn das Wasser wirklich so gezapft wird.
+- **Pufferspeicher** — Inhalt und Fühler an der Wärmepumpe: der Ausblick rechnet die Anhebung der Heizkreise über den Puffer; ein Verdichter, Warmwasser zuerst.
+- **Simulation der Anhebung** — jeder Kreis mit seinem eigenen Sollwert, nur das Warmwasser mit Speichermodell, die Leistung der Wärmepumpe als Summe ihrer Kreise.
+- **Laufende Wasserzähler** — eigener Maßstab: kleine Ausreißer, Nullstände und ein Zählertausch zählen nicht mehr als Verbrauch.
+- **Übernahme der Wärmepumpen-Kreise** — eine einzige, verliert keine Werte mehr (gleicher Sollwert, zwei Kreise auf einem Sollwert, ohne Wohnungen); eine Simulation schreibt nie die echte Konfiguration.
+- **Weniger Last auf dem Pi** — Monatszähler nur bei Änderung gespeichert, abgeschlossene Warmwasser-Monate gemerkt statt alle 3 Stunden neu gelesen.
+- **Oberfläche** — Namen statt Kennungen beim ersten Öffnen, Wärmepumpen-Karte aktuell, Neuladen nur einmal je Version, Warmwasser nicht in Führung und Raumauswahl, ⓘ-Hilfe auch in Vorgaben und Dialogen, Status-Seite mit den Kreis-Entitäten.
 - **Nach einem Update** lädt eine offene SEA-Seite sich selbst neu (sie zeigte sonst die alte Oberfläche mit den neuen Daten).
 - **Warmwasserbereiter** — ein Kreis mit einem Warmwasserbereiter als Sollwert ist immer Art Warmwasser; ein Heizkreis, der den Sollwert eines Karten-Kreises schon besaß, übernimmt dessen Art.
 - **Warmwasser-Temperatur** — gemessen zählt je Tag der Wert, den das Wasser mindestens 6 Stunden erreicht, statt des Monatsmittels mit der Abkühlung im Stillstand; die Verluste fallen nicht mehr zu hoch aus.
