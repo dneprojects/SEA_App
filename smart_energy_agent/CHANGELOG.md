@@ -2,6 +2,10 @@
 
 ## 0.15.0
 
+- **Planfenster mit Herkunft** — jedes Fenster sagt, wie viel Watt aus PV, Batterie und Netz kommen; Batterie, Auto und Wärmepumpe richten sich nach ihrem Anteil. Die Zielprüfung rechnet auf dem Tag des Plans.
+- **Ein Tagesplan** — die alte Faustregel-Tagesplanung entfällt; Warnungen, „kein Fenster für die Anhebung“, geplante Anhebungs-Balken im Verlauf und die Einsparprognose kommen aus dem Lauf des Plans.
+- **Heute = der Plan** — Diagramm, Fenster und Briefing zeigen den Lauf genau des Plans, der gerade gilt (neu gerechnet mit jedem Plan, nicht nach eigener Uhr).
+- **Plan in Viertelstunden** — Plan, Ausblick und Zielprüfung rechnen mit derselben Prognose im 15-Minuten-Raster der Uhr (PV zur Stundenmitte, Börsenpreis je Viertelstunde, Jetzt-Wert aus der Live-Bilanz ohne SEAs eigene Lasten).
 - **Ein Zuhause je Wert** — Anhebung/Netzbezug-Decken folgen ihren Einträgen in der Prioritätenliste; Batterie-Unterstützung nur noch Ja/Nein; Leistungszahl nur an der Wärmepumpe; „Vorzeichen umkehren“ nur am Netz (alte Werte werden übernommen).
 - **Weniger Last auf dem Pi** — die Batterie-Gesundheit wird höchstens stündlich neu aus dem Verlauf gerechnet, die Einstellungen je Seitenaufruf einmal geladen; HT/NT, Ladestand mehrerer Batterien und Uhrzeiten nach je einer Regel.
 - **Auto** — ohne eingetragene Kapazität plant SEA mit der Vorgabe (vorher kein Ladeplan); Ausblick und Zielprüfung rechnen mit den Ladeverlusten und der kleineren Leistung von Wallbox und Auto.
