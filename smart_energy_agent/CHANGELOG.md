@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **„Anlage“ statt „Komponenten“** — die Karte mit Netz, PV, Speicher, Geräten heißt jetzt „Anlage“; die Fahrzeuge stehen darin als eigener Eintrag direkt unter den Wallboxen (Zähler eine Ebene tiefer).
 - **Planfenster mit Herkunft** — jedes Fenster sagt, wie viel Watt aus PV, Batterie und Netz kommen; Batterie, Auto und Wärmepumpe richten sich nach ihrem Anteil. Die Zielprüfung rechnet auf dem Tag des Plans.
 - **Ein Tagesplan** — die alte Faustregel-Tagesplanung entfällt; Warnungen, „kein Fenster für die Anhebung“, geplante Anhebungs-Balken im Verlauf und die Einsparprognose kommen aus dem Lauf des Plans.
 - **Heute = der Plan** — Diagramm, Fenster und Briefing zeigen den Lauf genau des Plans, der gerade gilt (neu gerechnet mit jedem Plan, nicht nach eigener Uhr).
