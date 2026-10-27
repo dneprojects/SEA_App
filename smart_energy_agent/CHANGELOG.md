@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Seiten sofort nach dem Start** — der Webserver startet vor den Rechnungen, regelmäßige Abfragen stauen sich nicht mehr; „Heute“ sagt, wenn der Tagesplan noch berechnet wird; das Protokoll nennt in den ersten Minuten, was den Server aufhält.
 - **Eigener Wochenplan am Thermostat** — Wohnungen/Räume, deren Thermostate selbst nach Plan schalten (z. B. FRITZ!DECT), steuert SEA nur im Urlaub; zur Rückkehr gilt die höhere der beiden Plantemperaturen vor dem Urlaub.
 - **Urlaub je Wohnung** — mehrere Urlaube je Wohnung mit Abreise- und Rückkehrzeit, „Urlaub für alle Wohnungen“ als Schnelltaste; Urlaubstemperatur per Pfeil ab Eco, nie unter dem Frostschutz; Warmwasser optional nur, solange alle Wohnungen gleichzeitig im Urlaub sind; früher zurück beendet den Urlaub; Heizkreise richten sich nach all ihren Wohnungen; „Heute“ kündigt den Urlaub an; die Hausverbrauchs-Prognose rechnet mit der eingesparten Heizenergie.
 - **„Anlage“ statt „Komponenten“** — die Karte mit Netz, PV, Speicher, Geräten heißt jetzt „Anlage“; die Fahrzeuge stehen darin als eigener Eintrag direkt unter den Wallboxen (Zähler eine Ebene tiefer).
