@@ -2,8 +2,8 @@
 
 ## 0.15.0
 
-- **Eigener Wochenplan am Thermostat** — Wohnungen/Räume, deren Thermostate selbst nach Plan schalten (z. B. FRITZ!DECT), steuert SEA nur im Urlaub; eine von Hand gestellte Temperatur beendet den Urlaub (Rückkehr ohne Tracker).
-- **Urlaub je Wohnung** — mehrere Urlaube je Wohnung mit Abreise- und Rückkehrzeit, „Urlaub für alle Wohnungen“ als Schnelltaste; Warmwasser optional nur, solange alle Wohnungen gleichzeitig im Urlaub sind; früher zurück beendet den Urlaub; Heizkreise richten sich nach all ihren Wohnungen; „Heute“ kündigt den Urlaub an; die Hausverbrauchs-Prognose rechnet mit der eingesparten Heizenergie.
+- **Eigener Wochenplan am Thermostat** — Wohnungen/Räume, deren Thermostate selbst nach Plan schalten (z. B. FRITZ!DECT), steuert SEA nur im Urlaub; zur Rückkehr gilt die höhere der beiden Plantemperaturen vor dem Urlaub.
+- **Urlaub je Wohnung** — mehrere Urlaube je Wohnung mit Abreise- und Rückkehrzeit, „Urlaub für alle Wohnungen“ als Schnelltaste; Urlaubstemperatur per Pfeil ab Eco, nie unter dem Frostschutz; Warmwasser optional nur, solange alle Wohnungen gleichzeitig im Urlaub sind; früher zurück beendet den Urlaub; Heizkreise richten sich nach all ihren Wohnungen; „Heute“ kündigt den Urlaub an; die Hausverbrauchs-Prognose rechnet mit der eingesparten Heizenergie.
 - **„Anlage“ statt „Komponenten“** — die Karte mit Netz, PV, Speicher, Geräten heißt jetzt „Anlage“; die Fahrzeuge stehen darin als eigener Eintrag direkt unter den Wallboxen (Zähler eine Ebene tiefer).
 - **Planfenster mit Herkunft** — jedes Fenster sagt, wie viel Watt aus PV, Batterie und Netz kommen; Batterie, Auto und Wärmepumpe richten sich nach ihrem Anteil. Die Zielprüfung rechnet auf dem Tag des Plans.
 - **Ein Tagesplan** — die alte Faustregel-Tagesplanung entfällt; Warnungen, „kein Fenster für die Anhebung“, geplante Anhebungs-Balken im Verlauf und die Einsparprognose kommen aus dem Lauf des Plans.
