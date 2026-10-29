@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Urlaub endet nicht mehr beim Start** — „früher zurück“ zählt erst, wenn die Wohnung im Urlaub schon weg war; ein Urlaub ab 0:00 endete nach 15 Minuten, weil noch alle zuhause waren.
 - **Tabellen mit Spaltenhilfe bündig** — die ⓘ sitzt in der Überschrift; vorher rutschten die Werte der Heizungs-Tabellen (und aller Tabellen mit ⓘ) eine Spalte daneben.
 - **Seiten sofort nach dem Start** — der Webserver startet vor den Rechnungen, regelmäßige Abfragen stauen sich nicht mehr; „Vorgaben“ wartet nicht mehr auf das Zählen des Verlaufs, „Status“ übernimmt die Batterie-Gesundheit aus der Messung beim Start; die Heizungs-Auswertung sagt „wird berechnet“ statt eine Verbindung zu belegen; langsame Abfragen stehen im Protokoll; „Heute“ sagt, wenn der Tagesplan noch berechnet wird; das Protokoll nennt in den ersten Minuten, was den Server aufhält.
 - **Eigener Wochenplan am Thermostat** — Wohnungen/Räume, deren Thermostate selbst nach Plan schalten (z. B. FRITZ!DECT), steuert SEA nur im Urlaub; zur Rückkehr gilt die höhere der beiden Plantemperaturen vor dem Urlaub.
