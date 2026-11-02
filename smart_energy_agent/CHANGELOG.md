@@ -2,6 +2,10 @@
 
 ## 0.15.0
 
+- **Akku folgt dem Überschuss schneller** — Regler hoch 0,2 → 0,35, Abbau 0,6 → 0,8 (alte Standards werden einmal umgestellt, eigene Werte bleiben); an echten September-Tagen halbiert sich die Einspeisung bei freiem Akku, der Netzbezug beim Laden sinkt auf ein Drittel.
+- **„Ohne Steuerung“ mit Systemgrenze** — der Vergleichsakku regelt so schnell nach wie der echte (aus den Daten gemessen); das Nachregeln zählt nicht mehr gegen SEA (September −4,26 → −1,20 €), das ⓘ zeigt den Anteil.
+- **Heizstab nie mehr automatisch vor den Akku** — im September stellte die Zielprüfung mittags fast täglich auf „Heizstab vor Akku“, der Akku wurde dann oft nicht voll (Hauptgrund für „Ohne Steuerung“ −4,26 €); eine selbst eingestellte Reihenfolge bleibt.
+- **Vergleich schneller** — die drei Vergleiche kommen in einer Abfrage aus einem Durchgang durch die Daten (vorher drei gleichzeitig), eine wiederholte Abfrage kommt 10 Minuten lang sofort.
 - **Analysen ohne alte Zahlen** — beim Wechsel des Zeitraums leeren sich die Karten sofort („wird berechnet …“), statt bis zur Antwort die Werte des vorigen Zeitraums zu zeigen; ein nicht berechneter Vergleich wird wiederholt und sagt es („nicht berechnet“, Erneut berechnen) statt „–“.
 - **Analysen ohne Journal, Vergleich mit Heizung** — „SEA-Einsparung aus Entscheidungen“ entfällt (buchte den Akku-Eigenverbrauch als SEA-Ersparnis); der Vergleich bekommt die Zeile „Ohne Heizungsabsenkung (geschätzt)“; ⓘ bei „Ohne Steuerung“ zeigt, woher ein Minus kommt; verschobene Energie und Akku-Endstand werden genauer verrechnet, der Mehrverlust des echten Akkus geht nicht zu SEAs Lasten; abgeschlossene Tage kommen aus den Nacht-Ergebnissen, die Heizungs-Auswertung übersteht einen Neustart.
 - **Urlaub endet nicht mehr beim Start** — „früher zurück“ zählt erst, wenn die Wohnung im Urlaub schon weg war; ein Urlaub ab 0:00 endete nach 15 Minuten, weil noch alle zuhause waren.
