@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Heizkreis-Führung: Testlauf und Kurven-Empfehlung** — „beobachten“ zeigt jetzt, wie weit „führen“ Tag für Tag absenken würde (vorher nur ein Schritt); auf Heute kommen Vorschlag und Empfehlung für die eigene Heizkurve (anheben, andere Steilheit oder absenken) als Hinweis mit Knopf zum Übernehmen; fehlen Daten, sagt der Stand, ob Wettervorhersage oder Raumtemperaturen.
 - **PV-Prognose eine Stunde früher, wie sie gemeint ist** — Forecast.Solar meldet die Energie der Stunde, die an einem Zeitpunkt endet; SEA las sie als die Stunde danach (am Nachmittag bis 1 kW Prognose bei Dunkelheit); die gespeicherten Prognosen werden einmal mitverschoben, die Korrektur lernt sofort richtig.
 - **Prüfbank mit den echten Reglerwerten** — die Simulation (Testbank und Analysen, die Tage nachfahren) lief fest mit 0,2 statt der ausgelieferten 0,35/0,8; alle Pflicht-Prüfungen bestehen mit den echten Werten.
 - **Gespeicherte Simulationstage veralten nicht mehr unbemerkt** — welche Module ein simulierter Tag nutzt, ergibt sich jetzt aus dem Code selbst (vorher fehlten zehn, u. a. die Takt-Erkennung); die Regelung greift nicht mehr auf die Analyse-Schicht zu.
