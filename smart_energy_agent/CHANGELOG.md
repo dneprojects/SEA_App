@@ -2,6 +2,24 @@
 
 ## 0.15.0
 
+- **PV-Prognose eine Stunde früher, wie sie gemeint ist** — Forecast.Solar meldet die Energie der Stunde, die an einem Zeitpunkt endet; SEA las sie als die Stunde danach (am Nachmittag bis 1 kW Prognose bei Dunkelheit); die gespeicherten Prognosen werden einmal mitverschoben, die Korrektur lernt sofort richtig.
+- **Prüfbank mit den echten Reglerwerten** — die Simulation (Testbank und Analysen, die Tage nachfahren) lief fest mit 0,2 statt der ausgelieferten 0,35/0,8; alle Pflicht-Prüfungen bestehen mit den echten Werten.
+- **Gespeicherte Simulationstage veralten nicht mehr unbemerkt** — welche Module ein simulierter Tag nutzt, ergibt sich jetzt aus dem Code selbst (vorher fehlten zehn, u. a. die Takt-Erkennung); die Regelung greift nicht mehr auf die Analyse-Schicht zu.
+- **Fehler im Protokoll mit Ort** — Fehler der Regelung und der Hintergrund-Rechnungen stehen beim ersten Mal und dann stündlich mit Ablauf im Protokoll, Plan-Fehler als Warnung statt nur im Debug.
+- **Aufräumen** — die Einstellung des 2026 abgelösten Batterie-Optimierers entfällt; Simulations-Kopien lesen nichts mehr von der Platte; eine fehlgeschlagene Datenbank-Erweiterung wird gemeldet statt verschluckt.
+- **Vorheizen ohne Preis nicht mehr nachts aus dem Netz** — eine Stunde ohne Preis gilt als Durchschnittspreis statt als so billig wie Sonnenstrom; ein überwiegend sonniges Vorheizfenster heizt bei Wolken nicht aus Akku und Netz weiter.
+- **Preis-Entität: nach der Prognose kein Preis** — Stunden nach dem Ende der Preisprognose bekommen nicht mehr den aktuellen Preis (die Nacht sah sonst so billig aus wie der Mittag).
+- **Zielprüfung ohne Uhrzeit-Sprung** — der Wert einer gespeicherten kWh richtet sich nach dem Tagespreis, nicht nach dem Preis der Prüf-Uhrzeit (bei HT/NT sprang er um 22 Uhr); steht „Heizstab vor Akku“ in der Liste, bleiben die Vorschläge für Auto und Wärmepumpe erhalten.
+- **Urlaub in der Lastprognose nicht doppelt** — was die bisherigen Urlaubstage im gelernten Verbrauch schon zeigen, wird nicht noch einmal abgezogen.
+- **Wolken sind keine taktende Last** — an einer Wolkenkante schwankt der errechnete Hausverbrauch kurz mit der PV; das zählt nicht mehr als Backofen-Takt (vorher bis zu 2 kW Netzbezug für Minuten).
+- **Eigene Regeln ohne Netzsensor** — fällt der Netzsensor aus, setzen Regeln auf Netz oder Überschuss aus, statt mit 0 W zu schalten.
+- **Tarifvergleich: Tage und Monat passen zusammen** — der Akku-Endstand wird verrechnet (HT/NT war über die Oktobertage 11 % zu teuer), „günstig“ gilt je Tag statt je Monat; die eigene Tarifzeile zeigt den echten Netzbezug und die echte Autarkie.
+- **Nachregeln ohne Netzladen gemessen** — Zeiten, in denen der Akku gezielt aus dem Netz lädt oder ins Netz entlädt, zählen nicht mehr als „langsames Nachregeln“ (Oktober 0,19 → 0,38).
+- **Wärmezähler, der stillsteht** — holt er danach auf, wird die Wärme auf die Stunden verteilt, in denen er stand (kein 0-kWh-Tag mit Doppeltag danach); holt er nicht auf, gelten diese Tage als unbekannt. Die Hauskennlinie wird damit wieder berechnet.
+- **Heizungsersparnis nur aus SEAs Absenkungen** — SEA schreibt mit, wann es einen Raum abgesenkt hält; Absenkungen von Hand, vom Thermostat selbst oder in Wohnungen ohne Personen zählen nicht mehr.
+- **Nacht-Ergebnisse werden wieder gespeichert** — seit 03.10. wurde kein Tag mehr festgeschrieben (die Suche begann 400 Tage zurück und gab vor den ersten Messwerten auf); die Analysen rechneten deshalb alles aus den Rohdaten.
+- **Gäste-Wohnung nach dem Urlaub warm** — eine Wohnung ohne eingetragene Personen bekommt nach Urlaubsende einmal ihre Komforttemperatur zurück, statt auf der Urlaubstemperatur zu bleiben.
+- **Backup mit alten Reglerwerten** — ein Backup von vor 0.15 stellt die alten Standards 0,2/0,6 jetzt auch auf 0,35/0,8 um.
 - **Akku folgt dem Überschuss schneller** — Regler hoch 0,2 → 0,35, Abbau 0,6 → 0,8 (alte Standards werden einmal umgestellt, eigene Werte bleiben); an echten September-Tagen halbiert sich die Einspeisung bei freiem Akku, der Netzbezug beim Laden sinkt auf ein Drittel.
 - **„Ohne Steuerung“ mit Systemgrenze** — der Vergleichsakku regelt so schnell nach wie der echte (aus den Daten gemessen); das Nachregeln zählt nicht mehr gegen SEA (September −4,26 → −1,20 €), das ⓘ zeigt den Anteil.
 - **Heizstab nie mehr automatisch vor den Akku** — im September stellte die Zielprüfung mittags fast täglich auf „Heizstab vor Akku“, der Akku wurde dann oft nicht voll (Hauptgrund für „Ohne Steuerung“ −4,26 €); eine selbst eingestellte Reihenfolge bleibt.
