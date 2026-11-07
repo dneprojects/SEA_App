@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Heizkreis-Führung lernt auch mit Warmwasser-Kreis** — die Heizungsauswertung wurde bei einem Warmwasser-Kreis nie behalten: die Führung meldete täglich „Raumbedarf noch nicht geladen“ und senkte nicht ab, die Analysen rechneten jedes Mal neu; zu kurz versorgte Räume stehen jetzt mit Namen und Temperatur im Stand.
 - **Temperaturabsenkung übersichtlicher** — die Karte ist in Klappkarten gegliedert (Allgemein, Urlaub für alle, Heizkreise, je Wohnung); Abreise und Rückkehr stehen mit Tag und Uhrzeit je auf einer Zeile, die Hinweise sichtbar statt nur als Tooltip; Datumsfelder sehen aus wie die übrigen Felder.
 - **Heizkreis-Führung: Testlauf und Kurven-Empfehlung** — „beobachten“ zeigt jetzt, wie weit „führen“ Tag für Tag absenken würde (vorher nur ein Schritt); auf Heute kommen Vorschlag und Empfehlung für die eigene Heizkurve (anheben, andere Steilheit oder absenken) als Hinweis mit Knopf zum Übernehmen; fehlen Daten, sagt der Stand, ob Wettervorhersage oder Raumtemperaturen.
 - **PV-Prognose eine Stunde früher, wie sie gemeint ist** — Forecast.Solar meldet die Energie der Stunde, die an einem Zeitpunkt endet; SEA las sie als die Stunde danach (am Nachmittag bis 1 kW Prognose bei Dunkelheit); die gespeicherten Prognosen werden einmal mitverschoben, die Korrektur lernt sofort richtig.
