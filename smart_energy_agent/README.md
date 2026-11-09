@@ -25,54 +25,19 @@ If the test HA has no PV/storage system, the template sensors in
 realistic daily profile (PV, house load, battery SoC/power, grid). See the file
 header for how to include them.
 
-## Two run modes
+## Run mode: Home Assistant App only
 
-### A) Standalone container (for HA Container / development)
-
-Recommended when HA itself runs as a container (no Supervisor, no add-ons).
-Smart Energy Agent connects via websocket + long-lived token.
-
-```bash
-cp .env.example .env          # set HA_URL and HA_TOKEN
-docker compose up -d --build
-# UI: http://<host>:7790
-```
-
-Create a token: HA → profile → "Long-lived access tokens" → "Create token".
-
-`HA_URL` depending on your setup:
-- same compose/docker network: `ws://homeassistant:8123/api/websocket`
-- HA on the docker host: `ws://host.docker.internal:8123/api/websocket`
-- fixed IP: `ws://192.168.178.144:8123/api/websocket`
-
-If HA runs in another compose project, attach Smart Energy Agent to its network
-(see the commented `networks:` sections in `docker-compose.yml`).
-
-### B) Home Assistant App / add-on (for HA OS / Supervised)
-
-Add the repository as an app repository and install via the Supervisor. Uses
-Ingress (`config.yaml`, `Dockerfile`) and the `SUPERVISOR_TOKEN` automatically —
-no manual token/URL configuration needed. Publishing is automated, see
-[`DEPLOYMENT.md`](DEPLOYMENT.md).
-
-## Local run without Docker (development)
-
-```bash
-pip install -r requirements.txt
-export HA_URL=ws://192.168.178.144:8123/api/websocket
-export HA_TOKEN=...        # long-lived token
-export SEA_HISTORY_DB=./smart_energy_agent.db
-python -m smart_energy_agent.main
-# UI: http://localhost:7790
-```
+SEA runs only as a Home Assistant App (add-on, HA OS / Supervised) with a
+license. Add the repository as an app repository and install via the
+Supervisor. It uses Ingress (`config.yaml`, `Dockerfile`) and the
+`SUPERVISOR_TOKEN` the Supervisor provides; without that token it does not
+start. Publishing is automated, see [`DEPLOYMENT.md`](DEPLOYMENT.md).
 
 ## Configuration (environment variables)
 
 | Variable | Default | Meaning |
 |---|---|---|
-| `HA_URL` | `ws://localhost:8123/api/websocket` | HA websocket (standalone) |
-| `HA_TOKEN` | – | long-lived token (standalone) |
-| `SUPERVISOR_TOKEN` | – | provided automatically when run as an app |
+| `SUPERVISOR_TOKEN` | – | provided by the Supervisor; required |
 | `SEA_LOG_LEVEL` | `info` | debug/info/warning/error |
 | `SEA_HISTORY_DB` | `/data/smart_energy_agent.db` | SQLite path (volume) |
 | `SEA_HISTORY_DAYS` | `90` | raw history retention (days) |
