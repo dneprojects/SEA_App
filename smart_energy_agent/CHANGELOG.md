@@ -2,6 +2,9 @@
 
 ## 0.15.0
 
+- **Heizungsersparnis mit Heizkreis-Absenkung** — die Schätzung zählt jetzt auch Stunden, in denen SEA den Heizkreis eines Raums absenkte (aufgezeichnet ab diesem Update).
+- **Vergleich mit anderen Betriebsarten** — die geschätzte Heizungsabsenkung steckt jetzt in allen drei Vergleichen (ohne SEA keine Absenkung); SEAs Ersparnis wird in „Heizungsabsenkung“ und „Akku und Geräte“ aufgeteilt; neue Namen „PV mit Volleinspeisung“, „PV ohne Speicher“, „PV und Speicher ohne SEA“.
+- **Steuerung am Auto** — eine Wallbox ohne eigene Steuerung lädt über den Lade-Schalter oder die Ladegrenze des Autos (z. B. 30–100 %), nur wenn das Auto an dieser Wallbox bestätigt ist, höchstens alle 15 min, Freigabe beim Abstecken.
 - **Batterieplan an der Reserve** — ein geplanter Entlade-Schritt rechnete unter die Notstrom-Reserve, die folgenden Schritte mit zu leerem Akku.
 - **Werte geprüft** — Notstrom-Reserve und Lade-Grenzen je Batterie höchstens 100 %, unbekannte Strategie- und Gerätenamen werden abgewiesen.
 - **Preise in Kronen** — eine Preis-Entität in SEK/NOK/DKK pro kWh wird in Öre umgerechnet (sie galt 100-fach zu billig); Zeitstempel in Millisekunden werden erkannt.
