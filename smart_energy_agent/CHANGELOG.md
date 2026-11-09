@@ -2,6 +2,17 @@
 
 ## 0.15.0
 
+- **Batterieplan an der Reserve** — ein geplanter Entlade-Schritt rechnete unter die Notstrom-Reserve, die folgenden Schritte mit zu leerem Akku.
+- **Werte geprüft** — Notstrom-Reserve und Lade-Grenzen je Batterie höchstens 100 %, unbekannte Strategie- und Gerätenamen werden abgewiesen.
+- **Preise in Kronen** — eine Preis-Entität in SEK/NOK/DKK pro kWh wird in Öre umgerechnet (sie galt 100-fach zu billig); Zeitstempel in Millisekunden werden erkannt.
+- **Ansage zum Autoladen** — sagt „lädt voraussichtlich bis gegen …“ statt „ist fertig“ am Ende des ersten Ladeabschnitts.
+- **„nicht vor“ allein** — die Meldung beim Übergeben sagt jetzt, dass „fertig bis“ fehlt, statt „keine Zeit gesetzt“.
+- **Sauber beenden** — beim Stoppen wird die Datenbank geschlossen; die Historie wird schon nach dem Start bereinigt (vorher erst nach einem Tag Rechnerlaufzeit).
+- **Bearbeitete Backups** — unsinnige Felder in einem von Hand bearbeiteten Backup bringen die Regelung nicht mehr zum Absturz.
+- **Neueste Antwort gewinnt** — Preis-Verlauf, Anlagen-Einrichtung und Fahrzeuge zeigen nie eine überholte Antwort.
+- **PV-Schwelle der Wallbox** — zählt nur noch Lasten mit niedrigerem Rang als frei; ein vorrangiger Heizstab ließ das Auto aus dem Netz starten.
+- **Kurzer Planungshorizont** — ein Gerät mit Frist morgen wird nicht mehr nachts aus dem Netz gestartet, nur weil es nicht in den Horizont passt; eine selbst gestartete Maschine zählt in der ersten Stunde nicht mehr doppelt.
+- **Analysen genauer** — „was SEA gespart hätte“ gleicht den Akkustand am Tagesende ab; die Vergleichsbatterie startet am ersten bekannten Ladestand (gespeicherte Tage werden neu gerechnet).
 - **Tarifvergleich bevorzugt „dynamisch“ nicht mehr** — verschiebbare Geräte bekamen die Verschiebe-Gutschrift auch für den Strom, den ohnehin die Sonne lieferte; jetzt nur für den Anteil aus dem Netz (gespeicherte Tage werden neu gerechnet).
 - **Tarifvergleich: Tage und eigener Tarif** — die Überschrift zeigte bei gespeicherten Tagen „(1 T.)“ für einen ganzen Monat, und in einem vergangenen Monat fehlte „mein Tarif · Ist“; jetzt stimmen Tageszahl und Markierung.
 - **Simulierte Tage mit Aufzeichnungslücke** — war SEA einige Stunden offline, lief die Uhr der Tagessimulation danach um die Lücke nach (Preise, HT/NT-Fenster und Fristen zur falschen Zeit); jetzt hat jeder Schritt seine echte Zeit.
