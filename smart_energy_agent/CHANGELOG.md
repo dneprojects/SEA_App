@@ -2,7 +2,9 @@
 
 ## 0.15.0
 
-- **Probelauf Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und vergleicht sie im Status mit der heutigen Korrektur; angewendet wird sie noch nicht.
+- **PV-Eichung neu lernen oder Tage auslassen** — unter Einrichtung → Allgemein: nach einem Umbau ab heute neu lernen, einen Ausfall oder ein Gerüst als Zeitraum ausschließen; nichts wird gelöscht, beides lässt sich zurücknehmen.
+- **PV-Korrektur im Lauf des Tages** — liefert die PV gerade weniger oder mehr als vorhergesagt, rechnen Plan und Ausblick den Rest des Tages entsprechend, nach vorn abklingend; die Status-Karte zeigt das Verhältnis.
+- **Probelauf Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und vergleicht sie im Status mit der bisherigen Korrektur; angewendet wird sie noch nicht.
 - **Prognose gewechselt** — nach dem Wechsel der PV-Prognose oder der Wetter-Entität lernt die Korrektur neu, statt die Fehler der alten Quelle weiter anzuwenden.
 - **Einrichtung** — die Hauptkarten heißen „Elektrizität“ (statt „Anlage“) und „Wärme“ (statt „Heizung“).
 - **Wer lädt?** — „Heute“ zeigt je Wallbox, wer lädt, woran SEA es erkennt, die kWh und wie SEA steuert (mit „ändern“); der Verlauf listet die Ladevorgänge mit kWh und Kosten; zwei Wallboxen an einem Zähler teilen ihn.
