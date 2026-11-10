@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Einrichtung** — die Hauptkarten heißen „Elektrizität“ (statt „Anlage“) und „Wärme“ (statt „Heizung“).
 - **Wer lädt?** — „Heute“ zeigt je Wallbox, wer lädt, woran SEA es erkennt, die kWh und wie SEA steuert (mit „ändern“); der Verlauf listet die Ladevorgänge mit kWh und Kosten; zwei Wallboxen an einem Zähler teilen ihn.
 - **Gast und Autos ohne Ladestand** — fester Eintrag „Gast“ unter Fahrzeuge und „Laden ohne Ladestand“ für Autos ohne Ladestand-Entität: nur Überschuss / sofort bis voll / bis zu einer Menge (mit Frist geplant), Hausbatterie für Gäste wählbar; SEA erkennt „voll“; ein Gast bekommt nie das Netzladen des eigenen Autos; ungesteuerte Ladungen gehen bis zu ihrem Ende in die Vorschau.
 - **Ladevorgänge** — jede Wallbox kennt ihren Ladevorgang und wer lädt (eigenes Auto, vermutet oder Gast); „Sofort laden“/„Laden beenden“ enden mit dem Ladevorgang; abgeschlossene Ladevorgänge werden mit kWh gespeichert.
