@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- **Probelauf Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und vergleicht sie im Status mit der heutigen Korrektur; angewendet wird sie noch nicht.
+- **Prognose gewechselt** — nach dem Wechsel der PV-Prognose oder der Wetter-Entität lernt die Korrektur neu, statt die Fehler der alten Quelle weiter anzuwenden.
 - **Einrichtung** — die Hauptkarten heißen „Elektrizität“ (statt „Anlage“) und „Wärme“ (statt „Heizung“).
 - **Wer lädt?** — „Heute“ zeigt je Wallbox, wer lädt, woran SEA es erkennt, die kWh und wie SEA steuert (mit „ändern“); der Verlauf listet die Ladevorgänge mit kWh und Kosten; zwei Wallboxen an einem Zähler teilen ihn.
 - **Gast und Autos ohne Ladestand** — fester Eintrag „Gast“ unter Fahrzeuge und „Laden ohne Ladestand“ für Autos ohne Ladestand-Entität: nur Überschuss / sofort bis voll / bis zu einer Menge (mit Frist geplant), Hausbatterie für Gäste wählbar; SEA erkennt „voll“; ein Gast bekommt nie das Netzladen des eigenen Autos; ungesteuerte Ladungen gehen bis zu ihrem Ende in die Vorschau.
