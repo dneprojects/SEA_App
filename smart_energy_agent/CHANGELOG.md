@@ -2,6 +2,9 @@
 
 ## 0.15.0
 
+- **Wer lädt?** — „Heute“ zeigt je Wallbox, wer lädt, woran SEA es erkennt, die kWh und wie SEA steuert (mit „ändern“); der Verlauf listet die Ladevorgänge mit kWh und Kosten; zwei Wallboxen an einem Zähler teilen ihn.
+- **Gast und Autos ohne Ladestand** — fester Eintrag „Gast“ unter Fahrzeuge und „Laden ohne Ladestand“ für Autos ohne Ladestand-Entität: nur Überschuss / sofort bis voll / bis zu einer Menge (mit Frist geplant), Hausbatterie für Gäste wählbar; SEA erkennt „voll“; ein Gast bekommt nie das Netzladen des eigenen Autos; ungesteuerte Ladungen gehen bis zu ihrem Ende in die Vorschau.
+- **Ladevorgänge** — jede Wallbox kennt ihren Ladevorgang und wer lädt (eigenes Auto, vermutet oder Gast); „Sofort laden“/„Laden beenden“ enden mit dem Ladevorgang; abgeschlossene Ladevorgänge werden mit kWh gespeichert.
 - **Heizungsersparnis mit Heizkreis-Absenkung** — die Schätzung zählt jetzt auch Stunden, in denen SEA den Heizkreis eines Raums absenkte (aufgezeichnet ab diesem Update).
 - **Vergleich mit anderen Betriebsarten** — die geschätzte Heizungsabsenkung steckt jetzt in allen drei Vergleichen (ohne SEA keine Absenkung); SEAs Ersparnis wird in „Heizungsabsenkung“ und „Akku und Geräte“ aufgeteilt; neue Namen „PV mit Volleinspeisung“, „PV ohne Speicher“, „PV und Speicher ohne SEA“.
 - **Steuerung am Auto** — eine Wallbox ohne eigene Steuerung lädt über den Lade-Schalter oder die Ladegrenze des Autos (z. B. 30–100 %), nur wenn das Auto an dieser Wallbox bestätigt ist, höchstens alle 15 min, Freigabe beim Abstecken.
