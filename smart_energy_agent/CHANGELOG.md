@@ -6,7 +6,7 @@
 - **PV-Karte unter Status** — Prognose und Messung nebeneinander für jetzt, heute bisher und gestern; die Güte heißt jetzt „im Mittel X % daneben“; der Netzlade-Abschlag erscheint nur, wo er wirkt.
 - **Wetter und Prognosen** — PV-Prognose, Wetter und „Prognose eichen“ stehen unter Einrichtung in einer eigenen Karte statt unter „Allgemein“; Sonderfälle beim Lernen regelt SEA selbst.
 - **PV-Korrektur im Lauf des Tages** — liefert die PV gerade weniger oder mehr als vorhergesagt, rechnen Plan und Ausblick den Rest des Tages entsprechend, nach vorn abklingend; die Status-Karte zeigt das Verhältnis.
-- **Probelauf Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und vergleicht sie im Status mit der bisherigen Korrektur; angewendet wird sie noch nicht.
+- **Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und wendet sie an; trifft sie schlechter als die Korrektur nach Uhrzeit, gilt diese; die PV-Karte zeigt die Himmelskarte.
 - **Prognose gewechselt** — nach dem Wechsel der PV-Prognose oder der Wetter-Entität lernt die Korrektur neu, statt die Fehler der alten Quelle weiter anzuwenden.
 - **Einrichtung** — die Hauptkarten heißen „Elektrizität“ (statt „Anlage“) und „Wärme“ (statt „Heizung“).
 - **Wer lädt?** — „Heute“ zeigt je Wallbox, wer lädt, woran SEA es erkennt, die kWh und wie SEA steuert (mit „ändern“); der Verlauf listet die Ladevorgänge mit kWh und Kosten; zwei Wallboxen an einem Zähler teilen ihn.
