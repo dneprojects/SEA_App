@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- **Hilfetexte** — die ⓘ-Erklärungen und Hinweise sind kürzer und sachlicher.
+- **PV-Karte unter Status** — Prognose und Messung nebeneinander für jetzt, heute bisher und gestern; die Güte heißt jetzt „im Mittel X % daneben“; der Netzlade-Abschlag erscheint nur, wo er wirkt.
 - **Wetter und Prognosen** — PV-Prognose, Wetter und „Prognose eichen“ stehen unter Einrichtung in einer eigenen Karte statt unter „Allgemein“; Sonderfälle beim Lernen regelt SEA selbst.
 - **PV-Korrektur im Lauf des Tages** — liefert die PV gerade weniger oder mehr als vorhergesagt, rechnen Plan und Ausblick den Rest des Tages entsprechend, nach vorn abklingend; die Status-Karte zeigt das Verhältnis.
 - **Probelauf Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und vergleicht sie im Status mit der bisherigen Korrektur; angewendet wird sie noch nicht.
