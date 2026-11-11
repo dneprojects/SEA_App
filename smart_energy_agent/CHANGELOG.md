@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Mehrere PV-Prognosen vergleichen** — Solar-Prognosen der Energie-Seite und Open-Meteo/Solcast direkt über ihre Sensoren (Flächen einer Integration addiert) bewertet SEA jede für sich und plant nach 14 Tagen mit der, die klar besser trifft.
 - **PV-Eichung im Winter** — die Korrektur nach Uhrzeit darf die Prognose bis auf 35 % senken (vorher 50 %); im Winter lag die Anlage darunter.
 - **Auffälligkeiten der PV-Anlage** — mit gemessener Sonne vergleicht SEA die Anlage mit sich selbst beim gleichen Sonnenstand und meldet Ausfall, neuen Schatten oder Reinigung mit Nachfrage; „Gereinigt“ hebt nur das Niveau; Helligkeitssensor samt Vorgeschichte aus Home Assistant; ohne ihn nur Ausfall-Erkennung.
 - **Hilfetexte** — die ⓘ-Erklärungen, Statuszeilen und Hinweise sind kürzer und sachlicher; kein doppeltes ⓘ mehr.
