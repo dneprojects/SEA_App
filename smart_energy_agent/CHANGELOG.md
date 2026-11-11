@@ -2,10 +2,10 @@
 
 ## 0.15.0
 
-- **Auffälligkeiten der PV-Anlage** — SEA erkennt an klaren Tagen Ausfall, neuen Schatten, Reinigung oder Erweiterung meldet sie und fragt nach; „Gereinigt“ hebt nur das Niveau; optional mit Helligkeitssensor (samt Vorgeschichte aus Home Assistant).
-- **Verschmutzung (geschätzt)** — die PV-Karte zeigt die Drift der Anlage seit dem letzten Regen oder der letzten Reinigung, aus der ganzen Historie mit herausgerechneter Temperatur; ab 8 % meldet SEA sie.
+- **PV-Eichung im Winter** — die Korrektur nach Uhrzeit darf die Prognose bis auf 35 % senken (vorher 50 %); im Winter lag die Anlage darunter.
+- **Auffälligkeiten der PV-Anlage** — mit gemessener Sonne vergleicht SEA die Anlage mit sich selbst beim gleichen Sonnenstand und meldet Ausfall, neuen Schatten oder Reinigung mit Nachfrage; „Gereinigt“ hebt nur das Niveau; Helligkeitssensor samt Vorgeschichte aus Home Assistant; ohne ihn nur Ausfall-Erkennung.
 - **Hilfetexte** — die ⓘ-Erklärungen, Statuszeilen und Hinweise sind kürzer und sachlicher; kein doppeltes ⓘ mehr.
-- **PV-Karte unter Status** — Prognose und Messung nebeneinander für jetzt, heute bisher und gestern; die Güte heißt jetzt „im Mittel X % daneben“; der Netzlade-Abschlag erscheint nur, wo er wirkt.
+- **PV-Karte unter Status** — eine Prognose (die geplante) neben der Messung für jetzt, heute und gestern, die Abweichung als kWh je Tag, Verschattung und Anlage mit kurzer Erklärung hinter ⓘ; der Netzlade-Abschlag erscheint nur, wo er wirkt.
 - **Wetter und Prognosen** — PV-Prognose, Wetter und „Prognose eichen“ stehen unter Einrichtung in einer eigenen Karte statt unter „Allgemein“; Sonderfälle beim Lernen regelt SEA selbst.
 - **PV-Korrektur im Lauf des Tages** — liefert die PV gerade weniger oder mehr als vorhergesagt, rechnen Plan und Ausblick den Rest des Tages entsprechend, nach vorn abklingend; die Status-Karte zeigt das Verhältnis.
 - **Korrektur nach Sonnenstand** — SEA lernt Verschattung nach dem Ort der Sonne am Himmel aus bis zu 400 Tagen (auch rückwirkend aus der Statistik von Home Assistant) und wendet sie an; trifft sie schlechter als die Korrektur nach Uhrzeit, gilt diese; die PV-Karte zeigt die Himmelskarte.
