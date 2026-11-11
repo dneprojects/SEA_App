@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- **Auffälligkeiten der PV-Anlage** — SEA erkennt an klaren Tagen Ausfall, neuen Schatten, Reinigung oder Erweiterung meldet sie und fragt nach; „Gereinigt“ hebt nur das Niveau; optional mit Helligkeitssensor (samt Vorgeschichte aus Home Assistant).
+- **Verschmutzung (geschätzt)** — die PV-Karte zeigt die Drift der Anlage seit dem letzten Regen oder der letzten Reinigung, aus der ganzen Historie mit herausgerechneter Temperatur; ab 8 % meldet SEA sie.
 - **Hilfetexte** — die ⓘ-Erklärungen, Statuszeilen und Hinweise sind kürzer und sachlicher; kein doppeltes ⓘ mehr.
 - **PV-Karte unter Status** — Prognose und Messung nebeneinander für jetzt, heute bisher und gestern; die Güte heißt jetzt „im Mittel X % daneben“; der Netzlade-Abschlag erscheint nur, wo er wirkt.
 - **Wetter und Prognosen** — PV-Prognose, Wetter und „Prognose eichen“ stehen unter Einrichtung in einer eigenen Karte statt unter „Allgemein“; Sonderfälle beim Lernen regelt SEA selbst.
