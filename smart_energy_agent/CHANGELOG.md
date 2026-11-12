@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Himmelskarte** — 100 % misst sich nicht mehr an einzelnen Ausreißerfeldern, leichter Schatten ist nur noch blass.
 - **PV-Prognosen sofort vergleichen** — aus der HA-Aufzeichnung ihrer Leistung jetzt; die Himmelskarte lernt nur aus der geplanten Prognose, neu beim Wechsel, und zeigt 100 % = unverschattet.
 - **Status-Karten** — „Heizung – Räume“ nach Wohnungen gegliedert; die ⓘ stehen in einer eigenen Spalte am Zeilenende.
 - **Mehrere PV-Prognosen vergleichen** — Solar-Prognosen der Energie-Seite und Open-Meteo/Solcast direkt über ihre Sensoren (Flächen einer Integration addiert) bewertet SEA jede für sich und plant nach 14 Tagen mit der, die klar besser trifft.
