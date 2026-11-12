@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Himmelskarte sofort** — die Vorgeschichte aus Home Assistant kommt von der geplanten Prognose, auch von Open-Meteo oder Solcast, nicht nur von Forecast.Solar.
 - **Himmelskarte** — 100 % misst sich nicht mehr an einzelnen Ausreißerfeldern, leichter Schatten ist nur noch blass.
 - **PV-Prognosen sofort vergleichen** — aus der HA-Aufzeichnung ihrer Leistung jetzt; die Himmelskarte lernt nur aus der geplanten Prognose, neu beim Wechsel, und zeigt 100 % = unverschattet.
 - **Status-Karten** — „Heizung – Räume“ nach Wohnungen gegliedert; die ⓘ stehen in einer eigenen Spalte am Zeilenende.
