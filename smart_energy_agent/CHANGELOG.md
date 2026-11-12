@@ -2,7 +2,7 @@
 
 ## 0.15.0
 
-- **Schattenkarte** — die Himmelskarte zeigt den Schatten allein: klare Stunden gegen die Dachflächen ohne Hindernis, Neigung und Ausrichtung aus den Einstellungen von Forecast.Solar, Open-Meteo oder Solcast.
+- **Schattenkarte** — die Himmelskarte zeigt den Schatten allein: klare Stunden gegen die Dachflächen ohne Hindernis, Neigung und Ausrichtung aus den Einstellungen von Forecast.Solar (auch mit Flächen als Untereinträgen), Open-Meteo oder Solcast.
 - **Himmelskarte sofort** — die Vorgeschichte aus Home Assistant kommt von der geplanten Prognose, auch von Open-Meteo oder Solcast, nicht nur von Forecast.Solar.
 - **Himmelskarte** — 100 % misst sich nicht mehr an einzelnen Ausreißerfeldern, leichter Schatten ist nur noch blass.
 - **PV-Prognosen sofort vergleichen** — aus der HA-Aufzeichnung ihrer Leistung jetzt; die Himmelskarte lernt nur aus der geplanten Prognose, neu beim Wechsel, und zeigt 100 % = unverschattet.
