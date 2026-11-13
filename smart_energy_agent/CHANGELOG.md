@@ -11,6 +11,8 @@
 - **Schattenkarte** — Gelb (volle Sonne) bis Braun (≤ 30 %), Weiß für ungelernte Felder, alle Felder der Sonnenbahn, Himmelsrichtungen NO bis NW.
 - **Schattenkarte füllt sich schneller** — ein Feld gilt ab dem ersten klaren Tag, fast klare Stunden zählen hochgerechnet mit (Feld: 195 statt 140 von 206 Feldern, 5 % weniger Tagesabweichung).
 - **Normierung mit 14 Tagen Rückblick** — eine graue Vorhersagewoche hebt die PV-Prognose nicht mehr an (Feld: 9 % weniger Tagesabweichung).
+- **Schattenkarte: leere Felder aus den Nachbarn** — ein ungelerntes Feld mit mindestens zwei Nachbarn bekommt deren Mittelwert, in Runden und bis an den Horizont (Feld: 2 % weniger Tagesabweichung).
+- **Dachflächen mit ⓘ** — erklärt Neigung, Richtung und kWp.
 - **Mehrere PV-Anlagen** — jede Anlage mit eigener Leistungsmessung zeigt ihre eigene Schattenkarte, Anlagengüte und Verluste; Dachflächen je Anlage eintragbar (z. B. Balkonanlage senkrecht am Geländer).
 - **Zwei PV-Anlagen, nur eine mit DC-Sensoren** — kein Wechselrichterverlust mehr aus der DC-Leistung einer Anlage gegen die AC-Leistung beider; die Spannung zählt weiter für die Wärme.
 - **Status-Zeilen auf dem Handy** — reicht die Breite nicht, steht der Wert unter der Beschriftung statt darüber.
