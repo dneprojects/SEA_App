@@ -2,12 +2,16 @@
 
 ## 0.15.0
 
-- **PV-Korrektur in zwei Teilen** — Leistungsfähigkeit der Anlage ÷ Maßstab der Vorhersage × Schatten gilt ab dem ersten Tag, auch nach einem Wechsel des Wetterdienstes; nur der Restfehler des Dienstes wird aus dem Vergleich gelernt, der Faktor je Uhrzeit entfällt.
-- **Schattenkarte bereinigt** — jede Stunde wird an der Leistungsfähigkeit ihres Tages gemessen, Schmutz und Jahreszeit erscheinen nicht mehr als Schatten.
-- **Zustand der Anlage** — Leistungsfähigkeit ohne Wärme und Dunst sowie die Verluste durch Wärme, Wechselrichter und Schmutz; ab 10 % Schmutz ein Hinweis mit kWh und € im Monat. Optional DC-Spannung und DC-Strom je Strang beim PV-Gerät.
+- **PV-Korrektur in zwei Teilen** — Dunst × Anlagengüte ÷ Normierung der Vorhersage × Schatten gilt ab dem ersten Tag, auch nach einem Wechsel des Wetterdienstes; nur der Restfehler des Dienstes wird aus dem Vergleich gelernt, der Faktor je Uhrzeit entfällt.
+- **Schattenkarte bereinigt** — jede Stunde wird am Wert ihres Tages gemessen, Schmutz und Jahreszeit erscheinen nicht mehr als Schatten.
+- **Feld „Energie“ heißt jetzt „Zähler“** (PV: „Ertragszähler“), mit Hinweis: nur Anzeige im Verlauf.
+- **Zustand der Anlage** — Dunst, Anlagengüte und ihre Verluste durch Wärme, Wechselrichter, Schmutz und übrige (zusammen 100 %) in der Unterkarte „Details zur PV-Prognose“; ab 10 % Schmutz ein Hinweis mit kWh und € im Monat. Optional DC-Spannung und DC-Strom je Strang beim PV-Gerät.
 - **Schattenkarte** — die Himmelskarte zeigt den Schatten allein: klare Stunden gegen die Dachflächen ohne Hindernis, Neigung und Ausrichtung aus den Einstellungen von Forecast.Solar (auch mit Flächen als Untereinträgen), Open-Meteo oder Solcast; Stunden vor dem Einbau des Helligkeitssensors zählen nach der PV allein.
 - **Himmelskarte sofort** — die Vorgeschichte aus Home Assistant kommt von der geplanten Prognose, auch von Open-Meteo oder Solcast, nicht nur von Forecast.Solar.
-- **Himmelskarte** — Gelb (volle Sonne) bis Braun (≤ 30 %), Weiß für ungelernte Felder, alle Felder der Sonnenbahn, Himmelsrichtungen NO bis NW.
+- **Schattenkarte** — Gelb (volle Sonne) bis Braun (≤ 30 %), Weiß für ungelernte Felder, alle Felder der Sonnenbahn, Himmelsrichtungen NO bis NW.
+- **Schattenkarte füllt sich schneller** — ein Feld gilt ab dem ersten klaren Tag, fast klare Stunden zählen hochgerechnet mit (Feld: 195 statt 140 von 206 Feldern, 5 % weniger Tagesabweichung).
+- **Normierung mit 14 Tagen Rückblick** — eine graue Vorhersagewoche hebt die PV-Prognose nicht mehr an (Feld: 9 % weniger Tagesabweichung).
+- **Status-Zeilen auf dem Handy** — reicht die Breite nicht, steht der Wert unter der Beschriftung statt darüber.
 - **PV-Prognosen sofort vergleichen** — aus der HA-Aufzeichnung ihrer Leistung jetzt; die Himmelskarte lernt nur aus der geplanten Prognose, neu beim Wechsel, und zeigt 100 % = unverschattet.
 - **Status-Karten** — „Heizung – Räume“ nach Wohnungen gegliedert; die ⓘ stehen in einer eigenen Spalte am Zeilenende.
 - **Mehrere PV-Prognosen vergleichen** — Solar-Prognosen der Energie-Seite und Open-Meteo/Solcast direkt über ihre Sensoren (Flächen einer Integration addiert) bewertet SEA jede für sich und plant nach 14 Tagen mit der, die klar besser trifft.
