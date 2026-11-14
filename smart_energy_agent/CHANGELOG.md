@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **SEA wurde nachts und alle 15 Minuten zäh** — der Restfehler der PV-Prognose rechnet 6-mal schneller; die nächtliche Neuberechnung der Tagessimulationen läuft in Häppchen mit Zeitgrenze und verliert bei einem Neustart nichts; die Tagesbilanz auf „Heute“ fragt nicht mehr jede Minute eine neue Rechnung an.
 - **PV-Korrektur in zwei Teilen** — Dunst × Anlagengüte ÷ Normierung der Vorhersage × Schatten gilt ab dem ersten Tag, auch nach einem Wechsel des Wetterdienstes; nur der Restfehler des Dienstes wird aus dem Vergleich gelernt, der Faktor je Uhrzeit entfällt.
 - **Schattenkarte bereinigt** — jede Stunde wird am Wert ihres Tages gemessen, Schmutz und Jahreszeit erscheinen nicht mehr als Schatten.
 - **Feld „Energie“ heißt jetzt „Zähler“** (PV: „Ertragszähler“), mit Hinweis: nur Anzeige im Verlauf.
