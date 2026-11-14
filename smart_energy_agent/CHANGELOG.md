@@ -2,6 +2,13 @@
 
 ## 0.15.0
 
+- **SEA-Werte in Home Assistant** — PV-Prognose, Strompreis, günstiges Fenster, Akku-Plan, Kosten und Einsparung heute, Hinweise, negativer Preis, §14a als `sensor.sea_…`; mit der Habitron-Integration als eigenes Gerät „Smart Energy Agent“.
+- **Hinweise nur mit Wirkung** — keine Umstellung und kein Vorschlag, der erst morgen wirken würde.
+- **Rückblick** — wöchentlich und monatlich als HA-Benachrichtigung und aufs Handy.
+- **Restlaufzeit der Haushaltsgeräte** — mit der vom Gerät gemeldeten Restlaufzeit plant SEA das gewählte Programm.
+- **Negativer Börsenpreis** — Einstellung an der PV („wird vergütet / nicht vergütet / kostet“): bei negativem Preis keine Einspeisung, Akku und Verbraucher nehmen den Strom, Rest wird abgeregelt; der Plan reserviert vorher Kapazität.
+- **§14a-Dimmung** — Dimm-Signal am Netz und „§14a-Gerät“ je Gerät: SEA hält den Netzbezug der Geräte unter der Grenze, Akku und PV decken den Rest; eine laufende Dimmung plant SEA zwei Stunden weiter ein und protokolliert jede Dimmung (3 Jahre).
+- **Analysen und Ausblick mit negativen Preisen** — Einspeisung in diesen Stunden zählt nach der Einstellung an der PV (0 € oder Börsenpreis).
 - **Start ruhiger** — große Hintergrund-Rechnungen laufen nacheinander und erst 30 s nach dem Start; das Protokoll nennt bei Blockaden und langsamen Abfragen, was nebenher rechnete.
 - **Status nach dem Start schneller** — der Ausblick holt die Speicherschätzung nicht mehr bei jedem Lauf neu aus Home Assistant; die nächtliche Tagessimulation liest nur die fehlenden Tage; die PV-Karten lernen nur neu, wenn neue Stunden da sind, und merken sich Sonnenstand und Klarhimmel jeder Stunde (Lernrunde knapp dreimal so schnell); der dynamische Tarif in der Simulation rechnet nicht mehr quadratisch.
 - **Überwachung** — jede Blockade des Servers wird mit SEA-Rechenzeit, Last und Speicher protokolliert.
