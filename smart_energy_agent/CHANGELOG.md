@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- **Start ruhiger** — große Hintergrund-Rechnungen laufen nacheinander und erst 30 s nach dem Start; das Protokoll nennt bei Blockaden und langsamen Abfragen, was nebenher rechnete.
 - **Status nach dem Start schneller** — der Ausblick holt die Speicherschätzung nicht mehr bei jedem Lauf neu aus Home Assistant; die nächtliche Tagessimulation liest nur die fehlenden Tage; die PV-Karten lernen nur neu, wenn neue Stunden da sind, und merken sich Sonnenstand und Klarhimmel jeder Stunde (Lernrunde knapp dreimal so schnell); der dynamische Tarif in der Simulation rechnet nicht mehr quadratisch.
 - **Überwachung** — jede Blockade des Servers wird mit SEA-Rechenzeit, Last und Speicher protokolliert.
 - **Schattenkarte** — die Farben der Felder entsprechen den Stufen der Legende; ein Kreis auf der Linie „heute“ zeigt die Sonne jetzt; die Karte klappt nicht mehr von selbst zu.
