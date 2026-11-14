@@ -2,6 +2,13 @@
 
 ## 0.15.0
 
+- **Status nach dem Start schneller** — der Ausblick holt die Speicherschätzung nicht mehr bei jedem Lauf neu aus Home Assistant; die nächtliche Tagessimulation liest nur die fehlenden Tage; die PV-Karten lernen nur neu, wenn neue Stunden da sind, und merken sich Sonnenstand und Klarhimmel jeder Stunde (Lernrunde knapp dreimal so schnell); der dynamische Tarif in der Simulation rechnet nicht mehr quadratisch.
+- **Überwachung** — jede Blockade des Servers wird mit SEA-Rechenzeit, Last und Speicher protokolliert.
+- **Schattenkarte** — die Farben der Felder entsprechen den Stufen der Legende; ein Kreis auf der Linie „heute“ zeigt die Sonne jetzt; die Karte klappt nicht mehr von selbst zu.
+- **Rechenfehler behoben** — Wärmeverlust des Speichers, Plan-Ladestand über dem Netzladeziel, zweite PV-Anlage in kW ×1000, Außentemperatur in °F, ein Tag zu viel im Investitionsbericht, Tage ohne Aufzeichnung, Heizungs-Ersparnis ohne Preis, Einsparung mit alten Tarifwerten.
+- **Simulations-Cache kennt die Anlage** — nach einer Geräteänderung rechnet SEA die Tage neu; Tage ohne Rohdaten behalten ihren letzten Stand.
+- **„Verpasste Einsparung“** zählt die gespeicherte Wärme; **Pufferladung** mit der Steilheit des Heizkreises; **PV-Korrektur** als Ganzes begrenzt.
+
 - **Einrichtung lädt schneller** — die Seite fragt ihre fünf Teile gleichzeitig ab statt nacheinander.
 - **SEA wurde nachts und alle 15 Minuten zäh** — der Restfehler der PV-Prognose rechnet 6-mal schneller; die nächtliche Neuberechnung der Tagessimulationen läuft in Häppchen mit Zeitgrenze und verliert bei einem Neustart nichts; die Tagesbilanz auf „Heute“ fragt nicht mehr jede Minute eine neue Rechnung an.
 - **PV-Korrektur in zwei Teilen** — Dunst × Anlagengüte ÷ Normierung der Vorhersage × Schatten gilt ab dem ersten Tag, auch nach einem Wechsel des Wetterdienstes; nur der Restfehler des Dienstes wird aus dem Vergleich gelernt, der Faktor je Uhrzeit entfällt.
