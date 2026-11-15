@@ -1,7 +1,7 @@
 # Home Assistant App (formerly add-on) configuration for Smart Energy Agent.
 # Phase 1: entity discovery, curation and monitoring
 name: Smart Energy Agent (Beta)
-version: "0.15.0-beta.97"
+version: "0.15.0-beta.98"
 slug: smart_energy_agent_beta
 description: >-
   Detects energy-related HA entities (power, energy, PV, grid, battery,
@@ -23,6 +23,9 @@ panel_title: Smart Energy Agent
 panel_admin: false           # show the sidebar panel to non-admin users too
 hassio_api: true
 homeassistant_api: true
+# the Habitron integration finds SEA's API (/api/v1) through the Supervisor's discovery
+discovery:
+  - habitron
 # Persistent storage for config (JSON) and history (SQLite). The addon_config
 # share is mounted at /config inside the container (host: /addon_configs/<slug>)
 # and survives restart, update and uninstall.

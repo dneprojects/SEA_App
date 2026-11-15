@@ -2,7 +2,7 @@
 
 ## 0.15.0
 
-- **SEA-Werte in Home Assistant** — PV-Prognose, Strompreis, günstiges Fenster, Akku-Plan, Kosten und Einsparung heute, Hinweise, negativer Preis, §14a als `sensor.sea_…`; mit der Habitron-Integration als eigenes Gerät „Smart Energy Agent“.
+- **SEA-Werte in Home Assistant** — PV-Prognose, Strompreis, günstiges Fenster, Akku-Plan, Kosten und Einsparung heute, Hinweise, negativer Preis, §14a; die Habitron-Integration findet SEA selbst und zeigt es als eigenes Gerät, sonst als `sensor.sea_…`.
 - **Hinweise nur mit Wirkung** — keine Umstellung und kein Vorschlag, der erst morgen wirken würde.
 - **Rückblick** — wöchentlich und monatlich als HA-Benachrichtigung und aufs Handy.
 - **Restlaufzeit der Haushaltsgeräte** — mit der vom Gerät gemeldeten Restlaufzeit plant SEA das gewählte Programm.
