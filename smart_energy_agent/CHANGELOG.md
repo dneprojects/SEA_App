@@ -3,6 +3,7 @@
 ## 0.15.0
 
 - **SEA-Werte in Home Assistant** — PV-Prognose, Strompreis, günstiges Fenster, Akku-Plan, Kosten und Einsparung heute, Hinweise, negativer Preis, §14a; die Habitron-Integration findet SEA selbst und zeigt es als eigenes Gerät, sonst als `sensor.sea_…`; dazu Tarif und je Strategie ihr Zustand (Aus, Voraussetzung fehlt, Bereit, Wirkt) für Automationen; Strategien und Regelung aus HA schaltbar.
+- **Gewohnheiten je Wochentag** — ohne eigene Frist plant SEA mit der gelernten Abfahrt und dem Tagesverbrauch des Autos; die Zirkulation kann SEA nach den gelernten Zapfzeiten schalten.
 - **Heizungsersparnis ohne Lücke** — fehlt in einem milden Monat die Kennlinie, rechnet SEA mit der zuletzt gültigen weiter; Tage ohne Ersparnis werden nachgerechnet.
 - **Heizkurven-Hinweis nennt die Räume** — welche Räume an wie vielen Tagen nicht auf ihr Soll kamen.
 - **Hinweise nur mit Wirkung** — keine Umstellung und kein Vorschlag, der erst morgen wirken würde.
