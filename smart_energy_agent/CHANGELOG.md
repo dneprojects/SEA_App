@@ -2,6 +2,35 @@
 
 ## 0.15.0
 
+- **Warmwasser bleibt für Mieter ohne eingetragene Personen oben** — eine Wohnung, für die niemand eingetragen ist, gilt als bewohnt; das Warmwasser des Hauses wird nicht mehr abgesenkt, nur weil die Eigentümer weg sind.
+- **Simulation schaltet ab, was SEA eingeschaltet hat** — Ausblick, Einstellungsvergleich und Investitionsprüfung rechnen ein von SEA gestartetes Gerät nicht mehr endlos durch.
+- **Heizkreis-Führung senkt Mieterräume nicht mit ab** — ein Raum ohne Thermostat folgt seiner eigenen Wohnung; gehört er zu einer Wohnung ohne gesteuerte Räume, bleibt der Kreis oben.
+- **Investitionsprüfung rechnet angebrochene Tage anteilig hoch** — ein kurzer erster Tag drückte den Jahreswert nicht mehr.
+- **Ladevorgang kostet, was er beim Laden kostete** — Preis nach Ladeleistung gewichtet, nicht über die ganze Steckzeit gemittelt.
+- **„von SEA in den Überschuss gelegt“ für Woche und Monat** — nicht nur der Wert von heute; die Tageswerte werden dafür einmal neu gerechnet.
+- **Einstellungsvergleich und Investitionsprüfung unabhängig von der Uhrzeit** — vergangene Tage starten nicht mehr mit der Speichertemperatur von jetzt.
+- **Analysen hängen nicht von der Uhrzeit der Rechnung ab** — eine Zeile ohne aufgezeichneten Preis nimmt beim dynamischen Tarif den Börsenpreis von damals, nicht den Preis von jetzt.
+- **Einrichtung verliert keine Änderung beim Laden** — eine Eingabe während des Ladens blieb erhalten.
+- **Verlauf vergangener Tage zeigt Geräte scharf** — Kurven nicht mehr verschmiert, Legenden mit dem Wert am Fensterende.
+- **Befehlspuffer begrenzt** — ohne Datenbank wuchs er bis zum Neustart.
+- **Verbindungsabbruch zu HA sofort erkannt** — auch während des Verbindungsaufbaus; keine eingefrorenen Werte mehr im Verlauf.
+- **„Kosten heute“ in HA springt um Mitternacht** — nicht erst bis zu 15 min später.
+- **Unendlich/NaN in Einstellungen oder Backup nimmt den Standardwert** — ein Backup mit „inf“ ließ SEA nicht mehr starten.
+- **Alte Daten aus /data kommen nicht mehr zurück** — die Übernahme läuft einmal, nicht bei jedem Start.
+- **Gelernte Abfahrt ohne Phantom-Fahrten** — ein stummer Auto-Tracker zählt nicht mehr als Abfahrt.
+- **Zwei Autos an einer Wallbox: Ausblick rechnet mit dem angesteckten** — nicht mit dem ersten der Liste.
+- **Ausblick ohne erfundene Preise** — hinter dem Ende der Day-Ahead-Preise ist der Preis unbekannt, Tarif-Verbraucher laufen dort nicht mehr „günstig“.
+- **Raum mit eigenem Wochenplan bekommt seinen Planwert zurück** — auch bei „Manuell“ oder ausgeschalteter Absenkung, nicht den Komfortwert.
+- **Warmwasser nach Hausurlaub rechtzeitig warm** — es kommt drei Stunden vor der ersten Rückkehr hoch, nicht erst, wenn jemand zu Hause ist.
+- **Offene Vorgaben-Seite holt nichts zurück** — ein vorzeitig beendeter Urlaub und eine in HA ausgeschaltete Absenkung bleiben so.
+- **Warmwasser folgt nur der Abwesenheit des ganzen Hauses** — auch mit einem Raum am Warmwasser-Kreis senkte eine einzelne Wohnung es ab.
+- **Wallbox ohne Dauerschreiben auch bei fehlendem Messwert** — nicht mehr alle 10 s „0 A“.
+- **PV-Begrenzer öffnet über dem Netzlade-Ziel** — ein Akku darüber galt als voll, die Sonne wurde abgeregelt.
+- **„Sofort laden“ übersteht einen Cloud-Aussetzer** — nur ein ausdrückliches „abgesteckt“ beendet es.
+- **Gast und unbekanntes Auto laden nie aus der Hausbatterie** — auch nicht an einer Wallbox mit Batterie-Unterstützung; ohne Erlaubnis lädt der Gast nach seiner Regel.
+- **Heizstab „Sonnenstrom und günstige Stunden“ geht mit PV-Überschuss aus** — er heizte bei aktiver Tarif-Verschiebung aus dem Netz weiter.
+- **Lizenz-Rückgabe: Wallbox mit vollem Ladestrom** — sie blieb auf 0 A stehen und lud ohne SEA nicht mehr.
+- **SG-Ready-Relais und Heizstab-Stufen wählbar** — die Auswahl unter Einrichtung blieb leer.
 - **Wallbox mit Batterie-Unterstützung lädt aus Überschuss** — auch mit Mindest-Ladestand und Abfahrtszeit vor dem spätesten Start und ohne steuerbare Batterie.
 - **Auto-Befehl nach Cloud-Fehler wiederholt** — ein nicht angekommenes „aus“ ließ das Auto weiterladen.
 - **„Manuell“ und PV-Regelung aus: eingeschaltete Relais gehen aus** — ein von SEA gestarteter Heizstab heizte aus dem Netz weiter.
