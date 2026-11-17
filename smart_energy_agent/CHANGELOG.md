@@ -2,10 +2,31 @@
 
 ## 0.15.0
 
+- **Wallbox mit Batterie-Unterstützung lädt aus Überschuss** — auch mit Mindest-Ladestand und Abfahrtszeit vor dem spätesten Start und ohne steuerbare Batterie.
+- **Auto-Befehl nach Cloud-Fehler wiederholt** — ein nicht angekommenes „aus“ ließ das Auto weiterladen.
+- **„Manuell“ und PV-Regelung aus: eingeschaltete Relais gehen aus** — ein von SEA gestarteter Heizstab heizte aus dem Netz weiter.
+- **Lizenz-Rückgabe nach Neustart vollständig** — auch Sollwerte, die „unbekannt“ zeigen, gehen auf 0.
+- **Wallbox-Ladestrom ohne Dauerschreiben** — nur bei Änderung und als Lebenszeichen statt alle 10 s.
+- **§14a: Netzladung einer anderen Batterie drückt das gedimmte Gerät nicht mehr** unter seine Mindestleistung.
+- **Warmwasser im Urlaub senkt ab** — auch ohne eigene Absenktiefe am Warmwasser.
+- **Zirkulationspumpe kommt wieder** — nach Neustart, geändertem oder geleertem Schalter schaltet SEA ein, was es ausgeschaltet hatte.
+- **Wochen- und Monatsrückblick kommt an** — er blieb aus, wenn alle Tage schon festgeschrieben waren.
+- **Kein Datenverlust nach Ladefehler** — Heizung, Fahrzeuge, Absenkung und Tarif speichern nicht, solange sie nicht geladen sind; eine geleerte Preis-Entität kommt nicht aus dem Energie-Dashboard zurück.
+- **Geleerte Gerätewerte nehmen ihren Standard** — ein geleertes Netzlade-Ziel stoppte jedes Netzladen.
+- **Planung rechnet Stunden ohne Preis nicht mehr gratis**; gelernte Abfahrt und Zapfzeiten stimmen am Tag der Zeitumstellung.
+- **Ausblick mit dem Sollwert jedes Heizkreises und dem Stand der PV-Begrenzung**; Tagessimulationen hängen nicht mehr an unrechenbaren Tagen und starten ohne die Speichertemperatur von heute.
+- **HA-Werte stimmen** — „nächstes günstiges Fenster“ mit Preis-Entität je Stunde, „Hinweise“ zählt nur offene.
+- **Schattenkarte füllt neue Dachflächen aus der HA-Statistik**; Warmwasser-Monat ohne Daten eines Zählers bleibt offen; Kennlinie mit negativer Fremdwärme richtig gezeichnet, monatlich gemessene zählt Heizmonate.
+- **Backup-Import bleibt** — eine Wiederherstellung am selben Tag nimmt den eingespielten Stand.
+- **Strategie-Anzeige stimmt** — „Wirkt“ auch bei Netzanschluss-Grenzen, getrennt für Batterie-Deckung und Bezugs-Deckel; der Bezugs-Deckel bleibt an, solange die §14a-Dimmung eingerichtet ist; dynamischer Tarif auch mit Batterie allein verfügbar; Akku-Ladung nach Preis zählt zum Tarif, Batterie-Unterstützung zum PV-Überschuss, Bezugs-Deckel wirkt auch nur mit schaltbaren Verbrauchern.
+- **Einstellungen robuster** — ein geleertes Feld nimmt wieder seinen Standardwert (auch Tarifpreise statt 0 ct), Schreibintervall mindestens 2 s, Komma als Dezimaltrennzeichen, Frostschutz 0–15 °C, kaputte Anfragen ändern nichts mehr.
 - **SEA-Werte in Home Assistant** — PV-Prognose, Strompreis, günstiges Fenster, Akku-Plan, Kosten und Einsparung heute, Hinweise, negativer Preis, §14a; die Habitron-Integration findet SEA selbst und zeigt es als eigenes Gerät, sonst als `sensor.sea_…`; dazu Tarif und je Strategie ihr Zustand (Aus, Voraussetzung fehlt, Bereit, Wirkt) für Automationen; Strategien und Regelung aus HA schaltbar.
 - **Gewohnheiten je Wochentag** — ohne eigene Frist plant SEA mit der gelernten Abfahrt und dem Tagesverbrauch des Autos; die Zirkulation kann SEA nach den gelernten Zapfzeiten schalten.
 - **Heizungsersparnis ohne Lücke** — fehlt in einem milden Monat die Kennlinie, rechnet SEA mit der zuletzt gültigen weiter; Tage ohne Ersparnis werden nachgerechnet.
 - **Heizkurven-Hinweis nennt die Räume** — welche Räume an wie vielen Tagen nicht auf ihr Soll kamen.
+- **Schattenkarte vergisst nicht mehr** — jedes Feld behält seine letzten 5 klaren Tage, bis neue sie ablösen; einmal auch aus älteren Stunden der HA-Statistik gefüllt.
+- **Kennlinie: Grund statt „weitere abwarten“** — steigt die Wärme nicht mit der Kälte, sagt SEA das.
+- **Interne Begriffe vereindeutigt** — keine sichtbare Änderung; Einstellungen, Datenbank und gespeicherte Pläne werden beim Update übernommen, der Tagescache wird einmal neu gerechnet.
 - **Hinweise nur mit Wirkung** — keine Umstellung und kein Vorschlag, der erst morgen wirken würde.
 - **Rückblick** — wöchentlich und monatlich als HA-Benachrichtigung und aufs Handy.
 - **Restlaufzeit der Haushaltsgeräte** — mit der vom Gerät gemeldeten Restlaufzeit plant SEA das gewählte Programm.
