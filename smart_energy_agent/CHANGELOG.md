@@ -2,6 +2,46 @@
 
 ## 0.15.0
 
+- Home Assistant: neue Werte Strom-Ampel (grün/gelb/rot: jetzt einschalten?) und nächstes PV-Fenster (Beginn und Ende)
+- Überschuss-Liste: unter jedem schaltbaren Gerät steht, was gerade gilt und wann SEA es ein- und ausschaltet
+- Umzug alter Daten: eine fehlgeschlagene Datei wird beim nächsten Start kopiert, auch wenn SEA inzwischen eine eigene geschrieben hat (diese wird beiseitegelegt)
+- Wiederherstellung aus einer Sicherung führt deren einmalige Befehle (Steckdose, Führung) nicht erneut aus
+- Heizungs-Ersparnis: Heizkreis zählt nur als abgesenkt, wenn die Führung wirklich tiefer schreibt (Mindest-Vorlauf kann sie auf 0 halten)
+- Open-Meteo-Umlegung: bricht an einer Statistik-Stunde nicht mehr halb ab (sonst doppelt verschoben) und verschiebt auch eingefrorene Vergleichsquellen
+- Gesteuerte Batterie-Bank ohne Ladestand-Sensor: Plan-Ladestand unbekannt statt die andere Bank über die Gesamtkapazität
+- Unbekannter Stecker-Zustand: das Auto behält sein günstiges Ladefenster im Plan
+- Wallbox-Rückgabe überschreibt nach einem Neustart keinen Wert einer Regel
+- Wallbox mit Batterie-Unterstützung wird in „Manuell“/PV aus ebenfalls auf Maximum zurückgegeben – die Hausdeckung allein hielt sie aus
+- Umbenanntes Auto erscheint sofort mit neuem Namen in der Auswahl „Unbekanntes Auto gilt als“ der Wallbox
+- Ladevorgänge: Hinweis „nicht mehr gespeichert“ nur für die Wallbox, die wirklich ältere Ladevorgänge verloren hat, mit ihrem Namen
+- Einspeise-Zeile: „(Durchschnitt)“ nur, wenn Stunden wirklich anders bezahlt wurden – nicht mehr durch Rundung bei kleiner Einspeisung
+- Übernahme aus dem HA-Energie-Dashboard zählt ab ihrem Start als Speichern: ein währenddessen gespeicherter Wert wird nicht überzeichnet
+- Ein mit Enter gespeichertes Feld zeigt nach dem Neuzeichnen den vom Server gespeicherten Wert, nicht den getippten
+- Räume nach Wohnung gruppiert: Heizkurven-Hinweis, Unterversorgungs-Grund und „Aktuell“ nennen bei mehreren Wohnungen erst die Wohnung, dann ihre Räume
+- **Heizungsersparnis zählt einen Kreis, der seinen Räumen folgt** — senkte die Heizkreis-Führung ihn bei Abwesenheit ab, fehlten seine ungesteuerten Räume in der Ersparnis.
+- **Einrichtung: Import aus dem Energie-Dashboard auch während des Ladens** — ein Klick vor dem Aufbau der Seite meldete einen Fehler, und die nächste Änderung löschte die übernommene Anlage.
+- **Ladevorgänge im Verlauf vollständig für den Zeitraum** — die Liste holt den gewählten Zeitraum vom Server und sagt, ab wann ältere Ladevorgänge nicht mehr gespeichert sind.
+- **Analysen „Einspeisung (Ist)“ geht auf** — sind Negativstunden unbezahlt oder kosten, zeigt die Zeile die mittlere Vergütung statt des eingestellten Satzes.
+- **Tarifvergleich zählt Tage über die Zeitumstellung richtig; Tagesdeckel eines Wärmespeichers nach lokalem Tag** — die Sommerzeit-Woche hatte 6 Tage, der Tagesdeckel wechselte um Mitternacht UTC.
+- **Backup-Import und Laden prüfen Zahlen-Grenzen** — ein bearbeitetes Backup behielt z. B. 150 % Notstrom-Reserve oder negative Deckel; ein unlesbarer Wert nimmt den Standard.
+- **Geordneter Stopp ohne Traceback** — jeder Stopp und jedes Update endete mit einem Fehler im Log und Exit-Code 1.
+- **Alt-Daten nach einem Kopierfehler wirklich erneut übernommen** — die schon kopierte Datenbank setzte die Fertig-Marke, die Anlage blieb in /data.
+- **Einmal-Befehle nicht im Backup** — Steckdose schalten und Heizkreis-Führung verschieben liefen beim Wiederherstellen eines Backups erneut.
+- **Hausdeckung nur über eine Batterie mit „deckt Netzbezug“** — stand die deckende Bank auf Automatik, deckte eine andere Bank das Haus gegen ihre Einstellung.
+- **Fahrzeug-Karte zeichnet nach ×, „Fähigkeit“ und „Verknüpfter Lader“ neu** — die V2H-Felder erschienen nicht, eine entfernte Entität blieb sichtbar.
+- **Vorgaben → Strategien: Eingabe im nächsten Feld bleibt beim Speichern** — das Neuzeichnen nach dem Speichern nahm Fokus und getippten Wert weg.
+- **Gestufter Heizstab: Tagesenergie nach vergangener Zeit** — Ausblick und Analysen zählten nur 1/18 seiner Energie und zwangen alle Stufen ans Netz.
+- **Kurzer Aussetzer des Steckers beendet kein Pflicht- oder Netzladen** — nur ein ausdrückliches „abgesteckt“ schaltet die Wallbox ab, ein „nicht verfügbar“ hält den letzten Stand.
+- **„Werte an HA“ aus nimmt die SEA-Entitäten zurück** — sie blieben bis zum HA-Neustart auf ihrem letzten Wert, „günstig“ konnte dauerhaft an stehen.
+- **Mehrere Batterien: eine unlesbare Bank macht den Gesamt-Ladestand unbekannt** — vorher galt der Ladestand der anderen Bank allein und verfälschte Plan, Ersparnis und Tarifvergleich.
+- **Urlaub: Fußbodenheizung kommt rechtzeitig hoch, auch neben Heizkörper-Räumen** — sie folgte den Thermostat-Räumen und war erst ~1 h vor der Rückkehr oben statt 8 h; die Lastprognose rechnet ebenso.
+- **Mieter mit Personen nur an den Räumen zählen fürs ganze Haus** — meldete ihr Tracker „unbekannt“, galt das Haus als weg und ein Heizkreis ohne Räume wurde abgesenkt.
+- **Ausblick zeigt einen laufenden Waschgang** — ein an der Maschine gestarteter oder übergebener Lauf fehlte in Geräte-Spur, Netzbezug und Kosten der nächsten Stunden.
+- **Ausblick kennt ein Auto mit Tracker** — ein einzelnes Auto mit Anwesenheits-Entität oder eigenem Kabel-Sensor galt in der Simulation als „kein Auto“ und lud sofort aus dem Netz.
+- **Open-Meteo über die Energie-Seite auf der richtigen Stunde** — die Prognose lag eine Stunde zu früh; gespeicherte Stunden werden einmal verschoben, auch in Zeitzonen mit halber Stunde Versatz richtig.
+- **Wallbox wie ohne SEA, wenn SEA sie nicht mehr steuert** — bei „Manuell“, PV-Überschuss aus und „SEA steuert das Laden nicht“ geht sie einmal auf Maximum bzw. wieder an; vorher blieb sie auf 0 A oder aus.
+- **Negativer Börsenpreis: Einspeise-Deckel 0 W wirkt** — die Batterie lädt und die PV wird abgeregelt; vorher lief die Einspeisung ungebremst weiter.
+- **Geräte-Einstellungen und Regeln sehen Änderungen sofort** — „Auto angesteckt“, „Stopp bei“, „Wechselrichter regelt selbst“, Start-Erkennung, Stufen, SG-Ready und die Entitäten der Regeln blieben auf dem Wert vom letzten Verbinden mit HA.
 - **Warmwasser bleibt für Mieter ohne eingetragene Personen oben** — eine Wohnung, für die niemand eingetragen ist, gilt als bewohnt; das Warmwasser des Hauses wird nicht mehr abgesenkt, nur weil die Eigentümer weg sind.
 - **Simulation schaltet ab, was SEA eingeschaltet hat** — Ausblick, Einstellungsvergleich und Investitionsprüfung rechnen ein von SEA gestartetes Gerät nicht mehr endlos durch.
 - **Heizkreis-Führung senkt Mieterräume nicht mit ab** — ein Raum ohne Thermostat folgt seiner eigenen Wohnung; gehört er zu einer Wohnung ohne gesteuerte Räume, bleibt der Kreis oben.
