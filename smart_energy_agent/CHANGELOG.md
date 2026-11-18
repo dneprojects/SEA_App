@@ -2,6 +2,10 @@
 
 ## 0.15.0
 
+- Status: Karten klappbar wie in der Einrichtung (Zustand bleibt gespeichert); Unterkarten wie „Details zur PV-Prognose“ einheitlich
+- Status und alle Seiten wieder flüssig: die PV-Prognose wurde je Prognosepunkt komplett neu eingelesen – der Server stand dadurch alle 15 s rund 4 s still
+- Protokoll: langsame Schritte von Aufzeichnung, HA-Werten und PV-Abweichung werden mit Namen gemeldet; „SEA-Rechenzeit“ zählt ab Beginn der Blockade
+- Heizkreis-Führung: je Heizkreis die Temperaturen jetzt (Vorlauf, gemessen oder laut Kurve, und außen)
 - Home Assistant: neue Werte Strom-Ampel (grün/gelb/rot: jetzt einschalten?) und nächstes PV-Fenster (Beginn und Ende)
 - Überschuss-Liste: unter jedem schaltbaren Gerät steht, was gerade gilt und wann SEA es ein- und ausschaltet
 - Umzug alter Daten: eine fehlgeschlagene Datei wird beim nächsten Start kopiert, auch wenn SEA inzwischen eine eigene geschrieben hat (diese wird beiseitegelegt)
