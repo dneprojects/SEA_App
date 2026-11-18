@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- Heizkurven-Empfehlung: ein Raumsoll, das von Hand am Gerät geändert wurde, zählt wie eine übernommene Empfehlung – die Empfehlung verschwindet
 - Heizkurven-Empfehlung schlägt zuerst nur einen kleinen Schritt vor: Raumsoll des Heizkreises ±0,5 K, Steilheit eine Stufe
 - Verschattungs- und Himmelskarte sind nach einem Neustart sofort da (gespeichert statt jedes Mal neu gelernt)
 - Status: Karten klappbar wie in der Einrichtung (Zustand bleibt gespeichert); Unterkarten wie „Details zur PV-Prognose“ einheitlich
