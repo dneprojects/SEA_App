@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- Heizkurven-Empfehlung schlägt zuerst nur einen kleinen Schritt vor: Raumsoll des Heizkreises ±0,5 K, Steilheit eine Stufe
+- Verschattungs- und Himmelskarte sind nach einem Neustart sofort da (gespeichert statt jedes Mal neu gelernt)
 - Status: Karten klappbar wie in der Einrichtung (Zustand bleibt gespeichert); Unterkarten wie „Details zur PV-Prognose“ einheitlich
 - Status und alle Seiten wieder flüssig: die PV-Prognose wurde je Prognosepunkt komplett neu eingelesen – der Server stand dadurch alle 15 s rund 4 s still
 - Protokoll: langsame Schritte von Aufzeichnung, HA-Werten und PV-Abweichung werden mit Namen gemeldet; „SEA-Rechenzeit“ zählt ab Beginn der Blockade
