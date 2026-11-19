@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- Heizkreis-Führung: ohne lesbaren Sollwert keine Empfehlung mehr (sie beruhte auf einem alten Wert)
+- Hinweis „Entitäten fehlen in Home Assistant“: nennt eingerichtete Entitäten, die HA nicht mehr kennt (umbenannt oder entfernt)
 - Heizkurven-Empfehlung: ein Raumsoll, das von Hand am Gerät geändert wurde, zählt wie eine übernommene Empfehlung – die Empfehlung verschwindet
 - Heizkurven-Empfehlung schlägt zuerst nur einen kleinen Schritt vor: Raumsoll des Heizkreises ±0,5 K, Steilheit eine Stufe
 - Verschattungs- und Himmelskarte sind nach einem Neustart sofort da (gespeichert statt jedes Mal neu gelernt)
