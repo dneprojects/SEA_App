@@ -2,6 +2,10 @@
 
 ## 0.15.0
 
+- Heizkreis-Führung ausgeschaltet: auch keine Heizkurven-Hinweise mehr
+- Heizkurve anheben wird nur noch empfohlen, wenn Räume nicht aufs Soll kamen oder die Ventile fast offen stehen und es kälter wird; nächster Schritt frühestens nach 3 Tagen
+- Heizkurven-Hinweise: Knopf „Ignorieren“ (wie ×) – kommt erst wieder, wenn es dringender wird oder die Lage vorbei ist
+- Heizkreis-Führung: bei „Automatisch“ übernimmt SEA die Heizkurven-Empfehlung selbst (Kreise auf „folgt den Räumen“/„vorausschauend führen“, nach 2 Stunden, meldet es im Verlauf); bei „Manuell“ Hinweis ohne Knopf
 - Verlauf: Messwerte erscheinen sofort, die Prognose wird ergänzt, sobald sie berechnet ist (wartete bis zu 15 s)
 - Große Abfragen (Verbrauchsprognose, Ersparnis, Tarifvergleich, Batterie-Messungen) lesen neben laufenden Rechnungen in Blöcken statt Zeile für Zeile – 28 Tage Verlauf in rund 1 s statt bis zu 30 s
 - Status liest die Batterie-Gesundheit nicht mehr bei jedem Aufruf aus 60 Tagen Verlauf – Messung von Start und Nacht
