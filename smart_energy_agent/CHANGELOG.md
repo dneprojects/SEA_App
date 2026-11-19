@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- Status liest die Batterie-Gesundheit nicht mehr bei jedem Aufruf aus 60 Tagen Verlauf – Messung von Start und Nacht
+- Status und Aufzeichnung warten nicht mehr bis zu einer Minute, während SEA im Hintergrund rechnet (z. B. Einstellungsvergleich nach dem Öffnen der App): die Datenbank kam neben der Rechnung kaum zum Zug
 - Heizkreis-Führung: ohne lesbaren Sollwert keine Empfehlung mehr (sie beruhte auf einem alten Wert)
 - Hinweis „Entitäten fehlen in Home Assistant“: nennt eingerichtete Entitäten, die HA nicht mehr kennt (umbenannt oder entfernt)
 - Heizkurven-Empfehlung: ein Raumsoll, das von Hand am Gerät geändert wurde, zählt wie eine übernommene Empfehlung – die Empfehlung verschwindet
