@@ -2,6 +2,9 @@
 
 ## 0.15.0
 
+- Analysen, Ersparnis: ⓘ-Texte knapper; Wärmemanagement sagt, dass angepasste Heizkurven nicht enthalten sind; Wärmemanagement steht unter Akku- und Gerätesteuerung
+- Analysen: ein abgeschlossener Zeitraum (z. B. ein voriger Monat) wird 6 Stunden lang nicht neu berechnet, solange keine Einstellung gespeichert wird (bisher 10 Minuten)
+- Analysen: Karte heißt „Ersparnis“, Summe „Gesamtersparnis“, Heizungsabsenkung „Wärmemanagement“; Balken stehen in jedem Zeitraum an derselben Stelle (auf dem Handy schob ein Hinweis wie „keine Außentemperatur“ sie in die Beschriftung); Trennlinie über der Summe durchgehend; „berechne …“ steht links unter den Knöpfen
 - Ziel & Kontrolle: der Einstellungsvergleich prüft auch eine niedrigere Überschuss-Schwelle der Wärmepumpen-Anhebung (aus der gemessenen Leistung der letzten 30 Tage) und zeigt neben Vorschlägen zu Heizstab/Anhebung, was die letzten 30 Tage aufgezeichnet haben
 - Analysen: Heizstab-Wärme wird mit dem COP der Wärmepumpe zum jeweiligen Zeitpunkt bewertet (ab jetzt mit aufgezeichnet; ältere Zeiten mit dem eingestellten Wert statt dem heutigen Sensorwert)
 - Analysen: Karte „Woher die Ersparnis kommt“ statt „Vergleich mit anderen Betriebsarten“ – Ersparnis gegenüber einem Haus ohne PV, aufgeteilt in PV-Anlage (Einspeisevergütung, Eigenverbrauch), Speicher und SEA (Heizungsabsenkung, Akku- und Gerätesteuerung), als Balken; die Vergleichskosten im ⓘ
