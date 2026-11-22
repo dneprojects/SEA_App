@@ -2,6 +2,10 @@
 
 ## 0.15.0
 
+- Ziel & Kontrolle: der Einstellungsvergleich prüft auch eine niedrigere Überschuss-Schwelle der Wärmepumpen-Anhebung (aus der gemessenen Leistung der letzten 30 Tage) und zeigt neben Vorschlägen zu Heizstab/Anhebung, was die letzten 30 Tage aufgezeichnet haben
+- Analysen: Heizstab-Wärme wird mit dem COP der Wärmepumpe zum jeweiligen Zeitpunkt bewertet (ab jetzt mit aufgezeichnet; ältere Zeiten mit dem eingestellten Wert statt dem heutigen Sensorwert)
+- Analysen: Karte „Woher die Ersparnis kommt“ statt „Vergleich mit anderen Betriebsarten“ – Ersparnis gegenüber einem Haus ohne PV, aufgeteilt in PV-Anlage (Einspeisevergütung, Eigenverbrauch), Speicher und SEA (Heizungsabsenkung, Akku- und Gerätesteuerung), als Balken; die Vergleichskosten im ⓘ
+- Analysen: gespeicherte Tageswerte werden neu berechnet – die Heizungsabsenkung der Tage bis 19.11. stand noch mit der alten, rund dreimal zu kleinen Schätzung drin
 - Heizkreis-Führung ausgeschaltet: auch keine Heizkurven-Hinweise mehr
 - Heizkurve anheben wird nur noch empfohlen, wenn Räume nicht aufs Soll kamen oder die Ventile fast offen stehen und es kälter wird; nächster Schritt frühestens nach 3 Tagen
 - Heizkurven-Hinweise: Knopf „Ignorieren“ (wie ×) – kommt erst wieder, wenn es dringender wird oder die Lage vorbei ist
