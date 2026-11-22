@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- Heizkreis-Führung: heizt ein Raum des Kreises vor (z. B. Rückkehr aus dem Urlaub), ruht die gelernte Kurvenabsenkung – der Kreis geht auf deine Kurve +1 K statt darunter zu bleiben
+- Temperaturabsenkung: ein von Hand am Thermostat gestellter Wert wird die Komforttemperatur des Raums, auch der beim ersten Übernehmen vorgefundene (SEA schrieb 21 °C über eingestellte 22–22,8 °C); nicht bei Abwesenheit, Urlaub, Wochenplan oder einem Wert bis zur Eco-Temperatur
 - Analysen, Akku- und Gerätesteuerung: das ⓘ zeigt Kosten ohne SEA-Steuerung, Ist-Kosten und Ersparnis, aufgeteilt in Geräte im Überschuss, Wärme im Überschuss und Reaktions- und Update-Zeiten (bei schwankendem Preis: Akku nach Preis); gespeicherte Tageswerte werden dafür neu berechnet
 - Energiekennlinie: steht ein Wärmezähler tagelang still, gelten diese Tage als Lücke statt als 0 kWh (17.–21.11. drückten die Kennlinie nach unten); eine mit solchen Tagen gelernte Kennlinie wird nicht weiter als Ersatz genutzt
 - Analysen, Ersparnis: ⓘ-Texte knapper; Wärmemanagement sagt, dass angepasste Heizkurven nicht enthalten sind; Wärmemanagement steht unter Akku- und Gerätesteuerung
