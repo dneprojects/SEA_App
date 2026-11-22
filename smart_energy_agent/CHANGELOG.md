@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- Analysen, Akku- und Gerätesteuerung: das ⓘ zeigt Kosten ohne SEA-Steuerung, Ist-Kosten und Ersparnis, aufgeteilt in Geräte im Überschuss, Wärme im Überschuss und Reaktions- und Update-Zeiten (bei schwankendem Preis: Akku nach Preis); gespeicherte Tageswerte werden dafür neu berechnet
+- Energiekennlinie: steht ein Wärmezähler tagelang still, gelten diese Tage als Lücke statt als 0 kWh (17.–21.11. drückten die Kennlinie nach unten); eine mit solchen Tagen gelernte Kennlinie wird nicht weiter als Ersatz genutzt
 - Analysen, Ersparnis: ⓘ-Texte knapper; Wärmemanagement sagt, dass angepasste Heizkurven nicht enthalten sind; Wärmemanagement steht unter Akku- und Gerätesteuerung
 - Analysen: ein abgeschlossener Zeitraum (z. B. ein voriger Monat) wird 6 Stunden lang nicht neu berechnet, solange keine Einstellung gespeichert wird (bisher 10 Minuten)
 - Analysen: Karte heißt „Ersparnis“, Summe „Gesamtersparnis“, Heizungsabsenkung „Wärmemanagement“; Balken stehen in jedem Zeitraum an derselben Stelle (auf dem Handy schob ein Hinweis wie „keine Außentemperatur“ sie in die Beschriftung); Trennlinie über der Summe durchgehend; „berechne …“ steht links unter den Knöpfen
