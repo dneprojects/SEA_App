@@ -2,6 +2,7 @@
 
 ## 0.15.0
 
+- Wärme- und Wasserzähler: ein neu eingetragener Zähler übernimmt seinen Verlauf aus der Home-Assistant-Statistik – Kennlinie und Auswertungen rechnen sofort damit statt erst nach Tagen
 - Ersparnis: alle Vergleiche rechnen mit derselben Last ohne SEAs Verschiebungen – verschobene Geräte und Wärme stehen bei SEA statt bei „Eigenverbrauch“, „Speicher“ ist nicht mehr zu klein, ohne Akku zeigt die Steuerung ihren Nutzen statt 0 €; gespeicherte Tageswerte werden neu berechnet
 - PV-Prognose im Tagesverlauf: der Abgleich der letzten halben Stunde vergleicht mit der Prognose zur jeweiligen Minute statt mit dem Stundenmittel (korrigierte bei steigender oder fallender Sonne auch eine richtige Prognose um bis zu 50 %)
 - Tagesplan: Geräte-Läufe zählen beim Ziel „Kosten“ die aufgegebene Einspeisung mit – eine günstige Netzstunde schlägt das Sonnenfenster, wenn sie billiger ist als die Vergütung
