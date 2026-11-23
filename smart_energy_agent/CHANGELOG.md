@@ -2,6 +2,18 @@
 
 ## 0.15.0
 
+- Ersparnis: alle Vergleiche rechnen mit derselben Last ohne SEAs Verschiebungen – verschobene Geräte und Wärme stehen bei SEA statt bei „Eigenverbrauch“, „Speicher“ ist nicht mehr zu klein, ohne Akku zeigt die Steuerung ihren Nutzen statt 0 €; gespeicherte Tageswerte werden neu berechnet
+- PV-Prognose im Tagesverlauf: der Abgleich der letzten halben Stunde vergleicht mit der Prognose zur jeweiligen Minute statt mit dem Stundenmittel (korrigierte bei steigender oder fallender Sonne auch eine richtige Prognose um bis zu 50 %)
+- Tagesplan: Geräte-Läufe zählen beim Ziel „Kosten“ die aufgegebene Einspeisung mit – eine günstige Netzstunde schlägt das Sonnenfenster, wenn sie billiger ist als die Vergütung
+- Restwert der Akku-Ladung mit dem gemessenen Wirkungsgrad statt fest 94 %
+- Investition: jede geöffnete Seite bekommt das Ergebnis ihres Zeitraums (eine zweite Seite ließ die erste endlos weiterrechnen)
+- Batterie-Unterstützung: eine Wallbox oder Last geht aus, sobald PV und Akku sie nicht mehr tragen (lief bisher bis zur Untergrenze aus dem Netz weiter); sie startet nicht mehr unter der Notstrom-Reserve
+- Entladen nach Preis oder Plan: bei PV-Überschuss lädt der Akku wie gewohnt statt einzuspeisen; ein eingefrorener Netzzähler lässt die Entladung nicht mehr hochlaufen
+- Ladevorgänge: ein kurzer Aussetzer der Kabel-Entität beendet den Ladevorgang nicht mehr („Laden beenden“ bleibt); ein Gast bleibt Gast; „voll“ erst nach 10 min ohne Bezug seit dem Einschalten und nie ohne Messwert; an einer Wallbox ohne verknüpftes Auto gelten ihre eigenen Einstellungen
+- Auto mit Ladegrenze als Schalter: ein angehobener Höchst-Ladestand wird ins Auto geschrieben, auch während es lädt
+- Entitäten, die Home Assistant entfernt oder umbenennt, liest SEA nicht mehr mit ihrem letzten Wert weiter: sie fehlen sofort (Hinweis „Entitäten fehlen“), ein Wärmezähler hat dann Lücken statt 0 kWh (16.–21.11. zeichnete ein umbenannter Zähler tagelang denselben Wert auf)
+- Energiekennlinie: ein stehender Wärmezähler ohne Nachholsprung ist eine Pause, auch über Tage (seit beta.116 fehlten echte Pausen der zweiten Wärmepumpe, „zu wenige Heiztage“); die Auswertung wird nach dem Update neu berechnet, ältere Ersatz-Kennlinien nicht mehr genutzt
+- Heizkreis-Führung: kommt ein Raum zu kurz, während die gelernte Absenkung beim Vorheizen ruht, zählt das für die Heizkurven-Empfehlung, und der Grund nennt den Raum
 - Heizkreis-Führung: heizt ein Raum des Kreises vor (z. B. Rückkehr aus dem Urlaub), ruht die gelernte Kurvenabsenkung – der Kreis geht auf deine Kurve +1 K statt darunter zu bleiben
 - Temperaturabsenkung: ein von Hand am Thermostat gestellter Wert wird die Komforttemperatur des Raums, auch der beim ersten Übernehmen vorgefundene (SEA schrieb 21 °C über eingestellte 22–22,8 °C); nicht bei Abwesenheit, Urlaub, Wochenplan oder einem Wert bis zur Eco-Temperatur
 - Analysen, Akku- und Gerätesteuerung: das ⓘ zeigt Kosten ohne SEA-Steuerung, Ist-Kosten und Ersparnis, aufgeteilt in Geräte im Überschuss, Wärme im Überschuss und Reaktions- und Update-Zeiten (bei schwankendem Preis: Akku nach Preis); gespeicherte Tageswerte werden dafür neu berechnet
