@@ -2,6 +2,8 @@
 
 ## 0.15.0
 
+- Heizkreis-Führung: zurück aus dem Urlaub gilt wieder die Heizkurve von vor dem Urlaub – die während des Urlaubs gelernte Absenkung verfällt (die Fußbodenheizung kam mit −2,5 K zurück)
+- Vorheizen: ohne Raummodell und ohne gelernte Rate heißt der Vorheizbeginn „nach Standardwert (noch nichts gelernt)“ statt „nach gelernter Aufheizrate“
 - Wärme- und Wasserzähler: ein neu eingetragener Zähler übernimmt seinen Verlauf aus der Home-Assistant-Statistik – Kennlinie und Auswertungen rechnen sofort damit statt erst nach Tagen
 - Ersparnis: alle Vergleiche rechnen mit derselben Last ohne SEAs Verschiebungen – verschobene Geräte und Wärme stehen bei SEA statt bei „Eigenverbrauch“, „Speicher“ ist nicht mehr zu klein, ohne Akku zeigt die Steuerung ihren Nutzen statt 0 €; gespeicherte Tageswerte werden neu berechnet
 - PV-Prognose im Tagesverlauf: der Abgleich der letzten halben Stunde vergleicht mit der Prognose zur jeweiligen Minute statt mit dem Stundenmittel (korrigierte bei steigender oder fallender Sonne auch eine richtige Prognose um bis zu 50 %)
